@@ -15,6 +15,13 @@ namespace PRO1
         public FillInTheBlanks()
         {
             InitializeComponent();
+            this.BackgroundImage = Image.FromFile(@"C:\Users\maimo\source\repos\HM2\HM2\Images\back2.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+        private void FillInTheBlanks_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

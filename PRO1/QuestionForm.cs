@@ -17,6 +17,7 @@ namespace PRO1
             InitializeComponent();
             this.BackgroundImage = Image.FromFile(@"C:\Users\maimo\source\repos\HM2\HM2\Images\back2.jpg");
             this.BackgroundImageLayout = ImageLayout.Stretch;
+            label1.Font = new Font("Arial", 12, FontStyle.Bold);
         }
 
         private void QuestionForm_Load(object sender, EventArgs e)
@@ -53,7 +54,10 @@ namespace PRO1
             }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
     
 }

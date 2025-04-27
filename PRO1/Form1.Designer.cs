@@ -79,11 +79,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(322, 61);
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(309, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = ":ברוכים הבאים(שם המרצה)";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 

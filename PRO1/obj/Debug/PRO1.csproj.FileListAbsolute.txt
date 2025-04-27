@@ -9,3 +9,7 @@ C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.csproj.CoreCompileInputs.ca
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.exe
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.pdb
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.QuestionForm.resources
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.FillInTheBlanks.resources
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.MultipleChoice.resources
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.OpenQuestion.resources
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.TrueFalse.resources

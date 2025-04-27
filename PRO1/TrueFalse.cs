@@ -15,6 +15,13 @@ namespace PRO1
         public TrueFalse()
         {
             InitializeComponent();
+            this.BackgroundImage = Image.FromFile(@"C:\Users\maimo\source\repos\HM2\HM2\Images\back2.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+        private void TrueFalse_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -84,8 +84,17 @@
     <Compile Include="TrueFalse.Designer.cs">
       <DependentUpon>TrueFalse.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FillInTheBlanks.resx">
+      <DependentUpon>FillInTheBlanks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleChoice.resx">
+      <DependentUpon>MultipleChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenQuestion.resx">
+      <DependentUpon>OpenQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="QuestionForm.resx">
       <DependentUpon>QuestionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrueFalse.resx">
+      <DependentUpon>TrueFalse.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
