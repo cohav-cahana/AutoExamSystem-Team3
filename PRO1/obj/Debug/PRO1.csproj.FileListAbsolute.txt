@@ -1,0 +1,11 @@
+C:\Users\maimo\source\repos\PRO1\PRO1\bin\Debug\PRO1.exe.config
+C:\Users\maimo\source\repos\PRO1\PRO1\bin\Debug\PRO1.exe
+C:\Users\maimo\source\repos\PRO1\PRO1\bin\Debug\PRO1.pdb
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.csproj.AssemblyReference.cache
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.Form1.resources
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.Properties.Resources.resources
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.csproj.GenerateResource.cache
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.csproj.CoreCompileInputs.cache
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.exe
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.pdb
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.QuestionForm.resources
