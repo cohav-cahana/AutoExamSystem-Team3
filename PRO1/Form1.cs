@@ -15,7 +15,7 @@ namespace PRO1
         public Form1()
         {
             InitializeComponent();
-            this.BackgroundImage = Image.FromFile(@"C:\Users\maimo\source\repos\HM2\HM2\Images\back2.jpg");
+            this.BackgroundImage = Properties.Resources.back2;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             label1.Font = new Font("Arial", 12, FontStyle.Bold);
             button1.Font= new Font("Arial", 12, FontStyle.Bold);
