@@ -15,7 +15,7 @@ namespace PRO1
         public QuestionForm()
         {
             InitializeComponent();
-            this.BackgroundImage = Image.FromFile(@"C:\Users\maimo\source\repos\HM2\HM2\Images\back2.jpg");
+            this.BackgroundImage = Properties.Resources.back2;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             label1.Font = new Font("Arial", 12, FontStyle.Bold);
         }
@@ -27,12 +27,15 @@ namespace PRO1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            this.Hide();
+
             // בודקים איזו אפשרות נבחרה מתוך ה-ComboBox
             if (comboBox1.SelectedIndex == 0) // אם הבחירה הראשונה
             {
                 // פותחים את ה-Form של MultipleChoice
                 MultipleChoice multipleChoiceForm = new MultipleChoice();
                 multipleChoiceForm.ShowDialog();
+
             }
             else if (comboBox1.SelectedIndex == 1) // אם הבחירה השנייה
             {
@@ -57,6 +60,17 @@ namespace PRO1
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+
+            Form1 form = new Form1();
+
+
+            form.Show();
         }
     }
     

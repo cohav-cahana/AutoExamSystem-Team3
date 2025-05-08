@@ -28,14 +28,14 @@ namespace PRO1
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
             this.Hide();
 
-            // יצירת אובייקט של ה-Form של השאלות
             QuestionForm questionForm = new QuestionForm();
 
-            // הצגת ה-Form של השאלות
-            questionForm.ShowDialog();  // אם תרצה שה-Form יהיה מודאלי
-            this.Show();
+            
+            questionForm.ShowDialog();  
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
