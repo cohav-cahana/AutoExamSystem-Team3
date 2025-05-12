@@ -90,6 +90,12 @@
     <Compile Include="frontPage.Designer.cs">
       <DependentUpon>frontPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="LecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerForm.Designer.cs">
+      <DependentUpon>LecturerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.cs">
@@ -98,8 +104,17 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frontPage.resx">
       <DependentUpon>frontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerForm.resx">
+      <DependentUpon>LecturerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

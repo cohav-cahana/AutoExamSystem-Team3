@@ -56,6 +56,7 @@ namespace AutoExamSystem___
 
             MessageBox.Show("הרשמה הושלמה בהצלחה!");
 
+
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Users.xlsx");
 
 
@@ -71,21 +72,23 @@ namespace AutoExamSystem___
                 ws.Cell(1, 4).Value = "Email";
                 ws.Cell(1, 5).Value = "Role";
                 wb.SaveAs(filePath);
-            
-
-                var workbook = new XLWorkbook(filePath);
-                var worksheet = workbook.Worksheet("Users");
-
-                int lastRow = worksheet.LastRowUsed().RowNumber() + 1;
-                worksheet.Cell(lastRow, 1).Value = txtUsername.Text;
-                worksheet.Cell(lastRow, 2).Value = txtPassword.Text;
-                worksheet.Cell(lastRow, 3).Value = txtID.Text;
-                worksheet.Cell(lastRow, 4).Value = txtEmail.Text;
-                worksheet.Cell(lastRow, 5).Value = role;
-
-                workbook.Save();
-                MessageBox.Show("המשתמש נשמר בהצלחה!");
             }
+
+
+            var workbook = new XLWorkbook(filePath);
+            var worksheet = workbook.Worksheet("Users");
+
+            int lastRow = worksheet.LastRowUsed().RowNumber() + 1;
+            worksheet.Cell(lastRow, 1).Value = txtUsername.Text;
+            worksheet.Cell(lastRow, 2).Value = txtPassword.Text;
+            worksheet.Cell(lastRow, 3).Value = txtID.Text;
+            worksheet.Cell(lastRow, 4).Value = txtEmail.Text;
+            worksheet.Cell(lastRow, 5).Value = role;
+
+            workbook.Save();
+            MessageBox.Show("המשתמש נשמר בהצלחה!");
+      
+            
         }
     }
 }

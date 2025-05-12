@@ -54,6 +54,7 @@
             this.login.TabIndex = 1;
             this.login.Text = "LOG IN";
             this.login.UseVisualStyleBackColor = true;
+            this.login.Click += new System.EventHandler(this.login_Click);
             // 
             // txtusername_log
             // 
