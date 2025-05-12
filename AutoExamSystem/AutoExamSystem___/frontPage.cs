@@ -62,7 +62,7 @@ namespace AutoExamSystem___
                         studentForm.Show();
                         this.Hide();
                     }
-                    else if (excelRole.ToLower() == "lecturer")
+                    else if (excelRole.ToLower() == "lecture")
                     {
                         MessageBox.Show("שלום מרצה!");
                         LecturerForm lecturerForm = new LecturerForm();
