@@ -27,6 +27,7 @@ namespace AutoExamSystem___
             string password = txtPassword.Text.Trim();
             string id = txtID.Text.Trim();
             string email = txtEmail.Text.Trim();
+            string role = cmbRole.SelectedItem?.ToString();
 
             if (username.Length < 6 || username.Length > 8 || !System.Text.RegularExpressions.Regex.IsMatch(username, @"^[a-zA-Z]*\d{0,2}$"))
             {
@@ -58,7 +59,7 @@ namespace AutoExamSystem___
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Users.xlsx");
 
 
-       
+
 
             if (!File.Exists(filePath))
             {
@@ -68,7 +69,9 @@ namespace AutoExamSystem___
                 ws.Cell(1, 2).Value = "Password";
                 ws.Cell(1, 3).Value = "ID";
                 ws.Cell(1, 4).Value = "Email";
+                ws.Cell(1, 5).Value = "Role";
                 wb.SaveAs(filePath);
+            
 
                 var workbook = new XLWorkbook(filePath);
                 var worksheet = workbook.Worksheet("Users");
@@ -78,6 +81,7 @@ namespace AutoExamSystem___
                 worksheet.Cell(lastRow, 2).Value = txtPassword.Text;
                 worksheet.Cell(lastRow, 3).Value = txtID.Text;
                 worksheet.Cell(lastRow, 4).Value = txtEmail.Text;
+                worksheet.Cell(lastRow, 5).Value = role;
 
                 workbook.Save();
                 MessageBox.Show("המשתמש נשמר בהצלחה!");

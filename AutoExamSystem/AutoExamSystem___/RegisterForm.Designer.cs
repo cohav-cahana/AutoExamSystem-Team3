@@ -37,6 +37,8 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.RegisterB = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -113,11 +115,33 @@
             this.RegisterB.UseVisualStyleBackColor = true;
             this.RegisterB.Click += new System.EventHandler(this.RegisterB_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(102, 270);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Role";
+            // 
+            // cmbRole
+            // 
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Items.AddRange(new object[] {
+            "Student",
+            "Lecture"});
+            this.cmbRole.Location = new System.Drawing.Point(210, 262);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(121, 24);
+            this.cmbRole.TabIndex = 10;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbRole);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.RegisterB);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtID);
@@ -145,5 +169,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button RegisterB;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbRole;
     }
 }

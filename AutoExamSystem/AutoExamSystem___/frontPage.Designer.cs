@@ -30,6 +30,10 @@
         {
             this.signup = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.Button();
+            this.txtusername_log = new System.Windows.Forms.TextBox();
+            this.txtpassword_log = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // signup
@@ -51,16 +55,53 @@
             this.login.Text = "LOG IN";
             this.login.UseVisualStyleBackColor = true;
             // 
+            // txtusername_log
+            // 
+            this.txtusername_log.Location = new System.Drawing.Point(303, 104);
+            this.txtusername_log.Name = "txtusername_log";
+            this.txtusername_log.Size = new System.Drawing.Size(185, 22);
+            this.txtusername_log.TabIndex = 2;
+            // 
+            // txtpassword_log
+            // 
+            this.txtpassword_log.Location = new System.Drawing.Point(303, 141);
+            this.txtpassword_log.Name = "txtpassword_log";
+            this.txtpassword_log.Size = new System.Drawing.Size(185, 22);
+            this.txtpassword_log.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(203, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "User name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(210, 147);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "password";
+            // 
             // frontPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtpassword_log);
+            this.Controls.Add(this.txtusername_log);
             this.Controls.Add(this.login);
             this.Controls.Add(this.signup);
             this.Name = "frontPage";
             this.Text = "frontPage";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -68,5 +109,9 @@
 
         private System.Windows.Forms.Button signup;
         private System.Windows.Forms.Button login;
+        private System.Windows.Forms.TextBox txtusername_log;
+        private System.Windows.Forms.TextBox txtpassword_log;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
