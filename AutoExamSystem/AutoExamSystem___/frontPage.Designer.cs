@@ -1,6 +1,6 @@
 ﻿namespace AutoExamSystem___
 {
-    partial class Form1
+    partial class frontPage
     {
         /// <summary>
         /// Required designer variable.
@@ -34,32 +34,32 @@
             // 
             // signup
             // 
-            this.signup.Location = new System.Drawing.Point(519, 212);
+            this.signup.Location = new System.Drawing.Point(334, 304);
             this.signup.Name = "signup";
-            this.signup.Size = new System.Drawing.Size(75, 23);
+            this.signup.Size = new System.Drawing.Size(132, 72);
             this.signup.TabIndex = 0;
-            this.signup.Text = "sign up";
+            this.signup.Text = "SIGN UP";
             this.signup.UseVisualStyleBackColor = true;
             this.signup.Click += new System.EventHandler(this.signup_Click);
             // 
             // login
             // 
-            this.login.Location = new System.Drawing.Point(336, 143);
+            this.login.Location = new System.Drawing.Point(334, 226);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(75, 23);
+            this.login.Size = new System.Drawing.Size(132, 72);
             this.login.TabIndex = 1;
-            this.login.Text = "Log in";
+            this.login.Text = "LOG IN";
             this.login.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // frontPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.login);
             this.Controls.Add(this.signup);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frontPage";
+            this.Text = "frontPage";
             this.ResumeLayout(false);
 
         }
@@ -70,4 +70,3 @@
         private System.Windows.Forms.Button login;
     }
 }
-

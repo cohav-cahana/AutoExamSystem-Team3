@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace AutoExamSystem___
 {
-    public partial class Form1 : Form
+    public partial class frontPage : Form
     {
-        public Form1()
+        public frontPage()
         {
             InitializeComponent();
         }
 
         private void signup_Click(object sender, EventArgs e)
         {
-            SignUp registerForm = new SignUp();
+            RegisterForm registerForm = new RegisterForm();
             registerForm.Show();
         }
     }
