@@ -30,13 +30,24 @@ namespace AutoExamSystem___
         }
 
         private List<Exam> exams = new List<Exam>();
-
+        
 
         private void btnCreatExam_Click(object sender, EventArgs e)
         {
             int questionCount = int.Parse(txtQuestionCount.Text);
             List<string> selectedTopics = checkedListBoxTopics.CheckedItems.Cast<string>().ToList();
+            List<string> allTopics = checkedListBoxTopics.Items.Cast<string>().ToList();
+
             string difficulty = cmbDifficulty.SelectedItem.ToString();
+            if (checkBoxRandomTopics.Checked)
+            {
+                Random rand = new Random();
+                selectedTopics = allTopics.OrderBy(x => rand.Next()).Take(2).ToList();
+            }
+            else
+            {
+                selectedTopics = checkedListBoxTopics.CheckedItems.Cast<string>().ToList();
+            }
 
             Exam newExam = new Exam
             {
