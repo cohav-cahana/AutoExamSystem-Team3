@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PRO1
+{
+    public class Exam
+    {
+        public string Id { get; set; }
+        public int QuestionCount { get; set; }
+        public List<string> Topics { get; set; }
+        public string Difficulty { get; set; }
+        public int DurationInSeconds { get; set; } // אופציונלי לשלב הבא
+
+        public override string ToString()
+        {
+            return $"מבחן {Id} - {QuestionCount} שאלות, נושא: {string.Join(",", Topics)}, רמה: {Difficulty}";
+        }
+    }
+}

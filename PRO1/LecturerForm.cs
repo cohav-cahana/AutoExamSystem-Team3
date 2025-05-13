@@ -13,6 +13,8 @@ namespace PRO1
 {
     public partial class LecturerForm : Form
     {
+        private FirebaseHelper firebaseHelper = new FirebaseHelper();
+
         public LecturerForm()
         {
             InitializeComponent();
@@ -20,18 +22,7 @@ namespace PRO1
 
         private List<Question> allQuestions = new List<Question>();
 
-        public class Exam
-        {
-            public string Id { get; set; }
-            public int QuestionCount { get; set; }
-            public List<string> Topics { get; set; }
-            public string Difficulty { get; set; }
-
-            public override string ToString()
-            {
-                return $"מבחן {Id} - {QuestionCount} שאלות, נושא: {string.Join(",", Topics)}, רמה: {Difficulty}";
-            }
-        }
+      
 
         private List<Exam> exams = new List<Exam>();
 
@@ -95,6 +86,13 @@ namespace PRO1
                     .Take(questionCount)
                     .ToList();
 
+                if (!int.TryParse(txt_Timer.Text, out int examDuration))
+                {
+                    MessageBox.Show("אנא הזיני זמן בשניות (מספר בלבד)");
+                    return;
+                }
+
+
 
                 if (selectedQuestions.Count < questionCount)
                 {
@@ -107,12 +105,16 @@ namespace PRO1
                     Id = Guid.NewGuid().ToString().Substring(0, 6),
                     QuestionCount = questionCount,
                     Topics = new List<string> { selectedTopic },
-                    Difficulty = difficulty
+                    Difficulty = difficulty,
+                    DurationInSeconds = examDuration
+
                 };
 
                 exams.Add(newExam);
                 listBoxExams.Items.Add(newExam);
                 MessageBox.Show("המבחן נוצר בהצלחה!");
+                await firebaseHelper.SaveExamAsync(newExam);
+
             }
         }
 

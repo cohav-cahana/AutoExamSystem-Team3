@@ -19,6 +19,13 @@ public class FirebaseHelper
         var firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/");
         await firebase.Child("questions").Child(key).PutAsync(data);
     }
+    public async Task SaveExamAsync(Exam exam)
+    {
+        await firebase
+            .Child("exams")
+            .Child(exam.Id)
+            .PutAsync(exam);
+    }
 
 
 
