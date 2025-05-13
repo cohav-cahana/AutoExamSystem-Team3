@@ -66,7 +66,10 @@ namespace PRO1
             {
                 foreach (var q in selectedExam.Questions)
                 {
-                    lstExamQuestions.Items.Add($"• {q.QuestionText} ({q.Type}, {q.Level})");
+                    lstExamQuestions.Items.Add(
+                        $"• {q.QuestionText} | תשובה: {q.CorrectAnswer} ({q.Type}, {q.Level})"
+                     );
+
                 }
             }
             else

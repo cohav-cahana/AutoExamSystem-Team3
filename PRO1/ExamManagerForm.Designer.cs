@@ -47,7 +47,7 @@
             // 
             this.lstExams.FormattingEnabled = true;
             this.lstExams.ItemHeight = 16;
-            this.lstExams.Location = new System.Drawing.Point(189, 41);
+            this.lstExams.Location = new System.Drawing.Point(134, 41);
             this.lstExams.Name = "lstExams";
             this.lstExams.Size = new System.Drawing.Size(280, 244);
             this.lstExams.TabIndex = 1;
@@ -68,10 +68,10 @@
             this.lstExamQuestions.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lstExamQuestions.FormattingEnabled = true;
             this.lstExamQuestions.ItemHeight = 19;
-            this.lstExamQuestions.Location = new System.Drawing.Point(489, 41);
+            this.lstExamQuestions.Location = new System.Drawing.Point(433, 41);
             this.lstExamQuestions.Name = "lstExamQuestions";
             this.lstExamQuestions.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lstExamQuestions.Size = new System.Drawing.Size(268, 251);
+            this.lstExamQuestions.Size = new System.Drawing.Size(355, 251);
             this.lstExamQuestions.TabIndex = 3;
             // 
             // ExamManagerForm
