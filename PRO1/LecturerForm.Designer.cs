@@ -1,6 +1,8 @@
-﻿namespace AutoExamSystem___
+﻿using System.Windows.Forms;
+
+namespace PRO1
 {
-    partial class LecturerForm
+    public partial class LecturerForm : Form
     {
         /// <summary>
         /// Required designer variable.

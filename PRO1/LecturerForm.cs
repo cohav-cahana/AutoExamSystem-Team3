@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PRO1;
 
-namespace AutoExamSystem___
+namespace PRO1
 {
     public partial class LecturerForm : Form
     {

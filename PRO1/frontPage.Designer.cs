@@ -1,4 +1,4 @@
-﻿namespace AutoExamSystem___
+﻿namespace PRO1
 {
     partial class frontPage
     {

@@ -8,11 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClosedXML.Excel;
 using System.IO;
 
 
-namespace AutoExamSystem___
+namespace PRO1
 {
     public partial class RegisterForm : Form
     {
