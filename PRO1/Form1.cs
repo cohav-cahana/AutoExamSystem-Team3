@@ -15,7 +15,7 @@ namespace PRO1
         public Form1()
         {
             InitializeComponent();
-            this.BackgroundImage = Image.FromFile(@"C:\Users\maimo\source\repos\HM2\HM2\Images\back2.jpg");
+            this.BackgroundImage = Properties.Resources.back2;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             label1.Font = new Font("Arial", 12, FontStyle.Bold);
             button1.Font= new Font("Arial", 12, FontStyle.Bold);
@@ -28,14 +28,14 @@ namespace PRO1
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
             this.Hide();
 
-            // יצירת אובייקט של ה-Form של השאלות
             QuestionForm questionForm = new QuestionForm();
 
-            // הצגת ה-Form של השאלות
-            questionForm.ShowDialog();  // אם תרצה שה-Form יהיה מודאלי
-            this.Show();
+            
+            questionForm.ShowDialog();  
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
