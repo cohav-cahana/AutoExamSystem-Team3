@@ -80,5 +80,70 @@ namespace PRO1
                 MessageBox.Show("שם המשתמש או הסיסמה שגויים.");
             }
         }
+        private void SetPlaceholder(TextBox textBox, string placeholder)
+        {
+            textBox.Text = placeholder;
+            textBox.ForeColor = Color.Gray;
+
+            if (textBox == txtpassword_log)
+                textBox.UseSystemPasswordChar = false;
+
+
+            textBox.Enter += (s, e) =>
+            {
+                if (textBox.Text == placeholder)
+                {
+                    textBox.Text = "";
+                    textBox.ForeColor = Color.Black;
+                    if (textBox == txtpassword_log)
+                        textBox.UseSystemPasswordChar = true;
+                }
+            };
+
+            textBox.Leave += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = Color.Gray;
+                }
+            };
+        }
+
+
+        private void frontPage_Load(object sender, EventArgs e)
+        {
+            SetPlaceholder(txtusername_log, "Username");
+            SetPlaceholder(txtpassword_log, "Password");
+            txtpassword_log.UseSystemPasswordChar = true;
+            btnShowPassword.Image = Image.FromFile("Resources/icons8-closed-eye-32x32.png");
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please contact your instructor to reset your password.", "Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        bool passwordVisible = false;
+
+        private void btnShowPassword_Click(object sender, EventArgs e)
+        {
+
+            passwordVisible = !passwordVisible;
+
+            txtpassword_log.UseSystemPasswordChar = !passwordVisible;
+
+            if (passwordVisible)
+            {
+                btnShowPassword.Image = Image.FromFile("Resources/icons8-open-eye-32x32.png");
+            }
+            else
+            {
+                btnShowPassword.Image = Image.FromFile("Resources/icons8-closed-eye-32x32.png");
+            }
+        }
     }
+    
 }
