@@ -18,7 +18,9 @@ namespace PRO1
             this.BackgroundImage = Properties.Resources.back2;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             label1.Font = new Font("Arial", 12, FontStyle.Bold);
+
         }
+
 
         private void QuestionForm_Load(object sender, EventArgs e)
         {

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
+using PRO1;
 
 public class FirebaseHelper
 {
@@ -94,4 +96,14 @@ public class FirebaseHelper
 
         await firebase.Child("questions").PostAsync(question);
     }
+    public async Task<List<Question>> GetAllQuestionsAsync()
+    {
+        var questions = await firebase
+            .Child("questions")
+            .OnceAsync<Question>();
+
+        return questions.Select(q => q.Object).ToList();
+    }
+
+
 }
