@@ -26,6 +26,16 @@ public class FirebaseHelper
             .Child(exam.Id)
             .PutAsync(exam);
     }
+    public async Task<List<Exam>> GetAllExamsAsync()
+    {
+        var firebaseExams = await firebase.Child("exams").OnceAsync<Exam>();
+        return firebaseExams.Select(e => e.Object).ToList();
+    }
+
+    public async Task DeleteExamAsync(string examId)
+    {
+        await firebase.Child("exams").Child(examId).DeleteAsync();
+    }
 
 
 

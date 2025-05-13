@@ -55,6 +55,13 @@ namespace PRO1
             CreateExam.Show();
             this.Hide();
         }
-    
+
+        private void btn_showExam_Click(object sender, EventArgs e)
+        {
+            ExamManagerForm examManagerForm = new ExamManagerForm();
+            examManagerForm.Show();
+            examManagerForm.StartPosition = FormStartPosition.CenterScreen; // center the form
+
+        }
     }
 }

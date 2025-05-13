@@ -106,7 +106,8 @@ namespace PRO1
                     QuestionCount = questionCount,
                     Topics = new List<string> { selectedTopic },
                     Difficulty = difficulty,
-                    DurationInSeconds = examDuration
+                    DurationInSeconds = examDuration,
+                    Questions = selectedQuestions
 
                 };
 

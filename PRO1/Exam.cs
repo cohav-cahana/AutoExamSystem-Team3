@@ -12,7 +12,9 @@ namespace PRO1
         public int QuestionCount { get; set; }
         public List<string> Topics { get; set; }
         public string Difficulty { get; set; }
-        public int DurationInSeconds { get; set; } // אופציונלי לשלב הבא
+        public int DurationInSeconds { get; set; }
+        public List<Question> Questions { get; set; } = new List<Question>();
+
 
         public override string ToString()
         {

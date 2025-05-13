@@ -101,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exam.cs" />
+    <Compile Include="ExamManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamManagerForm.Designer.cs">
+      <DependentUpon>ExamManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FillInTheBlanks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     <Compile Include="TrueFalse.Designer.cs">
       <DependentUpon>TrueFalse.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ExamManagerForm.resx">
+      <DependentUpon>ExamManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FillInTheBlanks.resx">
       <DependentUpon>FillInTheBlanks.cs</DependentUpon>
     </EmbeddedResource>
