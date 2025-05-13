@@ -16,6 +16,7 @@ namespace PRO1
         public TestForm()
         {
             InitializeComponent();
+            panel1.Controls.Add(new FillinTheBlacksPanel());
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
