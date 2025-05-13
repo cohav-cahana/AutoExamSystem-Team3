@@ -148,5 +148,11 @@
   <ItemGroup>
     <Folder Include="Data\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PRO1\PRO1.csproj">
+      <Project>{679c06d5-ca4f-4565-ada4-8dd4ee180447}</Project>
+      <Name>PRO1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AutoExamSystem___;
+
 
 namespace PRO1
 {
@@ -47,5 +49,13 @@ namespace PRO1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LecturerForm CreateExam = new LecturerForm();
+            CreateExam.Show();
+            this.Hide();
+        }
+    
     }
 }
