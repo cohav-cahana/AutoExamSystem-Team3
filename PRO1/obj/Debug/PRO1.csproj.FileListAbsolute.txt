@@ -32,7 +32,6 @@ C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.MultipleChoice.resources
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.OpenQuestion.resources
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.QuestionForm.resources
-C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.TestFrom.resources
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.TrueFalse.resources
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.GenerateResource.cache
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.exe
@@ -55,3 +54,5 @@ C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\bin\Debug\Sys
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.Up2Date
+C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.TestForm.resources
+C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.MultipleChoiceUserControl.resources

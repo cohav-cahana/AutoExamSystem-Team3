@@ -13,17 +13,22 @@ namespace PRO1
 {
     public partial class TestForm : Form
     {
+        private int timeLeftInSeconds = 15;
         public TestForm()
         {
             InitializeComponent();
+            lblTimer.Text = FormatTime(timeLeftInSeconds);
+            examTimer.Start();
+            panel1.Controls.Add(new MultipleChoiceUserControl());
+        }
+        private string FormatTime(int seconds)
+        {
+            int mins = seconds / 60;
+            int secs = seconds % 60;
+            return $"{mins:D2}:{secs:D2}";
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }
@@ -40,7 +45,28 @@ namespace PRO1
 
         private void examTimer_Tick(object sender, EventArgs e)
         {
+            timeLeftInSeconds--;
 
+            if (timeLeftInSeconds <= 0)
+            {
+                examTimer.Stop();
+                MessageBox.Show("Time is up! The test will now close.", "Time Expired", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close(); // Close the test form
+            }
+            else
+            {
+                if(timeLeftInSeconds <= 10)
+                {
+                    lblTimer.ForeColor = Color.LightPink; // Change color to red when time is low
+                    lblTimer.BackColor = Color.Red;
+                }
+                else
+                {
+                    lblTimer.ForeColor = Color.LightGreen;
+                    lblTimer.BackColor = Color.ForestGreen;
+                }
+                lblTimer.Text = FormatTime(timeLeftInSeconds);
+            }
         }
 
         private void lblQuestionCounter_Click(object sender, EventArgs e)

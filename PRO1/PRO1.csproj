@@ -85,6 +85,12 @@
     <Compile Include="MultipleChoice.Designer.cs">
       <DependentUpon>MultipleChoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="MultipleChoiceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MultipleChoiceUserControl.Designer.cs">
+      <DependentUpon>MultipleChoiceUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Open.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MultipleChoice.resx">
       <DependentUpon>MultipleChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleChoiceUserControl.resx">
+      <DependentUpon>MultipleChoiceUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpenQuestion.resx">
       <DependentUpon>Open.cs</DependentUpon>
