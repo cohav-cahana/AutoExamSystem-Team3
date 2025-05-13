@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lstExams = new System.Windows.Forms.ListBox();
             this.btnDeleteExam = new System.Windows.Forms.Button();
+            this.lstExamQuestions = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -48,12 +49,13 @@
             this.lstExams.ItemHeight = 16;
             this.lstExams.Location = new System.Drawing.Point(189, 41);
             this.lstExams.Name = "lstExams";
-            this.lstExams.Size = new System.Drawing.Size(203, 292);
+            this.lstExams.Size = new System.Drawing.Size(280, 244);
             this.lstExams.TabIndex = 1;
+            this.lstExams.SelectedIndexChanged += new System.EventHandler(this.lstExams_SelectedIndexChanged);
             // 
             // btnDeleteExam
             // 
-            this.btnDeleteExam.Location = new System.Drawing.Point(420, 252);
+            this.btnDeleteExam.Location = new System.Drawing.Point(489, 401);
             this.btnDeleteExam.Name = "btnDeleteExam";
             this.btnDeleteExam.Size = new System.Drawing.Size(116, 37);
             this.btnDeleteExam.TabIndex = 2;
@@ -61,11 +63,23 @@
             this.btnDeleteExam.UseVisualStyleBackColor = true;
             this.btnDeleteExam.Click += new System.EventHandler(this.btnDeleteExam_Click);
             // 
+            // lstExamQuestions
+            // 
+            this.lstExamQuestions.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lstExamQuestions.FormattingEnabled = true;
+            this.lstExamQuestions.ItemHeight = 19;
+            this.lstExamQuestions.Location = new System.Drawing.Point(489, 41);
+            this.lstExamQuestions.Name = "lstExamQuestions";
+            this.lstExamQuestions.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lstExamQuestions.Size = new System.Drawing.Size(268, 251);
+            this.lstExamQuestions.TabIndex = 3;
+            // 
             // ExamManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lstExamQuestions);
             this.Controls.Add(this.btnDeleteExam);
             this.Controls.Add(this.lstExams);
             this.Controls.Add(this.label1);
@@ -82,5 +96,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lstExams;
         private System.Windows.Forms.Button btnDeleteExam;
+        private System.Windows.Forms.ListBox lstExamQuestions;
     }
 }

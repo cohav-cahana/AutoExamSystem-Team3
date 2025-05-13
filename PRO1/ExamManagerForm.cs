@@ -53,5 +53,26 @@ namespace PRO1
                 lstExams.Items.Add($"{exam.Id} - {exam.QuestionCount} שאלות ({exam.Difficulty})");
 
         }
+
+        private void lstExams_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstExams.SelectedIndex == -1)
+                return;
+
+            var selectedExam = exams[lstExams.SelectedIndex];
+            lstExamQuestions.Items.Clear();
+
+            if (selectedExam.Questions != null && selectedExam.Questions.Count > 0)
+            {
+                foreach (var q in selectedExam.Questions)
+                {
+                    lstExamQuestions.Items.Add($"• {q.QuestionText} ({q.Type}, {q.Level})");
+                }
+            }
+            else
+            {
+                lstExamQuestions.Items.Add("למבחן זה אין שאלות שמורות");
+            }
+        }
     }
 }
