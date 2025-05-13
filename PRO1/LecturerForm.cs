@@ -17,6 +17,9 @@ namespace PRO1
         {
             InitializeComponent();
         }
+
+        private List<Question> allQuestions = new List<Question>();
+
         public class Exam
         {
             public string Id { get; set; }
@@ -31,15 +34,26 @@ namespace PRO1
         }
 
         private List<Exam> exams = new List<Exam>();
-        
 
-        private void btnCreatExam_Click(object sender, EventArgs e)
+
+        private async void btnCreatExam_Click(object sender, EventArgs e)
         {
-            int questionCount = int.Parse(txtQuestionCount.Text);
-            List<string> selectedTopics = checkedListBoxTopics.CheckedItems.Cast<string>().ToList();
-            List<string> allTopics = checkedListBoxTopics.Items.Cast<string>().ToList();
+            if (!int.TryParse(txtQuestionCount.Text, out int questionCount))
+            {
+                MessageBox.Show("אנא הזיני מספר שאלות תקין");
+                return;
+            }
 
-            string difficulty = cmbDifficulty.SelectedItem.ToString();
+            string difficulty = cmbDifficulty.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(difficulty))
+            {
+                MessageBox.Show("אנא בחרי רמת קושי");
+                return;
+            }
+
+            List<string> allTopics = checkedListBoxTopics.Items.Cast<string>().ToList();
+            List<string> selectedTopics;
+
             if (checkBoxRandomTopics.Checked)
             {
                 Random rand = new Random();
@@ -50,9 +64,21 @@ namespace PRO1
                 selectedTopics = checkedListBoxTopics.CheckedItems.Cast<string>().ToList();
             }
 
+            List<Question> selectedQuestions = allQuestions
+                .Where(q => selectedTopics.Contains(q.Topic) && q.Level == difficulty)
+                .OrderBy(q => Guid.NewGuid()) // ערבוב
+                .Take(questionCount)
+                .ToList();
+
+            if (selectedQuestions.Count < questionCount)
+            {
+                MessageBox.Show("אין מספיק שאלות מתאימות במסד הנתונים");
+                return;
+            }
+
             Exam newExam = new Exam
             {
-                Id = Guid.NewGuid().ToString().Substring(0, 6), // מזהה ייחודי קצר
+                Id = Guid.NewGuid().ToString().Substring(0, 6),
                 QuestionCount = questionCount,
                 Topics = selectedTopics,
                 Difficulty = difficulty
@@ -60,20 +86,37 @@ namespace PRO1
 
             exams.Add(newExam);
             listBoxExams.Items.Add(newExam);
-            MessageBox.Show("המבחן נוצר בהצלחה!");
+
+            MessageBox.Show($"המבחן נוצר עם {selectedQuestions.Count} שאלות!");
+
         }
 
-        private void LecturerForm_Load(object sender, EventArgs e)
+        private async void LecturerForm_Load(object sender, EventArgs e)
         {
+            FirebaseHelper firebaseHelper = new FirebaseHelper();
+            allQuestions = await firebaseHelper.GetAllQuestionsAsync();
+
+            var topics = allQuestions
+       .Select(q => q.Topic)
+       .Where(topic => !string.IsNullOrEmpty(topic))
+       .Distinct()
+       .ToList();
+
+            checkedListBoxTopics.Items.Clear();
+            foreach (var topic in topics)
+                checkedListBoxTopics.Items.Add(topic);
+
+
             checkedListBoxTopics.Items.Clear();
             checkedListBoxTopics.Items.Add("True/False");
             checkedListBoxTopics.Items.Add("Open Question");
             checkedListBoxTopics.Items.Add("Fill in the Blanks");
             checkedListBoxTopics.Items.Add("Multiple Choice");
+
             cmbDifficulty.Items.Clear();
-            cmbDifficulty.Items.Add("Easy");
-            cmbDifficulty.Items.Add("Medium");
-            cmbDifficulty.Items.Add("Hard");
+            cmbDifficulty.Items.Add("קל");
+            cmbDifficulty.Items.Add("בינוני");
+            cmbDifficulty.Items.Add("קשה");
         }
     }
     
