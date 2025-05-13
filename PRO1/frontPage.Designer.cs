@@ -159,8 +159,8 @@
             // 
             // panelRight
             // 
-            this.panelRight.BackgroundImage = global::PRO1.Properties.Resources.AutoExamP_;
-            this.panelRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelRight.BackgroundImage = global::PRO1.Properties.Resources.AutoExamLogo;
+            this.panelRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRight.Location = new System.Drawing.Point(450, 0);
             this.panelRight.Name = "panelRight";
@@ -172,7 +172,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImage = global::PRO1.Properties.Resources.AutoExamP_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelRight);

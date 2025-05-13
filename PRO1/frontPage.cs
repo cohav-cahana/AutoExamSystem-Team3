@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PRO1;
+using PRO1.Properties;
+
 
 namespace PRO1
 {
@@ -117,6 +119,9 @@ namespace PRO1
             SetPlaceholder(txtpassword_log, "Password");
             txtpassword_log.UseSystemPasswordChar = true;
             btnShowPassword.Image = Image.FromFile("Resources/icons8-closed-eye-32x32.png");
+
+            panelRight.BackgroundImageLayout = ImageLayout.Stretch;
+
 
         }
 
