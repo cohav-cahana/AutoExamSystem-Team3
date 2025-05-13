@@ -51,24 +51,32 @@ namespace PRO1
                 return;
             }
 
-            List<string> allTopics = checkedListBoxTopics.Items.Cast<string>().ToList();
-            List<string> selectedTopics;
-
-            if (checkBoxRandomTopics.Checked)
+            string selectedTopic = cmb_topic.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(selectedTopic))
             {
-                Random rand = new Random();
-                selectedTopics = allTopics.OrderBy(x => rand.Next()).Take(2).ToList();
-            }
-            else
-            {
-                selectedTopics = checkedListBoxTopics.CheckedItems.Cast<string>().ToList();
+                MessageBox.Show("אנא בחרי נושא");
+                return;
             }
 
+            List<string> selectedTypes = checkedListBoxType.CheckedItems.Cast<string>().ToList();
+            if (selectedTypes.Count == 0)
+            {
+                MessageBox.Show("אנא בחרי לפחות סוג שאלה אחד");
+                return;
+            }
+
+            // ✨ סינון חכם
             List<Question> selectedQuestions = allQuestions
-                .Where(q => selectedTopics.Contains(q.Topic) && q.Level == difficulty)
-                .OrderBy(q => Guid.NewGuid()) // ערבוב
+                .Where(q =>
+                    q.Topic?.Trim() == selectedTopic.Trim() &&
+                    selectedTypes.Any(t => t.Trim() == q.Type?.Trim()) &&
+                    string.Equals(q.Level?.Trim(), difficulty.Trim(), StringComparison.OrdinalIgnoreCase)
+                )
+                .OrderBy(q => Guid.NewGuid())
                 .Take(questionCount)
                 .ToList();
+
+            MessageBox.Show($"נמצאו {selectedQuestions.Count} שאלות מתאימות");
 
             if (selectedQuestions.Count < questionCount)
             {
@@ -80,15 +88,13 @@ namespace PRO1
             {
                 Id = Guid.NewGuid().ToString().Substring(0, 6),
                 QuestionCount = questionCount,
-                Topics = selectedTopics,
+                Topics = new List<string> { selectedTopic },
                 Difficulty = difficulty
             };
 
             exams.Add(newExam);
             listBoxExams.Items.Add(newExam);
-
-            MessageBox.Show($"המבחן נוצר עם {selectedQuestions.Count} שאלות!");
-
+            MessageBox.Show("המבחן נוצר בהצלחה!");
         }
 
         private async void LecturerForm_Load(object sender, EventArgs e)
@@ -97,27 +103,39 @@ namespace PRO1
             allQuestions = await firebaseHelper.GetAllQuestionsAsync();
 
             var topics = allQuestions
-       .Select(q => q.Topic)
-       .Where(topic => !string.IsNullOrEmpty(topic))
-       .Distinct()
-       .ToList();
+                .Select(q => q.Topic)
+                .Where(topic => !string.IsNullOrWhiteSpace(topic))
+                .Distinct()
+                .ToList();
 
-            checkedListBoxTopics.Items.Clear();
+            cmb_topic.Items.Clear();
             foreach (var topic in topics)
-                checkedListBoxTopics.Items.Add(topic);
+                cmb_topic.Items.Add(topic);
 
 
-            checkedListBoxTopics.Items.Clear();
-            checkedListBoxTopics.Items.Add("True/False");
-            checkedListBoxTopics.Items.Add("Open Question");
-            checkedListBoxTopics.Items.Add("Fill in the Blanks");
-            checkedListBoxTopics.Items.Add("Multiple Choice");
+            var types = allQuestions
+                .Select(q => q.Type)
+                .Where(type => !string.IsNullOrWhiteSpace(type))
+                .Distinct()
+                .ToList();
+
+            checkedListBoxType.Items.Clear();
+            foreach (var type in types)
+                checkedListBoxType.Items.Add(type);
+
+
+
+            var levels = allQuestions
+                           .Select(q => q.Level)
+                           .Where(level => !string.IsNullOrWhiteSpace(level))
+                           .Distinct()
+                           .ToList();
 
             cmbDifficulty.Items.Clear();
-            cmbDifficulty.Items.Add("קל");
-            cmbDifficulty.Items.Add("בינוני");
-            cmbDifficulty.Items.Add("קשה");
+            foreach (var level in levels)
+                cmbDifficulty.Items.Add(level);
         }
+
     }
-    
+
 }
