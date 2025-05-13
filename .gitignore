@@ -37,3 +37,10 @@ Desktop.ini
 
 # קבצי JSON זמניים
 *Layout*.json
+
+# קבצי Cache ו־Temp נוספים שנוצרים על ידי קומפילציה
+*.cache
+*.txt
+
+# קבצי exe של קומפילציה
+*.exe
