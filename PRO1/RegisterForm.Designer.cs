@@ -43,7 +43,11 @@ namespace PRO1
             this.cmbRole = new System.Windows.Forms.ComboBox();
             this.btnPasswordTip = new System.Windows.Forms.Button();
             this.btnUsernameTip = new System.Windows.Forms.Button();
+            this.picSmileySad = new System.Windows.Forms.PictureBox();
+            this.picSmiley = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picSmileySad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSmiley)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,6 +194,26 @@ namespace PRO1
             this.btnUsernameTip.Text = "?";
             this.btnUsernameTip.UseVisualStyleBackColor = true;
             // 
+            // picSmileySad
+            // 
+            this.picSmileySad.Image = global::PRO1.Properties.Resources.sad_smiley_small;
+            this.picSmileySad.Location = new System.Drawing.Point(326, 461);
+            this.picSmileySad.Name = "picSmileySad";
+            this.picSmileySad.Size = new System.Drawing.Size(53, 61);
+            this.picSmileySad.TabIndex = 15;
+            this.picSmileySad.TabStop = false;
+            this.picSmileySad.Visible = false;
+            // 
+            // picSmiley
+            // 
+            this.picSmiley.Image = global::PRO1.Properties.Resources.icon_smiley_small;
+            this.picSmiley.Location = new System.Drawing.Point(469, 282);
+            this.picSmiley.Name = "picSmiley";
+            this.picSmiley.Size = new System.Drawing.Size(100, 50);
+            this.picSmiley.TabIndex = 14;
+            this.picSmiley.TabStop = false;
+            this.picSmiley.Visible = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(543, -5);
@@ -205,6 +229,8 @@ namespace PRO1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(900, 647);
+            this.Controls.Add(this.picSmileySad);
+            this.Controls.Add(this.picSmiley);
             this.Controls.Add(this.btnUsernameTip);
             this.Controls.Add(this.btnPasswordTip);
             this.Controls.Add(this.pictureBox1);
@@ -226,6 +252,8 @@ namespace PRO1
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picSmileySad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSmiley)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -248,5 +276,7 @@ namespace PRO1
         private PictureBox pictureBox1;
         private Button btnPasswordTip;
         private Button btnUsernameTip;
+        private PictureBox picSmiley;
+        private PictureBox picSmileySad;
     }
 }

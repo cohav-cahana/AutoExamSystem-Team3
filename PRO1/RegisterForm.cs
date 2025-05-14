@@ -17,6 +17,9 @@ namespace PRO1
     public partial class RegisterForm : Form
     {
         ToolTip tip = new ToolTip();
+        private Point originalSmileyLocation;
+        private Point originalSadSmileyLocation;
+
 
         public RegisterForm()
         {
@@ -33,6 +36,7 @@ namespace PRO1
 
             if (username.Length < 6 || username.Length > 8 || !System.Text.RegularExpressions.Regex.IsMatch(username, @"^[a-zA-Z]*\d{0,2}$"))
             {
+                JumpSmiley(picSmileySad, originalSadSmileyLocation);
                 MessageBox.Show("שם המשתמש חייב להכיל 6–8 תווים, עד שתי ספרות וכל השאר אותיות באנגלית.");
                 return;
             }
@@ -40,23 +44,31 @@ namespace PRO1
             if (password.Length < 8 || password.Length > 10 ||
                 !System.Text.RegularExpressions.Regex.IsMatch(password, @"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$"))
             {
+                JumpSmiley(picSmileySad, originalSadSmileyLocation);
                 MessageBox.Show("הסיסמה חייבת להכיל 8–10 תווים, לפחות אות אחת, ספרה אחת ותו מיוחד.");
                 return;
             }
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(id, @"^\d{9}$"))
             {
+                JumpSmiley(picSmileySad, originalSadSmileyLocation);
                 MessageBox.Show("מספר תז לא תקין. חייב להיות 9 ספרות.");
                 return;
             }
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
+                JumpSmiley(picSmileySad, originalSadSmileyLocation);
                 MessageBox.Show("כתובת מייל לא תקינה.");
                 return;
             }
-
+            JumpSmiley(picSmiley, originalSmileyLocation);
             MessageBox.Show("  ההרשמה בוצעה בהצלחה! ");
+
+
+         
+
+
 
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Users.xlsx");
 
@@ -88,7 +100,7 @@ namespace PRO1
 
             workbook.Save();
             //debug
-           //MessageBox.Show("המשתמש נשמר בהצלחה!");
+          // MessageBox.Show("המשתמש נשמר בהצלחה!");
       
             
         }
@@ -174,7 +186,55 @@ namespace PRO1
             RegisterB.Region = new Region(path);
 
 
+            //smiley icon
+            picSmiley.Image = Properties.Resources.icon_smiley_small; 
+            picSmiley.SizeMode = PictureBoxSizeMode.StretchImage;
+            picSmiley.Size = new Size(40, 40);
+            picSmiley.Location = new Point(RegisterB.Right + 5, RegisterB.Top);
+            originalSmileyLocation = picSmiley.Location;
+
+            //sad smiley icon
+            picSmileySad.Image = Properties.Resources.sad_smiley_small;
+            picSmileySad.SizeMode = PictureBoxSizeMode.StretchImage;
+            picSmileySad.Size = new Size(40, 40);
+            originalSadSmileyLocation = picSmileySad.Location;
+
+
 
         }
+        private void JumpSmiley(PictureBox pic, Point original)
+        {
+            pic.Visible = true;
+            int count = 0;
+            int offset = 6;
+
+            Timer t = new Timer();
+            t.Interval = 60;
+            t.Tick += (s, e) =>
+            {
+                if (count >= 6)
+                {
+                    pic.Location = original;
+                    t.Stop();
+                    Timer hide = new Timer();
+                    hide.Interval = 1000;
+                    hide.Tick += (ss, ee) =>
+                    {
+                        pic.Visible = false;
+                        hide.Stop();
+                    };
+                    hide.Start();
+                }
+                else
+                {
+                    int dy = (count % 2 == 0) ? -offset : offset;
+                    pic.Location = new Point(original.X, original.Y + dy);
+                    count++;
+                }
+            };
+            t.Start();
+        }
+     
+
     }
 }
