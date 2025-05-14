@@ -63,6 +63,16 @@ namespace PRO1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AutoExamLogo {
+            get {
+                object obj = ResourceManager.GetObject("AutoExamLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back2 {
             get {
                 object obj = ResourceManager.GetObject("back2", resourceCulture);
@@ -77,6 +87,26 @@ namespace PRO1.Properties {
             get {
                 object obj = ResourceManager.GetObject("projec1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] icons8_closed_eye_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-closed-eye-32x32", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] icons8_open_eye_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-open-eye-32x32", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

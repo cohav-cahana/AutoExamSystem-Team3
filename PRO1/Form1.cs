@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PRO1
 {
     public partial class Form1 : Form
@@ -45,6 +46,21 @@ namespace PRO1
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LecturerForm CreateExam = new LecturerForm();
+            CreateExam.Show();
+            this.Hide();
+        }
+
+        private void btn_showExam_Click(object sender, EventArgs e)
+        {
+            ExamManagerForm examManagerForm = new ExamManagerForm();
+            examManagerForm.Show();
+            examManagerForm.StartPosition = FormStartPosition.CenterScreen; // center the form
 
         }
     }

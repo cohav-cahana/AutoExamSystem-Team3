@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
+using PRO1;
 
 public class FirebaseHelper
 {
@@ -16,6 +18,23 @@ public class FirebaseHelper
     {
         var firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/");
         await firebase.Child("questions").Child(key).PutAsync(data);
+    }
+    public async Task SaveExamAsync(Exam exam)
+    {
+        await firebase
+            .Child("exams")
+            .Child(exam.Id)
+            .PutAsync(exam);
+    }
+    public async Task<List<Exam>> GetAllExamsAsync()
+    {
+        var firebaseExams = await firebase.Child("exams").OnceAsync<Exam>();
+        return firebaseExams.Select(e => e.Object).ToList();
+    }
+
+    public async Task DeleteExamAsync(string examId)
+    {
+        await firebase.Child("exams").Child(examId).DeleteAsync();
     }
 
 
@@ -94,4 +113,14 @@ public class FirebaseHelper
 
         await firebase.Child("questions").PostAsync(question);
     }
+    public async Task<List<Question>> GetAllQuestionsAsync()
+    {
+        var questions = await firebase
+            .Child("questions")
+            .OnceAsync<Question>();
+
+        return questions.Select(q => q.Object).ToList();
+    }
+
+
 }
