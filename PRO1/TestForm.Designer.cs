@@ -33,6 +33,8 @@
             this.examTimer = new System.Windows.Forms.Timer(this.components);
             this.lblTimer = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.examStartBtn = new System.Windows.Forms.Button();
+            this.nextBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +67,6 @@
             this.lblTimer.TabIndex = 4;
             this.lblTimer.Text = "00:00\r\n";
             this.lblTimer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblTimer.Click += new System.EventHandler(this.lblTimer_Click);
             // 
             // panel1
             // 
@@ -74,6 +75,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(931, 447);
             this.panel1.TabIndex = 6;
+            // 
+            // examStartBtn
+            // 
+            this.examStartBtn.Location = new System.Drawing.Point(494, 586);
+            this.examStartBtn.Name = "examStartBtn";
+            this.examStartBtn.Size = new System.Drawing.Size(105, 34);
+            this.examStartBtn.TabIndex = 7;
+            this.examStartBtn.Text = "Click To Start";
+            this.examStartBtn.UseVisualStyleBackColor = true;
+            this.examStartBtn.Click += new System.EventHandler(this.examStartBtn_Click);
+            // 
+            // nextBtn
+            // 
+            this.nextBtn.Location = new System.Drawing.Point(5, 586);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(128, 34);
+            this.nextBtn.TabIndex = 8;
+            this.nextBtn.Text = "Next Question";
+            this.nextBtn.UseVisualStyleBackColor = true;
+            this.nextBtn.Visible = false;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
             // TestForm
             // 
@@ -84,6 +106,8 @@
             this.BackgroundImage = global::PRO1.Properties.Resources.projec1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1099, 637);
+            this.Controls.Add(this.nextBtn);
+            this.Controls.Add(this.examStartBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.label1);
@@ -92,7 +116,6 @@
             this.Name = "TestForm";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Text = "Test";
-            this.Load += new System.EventHandler(this.TestFrom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +126,7 @@
         private System.Windows.Forms.Timer examTimer;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button examStartBtn;
+        private System.Windows.Forms.Button nextBtn;
     }
 }

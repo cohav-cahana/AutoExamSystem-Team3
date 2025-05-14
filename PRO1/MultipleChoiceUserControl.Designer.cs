@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.questionLbl = new System.Windows.Forms.Label();
             this.lblQuestionCounter = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -36,26 +36,26 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // label2
+            // questionLbl
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.questionLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Britannic Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(282, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(368, 50);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Question Number 1";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.questionLbl.BackColor = System.Drawing.Color.Transparent;
+            this.questionLbl.Font = new System.Drawing.Font("Britannic Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionLbl.ForeColor = System.Drawing.Color.Black;
+            this.questionLbl.Location = new System.Drawing.Point(137, 49);
+            this.questionLbl.Name = "questionLbl";
+            this.questionLbl.Size = new System.Drawing.Size(672, 84);
+            this.questionLbl.TabIndex = 3;
+            this.questionLbl.Text = "Question Number 1";
+            this.questionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblQuestionCounter
             // 
             this.lblQuestionCounter.AutoSize = true;
             this.lblQuestionCounter.BackColor = System.Drawing.Color.Transparent;
             this.lblQuestionCounter.Font = new System.Drawing.Font("Broadway", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestionCounter.Location = new System.Drawing.Point(332, 394);
+            this.lblQuestionCounter.Location = new System.Drawing.Point(337, 398);
             this.lblQuestionCounter.Name = "lblQuestionCounter";
             this.lblQuestionCounter.Size = new System.Drawing.Size(262, 26);
             this.lblQuestionCounter.TabIndex = 6;
@@ -124,7 +124,8 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.lblQuestionCounter);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.questionLbl);
+            this.Location = new System.Drawing.Point(282, 19);
             this.Name = "MultipleChoiceUserControl";
             this.Size = new System.Drawing.Size(931, 447);
             this.ResumeLayout(false);
@@ -134,7 +135,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label questionLbl;
         private System.Windows.Forms.Label lblQuestionCounter;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;

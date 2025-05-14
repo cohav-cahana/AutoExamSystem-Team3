@@ -37,6 +37,34 @@ public class FirebaseHelper
         await firebase.Child("exams").Child(examId).DeleteAsync();
     }
 
+    public async Task AddUserAsync(string username, string password, string id, string email, string role)
+    {
+        var user = new
+        {
+            Username = username,
+            Password = password,
+            ID = id,
+            Email = email,
+            Role = role
+        };
+
+        await firebase
+            .Child("users")
+            .Child(id)
+            .PutAsync(user);
+    }
+
+    public async Task DeleteUserAsync(string userId) // Use when you need to delete a specific user from the database
+    {
+        await firebase.Child("users").Child(userId).DeleteAsync();
+    }
+
+    public async Task SaveExamResultAsync(ExamResult result)
+    {
+        await firebase
+            .Child($"users/{result.UserId}/grades")
+            .PostAsync(result);
+    }
 
 
     public async Task AddQuestionAsync(string type, string correctAnswer, string topic, string level, string questionText, string answer1, string answer2, string answer3, string answer4)

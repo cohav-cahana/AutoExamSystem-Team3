@@ -20,8 +20,9 @@ namespace PRO1
             InitializeComponent();
         }
 
-        private void RegisterB_Click(object sender, EventArgs e)
+        private async void RegisterB_Click(object sender, EventArgs e)
         {
+            FirebaseHelper firebaseHelper = new FirebaseHelper();
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
             string id = txtID.Text.Trim();
@@ -85,6 +86,10 @@ namespace PRO1
             worksheet.Cell(lastRow, 5).Value = role;
 
             workbook.Save();
+
+            await firebaseHelper.AddUserAsync(username, password, id, email, role);
+
+
             MessageBox.Show("המשתמש נשמר בהצלחה!");
       
             

@@ -108,7 +108,7 @@
             this.colDifficulty.Name = "colDifficulty";
             this.colDifficulty.ReadOnly = true;
             // 
-            // GradeForm
+            // GradeFormTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,8 +117,8 @@
             this.ClientSize = new System.Drawing.Size(1317, 744);
             this.Controls.Add(this.dgvScores);
             this.Controls.Add(this.linkLabel1);
-            this.Name = "GradeForm";
-            this.Text = "GradeFrom";
+            this.Name = "GradeFormTeacher";
+            this.Text = "GradeFormTeacher";
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

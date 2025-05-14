@@ -12,14 +12,27 @@ namespace PRO1
 {
     public partial class StudentForm : Form
     {
-        public StudentForm()
+        private frontPage login;
+        private User currentUser;
+        public StudentForm(User user, frontPage login)
         {
             InitializeComponent();
+            this.currentUser = user;
+            this.login = login;
+            welcomeLbl.Text = "Welcome " + user.Username;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void examBtn_Click(object sender, EventArgs e)
         {
+            ExamSelection examSelection = new ExamSelection(currentUser, this);
+            examSelection.Show();
+            this.Hide();
+        }
 
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            login.Show();
+            this.Close();
         }
     }
 }

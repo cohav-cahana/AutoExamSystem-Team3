@@ -100,11 +100,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FillinTheBlacksPanel.cs">
+    <Compile Include="ExamResult.cs" />
+    <Compile Include="ExamSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamSelection.Designer.cs">
+      <DependentUpon>ExamSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FillinTheBlanksPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FillinTheBlacksPanel.Designer.cs">
-      <DependentUpon>FillinTheBlacksPanel.cs</DependentUpon>
+    <Compile Include="FillinTheBlanksPanel.Designer.cs">
+      <DependentUpon>FillinTheBlanksPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Exam.cs" />
     <Compile Include="ExamManagerForm.cs">
@@ -162,11 +169,11 @@
     <Compile Include="Open.Designer.cs">
       <DependentUpon>Open.cs</DependentUpon>
     </Compile>
-    <Compile Include="openQuestionPanel.cs">
+    <Compile Include="OpenQuestionUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="openQuestionPanel.Designer.cs">
-      <DependentUpon>openQuestionPanel.cs</DependentUpon>
+    <Compile Include="OpenQuestionUserControl.Designer.cs">
+      <DependentUpon>OpenQuestionUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -211,8 +218,18 @@
     <Compile Include="TrueFalse.Designer.cs">
       <DependentUpon>TrueFalse.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FillinTheBlacksPanel.resx">
-      <DependentUpon>FillinTheBlacksPanel.cs</DependentUpon>
+    <Compile Include="TrueFalseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TrueFalseUserControl.Designer.cs">
+      <DependentUpon>TrueFalseUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="ExamSelection.resx">
+      <DependentUpon>ExamSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FillinTheBlanksPanel.resx">
+      <DependentUpon>FillinTheBlanksPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExamManagerForm.resx">
       <DependentUpon>ExamManagerForm.cs</DependentUpon>
@@ -241,8 +258,8 @@
     <EmbeddedResource Include="OpenQuestion.resx">
       <DependentUpon>Open.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="openQuestionPanel.resx">
-      <DependentUpon>openQuestionPanel.cs</DependentUpon>
+    <EmbeddedResource Include="OpenQuestionUserControl.resx">
+      <DependentUpon>OpenQuestionUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -263,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrueFalse.resx">
       <DependentUpon>TrueFalse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrueFalseUserControl.resx">
+      <DependentUpon>TrueFalseUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -13,44 +13,48 @@ namespace PRO1
 {
     public partial class TestForm : Form
     {
-        private int timeLeftInSeconds = 15;
-        public TestForm()
+        private int timeLeftInSeconds;
+        private User currentUser;
+        private Exam currentExam;
+        private int questionCounter = 0;
+        private int correctAnswers = 0;
+        private int totalQuestions;
+        private ExamSelection examSelection;
+        public TestForm(User user, Exam exam, ExamSelection examSelection)
         {
             InitializeComponent();
+            this.examSelection = examSelection;
+            timeLeftInSeconds = exam.DurationInSeconds;
+            this.currentUser = user;
+            this.currentExam = exam;
+            this.totalQuestions = exam.QuestionCount;
             lblTimer.Text = FormatTime(timeLeftInSeconds);
-            examTimer.Start();
-            panel1.Controls.Add(new MultipleChoiceUserControl());
         }
-        private string FormatTime(int seconds)
+        public static string FormatTime(int seconds)
         {
             int mins = seconds / 60;
             int secs = seconds % 60;
             return $"{mins:D2}:{secs:D2}";
         }
 
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TestFrom_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void examTimer_Tick(object sender, EventArgs e)
+        private async void examTimer_Tick(object sender, EventArgs e)
         {
             timeLeftInSeconds--;
 
             if (timeLeftInSeconds <= 0)
             {
                 examTimer.Stop();
-                MessageBox.Show("Time is up! The test will now close.", "Time Expired", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                float score = (correctAnswers * 100) / totalQuestions;
+                ExamResult result = new ExamResult
+                {
+                    UserId = currentUser.UserId,
+                    ExamId = currentExam.Id,
+                    Grade = score,
+                    TakenAt = DateTime.Now
+                };
+                FirebaseHelper firebaseHelper = new FirebaseHelper();
+                await firebaseHelper.SaveExamResultAsync(result);
+                MessageBox.Show("Time is up!\nYour Grade Is: " + score +"\nThe test will now close.", "Time Expired", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close(); // Close the test form
             }
             else
@@ -69,29 +73,137 @@ namespace PRO1
             }
         }
 
-        private void lblQuestionCounter_Click(object sender, EventArgs e)
+        private void StartExam()
         {
-
+            examTimer.Start();
+            if (questionCounter < totalQuestions)
+            {
+                LoadQuestion();
+            }
+            else
+            {
+                MessageBox.Show("Exam Completed!");
+                this.Close(); // Close the test form
+            }
         }
 
-        private void lblTimer_Click(object sender, EventArgs e)
+        private void LoadQuestion()
         {
+            panel1.Controls.Clear();
 
+            Question currentQuestion = currentExam.Questions[questionCounter];
+            UserControl control = null;
+
+            if (currentQuestion.Type == "FillInTheBlanks")
+            {
+                control = new FillinTheBlanksPanel(currentQuestion, questionCounter, totalQuestions);
+            }
+            else if (currentQuestion.Type == "MultipleChoice")
+            {
+                control = new MultipleChoiceUserControl(currentQuestion, questionCounter, totalQuestions);
+            }
+            else if (currentQuestion.Type == "TrueFalse")
+            {
+                control = new TrueFalseUserControl(currentQuestion, questionCounter, totalQuestions);
+            }
+            else if (currentQuestion.Type == "OpenQuestion")
+            {
+                control = new OpenQuestionUserControl(currentQuestion, questionCounter, totalQuestions);
+            }
+            else
+            {
+                MessageBox.Show("Unknown question type.");
+                return;
+            }
+
+            // Center the control in the panel
+            control.Location = new Point(
+                (panel1.Width - control.Width) / 2,
+                (panel1.Height - control.Height) / 2
+            );
+            control.Anchor = AnchorStyles.None;
+
+            panel1.Controls.Add(control);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void examStartBtn_Click(object sender, EventArgs e)
         {
-
+            examStartBtn.Visible = false;
+            nextBtn.Visible = true;
+            StartExam();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private async void nextBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
+            if (panel1.Controls[0] is MultipleChoiceUserControl mc)
+            {
+                if(!mc.IsAnswered())
+                {
+                    MessageBox.Show("Please answer the question before proceeding.");
+                    return;
+                }
+                if(mc.IsCorrect())
+                {
+                    correctAnswers++;
+                }
+            }
+            if (panel1.Controls[0] is TrueFalseUserControl tf)
+            {
+                if (!tf.IsAnswered())
+                {
+                    MessageBox.Show("Please answer the question before proceeding.");
+                    return;
+                }
+                if (tf.IsCorrect())
+                {
+                    correctAnswers++;
+                }
+            }
+            if(panel1.Controls[0] is FillinTheBlanksPanel fb)
+            {
+                if (!fb.IsAnswered())
+                {
+                    MessageBox.Show("Please answer the question before proceeding.");
+                    return;
+                }
+                if (fb.IsCorrect())
+                {
+                    correctAnswers++;
+                }
+            }
+            if(panel1.Controls[0] is OpenQuestionUserControl oq)
+            {
+                if (!oq.IsAnswered())
+                {
+                    MessageBox.Show("Please answer the question before proceeding.");
+                    return;
+                }
+                if (oq.IsCorrect())
+                {
+                    correctAnswers++;
+                }
+            }
+            questionCounter++;
+            if (questionCounter < totalQuestions)
+            {
+                LoadQuestion();
+            }
+            else
+            {
+                float score = (correctAnswers * 100) / totalQuestions;
+                ExamResult result = new ExamResult
+                {
+                    UserId = currentUser.UserId,
+                    ExamId = currentExam.Id,
+                    Grade = score,
+                    TakenAt = DateTime.Now
+                };
+                FirebaseHelper firebaseHelper = new FirebaseHelper();
+                await firebaseHelper.SaveExamResultAsync(result);
+                MessageBox.Show("Exam Completed!\nYour Grade Is: " + score);
+                examSelection.Show();
+                this.Close(); // Close the test form
+            }
         }
     }
 }
