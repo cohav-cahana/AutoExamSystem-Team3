@@ -85,11 +85,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GradeFrom.cs">
+    <Compile Include="GradeFormTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GradeFrom.Designer.cs">
-      <DependentUpon>GradeFrom.cs</DependentUpon>
+    <Compile Include="GradeFormTeacher.Designer.cs">
+      <DependentUpon>GradeFormTeacher.cs</DependentUpon>
     </Compile>
     <Compile Include="MultipleChoice.cs">
       <SubType>Form</SubType>
@@ -149,8 +149,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GradeFrom.resx">
-      <DependentUpon>GradeFrom.cs</DependentUpon>
+    <EmbeddedResource Include="GradeFormTeacher.resx">
+      <DependentUpon>GradeFormTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MultipleChoice.resx">
       <DependentUpon>MultipleChoice.cs</DependentUpon>

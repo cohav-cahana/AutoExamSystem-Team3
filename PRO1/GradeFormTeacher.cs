@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PRO1
 {
-    public partial class GradeFrom : Form
+    public partial class GradeFormTeacher : Form
     {
-        public GradeFrom()
+        public GradeFormTeacher()
         {
             InitializeComponent();
         }

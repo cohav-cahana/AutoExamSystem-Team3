@@ -29,38 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.examTimer = new System.Windows.Forms.Timer(this.components);
             this.lblTimer = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(2, 603);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1095, 32);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.Black;
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(1081, 26);
-            this.toolStripStatusLabel1.Spring = true;
-            this.toolStripStatusLabel1.Text = "Test Project";
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // label1
             // 
@@ -114,24 +87,18 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.statusStrip1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TestForm";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Text = "Test";
             this.Load += new System.EventHandler(this.TestFrom_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer examTimer;
         private System.Windows.Forms.Label lblTimer;
