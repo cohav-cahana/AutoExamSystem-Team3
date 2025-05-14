@@ -56,3 +56,6 @@ C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\bin\Debug\Sys
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.Up2Date
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.TestForm.resources
 C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.MultipleChoiceUserControl.resources
+C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.FillinTheBlacksPanel.resources
+C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.GradeFormTeacher.resources
+C:\Users\amirs\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.openQuestionPanel.resources
