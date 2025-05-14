@@ -104,6 +104,30 @@ namespace PRO1
       
             
         }
+        private void SetPlaceholder(TextBox textBox, string placeholder)
+        {
+            textBox.Text = placeholder;
+            textBox.ForeColor = Color.Gray;
+
+            textBox.Enter += (s, e) =>
+            {
+                if (textBox.Text == placeholder)
+                {
+                    textBox.Text = "";
+                    textBox.ForeColor = Color.Black;
+                }
+            };
+
+            textBox.Leave += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = Color.Gray;
+                }
+            };
+        }
+
 
         private void cmbRole_MouseEnter(object sender, EventArgs e)
         {
@@ -131,6 +155,13 @@ namespace PRO1
                     fadeTimer.Stop();
             };
             fadeTimer.Start();
+
+            //setPlaceholder for textboxes
+            SetPlaceholder(txtUsername, "User Name");
+            SetPlaceholder(txtPassword, "Password");
+            SetPlaceholder(txtID, "ID");
+            SetPlaceholder(txtEmail, "Email");
+
 
             // button to show password tip
             btnPasswordTip.FlatStyle = FlatStyle.Flat;

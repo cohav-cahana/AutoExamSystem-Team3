@@ -98,7 +98,7 @@
             this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(103, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 45);
+            this.label3.Size = new System.Drawing.Size(261, 46);
             this.label3.TabIndex = 6;
             this.label3.Text = "Welcome back!";
             // 
