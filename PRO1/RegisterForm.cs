@@ -9,12 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Drawing2D;
 
 
 namespace PRO1
 {
     public partial class RegisterForm : Form
     {
+        ToolTip tip = new ToolTip();
+
         public RegisterForm()
         {
             InitializeComponent();
@@ -43,7 +46,7 @@ namespace PRO1
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(id, @"^\d{9}$"))
             {
-                MessageBox.Show("מספר ת\"ז לא תקין. חייב להיות 9 ספרות.");
+                MessageBox.Show("מספר תז לא תקין. חייב להיות 9 ספרות.");
                 return;
             }
 
@@ -53,8 +56,7 @@ namespace PRO1
                 return;
             }
 
-            MessageBox.Show("הרשמה הושלמה בהצלחה!");
-
+            MessageBox.Show("  ההרשמה בוצעה בהצלחה! ");
 
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Users.xlsx");
 
@@ -85,9 +87,94 @@ namespace PRO1
             worksheet.Cell(lastRow, 5).Value = role;
 
             workbook.Save();
-            MessageBox.Show("המשתמש נשמר בהצלחה!");
+            //debug
+           //MessageBox.Show("המשתמש נשמר בהצלחה!");
       
             
+        }
+
+        private void cmbRole_MouseEnter(object sender, EventArgs e)
+        {
+            RegisterB.BackColor = Color.SlateBlue;
+
+
+        }
+
+        private void cmbRole_MouseLeave(object sender, EventArgs e)
+        {
+            RegisterB.BackColor = Color.MediumSlateBlue;
+
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0.2;
+            Timer fadeTimer = new Timer();
+            fadeTimer.Interval = 15;
+            fadeTimer.Tick += (s, args) =>
+            {
+                if (this.Opacity < 1)
+                    this.Opacity += 0.05;
+                else
+                    fadeTimer.Stop();
+            };
+            fadeTimer.Start();
+
+            // button to show password tip
+            btnPasswordTip.FlatStyle = FlatStyle.Flat;
+            btnPasswordTip.FlatAppearance.BorderSize = 0;
+            btnPasswordTip.BackColor = Color.MediumSlateBlue;
+            btnPasswordTip.ForeColor = Color.White;
+            btnPasswordTip.Width = 22;
+            btnPasswordTip.Height = 22;
+            btnPasswordTip.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            btnPasswordTip.Location = new Point(txtPassword.Right + 5, txtPassword.Top);
+            btnPasswordTip.Cursor = Cursors.Hand;
+
+            // make it round
+            GraphicsPath circlePath = new GraphicsPath();
+            circlePath.AddEllipse(0, 0, btnPasswordTip.Width, btnPasswordTip.Height);
+            btnPasswordTip.Region = new Region(circlePath);
+            // add the tooltip
+            tip.SetToolTip(btnPasswordTip, "הסיסמה צריכה להכיל 8-10 תווים, לפחות אות אחת, מספר ותו מיוחד.");
+
+            //button to show UserName tip
+            btnUsernameTip.FlatStyle = FlatStyle.Flat;
+            btnUsernameTip.FlatAppearance.BorderSize = 0;
+            btnUsernameTip.BackColor = Color.MediumSlateBlue;
+            btnUsernameTip.ForeColor = Color.White;
+            btnUsernameTip.Width = 22;
+            btnUsernameTip.Height = 22;
+            btnUsernameTip.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            btnUsernameTip.Location = new Point(txtUsername.Right + 5, txtUsername.Top);
+            btnUsernameTip.Cursor = Cursors.Hand;
+
+            //make it round
+            GraphicsPath circlePath2 = new GraphicsPath();
+            circlePath2.AddEllipse(0, 0, btnUsernameTip.Width, btnUsernameTip.Height);
+            btnUsernameTip.Region = new Region(circlePath2);
+
+            // add the tooltip
+            tip.SetToolTip(btnUsernameTip, "שם המשתמש חייב להכיל 6–8 תווים, עד שתי ספרות וכל השאר אותיות באנגלית.");
+            
+
+
+
+            // make the Register button round
+                        GraphicsPath path = new GraphicsPath();
+            int radius = 50; 
+            Rectangle rect = new Rectangle(0, 0, RegisterB.Width, RegisterB.Height);
+
+            path.AddArc(rect.X, rect.Y, radius, radius, 180, 90);
+            path.AddArc(rect.Right - radius, rect.Y, radius, radius, 270, 90);
+            path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90);
+            path.AddArc(rect.X, rect.Bottom - radius, radius, radius, 90, 90);
+            path.CloseFigure();
+
+            RegisterB.Region = new Region(path);
+
+
+
         }
     }
 }

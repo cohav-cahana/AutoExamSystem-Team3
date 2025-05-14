@@ -233,6 +233,7 @@
     <Content Include="Images\AutoExamP_.jpg" />
     <Content Include="Images\back2.jpg" />
     <Content Include="Resources\AutoExamLogo.jpg" />
+    <None Include="Resources\scelogo.jpeg" />
     <None Include="Resources\AutoExamLogo1.jpg" />
     <Content Include="Resources\icons8-closed-eye-32x32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
