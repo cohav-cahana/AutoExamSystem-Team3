@@ -57,11 +57,19 @@ namespace PRO1
                 if (excelUser == username && excelPass == password)
                 {
                     found = true;
+                    User user = new User
+                    {
+                        Username = username,
+                        Password = password,
+                        UserId = row.Cell(3).GetValue<string>(),
+                        Email = row.Cell(4).GetValue<string>(),
+                        Role = excelRole
+                    };
 
                     if (excelRole.ToLower() == "student")
                     {
                         MessageBox.Show("ברוך הבא סטודנט!");
-                        StudentForm studentForm = new StudentForm();
+                        StudentForm studentForm = new StudentForm(user, this);
                         studentForm.Show();
                         this.Hide();
                     }
@@ -150,5 +158,5 @@ namespace PRO1
             }
         }
     }
-    
+
 }

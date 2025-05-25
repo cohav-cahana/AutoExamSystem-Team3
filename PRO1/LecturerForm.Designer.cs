@@ -106,7 +106,7 @@ namespace PRO1
             this.btnCreatExam.Name = "btnCreatExam";
             this.btnCreatExam.Size = new System.Drawing.Size(115, 39);
             this.btnCreatExam.TabIndex = 6;
-            this.btnCreatExam.Text = "Creat Exam";
+            this.btnCreatExam.Text = "Create Exam";
             this.btnCreatExam.UseVisualStyleBackColor = true;
             this.btnCreatExam.Click += new System.EventHandler(this.btnCreatExam_Click);
             // 

@@ -83,9 +83,9 @@ namespace PRO1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icon_smiley_small {
+        internal static System.Drawing.Bitmap projec1 {
             get {
-                object obj = ResourceManager.GetObject("icon_smiley_small", resourceCulture);
+                object obj = ResourceManager.GetObject("projec1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -107,26 +107,6 @@ namespace PRO1.Properties {
             get {
                 object obj = ResourceManager.GetObject("icons8-open-eye-32x32", resourceCulture);
                 return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sad_smiley_small {
-            get {
-                object obj = ResourceManager.GetObject("sad_smiley_small", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap scelogo {
-            get {
-                object obj = ResourceManager.GetObject("scelogo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
