@@ -41,6 +41,8 @@ namespace PRO1
             this.checkBoxRandomTopics = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmb_topic = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_Timer = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -121,7 +123,7 @@ namespace PRO1
             // 
             this.checkBoxRandomTopics.AutoSize = true;
             this.checkBoxRandomTopics.Location = new System.Drawing.Point(272, 156);
-            this.checkBoxRandomTopics.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxRandomTopics.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxRandomTopics.Name = "checkBoxRandomTopics";
             this.checkBoxRandomTopics.Size = new System.Drawing.Size(117, 20);
             this.checkBoxRandomTopics.TabIndex = 8;
@@ -145,11 +147,29 @@ namespace PRO1
             this.cmb_topic.Size = new System.Drawing.Size(121, 24);
             this.cmb_topic.TabIndex = 10;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(45, 237);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(177, 16);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Exam duration (in seconds) : ";
+            // 
+            // txt_Timer
+            // 
+            this.txt_Timer.Location = new System.Drawing.Point(267, 237);
+            this.txt_Timer.Name = "txt_Timer";
+            this.txt_Timer.Size = new System.Drawing.Size(100, 22);
+            this.txt_Timer.TabIndex = 12;
+            // 
             // LecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txt_Timer);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cmb_topic);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBoxRandomTopics);
@@ -183,5 +203,7 @@ namespace PRO1
         private System.Windows.Forms.CheckBox checkBoxRandomTopics;
         private Label label4;
         private ComboBox cmb_topic;
+        private Label label5;
+        private TextBox txt_Timer;
     }
 }
