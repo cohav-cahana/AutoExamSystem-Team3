@@ -81,16 +81,6 @@ namespace PRO1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap projec1 {
-            get {
-                object obj = ResourceManager.GetObject("projec1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] icons8_closed_eye_32x32 {
@@ -107,6 +97,16 @@ namespace PRO1.Properties {
             get {
                 object obj = ResourceManager.GetObject("icons8-open-eye-32x32", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap projec1 {
+            get {
+                object obj = ResourceManager.GetObject("projec1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

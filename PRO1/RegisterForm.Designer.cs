@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace PRO1
 {
@@ -28,6 +29,15 @@ namespace PRO1
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+        private void cmbRole_MouseEnter(object sender, EventArgs e)
+        {
+            // למשל שינוי צבע או טולטיפ
+        }
+
+        private void cmbRole_MouseLeave(object sender, EventArgs e)
+        {
+        }
         private void InitializeComponent()
         {
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -59,6 +69,7 @@ namespace PRO1
             this.txtUsername.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtUsername.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
+
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -152,7 +163,7 @@ namespace PRO1
             // picSmileySad
             // 
             this.picSmileySad.BackColor = System.Drawing.Color.Transparent;
-            this.picSmileySad.Image = global::PRO1.Properties.Resources.sad_smiley_small;
+        //    this.picSmileySad.Image = global::PRO1.Properties.Resources.sad_smiley_small;
             this.picSmileySad.Location = new System.Drawing.Point(287, 454);
             this.picSmileySad.Name = "picSmileySad";
             this.picSmileySad.Size = new System.Drawing.Size(53, 61);
@@ -162,7 +173,7 @@ namespace PRO1
             // 
             // picSmiley
             // 
-            this.picSmiley.Image = global::PRO1.Properties.Resources.icon_smiley_small;
+          //  this.picSmiley.Image = global::PRO1.Properties.Resources.icon_smiley_small;
             this.picSmiley.Location = new System.Drawing.Point(479, 444);
             this.picSmiley.Name = "picSmiley";
             this.picSmiley.Size = new System.Drawing.Size(100, 50);
@@ -172,7 +183,7 @@ namespace PRO1
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PRO1.Properties.Resources.scelogo;
+     //       this.pictureBox1.Image = global::PRO1.Properties.Resources.scelogo;
             this.pictureBox1.Location = new System.Drawing.Point(543, -5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(356, 139);
@@ -215,7 +226,7 @@ namespace PRO1
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
-            this.Load += new System.EventHandler(this.RegisterForm_Load);
+          //  this.Load += new System.EventHandler(this.RegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picSmileySad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSmiley)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
