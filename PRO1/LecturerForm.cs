@@ -154,6 +154,12 @@ namespace PRO1
                 cmbDifficulty.Items.Add(level);
         }
 
+        private void go_back_Click(object sender, EventArgs e)
+        {
+            Form1 go_back1 = new Form1();
+            go_back1.Show();
+            this.Hide();
+        }
     }
 
 }
