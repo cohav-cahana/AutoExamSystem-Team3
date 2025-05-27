@@ -112,8 +112,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PRO1.Properties.Resources.projec1;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+          //  this.BackgroundImage = global::PRO1.Properties.Resources.projec1;
+            //this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1317, 744);
             this.Controls.Add(this.dgvScores);
             this.Controls.Add(this.linkLabel1);
