@@ -93,6 +93,16 @@ namespace PRO1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] icon_smiley_small_png {
+            get {
+                object obj = ResourceManager.GetObject("icon_smiley_small.png", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] icons8_closed_eye_32x32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-closed-eye-32x32", resourceCulture);
