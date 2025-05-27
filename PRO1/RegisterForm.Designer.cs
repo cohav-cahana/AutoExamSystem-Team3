@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
+using System.IO;
+
 
 namespace PRO1
 {
@@ -66,8 +69,8 @@ namespace PRO1
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(112, 38);
             this.txtUsername.TabIndex = 4;
-           // this.txtUsername.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
-           // this.txtUsername.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
+            this.txtUsername.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
+            this.txtUsername.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
 
             // txtPassword
@@ -79,8 +82,8 @@ namespace PRO1
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(112, 38);
             this.txtPassword.TabIndex = 5;
-           // this.txtPassword.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
-            //this.txtPassword.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
+           this.txtPassword.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
+            this.txtPassword.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
             // txtID
             // 
@@ -91,8 +94,8 @@ namespace PRO1
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(112, 38);
             this.txtID.TabIndex = 6;
-           // this.txtID.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
-            //this.txtID.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
+           this.txtID.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
+            this.txtID.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
             // txtEmail
             // 
@@ -103,8 +106,8 @@ namespace PRO1
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(112, 38);
             this.txtEmail.TabIndex = 7;
-          //  this.txtEmail.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
-            //this.txtEmail.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
+           this.txtEmail.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
+            this.txtEmail.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
             // RegisterB
             // 
@@ -121,8 +124,8 @@ namespace PRO1
             this.RegisterB.Text = "sign up";
             this.RegisterB.UseVisualStyleBackColor = false;
             this.RegisterB.Click += new System.EventHandler(this.RegisterB_Click);
-           // this.RegisterB.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
-            //this.RegisterB.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
+            this.RegisterB.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
+            this.RegisterB.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
             // cmbRole
             // 
@@ -139,8 +142,8 @@ namespace PRO1
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(136, 31);
             this.cmbRole.TabIndex = 10;
-            //this.cmbRole.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
-            //this.cmbRole.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
+            this.cmbRole.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
+            this.cmbRole.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
             // btnPasswordTip
             // 
@@ -163,7 +166,7 @@ namespace PRO1
             // picSmileySad
             // 
             this.picSmileySad.BackColor = System.Drawing.Color.Transparent;
-        //    this.picSmileySad.Image = global::PRO1.Properties.Resources.sad_smiley_small;
+            this.picSmileySad.Image = Image.FromStream(new System.IO.MemoryStream(global::PRO1.Properties.Resources.sad_smiley_small));
             this.picSmileySad.Location = new System.Drawing.Point(287, 454);
             this.picSmileySad.Name = "picSmileySad";
             this.picSmileySad.Size = new System.Drawing.Size(53, 61);
@@ -173,7 +176,7 @@ namespace PRO1
             // 
             // picSmiley
             // 
-          //  this.picSmiley.Image = global::PRO1.Properties.Resources.icon_smiley_small;
+            this.picSmiley.Image = Image.FromStream(new System.IO.MemoryStream(global::PRO1.Properties.Resources.icon_smiley_small));
             this.picSmiley.Location = new System.Drawing.Point(479, 444);
             this.picSmiley.Name = "picSmiley";
             this.picSmiley.Size = new System.Drawing.Size(100, 50);
@@ -183,7 +186,7 @@ namespace PRO1
             // 
             // pictureBox1
             // 
-     //       this.pictureBox1.Image = global::PRO1.Properties.Resources.scelogo;
+         // this.pictureBox1.Image = global::PRO1.Properties.Resources.scelogo;
             this.pictureBox1.Location = new System.Drawing.Point(543, -5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(356, 139);

@@ -182,11 +182,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Question.cs" />
     <Compile Include="QuestionForm.cs">
       <SubType>Form</SubType>
@@ -302,13 +297,12 @@
   <ItemGroup>
     <Content Include="Images\AutoExamP_.jpg" />
     <Content Include="Images\back2.jpg" />
-    <None Include="Resources\icon_smiley_small.png.jpeg" />
-    <None Include="Resources\icon_smiley_small.png %282%29.jpeg" />
-    <None Include="Resources\sad_smiley_small.png.jpeg" />
     <None Include="Resources\projec11.png" />
     <Content Include="Resources\AutoExamLogo.jpg" />
     <None Include="Resources\sad_smiley_small.png" />
-    <None Include="Resources\icon_smiley_small.png" />
+    <EmbeddedResource Include="Resources\icon_smiley_small.png">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <None Include="Resources\scelogo.jpeg" />
     <None Include="Resources\AutoExamLogo1.jpg" />
     <Content Include="Resources\icons8-closed-eye-32x32.png">

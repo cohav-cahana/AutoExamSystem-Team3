@@ -83,9 +83,9 @@ namespace PRO1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] icon_smiley_small_png {
+        internal static byte[] icon_smiley_small {
             get {
-                object obj = ResourceManager.GetObject("icon_smiley_small_png", resourceCulture);
+                object obj = ResourceManager.GetObject("icon_smiley_small", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace PRO1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] sad_smiley_small_png {
+        internal static byte[] sad_smiley_small {
             get {
-                object obj = ResourceManager.GetObject("sad_smiley_small_png", resourceCulture);
+                object obj = ResourceManager.GetObject("sad_smiley_small", resourceCulture);
                 return ((byte[])(obj));
             }
         }
