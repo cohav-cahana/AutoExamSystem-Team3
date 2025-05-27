@@ -220,6 +220,7 @@
       <DependentUpon>TrueFalseUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="ValidationHelper.cs" />
     <EmbeddedResource Include="ExamSelection.resx">
       <DependentUpon>ExamSelection.cs</DependentUpon>
     </EmbeddedResource>
