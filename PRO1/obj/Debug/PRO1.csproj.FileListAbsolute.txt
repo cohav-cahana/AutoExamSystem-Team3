@@ -172,10 +172,7 @@ C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.Multiple
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.MultipleChoiceUserControl.resources
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.OpenQuestion.resources
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.OpenQuestionUserControl.resources
-<<<<<<< Updated upstream
-=======
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.Properties.Resources.resources
->>>>>>> Stashed changes
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.QuestionForm.resources
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.TestForm.resources
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.RegisterForm.resources
@@ -183,10 +180,7 @@ C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.StudentF
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.TrueFalse.resources
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.TrueFalseUserControl.resources
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.GenerateResource.cache
-<<<<<<< Updated upstream
-=======
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.CoreCompileInputs.cache
->>>>>>> Stashed changes
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.exe
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.pdb
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\bin\Debug\Resources\icons8-closed-eye-32x32.png
@@ -229,9 +223,4 @@ C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\bin\Debug\System.Numeri
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\bin\Debug\System.Reactive.xml
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\bin\Debug\System.Threading.Tasks.Extensions.xml
-<<<<<<< Updated upstream
-C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.Properties.Resources.resources
-C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.CoreCompileInputs.cache
-=======
->>>>>>> Stashed changes
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.Up2Date

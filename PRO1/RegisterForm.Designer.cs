@@ -226,11 +226,7 @@ namespace PRO1
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
-<<<<<<< Updated upstream
-          //  this.Load += new System.EventHandler(this.RegisterForm_Load);
-=======
-            //this.Load += new System.EventHandler(this.RegisterForm_Load);
->>>>>>> Stashed changes
+
             ((System.ComponentModel.ISupportInitialize)(this.picSmileySad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSmiley)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
