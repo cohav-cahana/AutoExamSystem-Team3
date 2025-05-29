@@ -71,5 +71,10 @@ namespace PRO1
             studentForm.Show();
             this.Close();
         }
+
+        private void AdaptiveButton_Click(object sender, EventArgs e)
+        {
+            AdaptiveButton.Show();
+        }
     }
 }

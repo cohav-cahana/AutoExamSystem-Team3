@@ -100,6 +100,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdaptiveSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaptiveSelection.Designer.cs">
+      <DependentUpon>AdaptiveSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExamResult.cs" />
     <Compile Include="ExamSelection.cs">
       <SubType>Form</SubType>
@@ -194,6 +200,12 @@
     <Compile Include="QuestionForm.Designer.cs">
       <DependentUpon>QuestionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdaptiveTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaptiveTestForm.Designer.cs">
+      <DependentUpon>AdaptiveTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +237,9 @@
       <DependentUpon>TrueFalseUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="AdaptiveSelection.resx">
+      <DependentUpon>AdaptiveSelection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExamSelection.resx">
       <DependentUpon>ExamSelection.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuestionForm.resx">
       <DependentUpon>QuestionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdaptiveTestForm.resx">
+      <DependentUpon>AdaptiveTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
