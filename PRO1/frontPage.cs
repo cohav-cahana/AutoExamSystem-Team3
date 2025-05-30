@@ -20,8 +20,22 @@ namespace PRO1
         public frontPage()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey; 
-            this.BackgroundImageLayout = ImageLayout.Zoom; 
+            this.BackgroundImage = Properties.Resources.jeffrey;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.BackColor = Color.FromArgb(120, Color.White);  
+            panel1.BorderStyle = BorderStyle.None;
+
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.BackColor = Color.Transparent;
+            button1.ForeColor = Color.White; // או כל צבע טקסט שאת רוצה
+            button1.Enabled = false; // כדי שלא ייראה לחיץ
+            button1.TabStop = false;
+
+
+
+
+
 
 
         }
@@ -166,6 +180,22 @@ namespace PRO1
         }
 
         private void panelLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+               
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
