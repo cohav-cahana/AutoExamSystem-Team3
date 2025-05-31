@@ -10,13 +10,22 @@ public class FirebaseHelper
 {
     private FirebaseClient firebase;
 
+
+
     public FirebaseHelper()
     {
         firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/"); 
     }
+
+    public FirebaseHelper(FirebaseClient client)
+    {
+        firebase = client;
+    }
+
+
     public async Task UpdateQuestionAsync(string key, Dictionary<string, object> data)
     {
-        var firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/");
+        //var firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/");
         await firebase.Child("questions").Child(key).PutAsync(data);
     }
     public async Task SaveExamAsync(Exam exam)

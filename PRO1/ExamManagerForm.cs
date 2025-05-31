@@ -17,6 +17,8 @@ namespace PRO1
         public ExamManagerForm()
         {
             InitializeComponent();
+            this.BackgroundImage = Properties.Resources.jeffrey;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         private List<Exam> exams = new List<Exam>();
 

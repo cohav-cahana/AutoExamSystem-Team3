@@ -134,6 +134,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GradeCalculator.cs" />
     <Compile Include="GradeFormTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +228,7 @@
       <DependentUpon>TrueFalseUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="ValidationHelper.cs" />
     <EmbeddedResource Include="ExamSelection.resx">
       <DependentUpon>ExamSelection.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +313,11 @@
     <None Include="Resources\jeffrey.jpg" />
     <None Include="Resources\jeffrey-hamilton-jrRe6er0pY0-unsplash.jpg" />
     <Content Include="Resources\AutoExamLogo.jpg" />
+    <None Include="Resources\sad_smiley_small.png" />
+    <EmbeddedResource Include="Resources\icon_smiley_small.png">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <None Include="Resources\scelogo.jpeg" />
     <None Include="Resources\AutoExamLogo1.jpg" />
     <Content Include="Resources\icons8-closed-eye-32x32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

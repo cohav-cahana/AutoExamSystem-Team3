@@ -43,6 +43,7 @@ namespace PRO1
             this.cmb_topic = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Timer = new System.Windows.Forms.TextBox();
+            this.go_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -164,11 +165,22 @@ namespace PRO1
             this.txt_Timer.Size = new System.Drawing.Size(100, 22);
             this.txt_Timer.TabIndex = 12;
             // 
+            // go_back
+            // 
+            this.go_back.Location = new System.Drawing.Point(666, 377);
+            this.go_back.Name = "go_back";
+            this.go_back.Size = new System.Drawing.Size(122, 52);
+            this.go_back.TabIndex = 13;
+            this.go_back.Text = "back";
+            this.go_back.UseVisualStyleBackColor = true;
+            this.go_back.Click += new System.EventHandler(this.go_back_Click);
+            // 
             // LecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.go_back);
             this.Controls.Add(this.txt_Timer);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmb_topic);
@@ -206,5 +218,6 @@ namespace PRO1
         private ComboBox cmb_topic;
         private Label label5;
         private TextBox txt_Timer;
+        private Button go_back;
     }
 }

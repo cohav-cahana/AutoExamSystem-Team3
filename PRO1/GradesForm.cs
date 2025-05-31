@@ -24,7 +24,7 @@ namespace PRO1
             InitializeComponent();
             currentUser = user;
             firebaseHelper = new FirebaseHelper();
-            this.BackgroundImage = Image.FromFile(@"C:\Users\maimo\source\repos\PRO1\PRO1\Resources\projec11.png");
+            this.BackgroundImage = Properties.Resources.jeffrey;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             label1.BackColor = System.Drawing.Color.FromArgb(100, 173, 216, 230);
             label2.BackColor = System.Drawing.Color.FromArgb(100, 173, 216, 230);
@@ -72,32 +72,36 @@ namespace PRO1
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10, FontStyle.Bold);
                 dataGridView1.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10);
+
+                dataGridView1.BorderStyle = BorderStyle.None;
+                dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
+                dataGridView1.GridColor = dataGridView1.BackgroundColor;
+
+                double total = 0;
+                int count = 0;
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells["ציון"].Value != null && double.TryParse(row.Cells["ציון"].Value.ToString(), out double grade))
+                    {
+                        total += grade;
+                        count++;
+                    }
+                }
+
+                double average = count > 0 ? total / count : 0;
+                label4.Text = average.ToString("0.##"); // רק המספר
+
+                // ציור תרשים ציונים
+                DrawGradesChart();
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("שגיאה בטעינת נתוני הציונים: " + ex.Message);
             }
-            // חישוב ממוצע ציונים והצגה ב-label4
-            double total = 0;
-            int count = 0;
-
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.Cells["ציון"].Value != null && double.TryParse(row.Cells["ציון"].Value.ToString(), out double grade))
-                {
-                    total += grade;
-                    count++;
-                }
-            }
-
-            double average = count > 0 ? total / count : 0;
-            label4.Text = average.ToString("0.##"); // רק הממוצע, בלי טקסט נוסף
-
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridView1.GridColor = dataGridView1.BackgroundColor;
-
-            DrawGradesChart();
+            
 
 
 

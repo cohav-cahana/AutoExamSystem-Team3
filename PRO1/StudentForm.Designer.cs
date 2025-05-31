@@ -40,21 +40,21 @@ namespace PRO1
             // 
             this.examBtn.BackColor = System.Drawing.Color.White;
             this.examBtn.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.examBtn.Location = new System.Drawing.Point(414, 304);
+            this.examBtn.Location = new System.Drawing.Point(257, 182);
             this.examBtn.Name = "examBtn";
             this.examBtn.Size = new System.Drawing.Size(628, 78);
             this.examBtn.TabIndex = 1;
-            this.examBtn.Text = "כפתור לבחירת מבחן";
+            this.examBtn.Text = "לבחירת מבחן";
             this.examBtn.UseVisualStyleBackColor = false;
             this.examBtn.Click += new System.EventHandler(this.examBtn_Click);
             // 
             // welcomeLbl
             // 
             this.welcomeLbl.AutoSize = true;
-            this.welcomeLbl.BackColor = System.Drawing.Color.White;
+            this.welcomeLbl.BackColor = System.Drawing.Color.Transparent;
             this.welcomeLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.welcomeLbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.welcomeLbl.Location = new System.Drawing.Point(1247, 37);
+            this.welcomeLbl.Location = new System.Drawing.Point(476, 130);
             this.welcomeLbl.Name = "welcomeLbl";
             this.welcomeLbl.Size = new System.Drawing.Size(189, 26);
             this.welcomeLbl.TabIndex = 2;
@@ -68,33 +68,33 @@ namespace PRO1
             this.gradeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gradeBtn.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.gradeBtn.ForeColor = System.Drawing.Color.Black;
-            this.gradeBtn.Location = new System.Drawing.Point(414, 409);
+            this.gradeBtn.Location = new System.Drawing.Point(257, 289);
             this.gradeBtn.Name = "gradeBtn";
             this.gradeBtn.Size = new System.Drawing.Size(628, 80);
             this.gradeBtn.TabIndex = 3;
-            this.gradeBtn.Text = "כפתור הצגת נתונים ";
+            this.gradeBtn.Text = " להצגת נתונים ";
             this.gradeBtn.UseVisualStyleBackColor = false;
             this.gradeBtn.Click += new System.EventHandler(this.gradeBtn_Click);
             // 
             // backBtn
             // 
             this.backBtn.AutoSize = true;
+            this.backBtn.BackColor = System.Drawing.Color.SaddleBrown;
             this.backBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.backBtn.Location = new System.Drawing.Point(12, 29);
+            this.backBtn.Location = new System.Drawing.Point(37, 579);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(189, 34);
             this.backBtn.TabIndex = 4;
             this.backBtn.Text = "חזרה לדף הכניסה";
-            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = global::PRO1.Properties.Resources.projec1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1448, 803);
+            this.ClientSize = new System.Drawing.Size(1151, 641);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.gradeBtn);
             this.Controls.Add(this.welcomeLbl);

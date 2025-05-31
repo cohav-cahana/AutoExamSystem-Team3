@@ -81,6 +81,18 @@ namespace PRO1.Properties {
         }
         
         /// <summary>
+
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] icon_smiley_small {
+            get {
+                object obj = ResourceManager.GetObject("icon_smiley_small", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] icons8_closed_eye_32x32 {
@@ -103,11 +115,30 @@ namespace PRO1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap jeffrey {
             get {
                 object obj = ResourceManager.GetObject("jeffrey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        internal static System.Drawing.Bitmap projec1 {
+            get {
+                object obj = ResourceManager.GetObject("projec1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] sad_smiley_small {
+            get {
+                object obj = ResourceManager.GetObject("sad_smiley_small", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+
     }
 }

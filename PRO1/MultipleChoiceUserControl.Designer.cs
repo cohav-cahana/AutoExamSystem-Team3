@@ -34,6 +34,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.questionPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // questionLbl
@@ -64,7 +65,7 @@
             // radioButton1
             // 
             this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton1.BackColor = System.Drawing.Color.Turquoise;
+            this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.Location = new System.Drawing.Point(289, 207);
             this.radioButton1.Name = "radioButton1";
@@ -78,7 +79,7 @@
             // radioButton2
             // 
             this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton2.BackColor = System.Drawing.Color.Turquoise;
+            this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.radioButton2.Location = new System.Drawing.Point(495, 207);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(170, 81);
@@ -91,7 +92,7 @@
             // radioButton3
             // 
             this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton3.BackColor = System.Drawing.Color.Turquoise;
+            this.radioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.radioButton3.Location = new System.Drawing.Point(289, 295);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(170, 81);
@@ -104,7 +105,7 @@
             // radioButton4
             // 
             this.radioButton4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton4.BackColor = System.Drawing.Color.Turquoise;
+            this.radioButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.radioButton4.Location = new System.Drawing.Point(495, 294);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(170, 81);
@@ -113,6 +114,13 @@
             this.radioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton4.UseVisualStyleBackColor = false;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            // 
+            // questionPanel
+            // 
+            this.questionPanel.Location = new System.Drawing.Point(166, 49);
+            this.questionPanel.Name = "questionPanel";
+            this.questionPanel.Size = new System.Drawing.Size(603, 90);
+            this.questionPanel.TabIndex = 11;
             // 
             // MultipleChoiceUserControl
             // 
@@ -125,9 +133,11 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.lblQuestionCounter);
             this.Controls.Add(this.questionLbl);
+            this.Controls.Add(this.questionPanel);
             this.Location = new System.Drawing.Point(282, 19);
             this.Name = "MultipleChoiceUserControl";
             this.Size = new System.Drawing.Size(931, 447);
+            this.Load += new System.EventHandler(this.MultipleChoiceUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +151,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Panel questionPanel;
     }
 }

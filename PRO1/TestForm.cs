@@ -29,6 +29,8 @@ namespace PRO1
             this.currentExam = exam;
             this.totalQuestions = exam.QuestionCount;
             lblTimer.Text = FormatTime(timeLeftInSeconds);
+            this.BackgroundImage = Properties.Resources.jeffrey;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         public static string FormatTime(int seconds)
         {
@@ -204,6 +206,16 @@ namespace PRO1
                 examSelection.Show();
                 this.Close(); // Close the test form
             }
+        }
+
+        private void TestForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
