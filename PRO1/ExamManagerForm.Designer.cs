@@ -37,7 +37,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 41);
+            this.label1.Location = new System.Drawing.Point(97, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             this.lstExams.FormattingEnabled = true;
             this.lstExams.ItemHeight = 16;
-            this.lstExams.Location = new System.Drawing.Point(134, 41);
+            this.lstExams.Location = new System.Drawing.Point(208, 157);
             this.lstExams.Name = "lstExams";
             this.lstExams.Size = new System.Drawing.Size(280, 244);
             this.lstExams.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // btnDeleteExam
             // 
-            this.btnDeleteExam.Location = new System.Drawing.Point(489, 401);
+            this.btnDeleteExam.Location = new System.Drawing.Point(426, 466);
             this.btnDeleteExam.Name = "btnDeleteExam";
             this.btnDeleteExam.Size = new System.Drawing.Size(116, 37);
             this.btnDeleteExam.TabIndex = 2;
@@ -68,7 +68,7 @@
             this.lstExamQuestions.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lstExamQuestions.FormattingEnabled = true;
             this.lstExamQuestions.ItemHeight = 19;
-            this.lstExamQuestions.Location = new System.Drawing.Point(433, 41);
+            this.lstExamQuestions.Location = new System.Drawing.Point(577, 157);
             this.lstExamQuestions.Name = "lstExamQuestions";
             this.lstExamQuestions.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.lstExamQuestions.Size = new System.Drawing.Size(355, 251);
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1151, 641);
             this.Controls.Add(this.lstExamQuestions);
             this.Controls.Add(this.btnDeleteExam);
             this.Controls.Add(this.lstExams);

@@ -72,7 +72,6 @@ namespace PRO1
             this.txtUsername.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtUsername.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
-
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -82,7 +81,7 @@ namespace PRO1
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(112, 38);
             this.txtPassword.TabIndex = 5;
-           this.txtPassword.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
+            this.txtPassword.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtPassword.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
             // txtID
@@ -94,7 +93,7 @@ namespace PRO1
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(112, 38);
             this.txtID.TabIndex = 6;
-           this.txtID.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
+            this.txtID.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtID.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
             // txtEmail
@@ -106,7 +105,7 @@ namespace PRO1
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(112, 38);
             this.txtEmail.TabIndex = 7;
-           this.txtEmail.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
+            this.txtEmail.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtEmail.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
             // RegisterB
@@ -166,7 +165,6 @@ namespace PRO1
             // picSmileySad
             // 
             this.picSmileySad.BackColor = System.Drawing.Color.Transparent;
-            this.picSmileySad.Image = Image.FromStream(new System.IO.MemoryStream(global::PRO1.Properties.Resources.sad_smiley_small));
             this.picSmileySad.Location = new System.Drawing.Point(287, 454);
             this.picSmileySad.Name = "picSmileySad";
             this.picSmileySad.Size = new System.Drawing.Size(53, 61);
@@ -176,7 +174,6 @@ namespace PRO1
             // 
             // picSmiley
             // 
-            this.picSmiley.Image = Image.FromStream(new System.IO.MemoryStream(global::PRO1.Properties.Resources.icon_smiley_small));
             this.picSmiley.Location = new System.Drawing.Point(479, 444);
             this.picSmiley.Name = "picSmiley";
             this.picSmiley.Size = new System.Drawing.Size(100, 50);
@@ -186,7 +183,6 @@ namespace PRO1
             // 
             // pictureBox1
             // 
-         // this.pictureBox1.Image = global::PRO1.Properties.Resources.scelogo;
             this.pictureBox1.Location = new System.Drawing.Point(543, -5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(356, 139);
@@ -201,7 +197,7 @@ namespace PRO1
             this.lblRegister.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblRegister.Location = new System.Drawing.Point(157, 23);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(246, 46);
+            this.lblRegister.Size = new System.Drawing.Size(241, 45);
             this.lblRegister.TabIndex = 16;
             this.lblRegister.Text = "Register Here!";
             // 
@@ -210,7 +206,7 @@ namespace PRO1
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(900, 647);
+            this.ClientSize = new System.Drawing.Size(1151, 641);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.picSmileySad);
             this.Controls.Add(this.picSmiley);
@@ -229,7 +225,7 @@ namespace PRO1
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
-
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picSmileySad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSmiley)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

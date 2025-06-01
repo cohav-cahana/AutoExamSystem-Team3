@@ -45,7 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(643, 130);
+            this.label1.Location = new System.Drawing.Point(871, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 16);
             this.label1.TabIndex = 13;
@@ -53,10 +53,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(277, 158);
+            this.textBox1.Location = new System.Drawing.Point(465, 227);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(409, 31);
+            this.textBox1.Size = new System.Drawing.Size(449, 34);
             this.textBox1.TabIndex = 12;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -64,7 +64,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(576, 224);
+            this.label2.Location = new System.Drawing.Point(816, 307);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 16);
             this.label2.TabIndex = 14;
@@ -72,16 +72,16 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(462, 255);
+            this.textBox2.Location = new System.Drawing.Point(662, 338);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 22);
+            this.textBox2.Size = new System.Drawing.Size(252, 22);
             this.textBox2.TabIndex = 15;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(86, 173);
+            this.label6.Location = new System.Drawing.Point(285, 245);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(161, 16);
             this.label6.TabIndex = 23;
@@ -90,9 +90,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(42, 358);
+            this.button1.Location = new System.Drawing.Point(465, 421);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 55);
+            this.button1.Size = new System.Drawing.Size(182, 58);
             this.button1.TabIndex = 25;
             this.button1.Text = "צור שאלה";
             this.button1.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(635, 86);
+            this.label3.Location = new System.Drawing.Point(741, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 32;
@@ -115,16 +115,16 @@
             "קל",
             "בינוני",
             "קשה"});
-            this.comboBox2.Location = new System.Drawing.Point(508, 83);
+            this.comboBox2.Location = new System.Drawing.Point(574, 123);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.Size = new System.Drawing.Size(161, 24);
             this.comboBox2.TabIndex = 31;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(635, 45);
+            this.label4.Location = new System.Drawing.Point(741, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 16);
             this.label4.TabIndex = 30;
@@ -138,17 +138,17 @@
             "בדיקות תוכנה",
             "סטטיסטיקה",
             "מבנה נתונים"});
-            this.comboBox1.Location = new System.Drawing.Point(508, 45);
+            this.comboBox1.Location = new System.Drawing.Point(574, 85);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(161, 24);
             this.comboBox1.TabIndex = 29;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(685, 370);
+            this.button2.Location = new System.Drawing.Point(927, 520);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 31);
+            this.button2.Size = new System.Drawing.Size(130, 34);
             this.button2.TabIndex = 33;
             this.button2.Text = "חזור";
             this.button2.UseVisualStyleBackColor = true;
@@ -158,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 434);
+            this.ClientSize = new System.Drawing.Size(1151, 641);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox2);

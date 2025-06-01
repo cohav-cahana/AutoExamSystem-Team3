@@ -154,11 +154,17 @@ namespace PRO1
                 cmbDifficulty.Items.Add(level);
         }
 
+
+        private void listBoxExams_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+         }
         private void go_back_Click(object sender, EventArgs e)
         {
             Form1 go_back1 = new Form1();
             go_back1.Show();
             this.Hide();
+
         }
     }
 

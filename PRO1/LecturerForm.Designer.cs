@@ -78,13 +78,13 @@ namespace PRO1
             this.checkedListBoxType.Location = new System.Drawing.Point(267, 95);
             this.checkedListBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBoxType.Name = "checkedListBoxType";
-            this.checkedListBoxType.Size = new System.Drawing.Size(206, 55);
+            this.checkedListBoxType.Size = new System.Drawing.Size(224, 89);
             this.checkedListBoxType.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 185);
+            this.label3.Location = new System.Drawing.Point(48, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 16);
             this.label3.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace PRO1
             // cmbDifficulty
             // 
             this.cmbDifficulty.FormattingEnabled = true;
-            this.cmbDifficulty.Location = new System.Drawing.Point(267, 185);
+            this.cmbDifficulty.Location = new System.Drawing.Point(267, 233);
             this.cmbDifficulty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbDifficulty.Name = "cmbDifficulty";
             this.cmbDifficulty.Size = new System.Drawing.Size(121, 24);
@@ -114,16 +114,17 @@ namespace PRO1
             // 
             this.listBoxExams.FormattingEnabled = true;
             this.listBoxExams.ItemHeight = 16;
-            this.listBoxExams.Location = new System.Drawing.Point(165, 293);
+            this.listBoxExams.Location = new System.Drawing.Point(48, 332);
             this.listBoxExams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxExams.Name = "listBoxExams";
             this.listBoxExams.Size = new System.Drawing.Size(120, 84);
             this.listBoxExams.TabIndex = 7;
+            this.listBoxExams.SelectedIndexChanged += new System.EventHandler(this.listBoxExams_SelectedIndexChanged);
             // 
             // checkBoxRandomTopics
             // 
             this.checkBoxRandomTopics.AutoSize = true;
-            this.checkBoxRandomTopics.Location = new System.Drawing.Point(272, 156);
+            this.checkBoxRandomTopics.Location = new System.Drawing.Point(272, 204);
             this.checkBoxRandomTopics.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxRandomTopics.Name = "checkBoxRandomTopics";
             this.checkBoxRandomTopics.Size = new System.Drawing.Size(117, 20);
@@ -151,7 +152,7 @@ namespace PRO1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 237);
+            this.label5.Location = new System.Drawing.Point(45, 285);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(177, 16);
             this.label5.TabIndex = 11;
@@ -159,7 +160,7 @@ namespace PRO1
             // 
             // txt_Timer
             // 
-            this.txt_Timer.Location = new System.Drawing.Point(267, 237);
+            this.txt_Timer.Location = new System.Drawing.Point(267, 285);
             this.txt_Timer.Name = "txt_Timer";
             this.txt_Timer.Size = new System.Drawing.Size(100, 22);
             this.txt_Timer.TabIndex = 12;

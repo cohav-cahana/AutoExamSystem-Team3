@@ -22,6 +22,9 @@ namespace PRO1
             questionLbl.Text = question.QuestionText;
             FitTextToLabel(questionLbl);
             lblQuestionCounter.Text = $"Question {numQuestion + 1} of {totalQuestions}";
+            questionPanel.BackColor = Color.FromArgb(120, Color.White); // שקיפות עדינה
+            questionPanel.BorderStyle = BorderStyle.None;
+
         }
 
         private void FitTextToLabel(Label label)
@@ -91,6 +94,16 @@ namespace PRO1
         public bool IsCorrect()
         {
             return GetSelectedAnswer() == correctAnswer;
+        }
+
+        private void TrueFalseUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void questionPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

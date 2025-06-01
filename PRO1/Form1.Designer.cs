@@ -38,8 +38,8 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button4.Location = new System.Drawing.Point(325, 335);
+            this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(419, 396);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(153, 55);
             this.button4.TabIndex = 9;
@@ -48,8 +48,8 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(325, 256);
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(419, 322);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(153, 55);
             this.button3.TabIndex = 8;
@@ -58,8 +58,8 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button2.Location = new System.Drawing.Point(325, 179);
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(419, 240);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(153, 55);
             this.button2.TabIndex = 7;
@@ -69,8 +69,8 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(325, 108);
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(419, 155);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 55);
             this.button1.TabIndex = 6;
@@ -81,8 +81,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(322, 53);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(416, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 16);
             this.label1.TabIndex = 5;
@@ -91,8 +91,8 @@
             // 
             // btn_showExam
             // 
-            this.btn_showExam.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_showExam.Location = new System.Drawing.Point(514, 335);
+            this.btn_showExam.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_showExam.Location = new System.Drawing.Point(419, 479);
             this.btn_showExam.Name = "btn_showExam";
             this.btn_showExam.Size = new System.Drawing.Size(153, 55);
             this.btn_showExam.TabIndex = 10;
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1151, 641);
             this.Controls.Add(this.btn_showExam);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

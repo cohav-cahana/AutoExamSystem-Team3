@@ -18,6 +18,8 @@ namespace PRO1
         public RegisterForm()
         {
             InitializeComponent();
+            this.BackgroundImage = Properties.Resources.jeffrey;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private async void RegisterB_Click(object sender, EventArgs e)
@@ -90,8 +92,14 @@ namespace PRO1
 
 
             MessageBox.Show("המשתמש נשמר בהצלחה!");
+            this.Close();
       
             
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

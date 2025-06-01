@@ -44,12 +44,13 @@
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Freestyle Script", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(432, 24);
+            this.linkLabel1.Location = new System.Drawing.Point(362, 9);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(327, 190);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Exam Results\r\n\r\n";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // dgvScores
             // 
@@ -64,14 +65,15 @@
             this.colScore,
             this.colSubject,
             this.colDifficulty});
-            this.dgvScores.Location = new System.Drawing.Point(147, 162);
+            this.dgvScores.Location = new System.Drawing.Point(160, 165);
             this.dgvScores.Name = "dgvScores";
             this.dgvScores.ReadOnly = true;
             this.dgvScores.RowHeadersWidth = 51;
             this.dgvScores.RowTemplate.Height = 24;
             this.dgvScores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvScores.Size = new System.Drawing.Size(889, 513);
+            this.dgvScores.Size = new System.Drawing.Size(758, 425);
             this.dgvScores.TabIndex = 2;
+            this.dgvScores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScores_CellContentClick);
             // 
             // Column1
             // 
@@ -112,13 +114,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-          //  this.BackgroundImage = global::PRO1.Properties.Resources.projec1;
-            //this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1317, 744);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1151, 641);
             this.Controls.Add(this.dgvScores);
             this.Controls.Add(this.linkLabel1);
             this.Name = "GradeFormTeacher";
             this.Text = "GradeFormTeacher";
+            this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -20,12 +20,17 @@ namespace PRO1
             this.currentUser = user;
             InitializeComponent();
             LoadExams();
+            this.BackgroundImage = Properties.Resources.jeffrey;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.BackColor = Color.FromArgb(120, Color.White);
+            panel1.BorderStyle = BorderStyle.None;
         }
         private async void LoadExams()
         {
             FirebaseHelper firebaseHelper = new FirebaseHelper();
             var exams = await firebaseHelper.GetAllExamsAsync();
             examList.Items.AddRange(exams.ToArray());
+
         }
 
         private void examList_SelectedIndexChanged(object sender, EventArgs e)
@@ -70,6 +75,16 @@ namespace PRO1
         {
             studentForm.Show();
             this.Close();
+        }
+
+        private void ExamSelection_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void topicPlaceholder_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

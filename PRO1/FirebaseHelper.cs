@@ -10,13 +10,22 @@ public class FirebaseHelper
 {
     private FirebaseClient firebase;
 
+
+
     public FirebaseHelper()
     {
         firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/"); 
     }
+
+    public FirebaseHelper(FirebaseClient client)
+    {
+        firebase = client;
+    }
+
+
     public async Task UpdateQuestionAsync(string key, Dictionary<string, object> data)
     {
-        var firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/");
+        //var firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/");
         await firebase.Child("questions").Child(key).PutAsync(data);
     }
     public async Task SaveExamAsync(Exam exam)
@@ -149,6 +158,18 @@ public class FirebaseHelper
 
         return questions.Select(q => q.Object).ToList();
     }
+    public async Task<List<ExamResult>> GetAllExamsAsync(string userId)
+    {
+        var results = await firebase
+            .Child("users")
+            .Child(userId)
+            .Child("grades")
+            .OnceAsync<ExamResult>();
+
+        return results.Select(r => r.Object).ToList();
+    }
+
+
 
 
 }
