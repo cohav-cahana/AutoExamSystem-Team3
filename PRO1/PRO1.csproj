@@ -100,11 +100,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdaptiveSelection.cs">
+    <Compile Include="AdaptiveExam.cs" />
+    <Compile Include="AdaptiveSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdaptiveSelection.Designer.cs">
-      <DependentUpon>AdaptiveSelection.cs</DependentUpon>
+    <Compile Include="AdaptiveSelectionForm.Designer.cs">
+      <DependentUpon>AdaptiveSelectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ExamResult.cs" />
     <Compile Include="ExamSelection.cs">
@@ -237,8 +238,8 @@
       <DependentUpon>TrueFalseUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <EmbeddedResource Include="AdaptiveSelection.resx">
-      <DependentUpon>AdaptiveSelection.cs</DependentUpon>
+    <EmbeddedResource Include="AdaptiveSelectionForm.resx">
+      <DependentUpon>AdaptiveSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExamSelection.resx">
       <DependentUpon>ExamSelection.cs</DependentUpon>

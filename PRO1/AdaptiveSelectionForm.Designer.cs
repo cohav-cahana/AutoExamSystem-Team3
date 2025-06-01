@@ -1,6 +1,6 @@
 ﻿namespace PRO1
 {
-    partial class AdaptiveSelection
+    partial class AdaptiveSelectionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,46 +40,51 @@
             // 
             this.typeofQ.FormattingEnabled = true;
             this.typeofQ.Items.AddRange(new object[] {
-            "אלגורתמים ",
-            "בדיקות נתונים",
+            "אלגוריתמים",
+            "בדיקות תוכנה",
             "סטטיסטיקה",
             "מבנה נתונים"});
-            this.typeofQ.Location = new System.Drawing.Point(553, 299);
+            this.typeofQ.Location = new System.Drawing.Point(276, 154);
+            this.typeofQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.typeofQ.Name = "typeofQ";
-            this.typeofQ.Size = new System.Drawing.Size(303, 39);
+            this.typeofQ.Size = new System.Drawing.Size(154, 24);
             this.typeofQ.TabIndex = 0;
             this.typeofQ.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // numberQuestion
             // 
-            this.numberQuestion.Location = new System.Drawing.Point(553, 420);
+            this.numberQuestion.Location = new System.Drawing.Point(276, 217);
+            this.numberQuestion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numberQuestion.Name = "numberQuestion";
-            this.numberQuestion.Size = new System.Drawing.Size(303, 38);
+            this.numberQuestion.Size = new System.Drawing.Size(154, 22);
             this.numberQuestion.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 305);
+            this.label1.Location = new System.Drawing.Point(80, 157);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 32);
+            this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = " Type of Question";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(159, 426);
+            this.label2.Location = new System.Drawing.Point(80, 220);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(268, 32);
+            this.label2.Size = new System.Drawing.Size(126, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "How Many Question";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1060, 1000);
+            this.button1.Location = new System.Drawing.Point(528, 398);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 84);
+            this.button1.Size = new System.Drawing.Size(115, 43);
             this.button1.TabIndex = 4;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,26 +92,28 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(72, 1010);
+            this.button2.Location = new System.Drawing.Point(35, 398);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 84);
+            this.button2.Size = new System.Drawing.Size(96, 43);
             this.button2.TabIndex = 5;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // AdaptiveSelection
+            // AdaptiveSelectionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1369, 1147);
+            this.ClientSize = new System.Drawing.Size(684, 545);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numberQuestion);
             this.Controls.Add(this.typeofQ);
-            this.Name = "AdaptiveSelection";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "AdaptiveSelectionForm";
             this.Text = "AdaptiveSelection";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -74,7 +74,9 @@ namespace PRO1
 
         private void AdaptiveButton_Click(object sender, EventArgs e)
         {
-            AdaptiveButton.Show();
+            AdaptiveSelectionForm adaptiveSelectionForm = new AdaptiveSelectionForm(currentUser, this);
+            adaptiveSelectionForm.Show();
+            this.Hide();
         }
     }
 }

@@ -27,6 +27,13 @@ public class FirebaseHelper
             .Child(exam.Id)
             .PutAsync(exam);
     }
+    public async Task SaveAdaptiveExamAsync(AdaptiveExam adaptiveExam)
+    {
+        await firebase
+            .Child("adaptiveExams")
+            .Child(adaptiveExam.Id)
+            .PutAsync(adaptiveExam);
+    }
     public async Task<List<Exam>> GetAllExamsAsync()
     {
         var firebaseExams = await firebase.Child("exams").OnceAsync<Exam>();
@@ -154,6 +161,13 @@ public class FirebaseHelper
     {
         var allQuestions = await GetAllQuestionsAsync();
         return allQuestions.Where(q => q.Topic.Equals(topic, StringComparison.OrdinalIgnoreCase)).ToList();
+    }
+    public async Task<List<Question>> GetQuestionsByTopicAndLevelAsync(string topic, string level)
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        return allQuestions
+            .Where(q => q.Topic.Equals(topic, StringComparison.OrdinalIgnoreCase) && q.Level.Equals(level, StringComparison.OrdinalIgnoreCase))
+            .ToList();
     }
     public async Task<List<Question>> easyQuestionsAsync()
     {

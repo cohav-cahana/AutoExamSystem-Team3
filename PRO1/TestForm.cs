@@ -50,7 +50,8 @@ namespace PRO1
                     UserId = currentUser.UserId,
                     ExamId = currentExam.Id,
                     Grade = score,
-                    TakenAt = DateTime.Now
+                    TakenAt = DateTime.Now,
+                    IsAdaptive = false
                 };
                 FirebaseHelper firebaseHelper = new FirebaseHelper();
                 await firebaseHelper.SaveExamResultAsync(result);
@@ -196,7 +197,8 @@ namespace PRO1
                     UserId = currentUser.UserId,
                     ExamId = currentExam.Id,
                     Grade = score,
-                    TakenAt = DateTime.Now
+                    TakenAt = DateTime.Now,
+                    IsAdaptive = false
                 };
                 FirebaseHelper firebaseHelper = new FirebaseHelper();
                 await firebaseHelper.SaveExamResultAsync(result);

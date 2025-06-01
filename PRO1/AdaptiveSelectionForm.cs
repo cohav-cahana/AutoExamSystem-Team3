@@ -11,12 +11,12 @@ using DocumentFormat.OpenXml.Drawing.Charts;
 
 namespace PRO1
 {
-    public partial class AdaptiveSelection : Form
+    public partial class AdaptiveSelectionForm : Form
     {
 
         private User user;
         private ExamSelection examSelection;
-        public AdaptiveSelection(User user, ExamSelection examSelection)
+        public AdaptiveSelectionForm(User user, ExamSelection examSelection)
         {
             InitializeComponent();
             this.user = user;
@@ -44,15 +44,20 @@ namespace PRO1
             if (!int.TryParse(num, out int number) || typeofQ.SelectedItem == null)
             {
                 MessageBox.Show("Please enter the number of questions and the topic.");
+                return;
             }
-            var questions = await firebaseHelper.GetQuestionsByTopicAsync(type);
-            if (questions == null || questions.Count < number)
+            var easyQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type,"קל");
+            var mediumQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "בינוני");
+            var hardQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "קשה");
+            if (easyQuestions == null || easyQuestions.Count < number || mediumQuestions == null
+                || mediumQuestions.Count < number || hardQuestions == null || hardQuestions.Count < number)
             {
                 MessageBox.Show("Not enough questions available for the selected topic.");
+                return;
             }
             else
             {
-                AdaptiveTestForm adaptiveTestForm = new AdaptiveTestForm(user, this, number);
+                AdaptiveTestForm adaptiveTestForm = new AdaptiveTestForm(user, this, number, easyQuestions, mediumQuestions, hardQuestions, type);
                 adaptiveTestForm.Show();
                 this.Hide();
             }

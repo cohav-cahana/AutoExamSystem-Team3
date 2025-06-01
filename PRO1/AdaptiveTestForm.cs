@@ -20,26 +20,34 @@ namespace PRO1
     public partial class AdaptiveTestForm : Form
     {
         private int timeLeftInSeconds;
-        int count = 0;
+        int count;
         private User currentUser;
-        private Exam currentExam;
         private int questionCounter = 0;
         private int correctAnswers = 0;
         private int totalQuestions;
-        private AdaptiveSelection examSelection;
+        private String topic;
+        private AdaptiveSelectionForm examSelection;
         private List<Question> easy = new List<Question>();
-        private List<Question> miduim = new List<Question>();
+        private List<Question> medium = new List<Question>();
         private List<Question> hard = new List<Question>();
-        public AdaptiveTestForm(User user, AdaptiveSelection examSelection,int totalQuestions)
+        private List<Question> allQuestions = new List<Question>();
+        public AdaptiveTestForm(User user, AdaptiveSelectionForm examSelection,int totalQuestions, List<Question> easy, List<Question> medium,
+            List<Question> hard, String topic)
         {
             InitializeComponent();
             this.examSelection = examSelection;
             this.currentUser = user;
-            this.timeLeftInSeconds = 30* totalQuestions; 
+            this.timeLeftInSeconds = 30 * totalQuestions; 
             lblTimer.Text = FormatTime(timeLeftInSeconds);
             this.totalQuestions = totalQuestions;
-            this.examSelection = examSelection;
-            this.putquestion();
+            this.easy = easy;
+            this.medium = medium;
+            this.hard = hard;
+            this.topic = topic;
+
+            int[] options = { 2, 3, 6 };
+            Random random = new Random();
+            count = options[random.Next(options.Length)];
         }
         public static string FormatTime(int seconds)
         {
@@ -56,14 +64,24 @@ namespace PRO1
             {
                 examTimer.Stop();
                 float score = (correctAnswers * 100) / totalQuestions;
+                AdaptiveExam exam = new AdaptiveExam
+                {
+                    Id = Guid.NewGuid().ToString().Substring(0, 6),
+                    QuestionCount = totalQuestions,
+                    Topics = new List<string> { topic },
+                    DurationInSeconds = 30 * totalQuestions,
+                    Questions = allQuestions,
+                };
                 ExamResult result = new ExamResult
                 {
                     UserId = currentUser.UserId,
-                    ExamId = currentExam.Id,
+                    ExamId = exam.Id,
                     Grade = score,
-                    TakenAt = DateTime.Now
+                    TakenAt = DateTime.Now,
+                    IsAdaptive = true
                 };
                 FirebaseHelper firebaseHelper = new FirebaseHelper();
+                await firebaseHelper.SaveAdaptiveExamAsync(exam);
                 await firebaseHelper.SaveExamResultAsync(result);
                 MessageBox.Show("Time is up!\nYour Grade Is: " + score +"\nThe test will now close.", "Time Expired", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close(); // Close the test form
@@ -106,18 +124,8 @@ namespace PRO1
             panel1.Controls.Clear();
             FirebaseHelper firebase = new FirebaseHelper();
             Question question = new Question();
-            if (count < 2)
-            {
-                Random random = new Random();
-                if (easy.Count > 0)
-                {
-                    int index = random.Next(easy.Count); // בוחר אינדקס רנדומלי
-                    Question randomQuestion = easy[index]; // לוקח את האיבר
-                    easy.RemoveAt(index); // מוחק את האיבר מהרשימה
-                }
-            }
 
-            Question currentQuestion = currentExam.Questions[questionCounter];
+            Question currentQuestion = pullNextQuestion();
             UserControl control = null;
 
             if (currentQuestion.Type == "FillInTheBlanks")
@@ -163,15 +171,19 @@ namespace PRO1
         {
             if (panel1.Controls[0] is MultipleChoiceUserControl mc)
             {
-                if(!mc.IsAnswered())
+                if (!mc.IsAnswered())
                 {
                     MessageBox.Show("Please answer the question before proceeding.");
                     return;
                 }
-                if(mc.IsCorrect())
+                if (mc.IsCorrect())
                 {
                     correctAnswers++;
+                    if (count < 8)
+                        count++;
                 }
+                else if (count > 0)
+                    count--;
             }
             if (panel1.Controls[0] is TrueFalseUserControl tf)
             {
@@ -183,9 +195,13 @@ namespace PRO1
                 if (tf.IsCorrect())
                 {
                     correctAnswers++;
+                    if (count < 8)
+                        count++;
                 }
+                else if (count > 0)
+                    count--;
             }
-            if(panel1.Controls[0] is FillinTheBlanksPanel fb)
+            if (panel1.Controls[0] is FillinTheBlanksPanel fb)
             {
                 if (!fb.IsAnswered())
                 {
@@ -195,9 +211,13 @@ namespace PRO1
                 if (fb.IsCorrect())
                 {
                     correctAnswers++;
+                    if (count < 8)
+                        count++;
                 }
+                else if (count > 0)
+                    count--;
             }
-            if(panel1.Controls[0] is OpenQuestionUserControl oq)
+            if (panel1.Controls[0] is OpenQuestionUserControl oq)
             {
                 if (!oq.IsAnswered())
                 {
@@ -207,7 +227,11 @@ namespace PRO1
                 if (oq.IsCorrect())
                 {
                     correctAnswers++;
+                    if (count < 8)
+                        count++;
                 }
+                else if (count > 0)
+                    count--;
             }
             questionCounter++;
             if (questionCounter < totalQuestions)
@@ -217,30 +241,68 @@ namespace PRO1
             else
             {
                 float score = (correctAnswers * 100) / totalQuestions;
+                AdaptiveExam exam = new AdaptiveExam
+                {
+                    Id = Guid.NewGuid().ToString().Substring(0, 6),
+                    QuestionCount = totalQuestions,
+                    Topics = new List<string> { topic },
+                    DurationInSeconds = 30 * totalQuestions,
+                    Questions = allQuestions,
+                };
                 ExamResult result = new ExamResult
                 {
                     UserId = currentUser.UserId,
-                    ExamId = currentExam.Id,
+                    ExamId = Guid.NewGuid().ToString().Substring(0, 6),
                     Grade = score,
-                    TakenAt = DateTime.Now
+                    TakenAt = DateTime.Now,
+                    IsAdaptive = true
                 };
                 FirebaseHelper firebaseHelper = new FirebaseHelper();
+                await firebaseHelper.SaveAdaptiveExamAsync(exam);
                 await firebaseHelper.SaveExamResultAsync(result);
                 MessageBox.Show("Exam Completed!\nYour Grade Is: " + score);
                 examSelection.Show();
                 this.Close(); // Close the test form
             }
         }
-        public async void putquestion()
-        {
-            FirebaseHelper firebase = new FirebaseHelper();
-            List<Question> easy = new List<Question>();
-            easy = await firebase.easyQuestionsAsync();
-            List<Question> miduim = new List<Question>();
-            miduim = await firebase.mediumQuestionsAsync();
-            List<Question> hard = new List<Question>();
-            hard = await firebase.hardQuestionsAsync();
-        }
         
+        public Question pullNextQuestion()
+        {
+            Random random = new Random();
+            if (count <= 2)
+            {
+                if (easy.Count > 0)
+                {
+                    int index = random.Next(easy.Count); // בוחר אינדקס רנדומלי
+                    Question randomQuestion = easy[index]; // לוקח את האיבר
+                    easy.RemoveAt(index); // מוחק את האיבר מהרשימה
+                    allQuestions.Add(randomQuestion); // מוסיף את השאלה לרשימת כל השאלות
+                    return randomQuestion;
+                }
+            }
+            else if (count <= 4)
+            {
+                if (medium.Count > 0)
+                {
+                    int index = random.Next(medium.Count); // בוחר אינדקס רנדומלי
+                    Question randomQuestion = medium[index]; // לוקח את האיבר
+                    medium.RemoveAt(index); // מוחק את האיבר מהרשימה
+                    allQuestions.Add(randomQuestion); // מוסיף את השאלה לרשימת כל השאלות
+                    return randomQuestion;
+                }
+            }
+            else
+            {
+                if (hard.Count > 0)
+                {
+                    int index = random.Next(hard.Count); // בוחר אינדקס רנדומלי
+                    Question randomQuestion = hard[index]; // לוקח את האיבר
+                    hard.RemoveAt(index); // מוחק את האיבר מהרשימה
+                    allQuestions.Add(randomQuestion); // מוסיף את השאלה לרשימת כל השאלות
+                    return randomQuestion;
+                }
+            }
+            return null; // No more questions available
+        }
     }
 }
