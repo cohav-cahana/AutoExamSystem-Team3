@@ -61,7 +61,7 @@ namespace PRO1.Tests
         [TestMethod]
         public void Login_ValidCredentials_ShouldReturnTrue()
         {
-            bool result = LoginManager.Authenticate("cohav11", "c123c123!");
+            bool result = LoginManager.Authenticate("maria44", "ma123456!");
             Assert.IsTrue(result);
         }
         [TestMethod]
@@ -71,6 +71,20 @@ namespace PRO1.Tests
             Assert.IsFalse(result);
         }
 
+        [TestMethod]
+        public void GenerateExam_ShouldReturnExactNumberOfQuestions()
+        {
+            GlobalState.QuestionManager.ClearAllQuestions(); 
+            GlobalState.QuestionManager.AddQuestion(new Question { QuestionText = "שאלה 1", Type = "TrueFalse" });
+            GlobalState.QuestionManager.AddQuestion(new Question { QuestionText = "שאלה 2", Type = "TrueFalse" });
+            GlobalState.QuestionManager.AddQuestion(new Question { QuestionText = "שאלה 3", Type = "TrueFalse" });
+
+            int expectedCount = 2;
+
+            var examQuestions = GlobalState.QuestionManager.GenerateExam(expectedCount);
+
+            Assert.AreEqual(expectedCount, examQuestions.Count);
+        }
 
     }
 }
