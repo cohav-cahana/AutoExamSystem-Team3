@@ -86,6 +86,20 @@ namespace PRO1.Tests
             Assert.AreEqual(expectedCount, examQuestions.Count);
         }
 
+        [TestMethod]
+        public void QuestionList_ShouldNotContainDuplicates_ByText()
+        {
+            List<Question> questions = new List<Question>
+            {
+                new Question { QuestionText = "מהי ירושה ב־OOP?" },
+                new Question { QuestionText = "מה ההבדל בין stack ל־heap?" },
+            };
+
+            var texts = questions.Select(q => q.QuestionText?.Trim()).ToList();
+            bool hasDuplicates = texts.Count != texts.Distinct().Count();
+
+            Assert.IsFalse(hasDuplicates, "נמצאו שאלות כפולות ברשימה!");
+        }
     }
 }
 
