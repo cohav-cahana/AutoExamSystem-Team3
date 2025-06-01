@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using PRO1;
 
 namespace PRO1.Tests
 {
     [TestClass]
     public class ValidationTests
     {
+        [TestMethod]
         public void ValidUsername_ShouldReturnTrue()
         {
             string username = "abcde1";
@@ -57,6 +58,20 @@ namespace PRO1.Tests
             bool result = ValidationHelper.IsValidID(id);
             Assert.IsFalse(result);
         }
+        [TestMethod]
+        public void Login_ValidCredentials_ShouldReturnTrue()
+        {
+            bool result = LoginManager.Authenticate("cohav11", "c123c123!");
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void Login_InvalidPassword_ShouldReturnFalse()
+        {
+            bool result = LoginManager.Authenticate("user1", "WrongPass");
+            Assert.IsFalse(result);
+        }
+
+
     }
 }
 
