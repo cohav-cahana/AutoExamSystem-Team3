@@ -79,9 +79,8 @@ namespace PRO1
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            RegisterForm signup = new RegisterForm();
-            signup.Show();
-            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
         }
 
         private void btnContact_Click(object sender, EventArgs e)

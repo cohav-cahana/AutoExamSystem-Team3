@@ -132,7 +132,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(526, 76);
             this.label1.TabIndex = 7;
-            this.label1.Text = "\"Learning is a treasure that will follow \r\nits owner everywhere.\"";
+            this.label1.Text = "\"Learning is a treasure that will follow \r\nits owner everywhere.\" ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnContact
@@ -164,6 +164,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::PRO1.Properties.Resources.students_banner_cropped;
             this.pictureBox1.Location = new System.Drawing.Point(0, 59);
             this.pictureBox1.Name = "pictureBox1";
