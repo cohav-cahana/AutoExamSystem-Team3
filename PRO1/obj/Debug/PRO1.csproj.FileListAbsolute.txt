@@ -251,3 +251,5 @@ C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\P
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.Up2Date
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.exe
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.pdb
+C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.GradesForm.resources
+C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.MainPage.resources

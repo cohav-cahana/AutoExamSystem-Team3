@@ -3,27 +3,59 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1.Tests\\PRO1.Tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PRO1.Tests\\PRO1.Tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|PRO1||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\mainpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\mainpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1.Tests\\ValidationTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PRO1.Tests\\ValidationTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\lecturerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\lecturerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\questionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\questionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\fillintheblanks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\fillintheblanks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\lecturerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\lecturerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\examselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\examselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\exammanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\exammanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAEF1582-DB6D-47A3-ACE0-3AEF8B34EAA2}|PRO1.Tests\\PRO1.Tests.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1.tests\\pro1.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{EAEF1582-DB6D-47A3-ACE0-3AEF8B34EAA2}|PRO1.Tests\\PRO1.Tests.csproj|solutionrelative:pro1.tests\\pro1.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|PRO1||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\lecturerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\lecturerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\questionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -36,10 +68,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\truefalse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\truefalse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\questionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\questionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\multiplechoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -70,10 +98,6 @@
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -86,16 +110,8 @@
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\frontpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\frontpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\exammanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\exammanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\lecturerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -110,10 +126,6 @@
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\firebasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\fillintheblanks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\fillintheblanks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\questionform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\questionform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
@@ -122,12 +134,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pro1\\openquestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1.Tests\\Test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PRO1.Tests\\Test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EAEF1582-DB6D-47A3-ACE0-3AEF8B34EAA2}|PRO1.Tests\\PRO1.Tests.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1.tests\\validationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAEF1582-DB6D-47A3-ACE0-3AEF8B34EAA2}|PRO1.Tests\\PRO1.Tests.csproj|solutionrelative:pro1.tests\\validationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+      "AbsoluteMoniker": "D:0:0:{EAEF1582-DB6D-47A3-ACE0-3AEF8B34EAA2}|PRO1.Tests\\PRO1.Tests.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1.tests\\test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAEF1582-DB6D-47A3-ACE0-3AEF8B34EAA2}|PRO1.Tests\\PRO1.Tests.csproj|solutionrelative:pro1.tests\\test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -142,6 +154,154 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\MainPage.cs",
+              "RelativeDocumentMoniker": "PRO1\\MainPage.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\MainPage.cs [Design]",
+              "RelativeToolTip": "PRO1\\MainPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T16:21:36.159Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\MainPage.cs",
+              "RelativeDocumentMoniker": "PRO1\\MainPage.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\MainPage.cs",
+              "RelativeToolTip": "PRO1\\MainPage.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAIA1wFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T16:24:11.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuestionForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\QuestionForm.cs",
+              "RelativeDocumentMoniker": "PRO1\\QuestionForm.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\QuestionForm.cs [Design]",
+              "RelativeToolTip": "PRO1\\QuestionForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T14:55:27.828Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FillInTheBlanks.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\FillInTheBlanks.cs",
+              "RelativeDocumentMoniker": "PRO1\\FillInTheBlanks.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\FillInTheBlanks.cs [Design]",
+              "RelativeToolTip": "PRO1\\FillInTheBlanks.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T14:55:16.497Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Form1.cs",
+              "RelativeDocumentMoniker": "PRO1\\Form1.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Form1.cs [Design]",
+              "RelativeToolTip": "PRO1\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T14:55:37.662Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\MainPage.Designer.cs",
+              "RelativeDocumentMoniker": "PRO1\\MainPage.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\MainPage.Designer.cs",
+              "RelativeToolTip": "PRO1\\MainPage.Designer.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T16:38:53.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LecturerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LecturerForm.cs",
+              "RelativeDocumentMoniker": "PRO1\\LecturerForm.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LecturerForm.cs [Design]",
+              "RelativeToolTip": "PRO1\\LecturerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T09:53:17.37Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ExamSelection.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\ExamSelection.cs",
+              "RelativeDocumentMoniker": "PRO1\\ExamSelection.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\ExamSelection.cs [Design]",
+              "RelativeToolTip": "PRO1\\ExamSelection.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T17:57:35.802Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Program.cs",
+              "RelativeDocumentMoniker": "PRO1\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Program.cs",
+              "RelativeToolTip": "PRO1\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvxQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T10:54:33.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Question.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Question.cs",
+              "RelativeDocumentMoniker": "PRO1\\Question.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Question.cs",
+              "RelativeToolTip": "PRO1\\Question.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwBAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T09:51:03.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ValidationTests.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1.Tests\\ValidationTests.cs",
+              "RelativeDocumentMoniker": "PRO1.Tests\\ValidationTests.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1.Tests\\ValidationTests.cs",
+              "RelativeToolTip": "PRO1.Tests\\ValidationTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T10:22:12.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ExamManagerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\ExamManagerForm.cs",
+              "RelativeDocumentMoniker": "PRO1\\ExamManagerForm.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\ExamManagerForm.cs [Design]",
+              "RelativeToolTip": "PRO1\\ExamManagerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T10:52:36.228Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "PRO1.Tests.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1.Tests\\PRO1.Tests.csproj",
               "RelativeDocumentMoniker": "PRO1.Tests\\PRO1.Tests.csproj",
@@ -154,7 +314,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
+              "Title": "PRO1",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\PRO1.csproj",
+              "RelativeDocumentMoniker": "PRO1\\PRO1.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\PRO1.csproj",
+              "RelativeToolTip": "PRO1\\PRO1.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-25T10:53:42.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "LecturerForm.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LecturerForm.cs",
               "RelativeDocumentMoniker": "PRO1\\LecturerForm.cs",
@@ -162,59 +334,12 @@
               "RelativeToolTip": "PRO1\\LecturerForm.cs",
               "ViewState": "AgIAAI4AAAAAAAAAAAAAAJ4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:54:09.294Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PRO1",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\PRO1.csproj",
-              "RelativeDocumentMoniker": "PRO1\\PRO1.csproj",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\PRO1.csproj*",
-              "RelativeToolTip": "PRO1\\PRO1.csproj*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-25T10:53:42.17Z",
+              "WhenOpened": "2025-05-13T09:54:09.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ValidationTests.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1.Tests\\ValidationTests.cs",
-              "RelativeDocumentMoniker": "PRO1.Tests\\ValidationTests.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1.Tests\\ValidationTests.cs",
-              "RelativeToolTip": "PRO1.Tests\\ValidationTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T10:22:12.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LecturerForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LecturerForm.cs",
-              "RelativeDocumentMoniker": "PRO1\\LecturerForm.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LecturerForm.cs [Design]",
-              "RelativeToolTip": "PRO1\\LecturerForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:53:17.37Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Question.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Question.cs",
-              "RelativeDocumentMoniker": "PRO1\\Question.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Question.cs",
-              "RelativeToolTip": "PRO1\\Question.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAwwBAAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:51:03.297Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "QuestionManager.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\QuestionManager.cs",
               "RelativeDocumentMoniker": "PRO1\\QuestionManager.cs",
@@ -226,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "TrueFalse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\TrueFalse.cs",
               "RelativeDocumentMoniker": "PRO1\\TrueFalse.cs",
@@ -238,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "TrueFalse.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\TrueFalse.cs",
               "RelativeDocumentMoniker": "PRO1\\TrueFalse.cs",
@@ -249,18 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "QuestionForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\QuestionForm.cs",
-              "RelativeDocumentMoniker": "PRO1\\QuestionForm.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\QuestionForm.cs [Design]",
-              "RelativeToolTip": "PRO1\\QuestionForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T14:55:27.828Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "MultipleChoice.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\MultipleChoice.cs",
               "RelativeDocumentMoniker": "PRO1\\MultipleChoice.cs",
@@ -271,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "QuestionForm.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\QuestionForm.cs",
               "RelativeDocumentMoniker": "PRO1\\QuestionForm.cs",
@@ -279,11 +393,12 @@
               "RelativeToolTip": "PRO1\\QuestionForm.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAiwEQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:51:42.498Z"
+              "WhenOpened": "2025-05-13T09:51:42.498Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\User.cs",
               "RelativeDocumentMoniker": "PRO1\\User.cs",
@@ -295,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "ValidationHelper.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\ValidationHelper.cs",
               "RelativeDocumentMoniker": "PRO1\\ValidationHelper.cs",
@@ -307,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "Test1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1.Tests\\Test1.cs",
               "RelativeDocumentMoniker": "PRO1.Tests\\Test1.cs",
@@ -319,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "Resources.resx",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "PRO1\\Properties\\Resources.resx",
@@ -331,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "RegisterForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\RegisterForm.Designer.cs",
               "RelativeDocumentMoniker": "PRO1\\RegisterForm.Designer.cs",
@@ -343,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "RegisterForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\RegisterForm.cs",
               "RelativeDocumentMoniker": "PRO1\\RegisterForm.cs",
@@ -354,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "StudentForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\StudentForm.cs",
               "RelativeDocumentMoniker": "PRO1\\StudentForm.cs",
@@ -365,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "frontPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\frontPage.cs",
               "RelativeDocumentMoniker": "PRO1\\frontPage.cs",
@@ -376,18 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Form1.cs",
-              "RelativeDocumentMoniker": "PRO1\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Form1.cs [Design]",
-              "RelativeToolTip": "PRO1\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T14:55:37.662Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Form1.cs",
               "RelativeDocumentMoniker": "PRO1\\Form1.cs",
@@ -395,23 +499,12 @@
               "RelativeToolTip": "PRO1\\Form1.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAEwDYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T14:56:41.948Z"
+              "WhenOpened": "2025-05-12T14:56:41.948Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Program.cs",
-              "RelativeDocumentMoniker": "PRO1\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Program.cs",
-              "RelativeToolTip": "PRO1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T10:54:33.999Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "frontPage.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\frontPage.cs",
               "RelativeDocumentMoniker": "PRO1\\frontPage.cs",
@@ -423,18 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ExamManagerForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\ExamManagerForm.cs",
-              "RelativeDocumentMoniker": "PRO1\\ExamManagerForm.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\ExamManagerForm.cs [Design]",
-              "RelativeToolTip": "PRO1\\ExamManagerForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T10:52:36.228Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "LecturerForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LecturerForm.Designer.cs",
               "RelativeDocumentMoniker": "PRO1\\LecturerForm.Designer.cs",
@@ -442,11 +524,12 @@
               "RelativeToolTip": "PRO1\\LecturerForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T10:38:16.186Z"
+              "WhenOpened": "2025-05-25T10:38:16.186Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "Open.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Open.cs",
               "RelativeDocumentMoniker": "PRO1\\Open.cs",
@@ -457,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "FirebaseHelper.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\FirebaseHelper.cs",
               "RelativeDocumentMoniker": "PRO1\\FirebaseHelper.cs",
@@ -469,29 +552,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "FillInTheBlanks.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\FillInTheBlanks.cs",
-              "RelativeDocumentMoniker": "PRO1\\FillInTheBlanks.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\FillInTheBlanks.cs [Design]",
-              "RelativeToolTip": "PRO1\\FillInTheBlanks.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T14:55:16.497Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "QuestionForm.resx",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\QuestionForm.resx",
               "RelativeDocumentMoniker": "PRO1\\QuestionForm.resx",
               "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\QuestionForm.resx",
               "RelativeToolTip": "PRO1\\QuestionForm.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-05-12T14:56:34.158Z"
+              "WhenOpened": "2025-05-12T14:56:34.158Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "OpenQuestion.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\OpenQuestion.cs",
               "RelativeDocumentMoniker": "PRO1\\OpenQuestion.cs",
