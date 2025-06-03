@@ -83,9 +83,9 @@ namespace PRO1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Graguation {
+        internal static System.Drawing.Bitmap projec1 {
             get {
-                object obj = ResourceManager.GetObject("Graguation", resourceCulture);
+                object obj = ResourceManager.GetObject("projec1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -107,96 +107,6 @@ namespace PRO1.Properties {
             get {
                 object obj = ResourceManager.GetObject("icons8-open-eye-32x32", resourceCulture);
                 return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap jeffrey {
-            get {
-                object obj = ResourceManager.GetObject("jeffrey", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logo_no_grid_background {
-            get {
-                object obj = ResourceManager.GetObject("logo_no_grid_background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logo_no_grid_background1 {
-            get {
-                object obj = ResourceManager.GetObject("logo_no_grid_background1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap mainpage {
-            get {
-                object obj = ResourceManager.GetObject("mainpage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap student {
-            get {
-                object obj = ResourceManager.GetObject("student", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap students {
-            get {
-                object obj = ResourceManager.GetObject("students", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap students_banner_cropped {
-            get {
-                object obj = ResourceManager.GetObject("students_banner_cropped", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap students_wide_banner {
-            get {
-                object obj = ResourceManager.GetObject("students_wide_banner", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap students1 {
-            get {
-                object obj = ResourceManager.GetObject("students1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

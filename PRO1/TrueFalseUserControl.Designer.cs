@@ -32,8 +32,6 @@
             this.lblQuestionCounter = new System.Windows.Forms.Label();
             this.TrueButton = new System.Windows.Forms.RadioButton();
             this.FalseButton = new System.Windows.Forms.RadioButton();
-            this.questionPanel = new System.Windows.Forms.Panel();
-            this.questionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // questionLbl
@@ -43,9 +41,9 @@
             this.questionLbl.BackColor = System.Drawing.Color.Transparent;
             this.questionLbl.Font = new System.Drawing.Font("Britannic Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLbl.ForeColor = System.Drawing.Color.Black;
-            this.questionLbl.Location = new System.Drawing.Point(51, 40);
+            this.questionLbl.Location = new System.Drawing.Point(116, 45);
             this.questionLbl.Name = "questionLbl";
-            this.questionLbl.Size = new System.Drawing.Size(485, 84);
+            this.questionLbl.Size = new System.Drawing.Size(672, 84);
             this.questionLbl.TabIndex = 4;
             this.questionLbl.Text = "Question Number 1";
             this.questionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -55,7 +53,7 @@
             this.lblQuestionCounter.AutoSize = true;
             this.lblQuestionCounter.BackColor = System.Drawing.Color.Transparent;
             this.lblQuestionCounter.Font = new System.Drawing.Font("Broadway", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestionCounter.Location = new System.Drawing.Point(155, 342);
+            this.lblQuestionCounter.Location = new System.Drawing.Point(320, 384);
             this.lblQuestionCounter.Name = "lblQuestionCounter";
             this.lblQuestionCounter.Size = new System.Drawing.Size(262, 26);
             this.lblQuestionCounter.TabIndex = 7;
@@ -64,7 +62,7 @@
             // TrueButton
             // 
             this.TrueButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.TrueButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TrueButton.BackColor = System.Drawing.Color.Turquoise;
             this.TrueButton.Location = new System.Drawing.Point(271, 248);
             this.TrueButton.Name = "TrueButton";
             this.TrueButton.Size = new System.Drawing.Size(136, 56);
@@ -78,7 +76,7 @@
             // FalseButton
             // 
             this.FalseButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.FalseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.FalseButton.BackColor = System.Drawing.Color.Turquoise;
             this.FalseButton.Location = new System.Drawing.Point(505, 248);
             this.FalseButton.Name = "FalseButton";
             this.FalseButton.Size = new System.Drawing.Size(127, 56);
@@ -89,16 +87,6 @@
             this.FalseButton.UseVisualStyleBackColor = false;
             this.FalseButton.CheckedChanged += new System.EventHandler(this.FalseButton_CheckedChanged);
             // 
-            // questionPanel
-            // 
-            this.questionPanel.Controls.Add(this.lblQuestionCounter);
-            this.questionPanel.Controls.Add(this.questionLbl);
-            this.questionPanel.Location = new System.Drawing.Point(164, 30);
-            this.questionPanel.Name = "questionPanel";
-            this.questionPanel.Size = new System.Drawing.Size(598, 403);
-            this.questionPanel.TabIndex = 10;
-            this.questionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.questionPanel_Paint);
-            // 
             // TrueFalseUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -106,14 +94,13 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.FalseButton);
             this.Controls.Add(this.TrueButton);
-            this.Controls.Add(this.questionPanel);
+            this.Controls.Add(this.lblQuestionCounter);
+            this.Controls.Add(this.questionLbl);
             this.Location = new System.Drawing.Point(282, 19);
             this.Name = "TrueFalseUserControl";
             this.Size = new System.Drawing.Size(931, 447);
-            this.Load += new System.EventHandler(this.TrueFalseUserControl_Load);
-            this.questionPanel.ResumeLayout(false);
-            this.questionPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -123,6 +110,5 @@
         private System.Windows.Forms.Label lblQuestionCounter;
         private System.Windows.Forms.RadioButton TrueButton;
         private System.Windows.Forms.RadioButton FalseButton;
-        private System.Windows.Forms.Panel questionPanel;
     }
 }

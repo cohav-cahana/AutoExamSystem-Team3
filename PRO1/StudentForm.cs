@@ -1,5 +1,4 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,8 +19,6 @@ namespace PRO1
             InitializeComponent();
             this.currentUser = user;
             this.login = login;
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
             welcomeLbl.Text = "Welcome " + user.Username;
         }
 
@@ -36,22 +33,6 @@ namespace PRO1
         {
             login.Show();
             this.Close();
-        }
-
-        private void gradeBtn_Click(object sender, EventArgs e)
-        {
-            GradesForm gradesForm = new GradesForm(currentUser);
-            gradesForm.Show();
-        }
-
-        private void welcomeLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void StudentForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

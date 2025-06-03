@@ -22,10 +22,6 @@ namespace PRO1
             questionLbl.Text = question.QuestionText;
             FitTextToLabel(questionLbl);
             lblQuestionCounter.Text = $"Question {numQuestion + 1} of {totalQuestions}";
-            panel1.BackColor = Color.FromArgb(120, Color.White);
-            panel1.BorderStyle = BorderStyle.None;
-
-
         }
 
         private void FitTextToLabel(Label label)
@@ -62,11 +58,6 @@ namespace PRO1
         public bool IsCorrect()
         {
             return GetUserAnswer().Equals(correctAnswer, StringComparison.OrdinalIgnoreCase);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

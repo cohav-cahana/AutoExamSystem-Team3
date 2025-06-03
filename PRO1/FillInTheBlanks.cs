@@ -16,7 +16,7 @@ namespace PRO1
         public FillInTheBlanks()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
+            this.BackgroundImage = Properties.Resources.back2;
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 

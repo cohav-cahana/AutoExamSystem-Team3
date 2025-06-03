@@ -35,8 +35,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.examStartBtn = new System.Windows.Forms.Button();
             this.nextBtn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -59,10 +57,10 @@
             // 
             // lblTimer
             // 
-            this.lblTimer.BackColor = System.Drawing.Color.Sienna;
+            this.lblTimer.BackColor = System.Drawing.Color.ForestGreen;
             this.lblTimer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTimer.Font = new System.Drawing.Font("Engravers MT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblTimer.ForeColor = System.Drawing.Color.LightGreen;
             this.lblTimer.Location = new System.Drawing.Point(884, 44);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(143, 31);
@@ -73,42 +71,31 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(96, 121);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(931, 447);
             this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // examStartBtn
             // 
-            this.examStartBtn.BackColor = System.Drawing.Color.SaddleBrown;
-            this.examStartBtn.Location = new System.Drawing.Point(517, 586);
+            this.examStartBtn.Location = new System.Drawing.Point(494, 586);
             this.examStartBtn.Name = "examStartBtn";
             this.examStartBtn.Size = new System.Drawing.Size(105, 34);
             this.examStartBtn.TabIndex = 7;
             this.examStartBtn.Text = "Click To Start";
-            this.examStartBtn.UseVisualStyleBackColor = false;
+            this.examStartBtn.UseVisualStyleBackColor = true;
             this.examStartBtn.Click += new System.EventHandler(this.examStartBtn_Click);
             // 
             // nextBtn
             // 
-            this.nextBtn.BackColor = System.Drawing.Color.SaddleBrown;
             this.nextBtn.Location = new System.Drawing.Point(5, 586);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(128, 34);
             this.nextBtn.TabIndex = 8;
             this.nextBtn.Text = "Next Question";
-            this.nextBtn.UseVisualStyleBackColor = false;
+            this.nextBtn.UseVisualStyleBackColor = true;
             this.nextBtn.Visible = false;
             this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(728, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 0;
             // 
             // TestForm
             // 
@@ -116,6 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImage = global::PRO1.Properties.Resources.projec1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1099, 637);
             this.Controls.Add(this.nextBtn);
@@ -128,8 +116,6 @@
             this.Name = "TestForm";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Text = "Test";
-            this.Load += new System.EventHandler(this.TestForm_Load);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +128,5 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button examStartBtn;
         private System.Windows.Forms.Button nextBtn;
-        private System.Windows.Forms.Panel panel2;
     }
 }

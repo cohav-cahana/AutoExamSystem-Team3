@@ -17,8 +17,6 @@ namespace PRO1
         public ExamManagerForm()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         private List<Exam> exams = new List<Exam>();
 
@@ -27,7 +25,7 @@ namespace PRO1
         {
             if (lstExams.SelectedIndex == -1)
             {
-                MessageBox.Show("בחר מבחן למחיקה");
+                MessageBox.Show("בחרי מבחן למחיקה");
                 return;
             }
 
@@ -46,7 +44,7 @@ namespace PRO1
             exams = data;
             if (exams.Count == 0)
             {
-                MessageBox.Show("לא נמצאו מבחנים במאגר");
+                MessageBox.Show("לא נמצאו מבחנים במאגר.");
                 return;
             }
             

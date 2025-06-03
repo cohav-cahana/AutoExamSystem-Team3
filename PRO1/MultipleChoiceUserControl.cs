@@ -54,9 +54,6 @@ namespace PRO1
                     }
                 }
             }
-            questionPanel.BackColor = Color.FromArgb(120, Color.White); // שקיפות עדינה
-            questionPanel.BorderStyle = BorderStyle.None;
-
         }
         private List<string> ShuffleOptions(List<string> options)
         {
@@ -117,9 +114,5 @@ namespace PRO1
             return GetSelectedAnswer() == correctAnswer;
         }
 
-        private void MultipleChoiceUserControl_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
