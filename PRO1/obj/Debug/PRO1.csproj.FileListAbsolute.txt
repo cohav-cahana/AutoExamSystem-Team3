@@ -232,7 +232,9 @@ C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\P
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.Form1.resources
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.GradeFormTeacher.resources
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.frontPage.resources
+C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.GradesForm.resources
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.LecturerForm.resources
+C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.MainPage.resources
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.MultipleChoice.resources
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.MultipleChoiceUserControl.resources
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.OpenQuestion.resources
@@ -251,5 +253,3 @@ C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\P
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.Up2Date
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.exe
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.pdb
-C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.GradesForm.resources
-C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.MainPage.resources
