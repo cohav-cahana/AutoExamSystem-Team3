@@ -20,6 +20,17 @@ namespace PRO1
         public frontPage()
         {
             InitializeComponent();
+            this.BackgroundImage = Properties.Resources.jeffrey;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.BackColor = Color.FromArgb(120, Color.White);  
+            panel1.BorderStyle = BorderStyle.None;
+
+
+
+
+
+
+
         }
 
         private void signup_Click(object sender, EventArgs e)
@@ -128,7 +139,7 @@ namespace PRO1
             txtpassword_log.UseSystemPasswordChar = true;
             btnShowPassword.Image = Image.FromFile("Resources/icons8-closed-eye-32x32.png");
 
-            panelRight.BackgroundImageLayout = ImageLayout.Stretch;
+            //panelRight.BackgroundImageLayout = ImageLayout.Stretch;
 
 
         }
@@ -140,7 +151,6 @@ namespace PRO1
         }
 
         bool passwordVisible = false;
-
         private void btnShowPassword_Click(object sender, EventArgs e)
         {
 
@@ -156,6 +166,31 @@ namespace PRO1
             {
                 btnShowPassword.Image = Image.FromFile("Resources/icons8-closed-eye-32x32.png");
             }
+        }
+        private void panelRight_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+               
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

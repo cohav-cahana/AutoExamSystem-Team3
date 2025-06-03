@@ -31,6 +31,7 @@
             this.answerText = new System.Windows.Forms.TextBox();
             this.questionLbl = new System.Windows.Forms.Label();
             this.lblQuestionCounter = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // answerText
@@ -68,6 +69,14 @@
             this.lblQuestionCounter.TabIndex = 6;
             this.lblQuestionCounter.Text = "שאלה 1 מתוך 20";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(100, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(766, 374);
+            this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // OpenQuestionUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -76,6 +85,7 @@
             this.Controls.Add(this.lblQuestionCounter);
             this.Controls.Add(this.questionLbl);
             this.Controls.Add(this.answerText);
+            this.Controls.Add(this.panel1);
             this.Name = "OpenQuestionUserControl";
             this.Size = new System.Drawing.Size(931, 447);
             this.ResumeLayout(false);
@@ -88,5 +98,6 @@
         private System.Windows.Forms.TextBox answerText;
         private System.Windows.Forms.Label questionLbl;
         private System.Windows.Forms.Label lblQuestionCounter;
+        private System.Windows.Forms.Panel panel1;
     }
 }
