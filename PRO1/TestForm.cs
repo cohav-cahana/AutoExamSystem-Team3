@@ -29,6 +29,8 @@ namespace PRO1
             this.currentExam = exam;
             this.totalQuestions = exam.QuestionCount;
             lblTimer.Text = FormatTime(timeLeftInSeconds);
+            this.BackgroundImage = Properties.Resources.jeffrey;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         public static string FormatTime(int seconds)
         {
@@ -50,8 +52,7 @@ namespace PRO1
                     UserId = currentUser.UserId,
                     ExamId = currentExam.Id,
                     Grade = score,
-                    TakenAt = DateTime.Now,
-                    IsAdaptive = false
+                    TakenAt = DateTime.Now
                 };
                 FirebaseHelper firebaseHelper = new FirebaseHelper();
                 await firebaseHelper.SaveExamResultAsync(result);
@@ -197,8 +198,7 @@ namespace PRO1
                     UserId = currentUser.UserId,
                     ExamId = currentExam.Id,
                     Grade = score,
-                    TakenAt = DateTime.Now,
-                    IsAdaptive = false
+                    TakenAt = DateTime.Now
                 };
                 FirebaseHelper firebaseHelper = new FirebaseHelper();
                 await firebaseHelper.SaveExamResultAsync(result);
@@ -206,6 +206,16 @@ namespace PRO1
                 examSelection.Show();
                 this.Close(); // Close the test form
             }
+        }
+
+        private void TestForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

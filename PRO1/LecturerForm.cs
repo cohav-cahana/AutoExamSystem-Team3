@@ -29,50 +29,56 @@ namespace PRO1
 
         private async void btnCreatExam_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtQuestionCount.Text, out int questionCount))
             {
-                MessageBox.Show("אנא הזיני מספר שאלות תקין");
-                return;
-            }
-
-            string difficulty = cmbDifficulty.SelectedItem?.ToString();
-            if (string.IsNullOrEmpty(difficulty))
-            {
-                MessageBox.Show("אנא בחרי רמת קושי");
-                return;
-            }
-
-            List<string> selectedTopics;
-            if (checkBoxRandomTopics.Checked)
-            {
-                List<string> allTopics = cmb_topic.Items.Cast<string>().ToList();
-                Random rand = new Random();
-                selectedTopics = allTopics.OrderBy(x => rand.Next()).Take(2).ToList();
-                MessageBox.Show("נבחרו נושאים אקראיים:\n" + string.Join(", ", selectedTopics));
-                if (selectedTopics.Count == 0)
+                if (!int.TryParse(txtQuestionCount.Text, out int questionCount))
                 {
-                    MessageBox.Show("אין מספיק נושאים מתאימים במסד הנתונים");
+                    MessageBox.Show("אנא הזיני מספר שאלות תקין");
                     return;
                 }
 
-
-
-            }
-            else
-            {
-                string selectedTopic = cmb_topic.SelectedItem?.ToString();
-                if (string.IsNullOrEmpty(selectedTopic))
+                string difficulty = cmbDifficulty.SelectedItem?.ToString();
+                if (string.IsNullOrEmpty(difficulty))
                 {
-                    MessageBox.Show("אנא בחרי נושא");
+                    MessageBox.Show("אנא בחרי רמת קושי");
                     return;
                 }
-                selectedTopics = new List<string> { selectedTopic };
 
+                string selectedTopic;
+
+                if (checkBoxRandomTopics.Checked)
+                {
+                    List<string> allTopics = cmb_topic.Items.Cast<string>().ToList();
+                    if (allTopics.Count == 0)
+                    {
+                        MessageBox.Show("אין נושאים זמינים במסד הנתונים");
+                        return;
+                    }
+
+                    Random rand = new Random();
+                    selectedTopic = allTopics[rand.Next(allTopics.Count)];
+                    MessageBox.Show("נבחר נושא אקראי:\n" + selectedTopic);
+                    cmb_topic.SelectedItem = selectedTopic; // תצוגה ויזואלית
+                }
+                else
+                {
+                    selectedTopic = cmb_topic.SelectedItem?.ToString();
+                    if (string.IsNullOrEmpty(selectedTopic))
+                    {
+                        MessageBox.Show("אנא בחרי נושא");
+                        return;
+                    }
+                }
 
                 List<string> selectedTypes = checkedListBoxType.CheckedItems.Cast<string>().ToList();
                 if (selectedTypes.Count == 0)
                 {
                     MessageBox.Show("אנא בחרי לפחות סוג שאלה אחד");
+                    return;
+                }
+
+                if (!int.TryParse(txt_Timer.Text, out int examDuration))
+                {
+                    MessageBox.Show("אנא הזיני זמן בשניות (מספר בלבד)");
                     return;
                 }
 
@@ -85,14 +91,6 @@ namespace PRO1
                     .OrderBy(q => Guid.NewGuid())
                     .Take(questionCount)
                     .ToList();
-
-                if (!int.TryParse(txt_Timer.Text, out int examDuration))
-                {
-                    MessageBox.Show("אנא הזיני זמן בשניות (מספר בלבד)");
-                    return;
-                }
-
-
 
                 if (selectedQuestions.Count < questionCount)
                 {
@@ -108,14 +106,12 @@ namespace PRO1
                     Difficulty = difficulty,
                     DurationInSeconds = examDuration,
                     Questions = selectedQuestions
-
                 };
 
                 exams.Add(newExam);
                 listBoxExams.Items.Add(newExam);
                 MessageBox.Show("המבחן נוצר בהצלחה!");
                 await firebaseHelper.SaveExamAsync(newExam);
-
             }
         }
 
@@ -158,6 +154,18 @@ namespace PRO1
                 cmbDifficulty.Items.Add(level);
         }
 
+
+        private void listBoxExams_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+         }
+        private void go_back_Click(object sender, EventArgs e)
+        {
+            Form1 go_back1 = new Form1();
+            go_back1.Show();
+            this.Hide();
+
+        }
     }
 
 }

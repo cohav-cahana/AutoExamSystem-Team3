@@ -12,6 +12,5 @@ namespace PRO1
         public string ExamId { get; set; }
         public float Grade { get; set; }
         public DateTime TakenAt { get; set; }
-        public Boolean IsAdaptive { get; set; }
     }
 }

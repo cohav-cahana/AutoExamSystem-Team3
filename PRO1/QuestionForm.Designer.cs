@@ -76,7 +76,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Name = "QuestionForm";
-            this.Text = "QuestionForm";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.QuestionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

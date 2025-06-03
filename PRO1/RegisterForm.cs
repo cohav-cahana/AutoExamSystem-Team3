@@ -18,6 +18,8 @@ namespace PRO1
         public RegisterForm()
         {
             InitializeComponent();
+            this.BackgroundImage = Properties.Resources.jeffrey;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private async void RegisterB_Click(object sender, EventArgs e)
@@ -29,26 +31,25 @@ namespace PRO1
             string email = txtEmail.Text.Trim();
             string role = cmbRole.SelectedItem?.ToString();
 
-            if (username.Length < 6 || username.Length > 8 || !System.Text.RegularExpressions.Regex.IsMatch(username, @"^[a-zA-Z]*\d{0,2}$"))
-            {
+            if (!ValidationHelper.IsValidUsername(username))
+            { 
                 MessageBox.Show("שם המשתמש חייב להכיל 6–8 תווים, עד שתי ספרות וכל השאר אותיות באנגלית.");
                 return;
             }
 
-            if (password.Length < 8 || password.Length > 10 ||
-                !System.Text.RegularExpressions.Regex.IsMatch(password, @"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$"))
+            if (!ValidationHelper.IsValidPassword(password))
             {
                 MessageBox.Show("הסיסמה חייבת להכיל 8–10 תווים, לפחות אות אחת, ספרה אחת ותו מיוחד.");
                 return;
             }
 
-            if (!System.Text.RegularExpressions.Regex.IsMatch(id, @"^\d{9}$"))
+            if (!ValidationHelper.IsValidID(id))
             {
                 MessageBox.Show("מספר ת\"ז לא תקין. חייב להיות 9 ספרות.");
                 return;
             }
 
-            if (!System.Text.RegularExpressions.Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            if (!ValidationHelper.IsValidEmail(email))
             {
                 MessageBox.Show("כתובת מייל לא תקינה.");
                 return;
@@ -91,8 +92,14 @@ namespace PRO1
 
 
             MessageBox.Show("המשתמש נשמר בהצלחה!");
+            this.Close();
       
             
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
