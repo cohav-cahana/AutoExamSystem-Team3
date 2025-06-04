@@ -63,5 +63,12 @@ namespace PRO1
             examManagerForm.StartPosition = FormStartPosition.CenterScreen; // center the form
 
         }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GradeFormTeacher gradeFormTeacher = new GradeFormTeacher();
+            gradeFormTeacher.Show();
+            this.Hide(); 
+        }
+
     }
 }

@@ -209,6 +209,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grade.cs" />
     <Compile Include="GradeCalculator.cs" />
     <Compile Include="GradeFormTeacher.cs">
       <SubType>Form</SubType>
@@ -393,6 +394,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Images\AutoExamP_.jpg" />
     <Content Include="Images\back2.jpg" />
     <Content Include="Resources\front11.png" />
