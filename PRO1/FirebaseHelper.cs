@@ -205,6 +205,58 @@ public class FirebaseHelper
 
         return results.Select(r => r.Object).ToList();
     }
+    public async Task<List<(string Username, string UserId, ExamResult)>> GetAllGradesAsync()
+    {
+        var gradesList = new List<(string, string, ExamResult)>();
+
+        var users = await firebase
+            .Child("users")
+            .OnceAsync<Dictionary<string, object>>();
+
+        foreach (var user in users)
+        {
+            string userId = user.Key;
+            var userData = user.Object;
+
+            string username = userData.ContainsKey("Username") ? userData["Username"].ToString() : userId;
+
+            var grades = await firebase
+                .Child("users")
+                .Child(userId)
+                .Child("grades")
+                .OnceAsync<ExamResult>();
+
+            foreach (var grade in grades)
+            {
+                
+                var exam = await GetExamByIdAsync(grade.Object.ExamId);
+
+
+                grade.Object.Subject = exam?.Topics?.FirstOrDefault() ?? "-";
+                grade.Object.Level = exam?.Difficulty ?? "-";
+                grade.Object.Score = (int)grade.Object.Grade;
+
+                
+
+                gradesList.Add((username, userId, grade.Object));
+            }
+        }
+
+        return gradesList;
+    }
+
+    public async Task<Exam> GetExamByIdAsync(string examId)
+    {
+        var exam = await firebase
+            .Child("exams")
+            .Child(examId)
+            .OnceSingleAsync<Exam>();
+
+        return exam;
+    }
+
+
+
 
 
 

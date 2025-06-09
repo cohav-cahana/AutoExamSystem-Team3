@@ -1,81 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace PRO1
 {
     public partial class GradeFormTeacher : Form
     {
+        
+        private int high = 0;
+        private int mid = 0;
+        private int low = 0;
+
         public GradeFormTeacher()
         {
             InitializeComponent();
             this.BackgroundImage = Properties.Resources.jeffrey;
             this.BackgroundImageLayout = ImageLayout.Stretch;
-
             this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
         }
 
         private void dgvScores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
         }
 
         private async void GradeFormTeacher_Load(object sender, EventArgs e)
         {
             dgvScores.Rows.Clear();
 
+            FirebaseHelper firebaseHelper = new FirebaseHelper();
 
-
-            string firebaseUrl = "https://questions-sce-default-rtdb.firebaseio.com/users.json";
-
-
-            using (HttpClient client = new HttpClient())
+            try
             {
-                HttpResponseMessage response = await client.GetAsync(firebaseUrl);
+                var allGrades = await firebaseHelper.GetAllGradesAsync();
 
-                if (response.IsSuccessStatusCode)
+                
+                high = 0;
+                mid = 0;
+                low = 0;
+
+                foreach (var (username, userId, examResult) in allGrades)
                 {
-                    string json = await response.Content.ReadAsStringAsync();
+                    dgvScores.Rows.Add(
+                        username,
+                        userId,
+                        examResult.Score,
+                        examResult.Subject,
+                        examResult.Level
+                    );
 
-                    var allUsers = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(json);
-
-                    foreach (var user in allUsers)
-                    {
-                        string userId = user.Key;
-                        var userData = user.Value;
-
-                        if (userData.ContainsKey("grades"))
-                        {
-                            string username = userData.ContainsKey("Username") ? userData["Username"].ToString() : userId;
-
-                            var gradesJson = JsonConvert.SerializeObject(userData["grades"]);
-                            var grades = JsonConvert.DeserializeObject<Dictionary<string, Grade>>(gradesJson);
-
-                            foreach (var grade in grades.Values)
-                            {
-                                dgvScores.Rows.Add(
-                                    username,         // שם
-                                    userId,           // ת"ז
-                                    grade.score,      // ציון
-                                    grade.subject,    // מקצוע
-                                    grade.level       // רמת קושי
-                                );
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("שגיאה בשליפת נתונים מה־Firebase.");
+                    
+                    if (examResult.Score >= 85)
+                        high++;
+                    else if (examResult.Score >= 56)
+                        mid++;
+                    else
+                        low++;
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("שגיאה בטעינת הציונים: " + ex.Message);
+            }
+        }
+
+        private void btnShowChart_Click(object sender, EventArgs e)
+        {
+            GradeChartForm chartForm = new GradeChartForm(high, mid, low);
+            chartForm.ShowDialog();
         }
     }
 }

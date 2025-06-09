@@ -11,6 +11,8 @@ namespace PRO1
         public string Id { get; set; }
         public int QuestionCount { get; set; }
         public List<string> Topics { get; set; }
+        public string Subject { get; set; }
+
         public string Difficulty { get; set; }
         public int DurationInSeconds { get; set; }
         public List<Question> Questions { get; set; } = new List<Question>();

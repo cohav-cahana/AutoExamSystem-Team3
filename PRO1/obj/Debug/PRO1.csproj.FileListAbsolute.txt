@@ -633,3 +633,4 @@ C:\Users\danc1\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO
 C:\Users\danc1\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.Up2Date
 C:\Users\danc1\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.exe
 C:\Users\danc1\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.pdb
+C:\Users\danc1\source\repos\cohav-cahana\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.GradeChartForm.resources
