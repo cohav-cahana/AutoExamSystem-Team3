@@ -17,7 +17,11 @@ namespace PRO1
         public TrueFalse()
         {
             InitializeComponent();
-            
+            label2.Font = new Font("Arial", 18, FontStyle.Bold);
+            label1.Font = new Font("Arial", 18, FontStyle.Bold);
+            label3.Font = new Font("Arial", 18, FontStyle.Bold);
+
+
         }
         public TrueFalse(Question selectedQuestion)
         {

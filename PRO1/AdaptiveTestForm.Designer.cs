@@ -78,22 +78,24 @@
             // 
             // examStartBtn
             // 
-            this.examStartBtn.Location = new System.Drawing.Point(494, 586);
+            this.examStartBtn.BackColor = System.Drawing.Color.Linen;
+            this.examStartBtn.Location = new System.Drawing.Point(530, 607);
             this.examStartBtn.Name = "examStartBtn";
             this.examStartBtn.Size = new System.Drawing.Size(105, 34);
             this.examStartBtn.TabIndex = 7;
             this.examStartBtn.Text = "Click To Start";
-            this.examStartBtn.UseVisualStyleBackColor = true;
+            this.examStartBtn.UseVisualStyleBackColor = false;
             this.examStartBtn.Click += new System.EventHandler(this.examStartBtn_Click);
             // 
             // nextBtn
             // 
-            this.nextBtn.Location = new System.Drawing.Point(5, 586);
+            this.nextBtn.BackColor = System.Drawing.Color.Linen;
+            this.nextBtn.Location = new System.Drawing.Point(37, 607);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(128, 34);
             this.nextBtn.TabIndex = 8;
             this.nextBtn.Text = "Next Question";
-            this.nextBtn.UseVisualStyleBackColor = true;
+            this.nextBtn.UseVisualStyleBackColor = false;
             this.nextBtn.Visible = false;
             this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 

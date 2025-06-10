@@ -19,6 +19,12 @@ namespace PRO1
         {
             InitializeComponent();
             this.BackColor = Color.White;
+            label4.Font = new Font("Arial", 12, FontStyle.Bold);
+            label1.Font = new Font("Arial", 12, FontStyle.Bold);
+            label2.Font = new Font("Arial", 12, FontStyle.Bold);
+            label3.Font = new Font("Arial", 12, FontStyle.Bold);
+            label5.Font = new Font("Arial", 12, FontStyle.Bold);
+
 
         }
 
@@ -166,6 +172,15 @@ namespace PRO1
             Form1 go_back1 = new Form1();
             go_back1.Show();
             this.Hide();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+
+            form1.Show();
+            this.Close();
 
         }
     }

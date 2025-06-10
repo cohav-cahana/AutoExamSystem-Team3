@@ -20,7 +20,11 @@ namespace PRO1
         public OpenQuestion()
         {
             InitializeComponent();
-            
+            label4.Font = new Font("Arial", 18, FontStyle.Bold);
+            label1.Font = new Font("Arial", 18, FontStyle.Bold);
+            label3.Font = new Font("Arial", 18, FontStyle.Bold);
+            label2.Font = new Font("Arial", 18, FontStyle.Bold);
+
         }
         public OpenQuestion(Question selectedQuestion)
         {

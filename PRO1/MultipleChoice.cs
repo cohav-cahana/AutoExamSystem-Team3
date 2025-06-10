@@ -22,6 +22,8 @@ namespace PRO1
         {
             InitializeComponent();
             this.teacherId = teacherId;
+            
+
 
         }
         public MultipleChoice(string teacherId, Question question) : this(teacherId)

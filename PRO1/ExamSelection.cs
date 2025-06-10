@@ -29,8 +29,8 @@ namespace PRO1
             numQuestionLbl.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
             durationLbl.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
 
-            panel1.BackColor = Color.FromArgb(120, Color.White);
-            panel1.BorderStyle = BorderStyle.None;
+            panel1.BackColor = Color.FromArgb(120, Color.White); // שקיפות למחצה
+
 
             topicPlaceholder.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
             difficultyPlaceholder.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);

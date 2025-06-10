@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,8 @@ namespace PRO1
             InitializeComponent();
             
             label1.Font = new Font("Arial", 12, FontStyle.Bold);
+            label2.Font = new Font("Arial", 12, FontStyle.Bold);
+
 
         }
 
@@ -172,7 +175,10 @@ namespace PRO1
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 
 }

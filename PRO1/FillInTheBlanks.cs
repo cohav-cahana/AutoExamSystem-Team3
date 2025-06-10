@@ -20,6 +20,11 @@ namespace PRO1
         {
             InitializeComponent();
             this.BackColor = Color.White;
+            label1.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+            label2.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+            label3.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+            label4.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+
 
         }
         public FillInTheBlanks(Question question) : this(SessionManager.TeacherId, question)
@@ -172,6 +177,11 @@ namespace PRO1
 
 
             questionForm.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,7 +46,7 @@
             "בדיקות תוכנה",
             "סטטיסטיקה",
             "מבנה נתונים"});
-            this.typeofQ.Location = new System.Drawing.Point(522, 127);
+            this.typeofQ.Location = new System.Drawing.Point(522, 132);
             this.typeofQ.Margin = new System.Windows.Forms.Padding(2);
             this.typeofQ.Name = "typeofQ";
             this.typeofQ.Size = new System.Drawing.Size(154, 24);
@@ -55,7 +55,7 @@
             // 
             // numberQuestion
             // 
-            this.numberQuestion.Location = new System.Drawing.Point(522, 187);
+            this.numberQuestion.Location = new System.Drawing.Point(522, 195);
             this.numberQuestion.Margin = new System.Windows.Forms.Padding(2);
             this.numberQuestion.Name = "numberQuestion";
             this.numberQuestion.Size = new System.Drawing.Size(154, 22);
@@ -70,6 +70,7 @@
             this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = " Type of Question";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -83,7 +84,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(774, 371);
+            this.button1.Location = new System.Drawing.Point(971, 605);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 43);
@@ -94,7 +95,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(281, 371);
+            this.button2.Location = new System.Drawing.Point(71, 593);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 43);
@@ -108,7 +109,7 @@
             this.pictureBox1.Image = global::PRO1.Properties.Resources._331;
             this.pictureBox1.Location = new System.Drawing.Point(-11, -5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1182, 641);
+            this.pictureBox1.Size = new System.Drawing.Size(1182, 683);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
