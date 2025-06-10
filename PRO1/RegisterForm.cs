@@ -31,10 +31,10 @@ namespace PRO1
 
             using (var workbook = new XLWorkbook(filePath))
             {
-                var worksheet = workbook.Worksheet(1); // גיליון ראשון — אם את יודעת את השם אפשר גם worksheet = workbook.Worksheet("Users")
+                var worksheet = workbook.Worksheet(1); 
                 var rows = worksheet.RangeUsed().RowsUsed();
 
-                foreach (var row in rows.Skip(1)) // Skip(1) כדי לדלג על שורת הכותרות
+                foreach (var row in rows.Skip(1))
                 {
                     string id = row.Cell(3).GetValue<string>().Trim();
                     if (!string.IsNullOrEmpty(id))
@@ -239,6 +239,12 @@ namespace PRO1
 
 
         }
-    
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
+        }
     }
 }

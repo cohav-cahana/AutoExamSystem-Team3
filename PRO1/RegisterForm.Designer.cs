@@ -55,6 +55,7 @@ namespace PRO1
             this.picSmiley = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblRegister = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picSmileySad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSmiley)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -201,12 +202,23 @@ namespace PRO1
             this.lblRegister.TabIndex = 16;
             this.lblRegister.Text = "Register Here!";
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(733, 567);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(124, 52);
+            this.btn_back.TabIndex = 17;
+            this.btn_back.Text = "Back";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.button1_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1151, 641);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.picSmileySad);
             this.Controls.Add(this.picSmiley);
@@ -247,5 +259,6 @@ namespace PRO1
         private PictureBox picSmiley;
         private PictureBox picSmileySad;
         private Label lblRegister;
+        private Button btn_back;
     }
 }
