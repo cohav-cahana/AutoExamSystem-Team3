@@ -179,7 +179,7 @@ namespace PRO1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1161, 676);
             this.Controls.Add(this.go_back);
             this.Controls.Add(this.txt_Timer);
             this.Controls.Add(this.label5);

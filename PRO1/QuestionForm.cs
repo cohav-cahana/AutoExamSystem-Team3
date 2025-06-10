@@ -12,20 +12,36 @@ namespace PRO1
 {
     public partial class QuestionForm : Form
     {
+        string currentTeacherId = "123456789";
         public QuestionForm()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.back2;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            
             label1.Font = new Font("Arial", 12, FontStyle.Bold);
 
         }
 
 
-        private void QuestionForm_Load(object sender, EventArgs e)
+        private async void QuestionForm_Load(object sender, EventArgs e)
         {
+            FirebaseHelper firebaseHelper = new FirebaseHelper();
+            string currentTeacherId = "123456789"; // ת"ז המרצה המחובר
+
+            try
+            {
+                List<Question> questions = await firebaseHelper.GetQuestionsByTeacherIdAsync(currentTeacherId);
+                dataGridView1.DataSource = questions;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("שגיאה בטעינת שאלות: " + ex.Message);
+            }
+
+
+
 
         }
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -35,7 +51,7 @@ namespace PRO1
             if (comboBox1.SelectedIndex == 0) // אם הבחירה הראשונה
             {
                 // פותחים את ה-Form של MultipleChoice
-                MultipleChoice multipleChoiceForm = new MultipleChoice();
+                MultipleChoice multipleChoiceForm = new MultipleChoice(currentTeacherId);
                 multipleChoiceForm.ShowDialog();
 
             }
@@ -74,6 +90,12 @@ namespace PRO1
 
             form.Show();
         }
+
+        private async void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
     }
-    
+
 }

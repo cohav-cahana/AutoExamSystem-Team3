@@ -35,6 +35,13 @@ public class FirebaseHelper
             .Child(exam.Id)
             .PutAsync(exam);
     }
+    public async Task SaveAdaptiveExamAsync(AdaptiveExam adaptiveExam)
+    {
+        await firebase
+            .Child("adaptiveExams")
+            .Child(adaptiveExam.Id)
+            .PutAsync(adaptiveExam);
+    }
     public async Task<List<Exam>> GetAllExamsAsync()
     {
         var firebaseExams = await firebase.Child("exams").OnceAsync<Exam>();
@@ -76,21 +83,10 @@ public class FirebaseHelper
     }
 
 
-    public async Task AddQuestionAsync(string type, string correctAnswer, string topic, string level, string questionText, string answer1, string answer2, string answer3, string answer4)
+    public async Task AddQuestionAsync(string type, string correctAnswer, string topic, string level, string questionText, string answer1, string answer2, string answer3, string answer4, string teacherId)
     {
 
-        //var question = new
-        //{
-        //    CorrectAnswer = correctAnswer,
-        //    Topic = topic,
-        //    Level=level,
-        //    QuestionText = questionText,
-        //    Answer1 = answer1,
-        //    Answer2 = answer2,
-        //    Answer3 = answer3,
-        //    Answer4 = answer4
-
-        //};
+        
         object question;
 
         switch (type)
@@ -102,7 +98,8 @@ public class FirebaseHelper
                     CorrectAnswer = correctAnswer,
                     Topic = topic,
                     Level = level,
-                    Type = type
+                    Type = type,
+                    TeacherId = teacherId
                 };
                 break;
 
@@ -117,7 +114,8 @@ public class FirebaseHelper
                     Answer2 = answer2,
                     Answer3 = answer3,
                     Answer4 = answer4,
-                    Type = type
+                    Type = type,
+                    TeacherId = teacherId
                 };
                 break;
 
@@ -128,7 +126,8 @@ public class FirebaseHelper
                     Topic = topic,
                     Level = level,
                     QuestionText = questionText,
-                    Type = type
+                    Type = type,
+                    TeacherId = teacherId
 
                 };
                 break;
@@ -139,7 +138,8 @@ public class FirebaseHelper
                     CorrectAnswer = correctAnswer,
                     Topic = topic,
                     Level = level,
-                    Type = "OpenQuestion"
+                    Type = "OpenQuestion",
+                    TeacherId = teacherId
                 };
                 break;
 
@@ -158,6 +158,36 @@ public class FirebaseHelper
 
         return questions.Select(q => q.Object).ToList();
     }
+    public async Task<List<Question>> GetQuestionsByTopicAsync(string topic)
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        return allQuestions.Where(q => q.Topic.Equals(topic, StringComparison.OrdinalIgnoreCase)).ToList();
+    }
+    public async Task<List<Question>> GetQuestionsByTopicAndLevelAsync(string topic, string level)
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        return allQuestions
+            .Where(q => q.Topic.Equals(topic, StringComparison.OrdinalIgnoreCase) && q.Level.Equals(level, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+    }
+    public async Task<List<Question>> easyQuestionsAsync()
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        var easyQuestions = allQuestions.Where(q => q.Level.Equals("קל", StringComparison.OrdinalIgnoreCase)).ToList();
+        return easyQuestions;
+    }
+    public async Task<List<Question>> mediumQuestionsAsync()
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        var mediumQuestions = allQuestions.Where(q => q.Level.Equals("בינוני", StringComparison.OrdinalIgnoreCase)).ToList();
+        return mediumQuestions;
+    }
+    public async Task<List<Question>> hardQuestionsAsync()
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        var hardQuestions = allQuestions.Where(q => q.Level.Equals("קשה", StringComparison.OrdinalIgnoreCase)).ToList();
+        return hardQuestions;
+    }
     public async Task<List<ExamResult>> GetAllExamsAsync(string userId)
     {
         var results = await firebase
@@ -168,6 +198,14 @@ public class FirebaseHelper
 
         return results.Select(r => r.Object).ToList();
     }
+    public async Task<List<Question>> GetQuestionsByTeacherIdAsync(string teacherId)
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        return allQuestions
+            .Where(q => q.TeacherId == teacherId)
+            .ToList();
+    }
+
 
 
 

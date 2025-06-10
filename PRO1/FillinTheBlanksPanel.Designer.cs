@@ -72,7 +72,7 @@
             this.Controls.Add(this.answerText);
             this.Controls.Add(this.questionLbl);
             this.Name = "FillinTheBlanksPanel";
-            this.Size = new System.Drawing.Size(1169, 688);
+            this.Size = new System.Drawing.Size(1179, 723);
             this.Load += new System.EventHandler(this.FillinTheBlanksPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

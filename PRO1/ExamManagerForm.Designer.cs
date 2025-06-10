@@ -32,6 +32,8 @@
             this.lstExams = new System.Windows.Forms.ListBox();
             this.btnDeleteExam = new System.Windows.Forms.Button();
             this.lstExamQuestions = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,6 +76,17 @@
             this.lstExamQuestions.Size = new System.Drawing.Size(355, 251);
             this.lstExamQuestions.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PRO1.Properties.Resources._581b653c8c6a6cbdbbffc565163bd97f1;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1147, 641);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // ExamManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -83,9 +96,11 @@
             this.Controls.Add(this.btnDeleteExam);
             this.Controls.Add(this.lstExams);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "ExamManagerForm";
             this.Text = "ExamManagerForm";
             this.Load += new System.EventHandler(this.ExamManagerForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +112,6 @@
         private System.Windows.Forms.ListBox lstExams;
         private System.Windows.Forms.Button btnDeleteExam;
         private System.Windows.Forms.ListBox lstExamQuestions;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

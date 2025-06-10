@@ -41,6 +41,8 @@
             this.startExamBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // examList
@@ -55,7 +57,7 @@
             // topLbl
             // 
             this.topLbl.AutoSize = true;
-            this.topLbl.Location = new System.Drawing.Point(455, 104);
+            this.topLbl.Location = new System.Drawing.Point(380, 104);
             this.topLbl.Name = "topLbl";
             this.topLbl.Size = new System.Drawing.Size(207, 16);
             this.topLbl.TabIndex = 1;
@@ -164,16 +166,29 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(143, 77);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(872, 485);
             this.panel1.TabIndex = 19;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PRO1.Properties.Resources._332;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1158, 674);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ExamSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 641);
+            this.ClientSize = new System.Drawing.Size(1161, 676);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.startExamBtn);
             this.Controls.Add(this.durationPlaceholder);
@@ -187,9 +202,11 @@
             this.Controls.Add(this.topLbl);
             this.Controls.Add(this.examList);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "ExamSelection";
             this.Text = "ExamSelection";
             this.Load += new System.EventHandler(this.ExamSelection_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +227,6 @@
         private System.Windows.Forms.Button startExamBtn;
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
