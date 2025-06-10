@@ -412,6 +412,7 @@
     <Content Include="Images\AutoExamP_.jpg" />
     <Content Include="Images\back2.jpg" />
     <Content Include="Resources\10313778.jpg" />
+    <Content Include="Resources\SYSTEM_OUT.png" />
     <None Include="Resources\הורדה %281%29.png" />
     <None Include="Resources\הורדה.png" />
     <None Include="Resources\חדש.jpg" />
@@ -462,6 +463,7 @@
     <None Include="Resources\icons8-test-501.png" />
     <Content Include="Resources\icons8-user-50.png" />
     <None Include="Resources\icons8-user-501.png" />
+    <Content Include="Resources\OIP.jfif" />
     <Content Include="Resources\student.png" />
     <Content Include="Resources\student1.png" />
     <Content Include="Resources\students1.png" />

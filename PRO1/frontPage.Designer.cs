@@ -52,6 +52,44 @@
             this.btnShowPassword.TabStop = false;
             this.btnShowPassword.UseVisualStyleBackColor = false;
             this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
+            this.login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.login.BackColor = System.Drawing.Color.Sienna;
+            this.login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.login.ForeColor = System.Drawing.Color.White;
+            this.login.Location = new System.Drawing.Point(486, 253);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(198, 40);
+            this.login.TabIndex = 11;
+            this.login.Text = "Login";
+            this.login.UseVisualStyleBackColor = false;
+            this.login.Click += new System.EventHandler(this.login_Click);
+            // 
+            // txtusername_log
+            // 
+            this.txtusername_log.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtusername_log.BackColor = System.Drawing.Color.White;
+            this.txtusername_log.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtusername_log.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusername_log.ForeColor = System.Drawing.Color.DimGray;
+            this.txtusername_log.Location = new System.Drawing.Point(458, 144);
+            this.txtusername_log.Name = "txtusername_log";
+            this.txtusername_log.Size = new System.Drawing.Size(250, 38);
+            this.txtusername_log.TabIndex = 12;
+            this.txtusername_log.TextChanged += new System.EventHandler(this.txtusername_log_TextChanged);
+            // 
+            // txtpassword_log
+            // 
+            this.txtpassword_log.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtpassword_log.BackColor = System.Drawing.Color.White;
+            this.txtpassword_log.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpassword_log.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword_log.ForeColor = System.Drawing.Color.DimGray;
+            this.txtpassword_log.Location = new System.Drawing.Point(458, 200);
+            this.txtpassword_log.Name = "txtpassword_log";
+            this.txtpassword_log.Size = new System.Drawing.Size(250, 38);
+            this.txtpassword_log.TabIndex = 13;
             // 
             // label3
             // 

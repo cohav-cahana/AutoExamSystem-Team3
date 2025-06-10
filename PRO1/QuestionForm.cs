@@ -25,6 +25,22 @@ namespace PRO1
         private void QuestionForm_Load(object sender, EventArgs e)
         {
 
+            FirebaseHelper firebaseHelper = new FirebaseHelper();
+            string currentTeacherId = "123456789"; // ת"ז המרצה המחובר
+
+            try
+            {
+                List<Question> questions = await firebaseHelper.GetQuestionsByTeacherIdAsync(currentTeacherId);
+                //dataGridView1.DataSource = questions;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("שגיאה בטעינת שאלות: " + ex.Message);
+            }
+
+
+
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

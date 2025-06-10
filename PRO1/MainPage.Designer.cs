@@ -36,6 +36,8 @@
             this.btnContact = new System.Windows.Forms.Button();
             this.lblContactInfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
+            this.btnExit = new System.Windows.Forms.Button();
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +55,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
@@ -66,6 +69,7 @@
             // 
             // sidePanel
             // 
+            this.sidePanel.Controls.Add(this.btnExit);
             this.sidePanel.Controls.Add(this.btnSignup);
             this.sidePanel.Controls.Add(this.btnLogin);
             this.sidePanel.Controls.Add(this.lblTitle);
@@ -140,6 +144,15 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(1077, 31);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(51, 41);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // MainPage
             // 
@@ -174,5 +187,7 @@
         private System.Windows.Forms.Button btnContact;
         private System.Windows.Forms.Label lblContactInfo;
         private System.Windows.Forms.PictureBox pictureBox1;
+
+        private System.Windows.Forms.Button btnExit;
     }
 }
