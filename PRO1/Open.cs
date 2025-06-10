@@ -20,16 +20,37 @@ namespace PRO1
         public OpenQuestion()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.back2;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            
         }
+        public OpenQuestion(Question selectedQuestion)
+        {
+            InitializeComponent();
+
+            questionKey = selectedQuestion.Id; 
+            originalData = new Dictionary<string, object>()
+    {
+        { "QuestionText", selectedQuestion.QuestionText },
+        { "CorrectAnswer", selectedQuestion.CorrectAnswer },
+        { "Topic", selectedQuestion.Topic },
+        { "Level", selectedQuestion.Level },
+        { "Type", "OpenQuestion" }
+    };
+
+            isEditMode = true;
+
+            textBox1.Text = selectedQuestion.QuestionText;
+            textBox2.Text = selectedQuestion.CorrectAnswer;
+            comboBox1.SelectedItem = selectedQuestion.Topic;
+            comboBox2.SelectedItem = selectedQuestion.Level;
+        }
+
+
 
 
         public OpenQuestion(Dictionary<string, object> data, string key)
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.back2;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            
 
             questionKey = key;
             originalData = data;
@@ -101,7 +122,6 @@ namespace PRO1
                 MessageBox.Show("השאלה הפתוחה נשמרה בהצלחה!");
             }
 
-            this.Close();
         }
 
     }

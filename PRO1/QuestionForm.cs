@@ -12,7 +12,9 @@ namespace PRO1
 {
     public partial class QuestionForm : Form
     {
-        string currentTeacherId = "123456789";
+        string currentTeacherId;
+        private BindingList<Question> questionsList;
+
         public QuestionForm()
         {
             InitializeComponent();
@@ -25,23 +27,41 @@ namespace PRO1
         private async void QuestionForm_Load(object sender, EventArgs e)
         {
             FirebaseHelper firebaseHelper = new FirebaseHelper();
-            string currentTeacherId = "123456789"; // ת"ז המרצה המחובר
+            this.currentTeacherId = SessionManager.TeacherId;
 
             try
             {
                 List<Question> questions = await firebaseHelper.GetQuestionsByTeacherIdAsync(currentTeacherId);
-                dataGridView1.DataSource = questions;
+                questionsList = new BindingList<Question>(questions);
+                dataGridView1.DataSource = questionsList;
+
+                // רק אם עדיין לא נוספו הכפתורים:
+                if (!dataGridView1.Columns.Contains("editButton"))
+                {
+                    DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+                    editButtonColumn.Name = "editButton";
+                    editButtonColumn.HeaderText = "ערוך";
+                    editButtonColumn.Text = "ערוך";
+                    editButtonColumn.UseColumnTextForButtonValue = true;
+                    dataGridView1.Columns.Add(editButtonColumn);
+                }
+
+                if (!dataGridView1.Columns.Contains("deleteButton"))
+                {
+                    DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+                    deleteButtonColumn.Name = "deleteButton";
+                    deleteButtonColumn.HeaderText = "מחק";
+                    deleteButtonColumn.Text = "מחק";
+                    deleteButtonColumn.UseColumnTextForButtonValue = true;
+                    dataGridView1.Columns.Add(deleteButtonColumn);
+                }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("שגיאה בטעינת שאלות: " + ex.Message);
             }
-
-
-
-
         }
-
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -93,8 +113,65 @@ namespace PRO1
 
         private async void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (e.RowIndex < 0) return;
+
+            var selectedQuestion = dataGridView1.Rows[e.RowIndex].DataBoundItem as Question;
+
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "deleteButton")
+            {
+                var confirm = MessageBox.Show("האם אתה בטוח שברצונך למחוק את השאלה?", "אישור מחיקה", MessageBoxButtons.YesNo);
+                if (confirm == DialogResult.Yes)
+                {
+                    FirebaseHelper firebaseHelper = new FirebaseHelper();
+
+                    try
+                    {
+                        await firebaseHelper.DeleteQuestionAsync(selectedQuestion.Id);
+                        questionsList.Remove(selectedQuestion);  // <-- זה מעדכן אוטומטית את ה־DataGridView
+                        MessageBox.Show("השאלה נמחקה בהצלחה.");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("שגיאה במחיקה: " + ex.Message);
+                    }
+                }
+            }
+            else if (dataGridView1.Columns[e.ColumnIndex].Name == "editButton")
+            {
+                // פתח טופס עריכה בהתאם לסוג השאלה
+                switch (selectedQuestion.Type)
+                {
+                    case "MultipleChoice":
+                        MultipleChoice editMC = new MultipleChoice(currentTeacherId, selectedQuestion);
+                        editMC.ShowDialog();
+                        break;
+
+                    case "OpenQuestion":
+                        OpenQuestion editOpen = new OpenQuestion(selectedQuestion);
+                        editOpen.ShowDialog();
+                        break;
+
+                    case "TrueFalse":
+                        TrueFalse editTF = new TrueFalse(selectedQuestion);
+                        editTF.ShowDialog();
+                        break;
+
+                    case "FillInTheBlanks":
+                        FillInTheBlanks editFill = new FillInTheBlanks(selectedQuestion);
+                        editFill.ShowDialog();
+                        break;
+
+                    default:
+                        MessageBox.Show("סוג שאלה לא נתמך לעריכה.");
+                        break;
+                }
+
+                // טען מחדש את הטבלה לאחר עריכה
+                QuestionForm_Load(sender, e);
+            }
         }
+
 
     }
 
