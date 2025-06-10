@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\questionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\gradesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\gradesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -74,8 +74,7 @@
               "RelativeToolTip": "PRO1\\QuestionForm.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAuwCAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T12:41:50.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T12:41:50.505Z"
             },
             {
               "$type": "Document",
@@ -86,8 +85,7 @@
               "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\MainPage.cs [Design]",
               "RelativeToolTip": "PRO1\\MainPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:21:35.326Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-10T09:21:35.326Z"
             },
             {
               "$type": "Document",
@@ -98,8 +96,7 @@
               "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\QuestionForm.cs [Design]",
               "RelativeToolTip": "PRO1\\QuestionForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T12:41:27.916Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-10T12:41:27.916Z"
             },
             {
               "$type": "Document",
@@ -158,8 +155,7 @@
               "RelativeToolTip": "PRO1\\GradesForm.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T16:46:27.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T16:46:27.826Z"
             },
             {
               "$type": "Document",
@@ -194,8 +190,7 @@
               "RelativeToolTip": "PRO1\\RegisterForm.cs",
               "ViewState": "AgIAAKQAAAAAAAAAAAAswPoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:32:43.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T09:32:43.043Z"
             },
             {
               "$type": "Document",
