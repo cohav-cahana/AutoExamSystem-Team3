@@ -67,7 +67,7 @@ namespace PRO1
             this.txtUsername.Location = new System.Drawing.Point(197, 97);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(112, 38);
+            this.txtUsername.Size = new System.Drawing.Size(143, 38);
             this.txtUsername.TabIndex = 4;
             this.txtUsername.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtUsername.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
@@ -79,7 +79,7 @@ namespace PRO1
             this.txtPassword.Location = new System.Drawing.Point(197, 165);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(112, 38);
+            this.txtPassword.Size = new System.Drawing.Size(143, 38);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtPassword.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
@@ -91,7 +91,7 @@ namespace PRO1
             this.txtID.Location = new System.Drawing.Point(197, 236);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(112, 38);
+            this.txtID.Size = new System.Drawing.Size(143, 38);
             this.txtID.TabIndex = 6;
             this.txtID.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtID.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
@@ -103,7 +103,7 @@ namespace PRO1
             this.txtEmail.Location = new System.Drawing.Point(197, 295);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(112, 38);
+            this.txtEmail.Size = new System.Drawing.Size(143, 38);
             this.txtEmail.TabIndex = 7;
             this.txtEmail.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtEmail.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
@@ -139,14 +139,14 @@ namespace PRO1
             this.cmbRole.Location = new System.Drawing.Point(197, 370);
             this.cmbRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(136, 31);
+            this.cmbRole.Size = new System.Drawing.Size(143, 31);
             this.cmbRole.TabIndex = 10;
             this.cmbRole.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.cmbRole.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
             // btnPasswordTip
             // 
-            this.btnPasswordTip.Location = new System.Drawing.Point(315, 168);
+            this.btnPasswordTip.Location = new System.Drawing.Point(356, 165);
             this.btnPasswordTip.Name = "btnPasswordTip";
             this.btnPasswordTip.Size = new System.Drawing.Size(42, 27);
             this.btnPasswordTip.TabIndex = 12;
@@ -155,7 +155,7 @@ namespace PRO1
             // 
             // btnUsernameTip
             // 
-            this.btnUsernameTip.Location = new System.Drawing.Point(327, 103);
+            this.btnUsernameTip.Location = new System.Drawing.Point(356, 102);
             this.btnUsernameTip.Name = "btnUsernameTip";
             this.btnUsernameTip.Size = new System.Drawing.Size(42, 27);
             this.btnUsernameTip.TabIndex = 13;

@@ -9,17 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using DocumentFormat.OpenXml.Drawing.Charts;
 
 
 namespace PRO1
 {
     public partial class RegisterForm : Form
     {
+        ToolTip tip = new ToolTip();
+
         public RegisterForm()
         {
             InitializeComponent();
             this.BackgroundImage = Properties.Resources.jeffrey;
             this.BackgroundImageLayout = ImageLayout.Stretch;
+
         }
 
         private async void RegisterB_Click(object sender, EventArgs e)
@@ -32,30 +36,30 @@ namespace PRO1
             string role = cmbRole.SelectedItem?.ToString();
 
             if (!ValidationHelper.IsValidUsername(username))
-            { 
-                MessageBox.Show("שם המשתמש חייב להכיל 6–8 תווים, עד שתי ספרות וכל השאר אותיות באנגלית.");
+            {
+                MessageBox.Show("Username must be 6–8 characters long, contain up to two digits, and the rest letters.");
                 return;
             }
 
             if (!ValidationHelper.IsValidPassword(password))
             {
-                MessageBox.Show("הסיסמה חייבת להכיל 8–10 תווים, לפחות אות אחת, ספרה אחת ותו מיוחד.");
+                MessageBox.Show("Password must be 8–10 characters long, with at least one letter, one digit, and one special character.");
                 return;
             }
 
             if (!ValidationHelper.IsValidID(id))
             {
-                MessageBox.Show("מספר ת\"ז לא תקין. חייב להיות 9 ספרות.");
+                MessageBox.Show("Invalid ID. It must be exactly 9 digits.");
                 return;
             }
 
             if (!ValidationHelper.IsValidEmail(email))
             {
-                MessageBox.Show("כתובת מייל לא תקינה.");
+                MessageBox.Show("Invalid email address.");
                 return;
             }
+        
 
-            MessageBox.Show("הרשמה הושלמה בהצלחה!");
 
 
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Users.xlsx");
@@ -91,15 +95,127 @@ namespace PRO1
             await firebaseHelper.AddUserAsync(username, password, id, email, role);
 
 
-            MessageBox.Show("המשתמש נשמר בהצלחה!");
+            MessageBox.Show("User saved successfully!");
+            MainPage mainpage = new MainPage();
+            mainpage.Show();
+
             this.Close();
-      
-            
+
+
         }
+        private void AddPlaceholders()
+        {
+            txtUsername.Text = "Enter username";
+            txtUsername.ForeColor = Color.Gray;
+            txtUsername.GotFocus += RemovePlaceholderUsername;
+            txtUsername.LostFocus += SetPlaceholderUsername;
+
+            txtPassword.Text = "Enter password";
+            txtPassword.ForeColor = Color.Gray;
+            txtPassword.GotFocus += RemovePlaceholderPassword;
+            txtPassword.LostFocus += SetPlaceholderPassword;
+
+            txtID.Text = "Enter ID";
+            txtID.ForeColor = Color.Gray;
+            txtID.GotFocus += RemovePlaceholderID;
+            txtID.LostFocus += SetPlaceholderID;
+
+            txtEmail.Text = "Enter email";
+            txtEmail.ForeColor = Color.Gray;
+            txtEmail.GotFocus += RemovePlaceholderEmail;
+            txtEmail.LostFocus += SetPlaceholderEmail;
+        }
+        // Username
+        private void RemovePlaceholderUsername(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "Enter username")
+            {
+                txtUsername.Text = "";
+                txtUsername.ForeColor = Color.Black;
+            }
+        }
+
+        private void SetPlaceholderUsername(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                txtUsername.Text = "Enter username";
+                txtUsername.ForeColor = Color.Gray;
+            }
+        }
+
+        // Password
+        private void RemovePlaceholderPassword(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Enter password")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.Black;
+                txtPassword.PasswordChar = '●';
+            }
+        }
+
+        private void SetPlaceholderPassword(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                txtPassword.PasswordChar = '\0';
+                txtPassword.UseSystemPasswordChar = false;
+                txtPassword.Text = "Enter password";
+                txtPassword.ForeColor = Color.Gray;
+            }
+        }
+
+        // ID
+        private void RemovePlaceholderID(object sender, EventArgs e)
+        {
+            if (txtID.Text == "Enter ID")
+            {
+                txtID.Text = "";
+                txtID.ForeColor = Color.Black;
+            }
+        }
+
+        private void SetPlaceholderID(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtID.Text))
+            {
+                txtID.Text = "Enter ID";
+                txtID.ForeColor = Color.Gray;
+            }
+        }
+
+        // Email
+        private void RemovePlaceholderEmail(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "Enter email")
+            {
+                txtEmail.Text = "";
+                txtEmail.ForeColor = Color.Black;
+            }
+        }
+
+        private void SetPlaceholderEmail(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                txtEmail.Text = "Enter email";
+                txtEmail.ForeColor = Color.Gray;
+            }
+        }
+
+
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
+            AddPlaceholders();
+            tip.SetToolTip(btnUsernameTip, "Username must be 6–8 characters long, contain up to two digits, and the rest letters (English).");
+            tip.SetToolTip(btnPasswordTip, "Password must be 8–10 characters long, with at least one letter, one digit, and one special character.");
+
+
+
 
         }
+    
     }
 }
