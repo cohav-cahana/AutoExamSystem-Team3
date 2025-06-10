@@ -73,21 +73,21 @@ namespace PRO1
             this.Hide();
         }
 
-        private void btnApply_Click(object sender, EventArgs e)
-        {
-        }
+       
 
-        private void btnSignup_Click(object sender, EventArgs e)
-        {
-            RegisterForm registerForm = new RegisterForm();
-            registerForm.Show();
-        }
+      
 
         private void btnContact_Click(object sender, EventArgs e)
         {
             lblContactInfo.Visible = true;
         }
 
+        private void btnSignup_Click_1(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
+            this.Hide();
 
+        }
     }
 }

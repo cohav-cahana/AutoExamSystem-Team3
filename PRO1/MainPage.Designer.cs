@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnApply = new System.Windows.Forms.Button();
-            this.btnLearn = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.btnSignup = new System.Windows.Forms.Button();
@@ -53,43 +51,12 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "COLLEGE SYSTEM";
             // 
-            // btnApply
-            // 
-            this.btnApply.BackColor = System.Drawing.Color.White;
-            this.btnApply.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnApply.FlatAppearance.BorderSize = 0;
-            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApply.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnApply.ForeColor = System.Drawing.Color.Black;
-            this.btnApply.Location = new System.Drawing.Point(482, 31);
-            this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(166, 35);
-            this.btnApply.TabIndex = 2;
-            this.btnApply.Text = "Apply Now";
-            this.btnApply.UseVisualStyleBackColor = false;
-            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
-            // 
-            // btnLearn
-            // 
-            this.btnLearn.BackColor = System.Drawing.Color.White;
-            this.btnLearn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLearn.FlatAppearance.BorderSize = 0;
-            this.btnLearn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLearn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnLearn.ForeColor = System.Drawing.Color.Black;
-            this.btnLearn.Location = new System.Drawing.Point(654, 31);
-            this.btnLearn.Name = "btnLearn";
-            this.btnLearn.Size = new System.Drawing.Size(146, 34);
-            this.btnLearn.TabIndex = 3;
-            this.btnLearn.Text = "Learn More";
-            this.btnLearn.UseVisualStyleBackColor = false;
-            // 
             // btnLogin
             // 
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnLogin.Location = new System.Drawing.Point(962, 31);
+            this.btnLogin.Location = new System.Drawing.Point(825, 31);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(85, 34);
             this.btnLogin.TabIndex = 4;
@@ -102,8 +69,6 @@
             this.sidePanel.Controls.Add(this.btnSignup);
             this.sidePanel.Controls.Add(this.btnLogin);
             this.sidePanel.Controls.Add(this.lblTitle);
-            this.sidePanel.Controls.Add(this.btnApply);
-            this.sidePanel.Controls.Add(this.btnLearn);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.sidePanel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
@@ -117,12 +82,13 @@
             this.btnSignup.FlatAppearance.BorderSize = 0;
             this.btnSignup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignup.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnSignup.Location = new System.Drawing.Point(822, 31);
+            this.btnSignup.Location = new System.Drawing.Point(936, 31);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(118, 34);
             this.btnSignup.TabIndex = 5;
             this.btnSignup.Text = "Sign up";
             this.btnSignup.UseVisualStyleBackColor = true;
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click_1);
             // 
             // label1
             // 
@@ -201,8 +167,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.Button btnLearn;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Button btnSignup;
