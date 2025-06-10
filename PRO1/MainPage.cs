@@ -13,9 +13,6 @@ namespace PRO1
 {
     public partial class MainPage : Form
     {
-        Timer slideTimer = new Timer();
-        int slideSpeed = 25;
-        Form nextForm;
         public MainPage()
         {
             InitializeComponent();
@@ -89,16 +86,15 @@ namespace PRO1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SlideToForm(new frontPage());
 
-        //    frontPage login = new frontPage();
-          //  login.Show();
-          //  this.Hide();
+             frontPage login = new frontPage();
+            login.Show();
+             this.Hide();
         }
 
-       
 
-      
+
+
 
         private void btnContact_Click(object sender, EventArgs e)
         {
@@ -107,11 +103,10 @@ namespace PRO1
 
         private void btnSignup_Click_1(object sender, EventArgs e)
         {
-            SlideToForm(new RegisterForm());
 
-        //    RegisterForm registerForm = new RegisterForm();
-          //  registerForm.Show();
-            //this.Hide();
+                RegisterForm registerForm = new RegisterForm();
+             registerForm.Show();
+            this.Hide();
 
         }
         private void MakeButtonRound(Button btn)
@@ -120,27 +115,6 @@ namespace PRO1
             path.AddEllipse(0, 0, btn.Width, btn.Height);
             btn.Region = new Region(path);
         }
-        private void SlideToForm(Form formToOpen)
-        {
-            nextForm = formToOpen;
-            nextForm.StartPosition = FormStartPosition.Manual;
-            nextForm.Location = new Point(this.Right, this.Top);
-            nextForm.Show();
-
-            slideTimer.Interval = 1;
-            slideTimer.Tick += SlideTimer_Tick;
-            slideTimer.Start();
-        }
-        private void SlideTimer_Tick(object sender, EventArgs e)
-        {
-            nextForm.Left -= slideSpeed;
-
-            if (nextForm.Left <= this.Left)
-            {
-                slideTimer.Stop();
-                slideTimer.Tick -= SlideTimer_Tick;
-                this.Hide();
-            }
-        }
+     
     }
 }
