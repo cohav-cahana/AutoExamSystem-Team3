@@ -136,7 +136,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            //this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelAverage
             // 
@@ -156,7 +156,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+          //  this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // GradesForm
             // 

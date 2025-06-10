@@ -30,7 +30,7 @@ namespace PRO1
 
             try
             {
-                List<Question> questions = await firebaseHelper.GetQuestionsByTeacherIdAsync(currentTeacherId);
+                //List<Question> questions = await firebaseHelper.GetQuestionsByTeacherIdAsync(currentTeacherId);
                 //dataGridView1.DataSource = questions;
             }
             catch (Exception ex)

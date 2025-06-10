@@ -77,7 +77,7 @@
             this.txtusername_log.Name = "txtusername_log";
             this.txtusername_log.Size = new System.Drawing.Size(250, 38);
             this.txtusername_log.TabIndex = 12;
-            this.txtusername_log.TextChanged += new System.EventHandler(this.txtusername_log_TextChanged);
+         //   this.txtusername_log.TextChanged += new System.EventHandler(this.txtusername_log_TextChanged);
             // 
             // txtpassword_log
             // 

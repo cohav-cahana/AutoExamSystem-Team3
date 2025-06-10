@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\PRO1"
+    "\\PRO1",
+    "\\PRO1\\Properties"
   ],
-  "SelectedNode": "\\PRO1\\App.config",
+  "SelectedNode": "\\PRO1\\Properties\\Resources.resx",
   "PreviewInSolutionExplorer": false
 }
