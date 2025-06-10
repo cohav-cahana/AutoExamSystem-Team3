@@ -33,11 +33,12 @@ namespace PRO1
             }
 
             MakeButtonRound(btnExit);
-            btnExit.BackColor = Color.FromArgb(217, 160, 102); // צבע חום-קרמל
+            btnExit.BackColor = Color.FromArgb(217, 160, 102); 
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.Cursor = Cursors.Hand;
             btnExit.BackgroundImageLayout = ImageLayout.Stretch;
+      //      btnExit.BackgroundImage = Image.FromFile("Resources/SYSTEM_OUT.png"); 
 
 
             btnExit.Click += btnExit_Click;
