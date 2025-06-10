@@ -67,3 +67,11 @@ C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1.Tests\obj\D
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.sourcelink.json
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.dll
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.pdb
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.csproj.AssemblyReference.cache
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.AssemblyInfoInputs.cache
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.AssemblyInfo.cs
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.sourcelink.json
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.dll
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1.Tests\obj\Debug\net472\PRO1.Tests.pdb

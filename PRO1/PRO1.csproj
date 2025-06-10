@@ -163,18 +163,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdaptiveExam.cs" />
     <Compile Include="AdaptiveSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdaptiveSelectionForm.Designer.cs">
       <DependentUpon>AdaptiveSelectionForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdaptiveTestForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdaptiveTestForm.Designer.cs">
-      <DependentUpon>AdaptiveTestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ExamResult.cs" />
     <Compile Include="ExamSelection.cs">
@@ -235,10 +228,15 @@
       <DependentUpon>LecturerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginControl.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginControl.Designer.cs">
       <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginControl1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginControl.resx</DependentUpon>
     </Compile>
     <Compile Include="LoginManager.cs" />
     <Compile Include="MainPage.cs">
@@ -264,6 +262,11 @@
     </Compile>
     <Compile Include="Open.Designer.cs">
       <DependentUpon>Open.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Open1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Open.resx</DependentUpon>
     </Compile>
     <Compile Include="OpenQuestionUserControl.cs">
       <SubType>UserControl</SubType>
@@ -319,12 +322,6 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="ValidationHelper.cs" />
-    <EmbeddedResource Include="AdaptiveSelectionForm.resx">
-      <DependentUpon>AdaptiveSelectionForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdaptiveTestForm.resx">
-      <DependentUpon>AdaptiveTestForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ExamSelection.resx">
       <DependentUpon>ExamSelection.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,6 +351,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginControl.resx">
       <DependentUpon>LoginControl.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginControl1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
@@ -366,6 +365,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Open.resx">
       <DependentUpon>Open.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Open1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OpenQuestionUserControl.resx">
       <DependentUpon>OpenQuestionUserControl.cs</DependentUpon>

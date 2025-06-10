@@ -381,3 +381,4 @@ C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.genautor
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.AdaptiveSelectionForm.resources
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.AdaptiveTestForm.resources
 C:\Users\User\Desktop\AutoExamSystem-Team3\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.LoginControl.resources
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.LoginControl.resources
