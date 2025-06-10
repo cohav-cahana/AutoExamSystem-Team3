@@ -25,6 +25,27 @@ namespace PRO1
             this.BackgroundImageLayout = ImageLayout.Stretch;
 
         }
+        public static List<string> ReadAllIDs(string filePath)
+        {
+            List<string> ids = new List<string>();
+
+            using (var workbook = new XLWorkbook(filePath))
+            {
+                var worksheet = workbook.Worksheet(1); // גיליון ראשון — אם את יודעת את השם אפשר גם worksheet = workbook.Worksheet("Users")
+                var rows = worksheet.RangeUsed().RowsUsed();
+
+                foreach (var row in rows.Skip(1)) // Skip(1) כדי לדלג על שורת הכותרות
+                {
+                    string id = row.Cell(3).GetValue<string>().Trim();
+                    if (!string.IsNullOrEmpty(id))
+                    {
+                        ids.Add(id);
+                    }
+                }
+            }
+
+            return ids;
+        }
 
         private async void RegisterB_Click(object sender, EventArgs e)
         {
@@ -34,6 +55,21 @@ namespace PRO1
             string id = txtID.Text.Trim();
             string email = txtEmail.Text.Trim();
             string role = cmbRole.SelectedItem?.ToString();
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Users.xlsx");
+
+            if (!File.Exists(filePath))
+            {
+                var wb = new XLWorkbook();
+                var ws = wb.Worksheets.Add("Users");
+                ws.Cell(1, 1).Value = "Username";
+                ws.Cell(1, 2).Value = "Password";
+                ws.Cell(1, 3).Value = "ID";
+                ws.Cell(1, 4).Value = "Email";
+                ws.Cell(1, 5).Value = "Role";
+                wb.SaveAs(filePath);
+            }
+            List<string> existingIDs = ReadAllIDs(filePath);
+
 
             if (!ValidationHelper.IsValidUsername(username))
             {
@@ -52,6 +88,11 @@ namespace PRO1
                 MessageBox.Show("Invalid ID. It must be exactly 9 digits.");
                 return;
             }
+            else if (!ValidationHelper.IsUniqueID(id, existingIDs))
+            {
+                MessageBox.Show("This ID already exists in the system. Please enter a unique ID.");
+                return;
+            }
 
             if (!ValidationHelper.IsValidEmail(email))
             {
@@ -60,24 +101,6 @@ namespace PRO1
             }
         
 
-
-
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Users.xlsx");
-
-
-
-
-            if (!File.Exists(filePath))
-            {
-                var wb = new XLWorkbook();
-                var ws = wb.Worksheets.Add("Users");
-                ws.Cell(1, 1).Value = "Username";
-                ws.Cell(1, 2).Value = "Password";
-                ws.Cell(1, 3).Value = "ID";
-                ws.Cell(1, 4).Value = "Email";
-                ws.Cell(1, 5).Value = "Role";
-                wb.SaveAs(filePath);
-            }
 
 
             var workbook = new XLWorkbook(filePath);
