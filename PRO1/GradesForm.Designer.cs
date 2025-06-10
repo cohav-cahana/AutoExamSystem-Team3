@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -102,27 +102,27 @@
             // 
             this.chartGrades.BackColor = System.Drawing.Color.Transparent;
             this.chartGrades.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chartGrades.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartGrades.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartGrades.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartGrades.Legends.Add(legend1);
             this.chartGrades.Location = new System.Drawing.Point(415, 306);
             this.chartGrades.Name = "chartGrades";
             this.chartGrades.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series2.BackImage = "C:\\Users\\maimo\\Desktop\\הורדה.png";
-            series2.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            series2.BackSecondaryColor = System.Drawing.Color.Transparent;
-            series2.BorderColor = System.Drawing.Color.Transparent;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Color = System.Drawing.Color.Transparent;
-            series2.LabelBackColor = System.Drawing.Color.Transparent;
-            series2.LabelBorderColor = System.Drawing.Color.Transparent;
-            series2.Legend = "Legend1";
-            series2.MarkerBorderColor = System.Drawing.Color.White;
-            series2.Name = "Series1";
-            series2.YValuesPerPoint = 2;
-            this.chartGrades.Series.Add(series2);
+            series1.BackImage = "C:\\Users\\maimo\\Desktop\\הורדה.png";
+            series1.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series1.BackSecondaryColor = System.Drawing.Color.Transparent;
+            series1.BorderColor = System.Drawing.Color.Transparent;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Transparent;
+            series1.LabelBackColor = System.Drawing.Color.Transparent;
+            series1.LabelBorderColor = System.Drawing.Color.Transparent;
+            series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.White;
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
+            this.chartGrades.Series.Add(series1);
             this.chartGrades.Size = new System.Drawing.Size(698, 323);
             this.chartGrades.TabIndex = 6;
             this.chartGrades.Text = "chart1";
@@ -149,7 +149,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PRO1.Properties.Resources._581b653c8c6a6cbdbbffc565163bd97f2;
+            this.pictureBox1.Image = global::PRO1.Properties.Resources._335;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1162, 677);

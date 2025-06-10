@@ -286,6 +286,7 @@
       <DependentUpon>QuestionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="QuestionManager.cs" />
+    <Compile Include="SessionManager.cs" />
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,6 +448,8 @@
     <None Include="Resources\332.jpg" />
     <None Include="Resources\333.jpg" />
     <None Include="Resources\334.jpg" />
+    <None Include="Resources\335.jpg" />
+    <None Include="Resources\336.jpg" />
     <Content Include="Resources\front11.png" />
     <Content Include="Resources\Graguation.png" />
     <None Include="Resources\students_banner_cropped.png" />

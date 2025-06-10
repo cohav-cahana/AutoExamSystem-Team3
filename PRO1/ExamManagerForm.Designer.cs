@@ -57,7 +57,7 @@
             // 
             // btnDeleteExam
             // 
-            this.btnDeleteExam.Location = new System.Drawing.Point(426, 466);
+            this.btnDeleteExam.Location = new System.Drawing.Point(816, 474);
             this.btnDeleteExam.Name = "btnDeleteExam";
             this.btnDeleteExam.Size = new System.Drawing.Size(116, 37);
             this.btnDeleteExam.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PRO1.Properties.Resources._581b653c8c6a6cbdbbffc565163bd97f1;
+            this.pictureBox1.Image = global::PRO1.Properties.Resources._336;
             this.pictureBox1.Location = new System.Drawing.Point(2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1147, 641);

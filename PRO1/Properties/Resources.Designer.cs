@@ -143,6 +143,26 @@ namespace PRO1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _335 {
+            get {
+                object obj = ResourceManager.GetObject("335", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _336 {
+            get {
+                object obj = ResourceManager.GetObject("336", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _393858cbf8203ce0e23482e20cc709b0 {
             get {
                 object obj = ResourceManager.GetObject("393858cbf8203ce0e23482e20cc709b0", resourceCulture);
