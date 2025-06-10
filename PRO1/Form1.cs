@@ -16,8 +16,8 @@ namespace PRO1
         public Form1()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackColor = Color.White;
+
             label1.Font = new Font("Arial", 12, FontStyle.Bold);
             button1.Font= new Font("Arial", 12, FontStyle.Bold);
             button2.Font = new Font("Arial", 12, FontStyle.Bold);

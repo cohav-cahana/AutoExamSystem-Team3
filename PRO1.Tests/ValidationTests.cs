@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using PRO1;
 
 namespace PRO1.Tests
 {
     [TestClass]
     public class ValidationTests
     {
+        [TestMethod]
         public void ValidUsername_ShouldReturnTrue()
         {
             string username = "abcde1";
@@ -56,6 +57,48 @@ namespace PRO1.Tests
             string id = "12345678";
             bool result = ValidationHelper.IsValidID(id);
             Assert.IsFalse(result);
+        }
+        [TestMethod]
+        public void Login_ValidCredentials_ShouldReturnTrue()
+        {
+            bool result = LoginManager.Authenticate("maria44", "ma123456!");
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void Login_InvalidPassword_ShouldReturnFalse()
+        {
+            bool result = LoginManager.Authenticate("user1", "WrongPass");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void GenerateExam_ShouldReturnExactNumberOfQuestions()
+        {
+            GlobalState.QuestionManager.ClearAllQuestions(); 
+            GlobalState.QuestionManager.AddQuestion(new Question { QuestionText = "שאלה 1", Type = "TrueFalse" });
+            GlobalState.QuestionManager.AddQuestion(new Question { QuestionText = "שאלה 2", Type = "TrueFalse" });
+            GlobalState.QuestionManager.AddQuestion(new Question { QuestionText = "שאלה 3", Type = "TrueFalse" });
+
+            int expectedCount = 2;
+
+            var examQuestions = GlobalState.QuestionManager.GenerateExam(expectedCount);
+
+            Assert.AreEqual(expectedCount, examQuestions.Count);
+        }
+
+        [TestMethod]
+        public void QuestionList_ShouldNotContainDuplicates_ByText()
+        {
+            List<Question> questions = new List<Question>
+            {
+                new Question { QuestionText = "מהי ירושה ב־OOP?" },
+                new Question { QuestionText = "מה ההבדל בין stack ל־heap?" },
+            };
+
+            var texts = questions.Select(q => q.QuestionText?.Trim()).ToList();
+            bool hasDuplicates = texts.Count != texts.Distinct().Count();
+
+            Assert.IsFalse(hasDuplicates, "נמצאו שאלות כפולות ברשימה!");
         }
     }
 }

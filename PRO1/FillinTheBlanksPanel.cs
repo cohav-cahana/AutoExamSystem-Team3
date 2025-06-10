@@ -22,8 +22,8 @@ namespace PRO1
             questionLbl.Text = question.QuestionText;
             FitTextToLabel(questionLbl);
             lblQuestionCounter.Text = $"Question {numQuestion + 1} of {totalQuestions}";
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackColor = Color.White;
+
         }
 
         private void FitTextToLabel(Label label)

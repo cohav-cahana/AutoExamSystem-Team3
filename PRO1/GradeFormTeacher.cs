@@ -14,9 +14,11 @@ namespace PRO1
     {
         public GradeFormTeacher()
         {
+
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackColor = Color.White;
+
+
         }
 
         private void dgvScores_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -20,10 +20,10 @@ namespace PRO1
         public frontPage()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.BackColor = Color.FromArgb(120, Color.White);  
-            panel1.BorderStyle = BorderStyle.None;
+            this.BackColor = Color.White;
+
+            //panel1.BackColor = Color.FromArgb(120, Color.White);  
+            //panel1.BorderStyle = BorderStyle.None;
 
 
 
@@ -190,6 +190,24 @@ namespace PRO1
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtusername_log_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
 
         }
     }

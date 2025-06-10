@@ -18,6 +18,8 @@ namespace PRO1
         public LecturerForm()
         {
             InitializeComponent();
+            this.BackColor = Color.White;
+
         }
 
         private List<Question> allQuestions = new List<Question>();

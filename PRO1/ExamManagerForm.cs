@@ -17,8 +17,8 @@ namespace PRO1
         public ExamManagerForm()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackColor = Color.White;
+
         }
         private List<Exam> exams = new List<Exam>();
 
@@ -78,6 +78,11 @@ namespace PRO1
             {
                 lstExamQuestions.Items.Add("למבחן זה אין שאלות שמורות");
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

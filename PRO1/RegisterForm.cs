@@ -15,11 +15,13 @@ namespace PRO1
 {
     public partial class RegisterForm : Form
     {
+        private MainPage mainPage;
         public RegisterForm()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackColor = Color.White;
+
+
         }
 
         private async void RegisterB_Click(object sender, EventArgs e)
@@ -92,12 +94,89 @@ namespace PRO1
 
 
             MessageBox.Show("המשתמש נשמר בהצלחה!");
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
             this.Close();
-      
-            
+
+
+
+
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsernameTip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picSmiley_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPasswordTip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
+
+    }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
         {
 
         }

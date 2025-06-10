@@ -33,9 +33,9 @@
             this.examTimer = new System.Windows.Forms.Timer(this.components);
             this.lblTimer = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.examStartBtn = new System.Windows.Forms.Button();
             this.nextBtn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +80,13 @@
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(728, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 0;
+            // 
             // examStartBtn
             // 
             this.examStartBtn.BackColor = System.Drawing.Color.SaddleBrown;
@@ -103,13 +110,6 @@
             this.nextBtn.Visible = false;
             this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(728, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 0;
-            // 
             // TestForm
             // 
             this.AccessibleName = "test";
@@ -117,7 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1099, 637);
+            this.ClientSize = new System.Drawing.Size(1161, 676);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.examStartBtn);
             this.Controls.Add(this.panel1);

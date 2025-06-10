@@ -12,11 +12,13 @@ namespace PRO1
 {
     public partial class MultipleChoice : Form
     {
-        public MultipleChoice()
+        private string teacherId;
+
+        public MultipleChoice(string teacherId)
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.back2;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.teacherId = teacherId;
+
         }
 
         private void MultipleChoice_Load(object sender, EventArgs e)
@@ -86,7 +88,7 @@ namespace PRO1
 
 
             // שליחה ל-Firebase
-            await firebaseHelper.AddQuestionAsync("MultipleChoice",correctAnswer, topic,level, questionText,  answer1,  answer2, answer3, answer4);
+            await firebaseHelper.AddQuestionAsync("MultipleChoice",correctAnswer, topic,level, questionText,  answer1,  answer2, answer3, answer4,teacherId);
 
             // הודעה שהשאלה נשמרה בהצלחה
             MessageBox.Show("השאלה נשמרה בהצלחה!");

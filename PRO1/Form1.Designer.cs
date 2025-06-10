@@ -34,14 +34,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_showExam = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(419, 396);
+            this.button4.Location = new System.Drawing.Point(285, 304);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(153, 55);
+            this.button4.Size = new System.Drawing.Size(155, 123);
             this.button4.TabIndex = 9;
             this.button4.Text = " ציוני התלמידים";
             this.button4.UseVisualStyleBackColor = false;
@@ -49,9 +51,9 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(419, 322);
+            this.button3.Location = new System.Drawing.Point(457, 304);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 55);
+            this.button3.Size = new System.Drawing.Size(150, 123);
             this.button3.TabIndex = 8;
             this.button3.Text = "הצגת סטטיסטיקות";
             this.button3.UseVisualStyleBackColor = false;
@@ -59,9 +61,9 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(419, 240);
+            this.button2.Location = new System.Drawing.Point(630, 304);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 55);
+            this.button2.Size = new System.Drawing.Size(160, 123);
             this.button2.TabIndex = 7;
             this.button2.Text = "יצירת מבחן";
             this.button2.UseVisualStyleBackColor = false;
@@ -70,11 +72,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(419, 155);
+            this.button1.Location = new System.Drawing.Point(817, 304);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 55);
+            this.button1.Size = new System.Drawing.Size(166, 123);
             this.button1.TabIndex = 6;
-            this.button1.Text = "יצירת שאלה";
+            this.button1.Text = "מאגר שאלות";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -82,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(416, 93);
+            this.label1.Location = new System.Drawing.Point(454, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 16);
             this.label1.TabIndex = 5;
@@ -92,28 +94,40 @@
             // btn_showExam
             // 
             this.btn_showExam.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_showExam.Location = new System.Drawing.Point(419, 479);
+            this.btn_showExam.Location = new System.Drawing.Point(114, 304);
             this.btn_showExam.Name = "btn_showExam";
-            this.btn_showExam.Size = new System.Drawing.Size(153, 55);
+            this.btn_showExam.Size = new System.Drawing.Size(153, 123);
             this.btn_showExam.TabIndex = 10;
             this.btn_showExam.Text = "הצגת מבחנים";
             this.btn_showExam.UseVisualStyleBackColor = false;
             this.btn_showExam.Click += new System.EventHandler(this.btn_showExam_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PRO1.Properties.Resources._331;
+            this.pictureBox1.Location = new System.Drawing.Point(-5, -4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1166, 679);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 641);
+            this.ClientSize = new System.Drawing.Size(1161, 676);
             this.Controls.Add(this.btn_showExam);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,6 +141,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_showExam;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
