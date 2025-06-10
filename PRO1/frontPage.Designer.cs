@@ -42,6 +42,7 @@
             // 
             this.login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.login.BackColor = System.Drawing.Color.Sienna;
+            this.login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.login.ForeColor = System.Drawing.Color.White;

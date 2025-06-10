@@ -19,6 +19,19 @@ namespace PRO1
         {
             InitializeComponent();
             this.BackColor = Color.White;
+            StyleWarmButton(btnCreatExam);
+            StyleWarmButton(go_back);
+  
+            StyleLabel(label4);
+            StyleLabel(label1);
+            StyleLabel(label2);
+            StyleLabel(label3);
+            StyleLabel(label5);
+
+            StyleTextBox(txtQuestionCount);
+            StyleTextBox(txt_Timer);
+            StyleComboBox(cmb_topic);
+            StyleComboBox(cmbDifficulty);
 
         }
 
@@ -167,6 +180,41 @@ namespace PRO1
             go_back1.Show();
             this.Hide();
 
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066"); // חום בהיר
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50"); // חום כהה יותר בהובר
+            button.Cursor = Cursors.Hand;
+        }
+        private void StyleLabel(Label label, bool isTitle = false)
+        {
+            label.ForeColor = ColorTranslator.FromHtml(isTitle ? "#5C3A21" : "#3E2C23");
+            label.BackColor = Color.Transparent;
+            label.Font = isTitle
+                ? new Font("Segoe UI", 16, FontStyle.Bold)
+                : new Font("Segoe UI", 11, FontStyle.Regular); 
+            label.TextAlign = ContentAlignment.MiddleRight;
+            label.RightToLeft = RightToLeft.Yes;
+        }
+
+        private void StyleTextBox(TextBox textBox)
+        {
+            textBox.BorderStyle = BorderStyle.FixedSingle;
+            textBox.BackColor = Color.White;
+            textBox.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            textBox.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+        }
+        private void StyleComboBox(ComboBox comboBox)
+        {
+            comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox.BackColor = Color.White;
+            comboBox.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            comboBox.Font = new Font("Segoe UI", 10, FontStyle.Regular);
         }
     }
 
