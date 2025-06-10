@@ -16,8 +16,8 @@ namespace PRO1
         public FillInTheBlanks()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackColor = Color.White;
+
         }
 
         private void FillInTheBlanks_Load(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace PRO1
             string level = comboBox2.SelectedItem?.ToString(); // רמת קושי
 
             // שליחה ל-Firebase
-            await firebaseHelper.AddQuestionAsync("FillInTheBlanks", correctAnswer, topic, level, questionText, "", "", "", "");
+            await firebaseHelper.AddQuestionAsync("FillInTheBlanks", correctAnswer, topic, level, questionText, "", "", "", "","");
 
             // הודעה שהשאלה נשמרה בהצלחה
             MessageBox.Show("השאלה נשמרה בהצלחה!");

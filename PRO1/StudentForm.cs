@@ -20,9 +20,11 @@ namespace PRO1
             InitializeComponent();
             this.currentUser = user;
             this.login = login;
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
             welcomeLbl.Text = "Welcome " + user.Username;
+           
+            this.BackColor = System.Drawing.Color.White;
+
+
         }
 
         private void examBtn_Click(object sender, EventArgs e)
@@ -35,13 +37,14 @@ namespace PRO1
         private void backBtn_Click(object sender, EventArgs e)
         {
             login.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void gradeBtn_Click(object sender, EventArgs e)
         {
             GradesForm gradesForm = new GradesForm(currentUser);
             gradesForm.Show();
+            this.Hide();
         }
 
         private void welcomeLbl_Click(object sender, EventArgs e)
@@ -50,6 +53,26 @@ namespace PRO1
         }
 
         private void StudentForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

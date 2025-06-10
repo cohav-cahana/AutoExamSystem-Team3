@@ -46,7 +46,7 @@
             this.questionLbl.ForeColor = System.Drawing.Color.Black;
             this.questionLbl.Location = new System.Drawing.Point(137, 49);
             this.questionLbl.Name = "questionLbl";
-            this.questionLbl.Size = new System.Drawing.Size(672, 84);
+            this.questionLbl.Size = new System.Drawing.Size(920, 84);
             this.questionLbl.TabIndex = 3;
             this.questionLbl.Text = "Question Number 1";
             this.questionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,7 +136,7 @@
             this.Controls.Add(this.questionPanel);
             this.Location = new System.Drawing.Point(282, 19);
             this.Name = "MultipleChoiceUserControl";
-            this.Size = new System.Drawing.Size(931, 447);
+            this.Size = new System.Drawing.Size(1179, 723);
             this.Load += new System.EventHandler(this.MultipleChoiceUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

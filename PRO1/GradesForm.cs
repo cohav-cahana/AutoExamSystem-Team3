@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,9 @@ namespace PRO1
         private User currentUser;
         private FirebaseHelper firebaseHelper;
         private List<ExamResult> examResults = new List<ExamResult>();
+        private StudentForm studentForm;
+        private frontPage login;
+
 
 
         public GradesForm(User user)
@@ -24,15 +28,40 @@ namespace PRO1
             InitializeComponent();
             currentUser = user;
             firebaseHelper = new FirebaseHelper();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-            label1.BackColor = System.Drawing.Color.FromArgb(100, 173, 216, 230);
-            label2.BackColor = System.Drawing.Color.FromArgb(100, 173, 216, 230);
+            
+            label1.BackColor = System.Drawing.Color.FromArgb(180, 150, 100, 50);
+            label2.BackColor = System.Drawing.Color.FromArgb(180, 150, 100, 50);
             label1.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
             label2.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            label3.Font = new System.Drawing.Font("Arial", 20, FontStyle.Bold);
-            label3.BackColor = System.Drawing.Color.FromArgb(120, 173, 216, 230); // תכלת עם שקיפות
-            label4.Font = new System.Drawing.Font("Arial", 20, FontStyle.Bold);
+            label3.Font = new System.Drawing.Font("Arial", 16, FontStyle.Bold);
+            label3.BackColor = System.Drawing.Color.FromArgb(180, 150, 100, 50);
+            label4.Font = new System.Drawing.Font("Arial", 15, FontStyle.Bold);
+            int size = 80;
+            int cornerRadius = 20;
+
+            panelAverage.Size = new Size(size, size);
+            panelAverage.BackColor = System.Drawing.Color.White;
+
+            GraphicsPath path = new GraphicsPath();
+
+            // פינה שמאל עליונה
+            path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+            // קו למעלה
+            path.AddLine(cornerRadius, 0, size - cornerRadius, 0);
+            // פינה ימין עליונה
+            path.AddArc(size - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+            // קו ימני
+            path.AddLine(size, cornerRadius, size, size - cornerRadius);
+            // פינה ימין תחתונה
+            path.AddArc(size - cornerRadius, size - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+            // קו תחתון
+            path.AddLine(size - cornerRadius, size, cornerRadius, size);
+            // פינה שמאל תחתונה
+            path.AddArc(0, size - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+            // קו שמאלי
+            path.AddLine(0, size - cornerRadius, 0, cornerRadius);
+
+            panelAverage.Region = new Region(path);
 
 
 
@@ -44,13 +73,13 @@ namespace PRO1
 
             try
             {
-                // שליפת תוצאות המבחנים של המשתמש הנוכחי
+                
                 examResults = await firebaseHelper.GetAllExamsAsync(currentUser.UserId);
 
-                // שליפת כל המבחנים כדי שנוכל לראות כמות שאלות לפי ID
+                
                 List<Exam> allExams = await firebaseHelper.GetAllExamsAsync();
 
-                // יצירת טבלה
+                
                 DataTable table = new DataTable();
                 table.Columns.Add("מזהה מבחן");
                 table.Columns.Add("כמות שאלות");
@@ -67,15 +96,34 @@ namespace PRO1
                 }
 
                 dataGridView1.DataSource = table;
-
-                // עיצוב הטבלה (רשות)
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10, FontStyle.Bold);
-                dataGridView1.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10);
-
+                
+                dataGridView1.EnableHeadersVisualStyles = false;
+                dataGridView1.BackgroundColor = System.Drawing.Color.White;
+                dataGridView1.GridColor = System.Drawing.Color.LightGray;
                 dataGridView1.BorderStyle = BorderStyle.None;
-                dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-                dataGridView1.GridColor = dataGridView1.BackgroundColor;
+                dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+
+                
+                dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(240, 240, 240); 
+                dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+                dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridView1.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 5, 0, 5);
+                dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+                
+                dataGridView1.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+                dataGridView1.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+                dataGridView1.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(220, 220, 250); 
+                dataGridView1.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+                dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridView1.DefaultCellStyle.Padding = new Padding(0, 5, 0, 5);
+
+               
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.RowTemplate.Height = 35;
+
+
+               
 
                 double total = 0;
                 int count = 0;
@@ -90,9 +138,9 @@ namespace PRO1
                 }
 
                 double average = count > 0 ? total / count : 0;
-                label4.Text = average.ToString("0.##"); // רק המספר
+                label4.Text = average.ToString("0.##"); 
 
-                // ציור תרשים ציונים
+                
                 DrawGradesChart();
 
 
@@ -111,7 +159,7 @@ namespace PRO1
             chartGrades.Series.Clear();
             chartGrades.ChartAreas.Clear();
 
-            // יצירת אזור גרף
+            
             ChartArea chartArea = new ChartArea();
             chartArea.BackColor = System.Drawing.Color.White;
             chartArea.AxisX.MajorGrid.Enabled = false;
@@ -120,19 +168,20 @@ namespace PRO1
             chartArea.AxisY.Title = "ציון";
             chartGrades.ChartAreas.Add(chartArea);
 
-            // יצירת סדרה
+            
             Series series = new Series
             {
-                ChartType = SeriesChartType.SplineArea, // קו הררי חלק
-                Color = System.Drawing.Color.FromArgb(180, 0, 120, 255), // כחול שקוף
+                ChartType = SeriesChartType.SplineArea, 
+                Color = System.Drawing.Color.FromArgb(180, 150, 100, 50), 
+
                 BorderWidth = 2,
-                BorderColor = System.Drawing.Color.Blue,
+                BorderColor = System.Drawing.Color.SaddleBrown, 
                 MarkerStyle = MarkerStyle.Circle,
                 MarkerSize = 6,
-                MarkerColor = System.Drawing.Color.Blue,
+                MarkerColor = System.Drawing.Color.SaddleBrown,
             };
 
-            // הוספת הנתונים לפי תאריך
+           
             var sortedResults = examResults.OrderBy(r => r.TakenAt);
             foreach (var result in sortedResults)
             {
@@ -173,6 +222,23 @@ namespace PRO1
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (studentForm == null)
+            {
+                studentForm = new StudentForm(currentUser,  login); // בהנחה שזו החתימה
+            }
+            this.Close();
+            studentForm.Show();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

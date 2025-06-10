@@ -40,7 +40,7 @@ namespace PRO1
             string level = comboBox2.SelectedItem.ToString(); // רמת השאלה שנבחרה בקומבובוקס2
 
             // שליחה ל-Firebase
-            await firebaseHelper.AddQuestionAsync("TrueFalse",correctAnswer, topic, level, questionText, "", "", "", "");
+            await firebaseHelper.AddQuestionAsync("TrueFalse",correctAnswer, topic, level, questionText, "", "", "", "","");
             // הודעה שהשאלה נשמרה בהצלחה
             MessageBox.Show("השאלה נשמרה בהצלחה!");
         }
