@@ -3,35 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\adaptivetestform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\adaptivetestform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\adaptivetestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\adaptivetestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\open.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\open.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\logincontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\logincontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\logincontrol.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\logincontrol.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\logincontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\logincontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\loginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\loginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\adaptiveselectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\adaptiveselectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\adaptiveselectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -39,7 +11,35 @@
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\adaptiveselectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\adaptivetestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\adaptivetestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\user\\desktop\\autoexamsystem-team3\\autoexamsystem-team3\\pro1\\adaptivetestform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\adaptivetestform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\open.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\open.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\logincontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\logincontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\logincontrol.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\logincontrol.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\logincontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\logincontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\loginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\loginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\pro1\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -114,65 +114,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdaptiveTestForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveTestForm.Designer.cs",
-              "RelativeDocumentMoniker": "PRO1\\AdaptiveTestForm.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveTestForm.Designer.cs",
-              "RelativeToolTip": "PRO1\\AdaptiveTestForm.Designer.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T20:19:29.448Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Open.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Open.cs",
-              "RelativeDocumentMoniker": "PRO1\\Open.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Open.cs [Design]",
-              "RelativeToolTip": "PRO1\\Open.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "AdaptiveTestForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveTestForm.Designer.cs",
+              "RelativeDocumentMoniker": "PRO1\\AdaptiveTestForm.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveTestForm.Designer.cs",
+              "RelativeToolTip": "PRO1\\AdaptiveTestForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T20:09:57.187Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginControl.resx",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginControl.resx",
-              "RelativeDocumentMoniker": "PRO1\\LoginControl.resx",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginControl.resx",
-              "RelativeToolTip": "PRO1\\LoginControl.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-06-10T20:06:51.782Z",
+              "WhenOpened": "2025-06-10T20:19:29.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginControl.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginControl.Designer.cs",
-              "RelativeDocumentMoniker": "PRO1\\LoginControl.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginControl.Designer.cs",
-              "RelativeToolTip": "PRO1\\LoginControl.Designer.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T20:06:50.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "LoginManager.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginManager.cs",
               "RelativeDocumentMoniker": "PRO1\\LoginManager.cs",
@@ -180,24 +143,22 @@
               "RelativeToolTip": "PRO1\\LoginManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T20:06:40.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T20:06:40.528Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "LoginControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginControl.cs",
               "RelativeDocumentMoniker": "PRO1\\LoginControl.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginControl.cs [Design]",
               "RelativeToolTip": "PRO1\\LoginControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T20:06:37.518Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-10T20:06:37.518Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AdaptiveTestForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveTestForm.cs",
               "RelativeDocumentMoniker": "PRO1\\AdaptiveTestForm.cs",
@@ -209,16 +170,62 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "AdaptiveSelectionForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveSelectionForm.cs",
+              "RelativeDocumentMoniker": "PRO1\\AdaptiveSelectionForm.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveSelectionForm.cs [Design]",
+              "RelativeToolTip": "PRO1\\AdaptiveSelectionForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T16:59:38.095Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AdaptiveSelectionForm.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveSelectionForm.cs",
               "RelativeDocumentMoniker": "PRO1\\AdaptiveSelectionForm.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveSelectionForm.cs",
               "RelativeToolTip": "PRO1\\AdaptiveSelectionForm.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAqwEUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T19:48:47.568Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginControl.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginControl.Designer.cs",
+              "RelativeDocumentMoniker": "PRO1\\LoginControl.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginControl.Designer.cs",
+              "RelativeToolTip": "PRO1\\LoginControl.Designer.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T20:06:50.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginControl.resx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginControl.resx",
+              "RelativeDocumentMoniker": "PRO1\\LoginControl.resx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\LoginControl.resx",
+              "RelativeToolTip": "PRO1\\LoginControl.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-10T20:06:51.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Open.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Open.cs",
+              "RelativeDocumentMoniker": "PRO1\\Open.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\Open.cs [Design]",
+              "RelativeToolTip": "PRO1\\Open.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T20:09:57.187Z"
             },
             {
               "$type": "Document",
@@ -229,8 +236,7 @@
               "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\MainPage.cs [Design]",
               "RelativeToolTip": "PRO1\\MainPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:21:35.326Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-10T09:21:35.326Z"
             },
             {
               "$type": "Document",
@@ -242,8 +248,7 @@
               "RelativeToolTip": "PRO1\\MainPage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T16:24:11.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T16:24:11.5Z"
             },
             {
               "$type": "Document",
@@ -278,18 +283,6 @@
               "RelativeToolTip": "PRO1\\frontPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T17:23:00.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AdaptiveSelectionForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveSelectionForm.cs",
-              "RelativeDocumentMoniker": "PRO1\\AdaptiveSelectionForm.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AutoExamSystem-Team3\\AutoExamSystem-Team3\\PRO1\\AdaptiveSelectionForm.cs [Design]",
-              "RelativeToolTip": "PRO1\\AdaptiveSelectionForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T16:59:38.095Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
