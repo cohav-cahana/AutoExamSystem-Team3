@@ -102,6 +102,7 @@ namespace PRO1
             {
                 Dictionary<string, object> updatedData = new Dictionary<string, object>()
         {
+                     { "Id", questionKey },
             { "QuestionText", questionText },
             { "CorrectAnswer", correctAnswer },
             { "Topic", topic },

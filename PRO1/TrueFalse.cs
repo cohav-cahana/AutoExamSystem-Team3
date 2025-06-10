@@ -71,6 +71,7 @@ namespace PRO1
                 // עדכון שאלה קיימת
                 var data = new Dictionary<string, object>
         {
+                    { "Id", questionKey },
             { "QuestionText", questionText },
             { "CorrectAnswer", correctAnswer },
             { "Topic", topic },

@@ -132,6 +132,7 @@ namespace PRO1
                 //await firebaseHelper.UpdateQuestionAsync(editedQuestion);
                 var data = new Dictionary<string, object>
     {
+                     { "Id", questionKey },
         { "QuestionText", editedQuestion.QuestionText },
         { "Answer1", editedQuestion.Answer1 },
         { "Answer2", editedQuestion.Answer2 },
