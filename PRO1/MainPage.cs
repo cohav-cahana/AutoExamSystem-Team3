@@ -31,6 +31,23 @@ namespace PRO1
                     btn.Click += Btn_Click;
                 }
             }
+
+            MakeButtonRound(btnExit);
+            btnExit.BackColor = Color.FromArgb(217, 160, 102); // צבע חום-קרמל
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.Cursor = Cursors.Hand;
+            btnExit.BackgroundImageLayout = ImageLayout.Stretch;
+
+
+            btnExit.Click += btnExit_Click;
+            btnExit.MouseEnter += (s, e2) => btnExit.BackColor = Color.FromArgb(184, 111, 80);
+            btnExit.MouseLeave += (s, e2) => btnExit.BackColor = Color.FromArgb(217, 160, 102);
+
+        }
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void Btn_Click(object sender, EventArgs e)
@@ -88,6 +105,12 @@ namespace PRO1
             registerForm.Show();
             this.Hide();
 
+        }
+        private void MakeButtonRound(Button btn)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddEllipse(0, 0, btn.Width, btn.Height);
+            btn.Region = new Region(path);
         }
     }
 }

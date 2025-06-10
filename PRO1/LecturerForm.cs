@@ -21,12 +21,10 @@ namespace PRO1
             this.BackColor = Color.White;
             StyleWarmButton(btnCreatExam);
             StyleWarmButton(go_back);
-  
+
             StyleLabel(label4);
-            StyleLabel(label1);
             StyleLabel(label2);
             StyleLabel(label3);
-            StyleLabel(label5);
 
             StyleTextBox(txtQuestionCount);
             StyleTextBox(txt_Timer);
@@ -37,7 +35,7 @@ namespace PRO1
 
         private List<Question> allQuestions = new List<Question>();
 
-      
+
 
         private List<Exam> exams = new List<Exam>();
 
@@ -167,13 +165,16 @@ namespace PRO1
             cmbDifficulty.Items.Clear();
             foreach (var level in levels)
                 cmbDifficulty.Items.Add(level);
+
+            SetPlaceholder(txtQuestionCount, "Number of questions");
+            SetPlaceholder(txt_Timer, "Exam duration");
         }
 
 
         private void listBoxExams_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-         }
+        }
         private void go_back_Click(object sender, EventArgs e)
         {
             Form1 go_back1 = new Form1();
@@ -197,7 +198,7 @@ namespace PRO1
             label.BackColor = Color.Transparent;
             label.Font = isTitle
                 ? new Font("Segoe UI", 16, FontStyle.Bold)
-                : new Font("Segoe UI", 11, FontStyle.Regular); 
+                : new Font("Segoe UI", 11, FontStyle.Regular);
             label.TextAlign = ContentAlignment.MiddleRight;
             label.RightToLeft = RightToLeft.Yes;
         }
@@ -215,6 +216,29 @@ namespace PRO1
             comboBox.BackColor = Color.White;
             comboBox.ForeColor = ColorTranslator.FromHtml("#3E2C23");
             comboBox.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+        }
+        private void SetPlaceholder(TextBox textBox, string placeholder)
+        {
+            textBox.Text = placeholder;
+            textBox.ForeColor = Color.Gray;
+
+            textBox.GotFocus += (s, e) =>
+            {
+                if (textBox.Text == placeholder)
+                {
+                    textBox.Text = "";
+                    textBox.ForeColor = Color.Black;
+                }
+            };
+
+            textBox.LostFocus += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = Color.Gray;
+                }
+            };
         }
     }
 

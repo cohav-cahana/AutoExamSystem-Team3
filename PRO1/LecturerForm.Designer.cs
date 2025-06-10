@@ -30,7 +30,6 @@ namespace PRO1
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.txtQuestionCount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkedListBoxType = new System.Windows.Forms.CheckedListBox();
@@ -41,32 +40,22 @@ namespace PRO1
             this.checkBoxRandomTopics = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmb_topic = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txt_Timer = new System.Windows.Forms.TextBox();
             this.go_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 155);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Choose a number of questions";
-            // 
             // txtQuestionCount
             // 
-            this.txtQuestionCount.Location = new System.Drawing.Point(443, 95);
+            this.txtQuestionCount.Location = new System.Drawing.Point(370, 95);
             this.txtQuestionCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQuestionCount.Name = "txtQuestionCount";
-            this.txtQuestionCount.Size = new System.Drawing.Size(100, 22);
+            this.txtQuestionCount.Size = new System.Drawing.Size(224, 22);
             this.txtQuestionCount.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(202, 219);
+            this.label2.Location = new System.Drawing.Point(222, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 2;
@@ -75,7 +64,7 @@ namespace PRO1
             // checkedListBoxType
             // 
             this.checkedListBoxType.FormattingEnabled = true;
-            this.checkedListBoxType.Location = new System.Drawing.Point(390, 146);
+            this.checkedListBoxType.Location = new System.Drawing.Point(370, 146);
             this.checkedListBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBoxType.Name = "checkedListBoxType";
             this.checkedListBoxType.Size = new System.Drawing.Size(224, 89);
@@ -84,7 +73,7 @@ namespace PRO1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(208, 269);
+            this.label3.Location = new System.Drawing.Point(244, 261);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 4;
@@ -93,10 +82,10 @@ namespace PRO1
             // cmbDifficulty
             // 
             this.cmbDifficulty.FormattingEnabled = true;
-            this.cmbDifficulty.Location = new System.Drawing.Point(453, 261);
+            this.cmbDifficulty.Location = new System.Drawing.Point(370, 261);
             this.cmbDifficulty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbDifficulty.Name = "cmbDifficulty";
-            this.cmbDifficulty.Size = new System.Drawing.Size(121, 24);
+            this.cmbDifficulty.Size = new System.Drawing.Size(219, 24);
             this.cmbDifficulty.TabIndex = 5;
             // 
             // btnCreatExam
@@ -146,25 +135,16 @@ namespace PRO1
             // cmb_topic
             // 
             this.cmb_topic.FormattingEnabled = true;
-            this.cmb_topic.Location = new System.Drawing.Point(443, 25);
+            this.cmb_topic.Location = new System.Drawing.Point(370, 40);
             this.cmb_topic.Name = "cmb_topic";
-            this.cmb_topic.Size = new System.Drawing.Size(121, 24);
+            this.cmb_topic.Size = new System.Drawing.Size(224, 24);
             this.cmb_topic.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(145, 330);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 16);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Exam duration (in seconds)";
             // 
             // txt_Timer
             // 
-            this.txt_Timer.Location = new System.Drawing.Point(474, 324);
+            this.txt_Timer.Location = new System.Drawing.Point(370, 324);
             this.txt_Timer.Name = "txt_Timer";
-            this.txt_Timer.Size = new System.Drawing.Size(100, 22);
+            this.txt_Timer.Size = new System.Drawing.Size(219, 22);
             this.txt_Timer.TabIndex = 12;
             // 
             // go_back
@@ -182,10 +162,8 @@ namespace PRO1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1161, 676);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.go_back);
             this.Controls.Add(this.txt_Timer);
@@ -206,8 +184,6 @@ namespace PRO1
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtQuestionCount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox checkedListBoxType;
@@ -218,7 +194,6 @@ namespace PRO1
         private System.Windows.Forms.CheckBox checkBoxRandomTopics;
         private Label label4;
         private ComboBox cmb_topic;
-        private Label label5;
         private TextBox txt_Timer;
         private Button go_back;
     }

@@ -462,6 +462,7 @@
     <None Include="Resources\icons8-test-501.png" />
     <Content Include="Resources\icons8-user-50.png" />
     <None Include="Resources\icons8-user-501.png" />
+    <Content Include="Resources\OIP.jfif" />
     <Content Include="Resources\student.png" />
     <Content Include="Resources\student1.png" />
     <Content Include="Resources\students1.png" />
