@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace PRO1
 {
+    //ניסיון
     public partial class AdaptiveSelectionForm : Form
     {
         public AdaptiveSelectionForm()
