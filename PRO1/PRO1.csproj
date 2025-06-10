@@ -163,6 +163,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdaptiveExam.cs" />
+    <Compile Include="AdaptiveSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaptiveSelectionForm.Designer.cs">
+      <DependentUpon>AdaptiveSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdaptiveTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdaptiveTestForm.Designer.cs">
+      <DependentUpon>AdaptiveTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExamResult.cs" />
     <Compile Include="ExamSelection.cs">
       <SubType>Form</SubType>
@@ -221,6 +234,12 @@
     <Compile Include="LecturerForm.Designer.cs">
       <DependentUpon>LecturerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginManager.cs" />
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
@@ -267,6 +286,7 @@
       <DependentUpon>QuestionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="QuestionManager.cs" />
+    <Compile Include="SessionManager.cs" />
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +319,12 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="ValidationHelper.cs" />
+    <EmbeddedResource Include="AdaptiveSelectionForm.resx">
+      <DependentUpon>AdaptiveSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdaptiveTestForm.resx">
+      <DependentUpon>AdaptiveTestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExamSelection.resx">
       <DependentUpon>ExamSelection.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +352,9 @@
     <EmbeddedResource Include="LecturerForm.resx">
       <DependentUpon>LecturerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,7 +364,7 @@
     <EmbeddedResource Include="MultipleChoiceUserControl.resx">
       <DependentUpon>MultipleChoiceUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OpenQuestion.resx">
+    <EmbeddedResource Include="Open.resx">
       <DependentUpon>Open.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpenQuestionUserControl.resx">
@@ -382,6 +411,45 @@
   <ItemGroup>
     <Content Include="Images\AutoExamP_.jpg" />
     <Content Include="Images\back2.jpg" />
+    <Content Include="Resources\10313778.jpg" />
+    <None Include="Resources\הורדה %281%29.png" />
+    <None Include="Resources\הורדה.png" />
+    <None Include="Resources\חדש.jpg" />
+    <None Include="Resources\103137781.jpg" />
+    <None Include="Resources\18314.jpg" />
+    <None Include="Resources\5ad99b6614e91b9d2b78927bc52c4149.jpg" />
+    <None Include="Resources\45047a31ad8121c3f5a23ffb64db4739.jpg" />
+    <None Include="Resources\43fbaeffaec808fc8e86a53b84fc1e2d.jpg" />
+    <None Include="Resources\ff1701ced6968cdcd43ea80b8a8109d4.png" />
+    <None Include="Resources\ff1701ced6968cdcd43ea80b8a8109d41.png" />
+    <None Include="Resources\393858cbf8203ce0e23482e20cc709b0.jpg" />
+    <None Include="Resources\56ea95b849dc9a90a5f7b5dd20ef9084.jpg" />
+    <None Include="Resources\56ea95b849dc9a90a5f7b5dd20ef90841.jpg" />
+    <None Include="Resources\9b2356b940865023738a860c0b22b5bb.jpg" />
+    <None Include="Resources\f5a0edf952437168dcc2aef8723d2481.jpg" />
+    <None Include="Resources\8be92f3efc83365bb25ef29b356fe40c.jpg" />
+    <None Include="Resources\9f1200b1213db2709888c5ad32a8720e.jpg" />
+    <None Include="Resources\9f1200b1213db2709888c5ad32a8720e1.jpg" />
+    <None Include="Resources\664b843e18a541658296ae53033e08c8.jpg" />
+    <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd.jpg" />
+    <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd1.jpg" />
+    <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd2.jpg" />
+    <None Include="Resources\33.jpg" />
+    <None Include="Resources\44.jpg" />
+    <None Include="Resources\9b2356b940865023738a860c0b22b5bb1.jpg" />
+    <None Include="Resources\9b2356b940865023738a860c0b22b5bb2.jpg" />
+    <None Include="Resources\c4a7b4e851d005d90bf7b1d76a01fdc2.jpg" />
+    <None Include="Resources\e6d90894545c09e8651ba564a2be8fc8.jpg" />
+    <None Include="Resources\2dcd96b6e77362d70e182db2b97b15bb.jpg" />
+    <None Include="Resources\581b653c8c6a6cbdbbffc565163bd97f.jpg" />
+    <None Include="Resources\581b653c8c6a6cbdbbffc565163bd97f1.jpg" />
+    <None Include="Resources\581b653c8c6a6cbdbbffc565163bd97f2.jpg" />
+    <None Include="Resources\331.jpg" />
+    <None Include="Resources\332.jpg" />
+    <None Include="Resources\333.jpg" />
+    <None Include="Resources\334.jpg" />
+    <None Include="Resources\335.jpg" />
+    <None Include="Resources\336.jpg" />
     <Content Include="Resources\front11.png" />
     <Content Include="Resources\Graguation.png" />
     <None Include="Resources\students_banner_cropped.png" />
@@ -390,10 +458,14 @@
     <None Include="Resources\mainpage.png" />
     <None Include="Resources\logo_no_grid_background.png" />
     <None Include="Resources\logo_no_grid_background1.png" />
+    <Content Include="Resources\icons8-test-50.png" />
+    <None Include="Resources\icons8-test-501.png" />
+    <Content Include="Resources\icons8-user-50.png" />
+    <None Include="Resources\icons8-user-501.png" />
     <Content Include="Resources\student.png" />
+    <Content Include="Resources\student1.png" />
     <Content Include="Resources\students1.png" />
     <None Include="Resources\students2.png" />
-    <None Include="Resources\student1.png" />
     <None Include="Resources\jeffrey.jpg" />
     <None Include="Resources\jeffrey-hamilton-jrRe6er0pY0-unsplash.jpg" />
     <Content Include="Resources\AutoExamLogo.jpg" />
