@@ -31,6 +31,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnSignup = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnContact = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
 
             this.btnExit = new System.Windows.Forms.Button();
+
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +81,14 @@
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(1161, 100);
             this.sidePanel.TabIndex = 5;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(1077, 31);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(51, 41);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // btnSignup
             // 
@@ -145,14 +155,6 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
 
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(1077, 31);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(51, 41);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // MainPage
             // 

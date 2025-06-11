@@ -1,5 +1,4 @@
-﻿using SixLabors.Fonts;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +21,23 @@ namespace PRO1
         {
             InitializeComponent();
             this.teacherId = teacherId;
-            
+
+      
+            StyleLabel(label1);         
+            StyleLabel(label2);        
+            StyleLabel(label3);
+            StyleRadioButton(radioButton1);
+            StyleRadioButton(radioButton2);
+            StyleRadioButton(radioButton3);
+            StyleRadioButton(radioButton4);
+
+            StyleWarmButton(button1);
+            StyleWarmButton(button2);
+            button1.MouseEnter += (s, e) => button1.BackColor = ColorTranslator.FromHtml("#B86F50");
+            button1.MouseLeave += (s, e) => button1.BackColor = ColorTranslator.FromHtml("#D9A066");
+
+            button2.MouseEnter += (s, e) => button2.BackColor = ColorTranslator.FromHtml("#B86F50");
+            button2.MouseLeave += (s, e) => button2.BackColor = ColorTranslator.FromHtml("#D9A066");
 
 
         }
@@ -51,6 +66,14 @@ namespace PRO1
         {
 
 
+        }
+        private void StyleRadioButton(RadioButton radio)
+        {
+            radio.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            radio.BackColor = Color.Transparent;
+            radio.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            radio.AutoSize = true;
+            radio.TextAlign = ContentAlignment.MiddleLeft;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -96,6 +119,24 @@ namespace PRO1
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+        private void StyleLabel(Label label, bool isTitle = false)
+        {
+            label.ForeColor = ColorTranslator.FromHtml(isTitle ? "#5C3A21" : "#3E2C23"); // כהה/חום בהיר
+            label.BackColor = Color.Transparent;
+            label.Font = isTitle
+                ? new Font("Segoe UI", 16, FontStyle.Bold)
+                : new Font("Segoe UI", 11, FontStyle.Regular);
+            label.TextAlign = ContentAlignment.MiddleRight;
+            label.RightToLeft = RightToLeft.No; // אם באנגלית
+        }
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            Color semiTransparentWhite = Color.FromArgb(150, Color.White); // 150 = שקיפות חלקית
+            using (SolidBrush brush = new SolidBrush(semiTransparentWhite))
+            {
+                e.Graphics.FillRectangle(brush, panel4.ClientRectangle);
+            }
         }
 
         private async void button1_Click(object sender, EventArgs e)
@@ -182,12 +223,18 @@ namespace PRO1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-
-
             QuestionForm questionForm = new QuestionForm();
-
-
             questionForm.Show();
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066"); // חום בהיר
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50"); // חום כהה בהובר
+            button.Cursor = Cursors.Hand;
         }
     }
  }

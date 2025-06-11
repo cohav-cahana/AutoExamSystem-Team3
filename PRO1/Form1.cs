@@ -24,7 +24,14 @@ namespace PRO1
             button3.Font = new Font("Arial", 8, FontStyle.Bold);
             button4.Font = new Font("Arial", 8, FontStyle.Bold);
 
+            StyleLinenButton(btn_showExam);
+            StyleLinenButton(button1);
+            StyleLinenButton(button2);
+            StyleLinenButton(button3);
+            StyleLinenButton(button4);
+            StyleTitleLabel(label1);
 
+      
 
 
         }
@@ -32,12 +39,27 @@ namespace PRO1
         {
 
             this.Hide();
-
             QuestionForm questionForm = new QuestionForm();
-
-            
             questionForm.ShowDialog();  
             
+        }
+        private void StyleTitleLabel(Label label)
+        {
+            label.BackColor = Color.Transparent; 
+            label.ForeColor = ColorTranslator.FromHtml("#3E2C23"); 
+            label.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+            label.TextAlign = ContentAlignment.MiddleCenter;
+        }
+        private void StyleLinenButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = Color.Linen;
+            button.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0; // <--- בלי מסגרת
+            button.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 239, 213); // Peach-like hover
+            button.Cursor = Cursors.Hand;
+            button.TextAlign = ContentAlignment.MiddleCenter;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -68,6 +90,11 @@ namespace PRO1
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

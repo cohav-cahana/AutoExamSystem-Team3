@@ -34,6 +34,7 @@ namespace PRO1
 
             panel1.BackColor = Color.FromArgb(150, Color.White);
             panel1.BorderStyle = BorderStyle.None;
+            StyleListBox(listBoxExams);
 
         }
 
@@ -244,9 +245,33 @@ namespace PRO1
                 }
             };
         }
-   
 
+        private void StyleListBox(ListBox listBox)
+        {
+            listBox.BorderStyle = BorderStyle.FixedSingle;
+            listBox.BackColor = Color.White;
+            listBox.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            listBox.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            listBox.ItemHeight = 30;
+        }
 
+        private void listBoxExams_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            ListBox listBox = sender as ListBox;
+            string text = listBox.Items[e.Index].ToString();
+
+            bool selected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
+            Color backColor = selected ? Color.FromArgb(217, 160, 102) : Color.White;
+            Color textColor = selected ? Color.White : Color.FromArgb(62, 44, 35);
+
+            e.Graphics.FillRectangle(new SolidBrush(backColor), e.Bounds);
+            TextRenderer.DrawText(e.Graphics, text, new Font("Segoe UI", 10, FontStyle.Bold),
+                e.Bounds, textColor, TextFormatFlags.Left | TextFormatFlags.VerticalCenter);
+
+            e.DrawFocusRectangle();
+        }
     }
 
 }

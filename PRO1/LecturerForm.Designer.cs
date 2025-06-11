@@ -94,7 +94,8 @@ namespace PRO1
             // 
             this.btnCreatExam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreatExam.ForeColor = System.Drawing.Color.White;
-            this.btnCreatExam.Location = new System.Drawing.Point(430, 505);
+
+            this.btnCreatExam.Location = new System.Drawing.Point(473, 524);
             this.btnCreatExam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreatExam.Name = "btnCreatExam";
             this.btnCreatExam.Size = new System.Drawing.Size(111, 52);
@@ -105,13 +106,16 @@ namespace PRO1
             // 
             // listBoxExams
             // 
+            this.listBoxExams.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.listBoxExams.FormattingEnabled = true;
-            this.listBoxExams.ItemHeight = 16;
-            this.listBoxExams.Location = new System.Drawing.Point(547, 32);
+
+            this.listBoxExams.ItemHeight = 35;
+            this.listBoxExams.Location = new System.Drawing.Point(618, 63);
             this.listBoxExams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxExams.Name = "listBoxExams";
-            this.listBoxExams.Size = new System.Drawing.Size(602, 452);
+            this.listBoxExams.Size = new System.Drawing.Size(531, 459);
             this.listBoxExams.TabIndex = 7;
+            this.listBoxExams.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBoxExams_DrawItem);
             this.listBoxExams.SelectedIndexChanged += new System.EventHandler(this.listBoxExams_SelectedIndexChanged);
             // 
             // checkBoxRandomTopics
@@ -122,7 +126,7 @@ namespace PRO1
             this.checkBoxRandomTopics.Name = "checkBoxRandomTopics";
             this.checkBoxRandomTopics.Size = new System.Drawing.Size(117, 20);
             this.checkBoxRandomTopics.TabIndex = 8;
-            this.checkBoxRandomTopics.Text = "Random types";
+            this.checkBoxRandomTopics.Text = "Random topic";
             this.checkBoxRandomTopics.UseVisualStyleBackColor = true;
             // 
             // label4
@@ -170,7 +174,8 @@ namespace PRO1
             this.panel1.Controls.Add(this.cmb_topic);
             this.panel1.Controls.Add(this.txtQuestionCount);
             this.panel1.Controls.Add(this.checkedListBoxType);
-            this.panel1.Location = new System.Drawing.Point(28, 32);
+
+            this.panel1.Location = new System.Drawing.Point(71, 63);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(513, 456);
             this.panel1.TabIndex = 14;
