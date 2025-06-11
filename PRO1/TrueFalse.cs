@@ -12,12 +12,38 @@ namespace PRO1
 {
     public partial class TrueFalse : Form
     {
+        private string questionKey; 
+        private bool isEditMode = false;
         public TrueFalse()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.back2;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            label2.Font = new Font("Arial", 18, FontStyle.Bold);
+            label1.Font = new Font("Arial", 18, FontStyle.Bold);
+            label3.Font = new Font("Arial", 18, FontStyle.Bold);
+
+
         }
+        public TrueFalse(Question selectedQuestion)
+        {
+            InitializeComponent();
+            
+
+            isEditMode = true;
+            questionKey = selectedQuestion.Id;
+
+            // מילוי נתוני השאלה בטופס
+            textBox1.Text = selectedQuestion.QuestionText;
+
+            if (selectedQuestion.CorrectAnswer == "True")
+                radioButton1.Checked = true;
+            else if (selectedQuestion.CorrectAnswer == "False")
+                radioButton2.Checked = true;
+
+            comboBox1.SelectedItem = selectedQuestion.Topic;
+            comboBox2.SelectedItem = selectedQuestion.Level;
+        }
+
+
 
         private void TrueFalse_Load(object sender, EventArgs e)
         {
@@ -33,16 +59,40 @@ namespace PRO1
         {
             FirebaseHelper firebaseHelper = new FirebaseHelper();
 
-            // קבלת המידע מהטופס
-            string questionText = textBox1.Text;  // השאלה
-            string correctAnswer = GetCorrectAnswer();  // תשובה נכונה (True/False)
-            string topic = comboBox1.SelectedItem.ToString(); // סוג השאלה שנבחר בקומבובוקס1
-            string level = comboBox2.SelectedItem.ToString(); // רמת השאלה שנבחרה בקומבובוקס2
+            string questionText = textBox1.Text;
+            string correctAnswer = GetCorrectAnswer();
+            string topic = comboBox1.SelectedItem?.ToString();
+            string level = comboBox2.SelectedItem?.ToString();
 
-            // שליחה ל-Firebase
-            await firebaseHelper.AddQuestionAsync("TrueFalse",correctAnswer, topic, level, questionText, "", "", "", "","");
-            // הודעה שהשאלה נשמרה בהצלחה
-            MessageBox.Show("השאלה נשמרה בהצלחה!");
+            if (string.IsNullOrWhiteSpace(questionText) || string.IsNullOrWhiteSpace(correctAnswer))
+            {
+                MessageBox.Show("אנא מלא את כל השדות הדרושים.");
+                return;
+            }
+
+            if (isEditMode)
+            {
+                // עדכון שאלה קיימת
+                var data = new Dictionary<string, object>
+        {
+                    { "Id", questionKey },
+            { "QuestionText", questionText },
+            { "CorrectAnswer", correctAnswer },
+            { "Topic", topic },
+            { "Level", level },
+            { "Type", "TrueFalse" },
+            { "TeacherId", SessionManager.TeacherId }
+        };
+
+                await firebaseHelper.UpdateQuestionAsync(questionKey, data);
+                MessageBox.Show("השאלה עודכנה בהצלחה!");
+            }
+            else
+            {
+                // הוספת שאלה חדשה
+                await firebaseHelper.AddQuestionAsync("TrueFalse", correctAnswer, topic, level, questionText, "", "", "", "", SessionManager.TeacherId);
+                MessageBox.Show("השאלה נשמרה בהצלחה!");
+            }
         }
 
         // פונקציה לקביעת התשובה הנכונה

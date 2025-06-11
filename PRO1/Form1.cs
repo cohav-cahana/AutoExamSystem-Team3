@@ -18,7 +18,7 @@ namespace PRO1
             InitializeComponent();
             this.BackColor = Color.White;
 
-            label1.Font = new Font("Arial", 12, FontStyle.Bold);
+            label1.Font = new Font("Arial", 18, FontStyle.Bold);
             button1.Font= new Font("Arial", 12, FontStyle.Bold);
             button2.Font = new Font("Arial", 12, FontStyle.Bold);
             button3.Font = new Font("Arial", 8, FontStyle.Bold);
@@ -61,6 +61,12 @@ namespace PRO1
             ExamManagerForm examManagerForm = new ExamManagerForm();
             examManagerForm.Show();
             examManagerForm.StartPosition = FormStartPosition.CenterScreen; // center the form
+            this.Hide();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -23,6 +23,9 @@ namespace PRO1
             this.user = user;
             this.examSelection = examSelection;
             this.BackColor = Color.White;
+            label1.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+            label2.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+
 
 
         }
@@ -73,6 +76,11 @@ namespace PRO1
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

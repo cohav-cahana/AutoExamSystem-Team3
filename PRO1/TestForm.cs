@@ -29,8 +29,7 @@ namespace PRO1
             this.currentExam = exam;
             this.totalQuestions = exam.QuestionCount;
             lblTimer.Text = FormatTime(timeLeftInSeconds);
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+           
         }
         public static string FormatTime(int seconds)
         {

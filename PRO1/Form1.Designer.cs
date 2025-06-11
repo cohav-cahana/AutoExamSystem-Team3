@@ -40,7 +40,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.BackColor = System.Drawing.Color.Linen;
             this.button4.Location = new System.Drawing.Point(285, 304);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(155, 123);
@@ -50,7 +50,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.BackColor = System.Drawing.Color.Linen;
             this.button3.Location = new System.Drawing.Point(457, 304);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 123);
@@ -60,7 +60,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.BackColor = System.Drawing.Color.Linen;
             this.button2.Location = new System.Drawing.Point(630, 304);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 123);
@@ -71,7 +71,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.BackColor = System.Drawing.Color.Linen;
             this.button1.Location = new System.Drawing.Point(817, 304);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 123);
@@ -93,7 +93,7 @@
             // 
             // btn_showExam
             // 
-            this.btn_showExam.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_showExam.BackColor = System.Drawing.Color.Linen;
             this.btn_showExam.Location = new System.Drawing.Point(114, 304);
             this.btn_showExam.Name = "btn_showExam";
             this.btn_showExam.Size = new System.Drawing.Size(153, 123);
@@ -111,6 +111,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 

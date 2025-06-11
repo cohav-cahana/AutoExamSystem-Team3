@@ -35,6 +35,8 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.questionPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // questionLbl
@@ -44,7 +46,7 @@
             this.questionLbl.BackColor = System.Drawing.Color.Transparent;
             this.questionLbl.Font = new System.Drawing.Font("Britannic Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLbl.ForeColor = System.Drawing.Color.Black;
-            this.questionLbl.Location = new System.Drawing.Point(137, 49);
+            this.questionLbl.Location = new System.Drawing.Point(117, 39);
             this.questionLbl.Name = "questionLbl";
             this.questionLbl.Size = new System.Drawing.Size(920, 84);
             this.questionLbl.TabIndex = 3;
@@ -56,7 +58,7 @@
             this.lblQuestionCounter.AutoSize = true;
             this.lblQuestionCounter.BackColor = System.Drawing.Color.Transparent;
             this.lblQuestionCounter.Font = new System.Drawing.Font("Broadway", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestionCounter.Location = new System.Drawing.Point(337, 398);
+            this.lblQuestionCounter.Location = new System.Drawing.Point(422, 513);
             this.lblQuestionCounter.Name = "lblQuestionCounter";
             this.lblQuestionCounter.Size = new System.Drawing.Size(262, 26);
             this.lblQuestionCounter.TabIndex = 6;
@@ -67,7 +69,7 @@
             this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton1.Location = new System.Drawing.Point(289, 207);
+            this.radioButton1.Location = new System.Drawing.Point(357, 291);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(170, 81);
             this.radioButton1.TabIndex = 7;
@@ -80,7 +82,7 @@
             // 
             this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.radioButton2.Location = new System.Drawing.Point(495, 207);
+            this.radioButton2.Location = new System.Drawing.Point(563, 291);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(170, 81);
             this.radioButton2.TabIndex = 8;
@@ -93,7 +95,7 @@
             // 
             this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.radioButton3.Location = new System.Drawing.Point(289, 295);
+            this.radioButton3.Location = new System.Drawing.Point(357, 379);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(170, 81);
             this.radioButton3.TabIndex = 9;
@@ -106,7 +108,7 @@
             // 
             this.radioButton4.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.radioButton4.Location = new System.Drawing.Point(495, 294);
+            this.radioButton4.Location = new System.Drawing.Point(563, 378);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(170, 81);
             this.radioButton4.TabIndex = 10;
@@ -117,10 +119,20 @@
             // 
             // questionPanel
             // 
-            this.questionPanel.Location = new System.Drawing.Point(166, 49);
+            this.questionPanel.Location = new System.Drawing.Point(270, 148);
             this.questionPanel.Name = "questionPanel";
             this.questionPanel.Size = new System.Drawing.Size(603, 90);
             this.questionPanel.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PRO1.Properties.Resources._3310;
+            this.pictureBox1.Location = new System.Drawing.Point(-33, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1199, 698);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // MultipleChoiceUserControl
             // 
@@ -134,10 +146,12 @@
             this.Controls.Add(this.lblQuestionCounter);
             this.Controls.Add(this.questionLbl);
             this.Controls.Add(this.questionPanel);
+            this.Controls.Add(this.pictureBox1);
             this.Location = new System.Drawing.Point(282, 19);
             this.Name = "MultipleChoiceUserControl";
             this.Size = new System.Drawing.Size(1179, 723);
             this.Load += new System.EventHandler(this.MultipleChoiceUserControl_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +166,6 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Panel questionPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

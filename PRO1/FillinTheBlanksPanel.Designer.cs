@@ -31,6 +31,8 @@
             this.questionLbl = new System.Windows.Forms.Label();
             this.answerText = new System.Windows.Forms.TextBox();
             this.lblQuestionCounter = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // questionLbl
@@ -63,6 +65,16 @@
             this.lblQuestionCounter.TabIndex = 2;
             this.lblQuestionCounter.Text = "שאלה 1 מתוך 20";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PRO1.Properties.Resources._338;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1173, 720);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // FillinTheBlanksPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -71,9 +83,11 @@
             this.Controls.Add(this.lblQuestionCounter);
             this.Controls.Add(this.answerText);
             this.Controls.Add(this.questionLbl);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "FillinTheBlanksPanel";
             this.Size = new System.Drawing.Size(1179, 723);
             this.Load += new System.EventHandler(this.FillinTheBlanksPanel_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,5 +98,6 @@
         private System.Windows.Forms.Label questionLbl;
         private System.Windows.Forms.TextBox answerText;
         private System.Windows.Forms.Label lblQuestionCounter;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
