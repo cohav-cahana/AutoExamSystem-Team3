@@ -69,5 +69,12 @@ namespace PRO1
         {
 
         }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GradeFormTeacher gradeFormTeacher = new GradeFormTeacher();
+            gradeFormTeacher.Show();
+            this.Hide(); 
+        }
+
     }
 }
