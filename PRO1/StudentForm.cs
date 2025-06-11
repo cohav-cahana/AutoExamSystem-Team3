@@ -68,6 +68,10 @@ namespace PRO1
         {
             login.Show();
             this.Close();
+
+            frontPage logi = new frontPage();
+            logi.Show();
+            this.Hide();
         }
 
         private void gradeBtn_Click(object sender, EventArgs e)
