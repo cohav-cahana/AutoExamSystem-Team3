@@ -74,7 +74,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(96, 121);
+            this.panel1.Location = new System.Drawing.Point(96, 110);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(931, 447);
             this.panel1.TabIndex = 6;
@@ -89,10 +89,10 @@
             // 
             // examStartBtn
             // 
-            this.examStartBtn.BackColor = System.Drawing.Color.SaddleBrown;
-            this.examStartBtn.Location = new System.Drawing.Point(517, 586);
+            this.examStartBtn.BackColor = System.Drawing.Color.Transparent;
+            this.examStartBtn.Location = new System.Drawing.Point(457, 574);
             this.examStartBtn.Name = "examStartBtn";
-            this.examStartBtn.Size = new System.Drawing.Size(105, 34);
+            this.examStartBtn.Size = new System.Drawing.Size(226, 46);
             this.examStartBtn.TabIndex = 7;
             this.examStartBtn.Text = "Click To Start";
             this.examStartBtn.UseVisualStyleBackColor = false;
@@ -100,10 +100,10 @@
             // 
             // nextBtn
             // 
-            this.nextBtn.BackColor = System.Drawing.Color.SaddleBrown;
-            this.nextBtn.Location = new System.Drawing.Point(5, 586);
+            this.nextBtn.BackColor = System.Drawing.Color.Transparent;
+            this.nextBtn.Location = new System.Drawing.Point(15, 574);
             this.nextBtn.Name = "nextBtn";
-            this.nextBtn.Size = new System.Drawing.Size(128, 34);
+            this.nextBtn.Size = new System.Drawing.Size(144, 46);
             this.nextBtn.TabIndex = 8;
             this.nextBtn.Text = "Next Question";
             this.nextBtn.UseVisualStyleBackColor = false;

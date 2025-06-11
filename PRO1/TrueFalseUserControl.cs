@@ -105,5 +105,10 @@ namespace PRO1
         {
 
         }
+
+        private void questionLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

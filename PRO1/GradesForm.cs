@@ -242,5 +242,10 @@ namespace PRO1
         {
 
         }
+
+        private void panelAverage_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

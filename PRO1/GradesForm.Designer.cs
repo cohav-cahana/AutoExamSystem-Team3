@@ -146,6 +146,7 @@
             this.panelAverage.Name = "panelAverage";
             this.panelAverage.Size = new System.Drawing.Size(200, 100);
             this.panelAverage.TabIndex = 9;
+            this.panelAverage.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAverage_Paint);
             // 
             // pictureBox1
             // 

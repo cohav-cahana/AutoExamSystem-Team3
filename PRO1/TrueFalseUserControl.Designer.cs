@@ -43,12 +43,13 @@
             this.questionLbl.BackColor = System.Drawing.Color.Transparent;
             this.questionLbl.Font = new System.Drawing.Font("Britannic Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLbl.ForeColor = System.Drawing.Color.Black;
-            this.questionLbl.Location = new System.Drawing.Point(51, 40);
+            this.questionLbl.Location = new System.Drawing.Point(50, 59);
             this.questionLbl.Name = "questionLbl";
             this.questionLbl.Size = new System.Drawing.Size(485, 84);
             this.questionLbl.TabIndex = 4;
             this.questionLbl.Text = "Question Number 1";
             this.questionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.questionLbl.Click += new System.EventHandler(this.questionLbl_Click);
             // 
             // lblQuestionCounter
             // 

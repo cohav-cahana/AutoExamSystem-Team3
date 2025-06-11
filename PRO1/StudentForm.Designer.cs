@@ -35,14 +35,30 @@ namespace PRO1
             this.backBtn = new System.Windows.Forms.Button();
             this.gradeBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             examBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
+            // examBtn
+            // 
+            examBtn.BackColor = System.Drawing.Color.Linen;
+            examBtn.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
+            examBtn.Image = global::PRO1.Properties.Resources.icons8_user_50;
+            examBtn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            examBtn.Location = new System.Drawing.Point(581, 245);
+            examBtn.Name = "examBtn";
+            examBtn.Size = new System.Drawing.Size(338, 114);
+            examBtn.TabIndex = 1;
+            examBtn.Text = "Start Test";
+            examBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            examBtn.UseVisualStyleBackColor = false;
+            examBtn.Click += new System.EventHandler(this.examBtn_Click);
+            // 
             // welcomeLbl
             // 
             this.welcomeLbl.AutoSize = true;
-            this.welcomeLbl.BackColor = System.Drawing.Color.Transparent;
+            this.welcomeLbl.BackColor = System.Drawing.Color.Linen;
             this.welcomeLbl.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.welcomeLbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.welcomeLbl.Location = new System.Drawing.Point(903, 61);
@@ -55,7 +71,7 @@ namespace PRO1
             // backBtn
             // 
             this.backBtn.AutoSize = true;
-            this.backBtn.BackColor = System.Drawing.Color.Snow;
+            this.backBtn.BackColor = System.Drawing.Color.Linen;
             this.backBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.backBtn.Location = new System.Drawing.Point(12, 575);
             this.backBtn.Name = "backBtn";
@@ -67,7 +83,7 @@ namespace PRO1
             // 
             // gradeBtn
             // 
-            this.gradeBtn.BackColor = System.Drawing.Color.White;
+            this.gradeBtn.BackColor = System.Drawing.Color.Linen;
             this.gradeBtn.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.gradeBtn.ForeColor = System.Drawing.Color.Black;
             this.gradeBtn.Image = global::PRO1.Properties.Resources.icons8_test_50;
@@ -81,21 +97,6 @@ namespace PRO1
             this.gradeBtn.UseVisualStyleBackColor = false;
             this.gradeBtn.Click += new System.EventHandler(this.gradeBtn_Click);
             // 
-            // examBtn
-            // 
-            examBtn.BackColor = System.Drawing.Color.White;
-            examBtn.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            examBtn.Image = global::PRO1.Properties.Resources.icons8_user_50;
-            examBtn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            examBtn.Location = new System.Drawing.Point(581, 245);
-            examBtn.Name = "examBtn";
-            examBtn.Size = new System.Drawing.Size(338, 114);
-            examBtn.TabIndex = 1;
-            examBtn.Text = "Start Test";
-            examBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            examBtn.UseVisualStyleBackColor = false;
-            examBtn.Click += new System.EventHandler(this.examBtn_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PRO1.Properties.Resources._333;
@@ -107,6 +108,15 @@ namespace PRO1
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Linen;
+            this.panel1.Location = new System.Drawing.Point(898, 52);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(207, 38);
+            this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -117,6 +127,7 @@ namespace PRO1
             this.Controls.Add(this.gradeBtn);
             this.Controls.Add(this.welcomeLbl);
             this.Controls.Add(examBtn);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
@@ -132,5 +143,6 @@ namespace PRO1
         private Button backBtn;
         private Label welcomeLbl;
         private PictureBox pictureBox2;
+        private Panel panel1;
     }
 }
