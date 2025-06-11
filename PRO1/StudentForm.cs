@@ -63,7 +63,8 @@ namespace PRO1
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            login.Show();
+            frontPage logi = new frontPage();
+            logi.Show();
             this.Hide();
         }
 
