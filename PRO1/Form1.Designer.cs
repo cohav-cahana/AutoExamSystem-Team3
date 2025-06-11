@@ -35,6 +35,7 @@
             this.labelWelcome = new System.Windows.Forms.Label();
             this.btn_showExam = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_createQ = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Linen;
-            this.button3.Location = new System.Drawing.Point(676, 304);
+            this.button3.Location = new System.Drawing.Point(861, 304);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(160, 123);
             this.button3.TabIndex = 8;
@@ -87,11 +88,9 @@
             this.labelWelcome.BackColor = System.Drawing.Color.Transparent;
             this.labelWelcome.Location = new System.Drawing.Point(454, 131);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(176, 16);
+            this.labelWelcome.Size = new System.Drawing.Size(0, 16);
             this.labelWelcome.TabIndex = 5;
-            this.labelWelcome.Text = " Welcome  + user.Username";
             this.labelWelcome.Click += new System.EventHandler(this.label1_Click);
-
             // 
             // btn_showExam
             // 
@@ -115,17 +114,29 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btn_createQ
+            // 
+            this.btn_createQ.BackColor = System.Drawing.Color.Linen;
+            this.btn_createQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btn_createQ.Location = new System.Drawing.Point(669, 304);
+            this.btn_createQ.Name = "btn_createQ";
+            this.btn_createQ.Size = new System.Drawing.Size(160, 123);
+            this.btn_createQ.TabIndex = 12;
+            this.btn_createQ.Text = "Create Qutestion";
+            this.btn_createQ.UseVisualStyleBackColor = false;
+            this.btn_createQ.Click += new System.EventHandler(this.btn_createQ_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1161, 676);
+            this.Controls.Add(this.btn_createQ);
             this.Controls.Add(this.btn_showExam);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.labelWelcome);
-
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -145,6 +156,7 @@
         private System.Windows.Forms.Label labelWelcome;
         private System.Windows.Forms.Button btn_showExam;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_createQ;
     }
 }
 

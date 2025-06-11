@@ -40,7 +40,7 @@ namespace PRO1
 
         private void gradeBtn_Click(object sender, EventArgs e)
         {
-            GradesForm gradesForm = new GradesForm(currentUser);
+            GradesForm gradesForm = new GradesForm(currentUser, login);
             gradesForm.Show();
         }
 

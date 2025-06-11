@@ -29,7 +29,7 @@ namespace PRO1
             StyleLinenButton(button2);
             StyleLinenButton(button3);
             StyleLinenButton(button4);
-            StyleTitleLabel(label1);
+           // StyleTitleLabel(label1);
 
       
 
@@ -64,7 +64,7 @@ namespace PRO1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            labelWelcome.Text = "Welcome  " + SessionManager.Username;
+            this.labelWelcome.Text = "Welcome " + SessionManager.Username;
 
         }
 
@@ -97,6 +97,13 @@ namespace PRO1
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_createQ_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            QuestionForm questionForm = new QuestionForm();
+            questionForm.ShowDialog();
         }
     }
 }

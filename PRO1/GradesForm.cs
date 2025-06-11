@@ -16,12 +16,17 @@ namespace PRO1
         private User currentUser;
         private FirebaseHelper firebaseHelper;
         private List<ExamResult> examResults = new List<ExamResult>();
+        private StudentForm studentForm;
+        private frontPage login;
 
 
-        public GradesForm(User user)
+
+
+        public GradesForm(User user, frontPage login)
         {
             InitializeComponent();
-            currentUser = user;
+            this.currentUser = user;
+            this.login = login;
             firebaseHelper = new FirebaseHelper();
             this.BackgroundImage = Properties.Resources.jeffrey;
             this.BackgroundImageLayout = ImageLayout.Stretch;
@@ -225,7 +230,7 @@ namespace PRO1
 
             if (studentForm == null)
             {
-                studentForm = new StudentForm(currentUser,  login); // בהנחה שזו החתימה
+                studentForm = new StudentForm(currentUser, login);
             }
             this.Close();
             studentForm.Show();
