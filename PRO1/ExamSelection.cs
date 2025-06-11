@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
+
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,19 +23,28 @@ namespace PRO1
             LoadExams();
             this.BackColor = Color.White;
 
-            topLbl.Font = new System.Drawing.Font("Arial", 16, FontStyle.Bold);
-            topicLbl.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            difficultyLbl.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            numQuestionLbl.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            durationLbl.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
 
-            panel1.BackColor = Color.FromArgb(120, Color.White); // שקיפות למחצה
+            StyleLabel(topLbl);
+            StyleLabel(topicLbl);
+            StyleLabel(difficultyLbl);
+            StyleLabel(numQuestionLbl);
+            StyleLabel(durationLbl);
+
+            topLbl.Visible = true;
+            topicLbl.Visible = true;
+            difficultyLbl.Visible = true;
+            numQuestionLbl.Visible = true;
+            durationLbl.Visible = true;
+
+            StyleLabel(topicPlaceholder);
+            StyleLabel(difficultyPlaceholder);
+            StyleLabel(numQuestionPlaceholder);
+            StyleLabel(durationPlaceholder);
+            StyleWarmButton(backBtn);
+            StyleWarmButton(startExamBtn);
+            
 
 
-            topicPlaceholder.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
-            difficultyPlaceholder.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
-            numQuestionPlaceholder.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
-            durationPlaceholder.Font = new System.Drawing.Font("Arial", 10, FontStyle.Bold);
 
         }
         private async void LoadExams()
@@ -102,10 +111,49 @@ namespace PRO1
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            //using (SolidBrush semiTransBrush = new SolidBrush(Color.FromArgb(120, Color.White)))
+            //{
+            //    e.Graphics.FillRectangle(semiTransBrush, panel1.ClientRectangle);
+            //}
+        }
 
+        private void StyleLabel(Label label, bool isTitle = false)
+        {
+            label.ForeColor = ColorTranslator.FromHtml(isTitle ? "#5C3A21" : "#3E2C23");
+            label.BackColor = Color.Transparent;
+            label.Font = isTitle
+                ? new Font("Segoe UI", 16, FontStyle.Bold)
+                : new Font("Segoe UI", 11, FontStyle.Regular);
+            label.TextAlign = ContentAlignment.MiddleRight;
+            label.RightToLeft = RightToLeft.Yes;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066"); // חום בהיר
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50"); // חום כהה יותר בהובר
+            button.Cursor = Cursors.Hand;
+        }
+
+        private void topicLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numQuestionLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void difficultyPlaceholder_Click(object sender, EventArgs e)
         {
 
         }

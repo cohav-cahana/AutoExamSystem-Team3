@@ -33,6 +33,10 @@ namespace PRO1
             radioButton2.Text = shuffledOptions[1];
             radioButton3.Text = shuffledOptions[2];
             radioButton4.Text = shuffledOptions[3];
+            panel1.BackColor = Color.FromArgb(120, Color.White); // שקיפות עדינה
+            panel1.BorderStyle = BorderStyle.None;
+            lblQuestionCounter.BackColor = Color.FromArgb(120, Color.White);
+
         }
 
         private void FitTextToLabel(Label label)
@@ -118,6 +122,21 @@ namespace PRO1
         }
 
         private void MultipleChoiceUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void questionLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblQuestionCounter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

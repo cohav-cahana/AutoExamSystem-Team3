@@ -40,10 +40,13 @@
             // 
             // button4
             // 
+
             this.button4.BackColor = System.Drawing.Color.Linen;
             this.button4.Location = new System.Drawing.Point(276, 304);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 123);
+
+            this.button4.Size = new System.Drawing.Size(155, 123);
+
             this.button4.TabIndex = 9;
             this.button4.Text = "Student Grades";
             this.button4.UseVisualStyleBackColor = false;
@@ -51,10 +54,13 @@
             // 
             // button2
             // 
+
+  
             this.button2.BackColor = System.Drawing.Color.Linen;
             this.button2.Location = new System.Drawing.Point(477, 304);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 123);
+
             this.button2.TabIndex = 7;
             this.button2.Text = "Create Exam\n";
             this.button2.UseVisualStyleBackColor = false;
@@ -62,10 +68,13 @@
             // 
             // button1
             // 
+
             this.button1.BackColor = System.Drawing.Color.Linen;
             this.button1.Location = new System.Drawing.Point(872, 304);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 123);
+
+            this.button1.Size = new System.Drawing.Size(166, 123);
+
             this.button1.TabIndex = 6;
             this.button1.Text = "Question Bank\n\n";
             this.button1.UseVisualStyleBackColor = false;
@@ -83,10 +92,16 @@
             // 
             // btn_showExam
             // 
+            
+            // 
+            // btn_showExam
+            // 
+
             this.btn_showExam.BackColor = System.Drawing.Color.Linen;
             this.btn_showExam.Location = new System.Drawing.Point(72, 304);
             this.btn_showExam.Name = "btn_showExam";
             this.btn_showExam.Size = new System.Drawing.Size(160, 123);
+    
             this.btn_showExam.TabIndex = 10;
             this.btn_showExam.Text = "View Exams\n";
             this.btn_showExam.UseVisualStyleBackColor = false;
@@ -121,11 +136,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1161, 676);
             this.Controls.Add(this.btn_createQ);
+
+
+            this.ClientSize = new System.Drawing.Size(1161, 676);
+
             this.Controls.Add(this.btn_showExam);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.pictureBox1);
+
+            this.Controls.Add(this.button1);
+
+
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

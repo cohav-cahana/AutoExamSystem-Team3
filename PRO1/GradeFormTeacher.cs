@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Net.Http;
 using System.Windows.Forms;
 
 namespace PRO1
@@ -17,6 +19,8 @@ namespace PRO1
             this.BackgroundImage = Properties.Resources.jeffrey;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
+
+       
         }
 
         private void dgvScores_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -73,6 +77,11 @@ namespace PRO1
         {
             GradeChartForm chartForm = new GradeChartForm(high, mid, low);
             chartForm.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

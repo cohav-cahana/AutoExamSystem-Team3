@@ -29,7 +29,12 @@ namespace PRO1
             this.currentExam = exam;
             this.totalQuestions = exam.QuestionCount;
             lblTimer.Text = FormatTime(timeLeftInSeconds);
-           
+            StyleWarmButton(nextBtn);
+            StyleWarmButton(examStartBtn);
+            examStartBtn.Visible = true;
+
+
+
         }
         public static string FormatTime(int seconds)
         {
@@ -132,6 +137,16 @@ namespace PRO1
             examStartBtn.Visible = false;
             nextBtn.Visible = true;
             StartExam();
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066"); // חום בהיר
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50"); // חום כהה יותר בהובר
+            button.Cursor = Cursors.Hand;
         }
 
         private async void nextBtn_Click(object sender, EventArgs e)

@@ -42,6 +42,7 @@
             this.backBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             // topLbl
             // 
             this.topLbl.AutoSize = true;
-            this.topLbl.Location = new System.Drawing.Point(380, 104);
+            this.topLbl.BackColor = System.Drawing.Color.Transparent;
+            this.topLbl.Location = new System.Drawing.Point(453, 104);
             this.topLbl.Name = "topLbl";
             this.topLbl.Size = new System.Drawing.Size(207, 16);
             this.topLbl.TabIndex = 1;
@@ -66,16 +68,19 @@
             // topicLbl
             // 
             this.topicLbl.AutoSize = true;
+            this.topicLbl.BackColor = System.Drawing.Color.Transparent;
             this.topicLbl.Location = new System.Drawing.Point(195, 230);
             this.topicLbl.Name = "topicLbl";
             this.topicLbl.Size = new System.Drawing.Size(76, 16);
             this.topicLbl.TabIndex = 2;
-            this.topicLbl.Text = "Exam topic:";
+            this.topicLbl.Text = ":Exam topic";
             this.topicLbl.Visible = false;
+            this.topicLbl.Click += new System.EventHandler(this.topicLbl_Click);
             // 
             // topicPlaceholder
             // 
             this.topicPlaceholder.AutoSize = true;
+            this.topicPlaceholder.BackColor = System.Drawing.Color.Transparent;
             this.topicPlaceholder.Location = new System.Drawing.Point(519, 230);
             this.topicPlaceholder.Name = "topicPlaceholder";
             this.topicPlaceholder.Size = new System.Drawing.Size(80, 16);
@@ -87,16 +92,19 @@
             // numQuestionLbl
             // 
             this.numQuestionLbl.AutoSize = true;
+            this.numQuestionLbl.BackColor = System.Drawing.Color.Transparent;
             this.numQuestionLbl.Location = new System.Drawing.Point(195, 337);
             this.numQuestionLbl.Name = "numQuestionLbl";
             this.numQuestionLbl.Size = new System.Drawing.Size(130, 16);
             this.numQuestionLbl.TabIndex = 4;
-            this.numQuestionLbl.Text = "Amount of questions:";
+            this.numQuestionLbl.Text = ":Amount of questions";
             this.numQuestionLbl.Visible = false;
+            this.numQuestionLbl.Click += new System.EventHandler(this.numQuestionLbl_Click);
             // 
             // numQuestionPlaceholder
             // 
             this.numQuestionPlaceholder.AutoSize = true;
+            this.numQuestionPlaceholder.BackColor = System.Drawing.Color.Transparent;
             this.numQuestionPlaceholder.Location = new System.Drawing.Point(519, 337);
             this.numQuestionPlaceholder.Name = "numQuestionPlaceholder";
             this.numQuestionPlaceholder.Size = new System.Drawing.Size(80, 16);
@@ -107,36 +115,41 @@
             // difficultyLbl
             // 
             this.difficultyLbl.AutoSize = true;
+            this.difficultyLbl.BackColor = System.Drawing.Color.Transparent;
             this.difficultyLbl.Location = new System.Drawing.Point(195, 283);
             this.difficultyLbl.Name = "difficultyLbl";
             this.difficultyLbl.Size = new System.Drawing.Size(59, 16);
             this.difficultyLbl.TabIndex = 6;
-            this.difficultyLbl.Text = "Difficulty:";
+            this.difficultyLbl.Text = ":Difficulty";
             this.difficultyLbl.Visible = false;
             // 
             // difficultyPlaceholder
             // 
             this.difficultyPlaceholder.AutoSize = true;
+            this.difficultyPlaceholder.BackColor = System.Drawing.Color.Transparent;
             this.difficultyPlaceholder.Location = new System.Drawing.Point(522, 283);
             this.difficultyPlaceholder.Name = "difficultyPlaceholder";
             this.difficultyPlaceholder.Size = new System.Drawing.Size(80, 16);
             this.difficultyPlaceholder.TabIndex = 7;
             this.difficultyPlaceholder.Text = "Placeholder";
             this.difficultyPlaceholder.Visible = false;
+            this.difficultyPlaceholder.Click += new System.EventHandler(this.difficultyPlaceholder_Click);
             // 
             // durationLbl
             // 
             this.durationLbl.AutoSize = true;
+            this.durationLbl.BackColor = System.Drawing.Color.Transparent;
             this.durationLbl.Location = new System.Drawing.Point(198, 390);
             this.durationLbl.Name = "durationLbl";
             this.durationLbl.Size = new System.Drawing.Size(60, 16);
             this.durationLbl.TabIndex = 8;
-            this.durationLbl.Text = "Duration:";
+            this.durationLbl.Text = ":Duration";
             this.durationLbl.Visible = false;
             // 
             // durationPlaceholder
             // 
             this.durationPlaceholder.AutoSize = true;
+            this.durationPlaceholder.BackColor = System.Drawing.Color.Transparent;
             this.durationPlaceholder.Location = new System.Drawing.Point(522, 389);
             this.durationPlaceholder.Name = "durationPlaceholder";
             this.durationPlaceholder.Size = new System.Drawing.Size(80, 16);
@@ -146,9 +159,9 @@
             // 
             // startExamBtn
             // 
-            this.startExamBtn.Location = new System.Drawing.Point(787, 483);
+            this.startExamBtn.Location = new System.Drawing.Point(599, 406);
             this.startExamBtn.Name = "startExamBtn";
-            this.startExamBtn.Size = new System.Drawing.Size(152, 29);
+            this.startExamBtn.Size = new System.Drawing.Size(225, 52);
             this.startExamBtn.TabIndex = 10;
             this.startExamBtn.Text = "Start Selected Exam";
             this.startExamBtn.UseVisualStyleBackColor = true;
@@ -158,15 +171,16 @@
             // 
             this.backBtn.Location = new System.Drawing.Point(198, 483);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(161, 23);
+            this.backBtn.Size = new System.Drawing.Size(122, 52);
             this.backBtn.TabIndex = 11;
-            this.backBtn.Text = "Back To Student Page";
+            this.backBtn.Text = "Back ";
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel1.BackColor = System.Drawing.Color.Linen;
+            this.panel1.Controls.Add(this.startExamBtn);
             this.panel1.Location = new System.Drawing.Point(143, 77);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(872, 485);
@@ -190,7 +204,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1161, 676);
             this.Controls.Add(this.backBtn);
-            this.Controls.Add(this.startExamBtn);
             this.Controls.Add(this.durationPlaceholder);
             this.Controls.Add(this.durationLbl);
             this.Controls.Add(this.difficultyPlaceholder);
@@ -206,6 +219,7 @@
             this.Name = "ExamSelection";
             this.Text = "ExamSelection";
             this.Load += new System.EventHandler(this.ExamSelection_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

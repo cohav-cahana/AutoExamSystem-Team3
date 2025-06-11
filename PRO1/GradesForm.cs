@@ -251,7 +251,9 @@ namespace PRO1
             label.TextAlign = ContentAlignment.MiddleRight;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e) { }
+
+        private void panelAverage_Paint(object sender, PaintEventArgs e)
         {
 
         }
