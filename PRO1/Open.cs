@@ -123,7 +123,7 @@ namespace PRO1
             }
             else
             {
-                await firebaseHelper.AddQuestionAsync("OpenQuestion", correctAnswer, topic, level, questionText, "", "", "", "");
+                await firebaseHelper.AddQuestionAsync("OpenQuestion", correctAnswer, topic, level, questionText, "", "", "", "","");
                 MessageBox.Show("השאלה הפתוחה נשמרה בהצלחה!");
             }
 

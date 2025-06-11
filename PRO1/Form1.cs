@@ -18,11 +18,12 @@ namespace PRO1
             InitializeComponent();
             this.BackColor = Color.White;
 
-            label1.Font = new Font("Arial", 18, FontStyle.Bold);
+            labelWelcome.Font = new Font("Arial", 18, FontStyle.Bold);
             button1.Font= new Font("Arial", 12, FontStyle.Bold);
             button2.Font = new Font("Arial", 12, FontStyle.Bold);
             button3.Font = new Font("Arial", 8, FontStyle.Bold);
             button4.Font = new Font("Arial", 8, FontStyle.Bold);
+
 
 
 
@@ -41,6 +42,7 @@ namespace PRO1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            labelWelcome.Text = "Welcome  " + SessionManager.Username;
 
         }
 
