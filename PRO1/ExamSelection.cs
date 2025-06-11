@@ -157,5 +157,12 @@ namespace PRO1
         {
 
         }
+
+        private void btn_A_Click(object sender, EventArgs e)
+        {
+            AdaptiveSelectionForm adaptiveSelectionForm = new AdaptiveSelectionForm(currentUser, this);
+            adaptiveSelectionForm.Show();
+            this.Hide();
+        }
     }
 }

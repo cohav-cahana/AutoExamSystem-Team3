@@ -190,3 +190,5 @@ C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.C
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.csproj.Up2Date
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.exe
 C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.pdb
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.AdaptiveSelectionForm.resources
+C:\Users\ASUS\Documents\GitHub\AutoExamSystem-Team3\PRO1\obj\Debug\PRO1.AdaptiveTestForm.resources
