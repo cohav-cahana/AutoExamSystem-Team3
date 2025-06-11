@@ -31,8 +31,7 @@ namespace PRO1
             registerForm.Show();
         }
 
-        private async void login_Click(object sender, EventArgs e)
-        {
+        private async void login_Click(object sender, EventArgs e) {
             string username = txtusername_log.Text.Trim();
             string password = txtpassword_log.Text.Trim();
 

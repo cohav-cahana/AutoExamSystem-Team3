@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\gradeformteacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradeformteacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\gradeformteacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradeformteacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\pro1\\firebasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\firebasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\frontpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\frontpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\frontpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,43 +15,15 @@
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\frontpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\pro1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\examresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\examresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\gradechartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradechartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\gradechartform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradechartform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\gradechartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradechartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\gradeformteacher.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradeformteacher.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\gradestrackingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradestrackingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\pro1\\gradesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\asus\\documents\\github\\autoexamsystem-team3\\pro1\\gradesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\pro1\\gradesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -69,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\pro1\\questionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\questionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\pro1\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\pro1\\open.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,181 +66,65 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\Form1.cs",
-              "RelativeDocumentMoniker": "PRO1\\Form1.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\Form1.cs [Design]",
-              "RelativeToolTip": "PRO1\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T10:16:39.376Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FirebaseHelper.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\FirebaseHelper.cs",
-              "RelativeDocumentMoniker": "PRO1\\FirebaseHelper.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\FirebaseHelper.cs",
-              "RelativeToolTip": "PRO1\\FirebaseHelper.cs",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAkwNwAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T10:25:31.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GradeFormTeacher.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeFormTeacher.cs",
-              "RelativeDocumentMoniker": "PRO1\\GradeFormTeacher.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeFormTeacher.cs [Design]",
-              "RelativeToolTip": "PRO1\\GradeFormTeacher.cs [Design]",
+              "Title": "frontPage.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\frontPage.Designer.cs",
+              "RelativeDocumentMoniker": "PRO1\\frontPage.Designer.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\frontPage.Designer.cs",
+              "RelativeToolTip": "PRO1\\frontPage.Designer.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAIwJQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:20:14.958Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T15:43:04.168Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GradeFormTeacher.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeFormTeacher.cs",
-              "RelativeDocumentMoniker": "PRO1\\GradeFormTeacher.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeFormTeacher.cs",
-              "RelativeToolTip": "PRO1\\GradeFormTeacher.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAgwEUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:43:43.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "frontPage.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\frontPage.cs",
               "RelativeDocumentMoniker": "PRO1\\frontPage.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\frontPage.cs",
               "RelativeToolTip": "PRO1\\frontPage.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAwwCkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAD4vyIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:31:32.335Z",
+              "WhenOpened": "2025-06-11T15:39:51.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "frontPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\frontPage.cs",
               "RelativeDocumentMoniker": "PRO1\\frontPage.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\frontPage.cs [Design]",
               "RelativeToolTip": "PRO1\\frontPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T13:34:32.816Z",
+              "WhenOpened": "2025-06-11T15:39:44.476Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\Form1.cs",
               "RelativeDocumentMoniker": "PRO1\\Form1.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\Form1.cs",
-              "RelativeToolTip": "PRO1\\Form1.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAkwCcAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\Form1.cs [Design]",
+              "RelativeToolTip": "PRO1\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T11:37:42.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ExamResult.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\ExamResult.cs",
-              "RelativeDocumentMoniker": "PRO1\\ExamResult.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\ExamResult.cs",
-              "RelativeToolTip": "PRO1\\ExamResult.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAwwBQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T13:15:58.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GradeChartForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeChartForm.cs",
-              "RelativeDocumentMoniker": "PRO1\\GradeChartForm.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeChartForm.cs [Design]",
-              "RelativeToolTip": "PRO1\\GradeChartForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T13:05:22.012Z",
+              "WhenOpened": "2025-06-11T15:39:37.238Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GradeChartForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeChartForm.Designer.cs",
-              "RelativeDocumentMoniker": "PRO1\\GradeChartForm.Designer.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeChartForm.Designer.cs",
-              "RelativeToolTip": "PRO1\\GradeChartForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T13:05:32.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GradeChartForm.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeChartForm.cs",
-              "RelativeDocumentMoniker": "PRO1\\GradeChartForm.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeChartForm.cs",
-              "RelativeToolTip": "PRO1\\GradeChartForm.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAswC4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T13:06:14.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GradeFormTeacher.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeFormTeacher.Designer.cs",
-              "RelativeDocumentMoniker": "PRO1\\GradeFormTeacher.Designer.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradeFormTeacher.Designer.cs",
-              "RelativeToolTip": "PRO1\\GradeFormTeacher.Designer.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAswKIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:59:44.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GradesTrackingForm.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradesTrackingForm.cs",
-              "RelativeDocumentMoniker": "PRO1\\GradesTrackingForm.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradesTrackingForm.cs",
-              "RelativeToolTip": "PRO1\\GradesTrackingForm.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAUwB0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:45:54.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 4,
               "Title": "GradesForm.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradesForm.cs",
               "RelativeDocumentMoniker": "PRO1\\GradesForm.cs",
@@ -293,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "GradesForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\GradesForm.cs",
               "RelativeDocumentMoniker": "PRO1\\GradesForm.cs",
@@ -305,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
               "Title": "ExamManagerForm.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\ExamManagerForm.cs",
               "RelativeDocumentMoniker": "PRO1\\ExamManagerForm.cs",
@@ -313,12 +157,11 @@
               "RelativeToolTip": "PRO1\\ExamManagerForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T10:47:49.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T10:47:49.723Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 7,
               "Title": "QuestionForm.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\QuestionForm.cs",
               "RelativeDocumentMoniker": "PRO1\\QuestionForm.cs",
@@ -330,19 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "StudentForm.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\StudentForm.cs",
-              "RelativeDocumentMoniker": "PRO1\\StudentForm.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\StudentForm.cs",
-              "RelativeToolTip": "PRO1\\StudentForm.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAIA5wCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T11:45:25.98Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 8,
               "Title": "Open.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\Open.cs",
               "RelativeDocumentMoniker": "PRO1\\Open.cs",
@@ -354,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 9,
               "Title": "Exam.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\Exam.cs",
               "RelativeDocumentMoniker": "PRO1\\Exam.cs",
@@ -366,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 12,
               "Title": "LecturerForm.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\LecturerForm.cs",
               "RelativeDocumentMoniker": "PRO1\\LecturerForm.cs",
@@ -378,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 10,
               "Title": "LecturerForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\LecturerForm.cs",
               "RelativeDocumentMoniker": "PRO1\\LecturerForm.cs",
@@ -389,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\Program.cs",
               "RelativeDocumentMoniker": "PRO1\\Program.cs",
@@ -401,15 +232,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 11,
               "Title": "ExamManagerForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\ExamManagerForm.cs",
               "RelativeDocumentMoniker": "PRO1\\ExamManagerForm.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\AutoExamSystem-Team3\\PRO1\\ExamManagerForm.cs [Design]",
               "RelativeToolTip": "PRO1\\ExamManagerForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T10:09:55.406Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T10:09:55.406Z"
             }
           ]
         }

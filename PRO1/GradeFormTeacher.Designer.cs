@@ -6,6 +6,8 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.PictureBox pictureBox1;
+
 
         /// <summary>
         /// Clean up any resources being used.
@@ -134,6 +136,8 @@
 
             // pictureBox1
             // 
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
             this.pictureBox1.Image = global::PRO1.Properties.Resources._339;
             this.pictureBox1.Location = new System.Drawing.Point(-4, -4);
             this.pictureBox1.Name = "pictureBox1";
@@ -152,6 +156,7 @@
             this.Controls.Add(this.btnShowChart);
             this.Controls.Add(this.dgvScores);
             this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "GradeFormTeacher";
             this.Text = "GradeFormTeacher";
             this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
@@ -171,5 +176,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colScore;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubject;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDifficulty;
+
     }
 }

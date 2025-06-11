@@ -38,9 +38,8 @@
             this.signup = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
+
             // btnShowPassword
-            // 
             this.btnShowPassword.BackColor = System.Drawing.Color.White;
             this.btnShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowPassword.FlatAppearance.BorderSize = 0;
@@ -52,47 +51,8 @@
             this.btnShowPassword.TabStop = false;
             this.btnShowPassword.UseVisualStyleBackColor = false;
             this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
-            this.login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.login.BackColor = System.Drawing.Color.Sienna;
-            this.login.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.login.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.login.ForeColor = System.Drawing.Color.White;
-            this.login.Location = new System.Drawing.Point(486, 253);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(198, 40);
-            this.login.TabIndex = 11;
-            this.login.Text = "Login";
-            this.login.UseVisualStyleBackColor = false;
-            this.login.Click += new System.EventHandler(this.login_Click);
-            // 
-            // txtusername_log
-            // 
-            this.txtusername_log.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtusername_log.BackColor = System.Drawing.Color.White;
-            this.txtusername_log.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtusername_log.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusername_log.ForeColor = System.Drawing.Color.DimGray;
-            this.txtusername_log.Location = new System.Drawing.Point(458, 144);
-            this.txtusername_log.Name = "txtusername_log";
-            this.txtusername_log.Size = new System.Drawing.Size(250, 38);
-            this.txtusername_log.TabIndex = 12;
-         //   this.txtusername_log.TextChanged += new System.EventHandler(this.txtusername_log_TextChanged);
-            // 
-            // txtpassword_log
-            // 
-            this.txtpassword_log.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtpassword_log.BackColor = System.Drawing.Color.White;
-            this.txtpassword_log.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtpassword_log.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword_log.ForeColor = System.Drawing.Color.DimGray;
-            this.txtpassword_log.Location = new System.Drawing.Point(458, 200);
-            this.txtpassword_log.Name = "txtpassword_log";
-            this.txtpassword_log.Size = new System.Drawing.Size(250, 38);
-            this.txtpassword_log.TabIndex = 13;
-            // 
+
             // label3
-            // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
@@ -104,9 +64,8 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Welcome back!";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
+
             // login
-            // 
             this.login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.login.BackColor = System.Drawing.Color.Sienna;
             this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -119,9 +78,8 @@
             this.login.Text = "Login";
             this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.login_Click);
-            // 
+
             // label1
-            // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -133,21 +91,8 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Forget Password?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtpassword_log
-            // 
-            this.txtpassword_log.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtpassword_log.BackColor = System.Drawing.Color.White;
-            this.txtpassword_log.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtpassword_log.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword_log.ForeColor = System.Drawing.Color.DimGray;
-            this.txtpassword_log.Location = new System.Drawing.Point(144, 182);
-            this.txtpassword_log.Name = "txtpassword_log";
-            this.txtpassword_log.Size = new System.Drawing.Size(250, 38);
-            this.txtpassword_log.TabIndex = 13;
-            // 
+
             // txtusername_log
-            // 
             this.txtusername_log.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtusername_log.BackColor = System.Drawing.Color.White;
             this.txtusername_log.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -157,9 +102,29 @@
             this.txtusername_log.Name = "txtusername_log";
             this.txtusername_log.Size = new System.Drawing.Size(250, 38);
             this.txtusername_log.TabIndex = 12;
-            // 
+
+            // txtpassword_log
+            this.txtpassword_log.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtpassword_log.BackColor = System.Drawing.Color.White;
+            this.txtpassword_log.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpassword_log.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword_log.ForeColor = System.Drawing.Color.DimGray;
+            this.txtpassword_log.Location = new System.Drawing.Point(144, 182);
+            this.txtpassword_log.Name = "txtpassword_log";
+            this.txtpassword_log.Size = new System.Drawing.Size(250, 38);
+            this.txtpassword_log.TabIndex = 13;
+
+            // signup
+            this.signup.BackColor = System.Drawing.Color.White;
+            this.signup.Location = new System.Drawing.Point(196, 341);
+            this.signup.Name = "signup";
+            this.signup.Size = new System.Drawing.Size(132, 25);
+            this.signup.TabIndex = 10;
+            this.signup.Text = "Register Here";
+            this.signup.UseVisualStyleBackColor = false;
+            this.signup.Click += new System.EventHandler(this.signup_Click);
+
             // panel1
-            // 
             this.panel1.Controls.Add(this.btnShowPassword);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtpassword_log);
@@ -172,20 +137,8 @@
             this.panel1.Size = new System.Drawing.Size(540, 429);
             this.panel1.TabIndex = 18;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // signup
-            // 
-            this.signup.BackColor = System.Drawing.Color.White;
-            this.signup.Location = new System.Drawing.Point(196, 341);
-            this.signup.Name = "signup";
-            this.signup.Size = new System.Drawing.Size(132, 25);
-            this.signup.TabIndex = 10;
-            this.signup.Text = "Register Here";
-            this.signup.UseVisualStyleBackColor = false;
-            this.signup.Click += new System.EventHandler(this.signup_Click);
-            // 
+
             // frontPage
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -198,8 +151,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-
         }
+
 
         #endregion
 
