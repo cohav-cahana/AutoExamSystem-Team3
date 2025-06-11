@@ -147,7 +147,7 @@ namespace PRO1
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    if (row.Cells["ציון"].Value != null && double.TryParse(row.Cells["ציון"].Value.ToString(), out double grade))
+                    if (row.Cells["Grade"].Value != null && double.TryParse(row.Cells["Grade"].Value.ToString(), out double grade))
                     {
                         total += grade;
                         count++;
