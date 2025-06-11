@@ -11,25 +11,32 @@ using System.Windows.Forms;
 
 namespace PRO1
 {
+    
     public partial class Form1 : Form
     {
-        public Form1()
+        private User currentUser;
+        private frontPage login;
+        public Form1() : this(new User(), null)
+        {
+        }
+        public Form1(User user, frontPage login)
         {
             InitializeComponent();
+            this.currentUser = user;
+            this.login = login;
+
+            this.BackColor = Color.White;
             this.BackColor = Color.White;
 
             labelWelcome.Font = new Font("Arial", 18, FontStyle.Bold);
             button1.Font= new Font("Arial", 12, FontStyle.Bold);
             button2.Font = new Font("Arial", 12, FontStyle.Bold);
-            button3.Font = new Font("Arial", 8, FontStyle.Bold);
             button4.Font = new Font("Arial", 8, FontStyle.Bold);
 
             StyleLinenButton(btn_showExam);
             StyleLinenButton(button1);
             StyleLinenButton(button2);
-            StyleLinenButton(button3);
             StyleLinenButton(button4);
-           // StyleTitleLabel(label1);
 
       
 
@@ -64,7 +71,7 @@ namespace PRO1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.labelWelcome.Text = "Welcome " + SessionManager.Username;
+            this.labelWelcome.Text = "Welcome " + currentUser.Username;
 
         }
 
@@ -94,16 +101,20 @@ namespace PRO1
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btn_createQ_Click(object sender, EventArgs e)
         {
             this.Hide();
             QuestionForm questionForm = new QuestionForm();
             questionForm.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GradeFormTeacher gradeFormTeacher = new GradeFormTeacher();
+            gradeFormTeacher.Show();
+            this.Hide();
         }
     }
 }

@@ -250,5 +250,10 @@ namespace PRO1
                 : new Font("Segoe UI", 11, FontStyle.Regular);
             label.TextAlign = ContentAlignment.MiddleRight;
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

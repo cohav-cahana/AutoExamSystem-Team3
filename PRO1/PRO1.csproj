@@ -198,6 +198,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GradeCalculator.cs" />
+    <Compile Include="GradeChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradeChartForm.Designer.cs">
+      <DependentUpon>GradeChartForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GradeFormTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradeChartForm.resx">
+      <DependentUpon>GradeChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GradeFormTeacher.resx">
       <DependentUpon>GradeFormTeacher.cs</DependentUpon>

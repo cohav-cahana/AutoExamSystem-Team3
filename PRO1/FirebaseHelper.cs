@@ -14,7 +14,7 @@ public class FirebaseHelper
 
     public FirebaseHelper()
     {
-        firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/"); 
+        firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/");
     }
 
     public FirebaseHelper(FirebaseClient client)
@@ -92,10 +92,10 @@ public class FirebaseHelper
     public async Task AddQuestionAsync(string type, string correctAnswer, string topic, string level, string questionText, string answer1, string answer2, string answer3, string answer4, string teacherId)
     {
 
-        
+
         object question;
         Random rnd = new Random();
-        int newId = rnd.Next(10000, 99999);  
+        int newId = rnd.Next(10000, 99999);
         string newIdString = newId.ToString();
 
 
@@ -131,7 +131,7 @@ public class FirebaseHelper
                 };
                 break;
 
-            case "FillInTheBlanks": 
+            case "FillInTheBlanks":
                 question = new
                 {
                     Id = newId,
@@ -179,14 +179,64 @@ public class FirebaseHelper
         foreach (var item in questions)
         {
             Question q = item.Object;
-            q.Id = item.Key; 
+            q.Id = item.Key;
 
             result.Add(q);
         }
 
         return result;
     }
+    public async Task<Exam> GetExamByIdAsync(string examId)
+    {
+        var exam = await firebase
+            .Child("exams")
+            .Child(examId)
+            .OnceSingleAsync<Exam>();
 
+        return exam;
+    }
+    public async Task<List<(string Username, string UserId, ExamResult)>> GetAllGradesAsync()
+    {
+        var gradesList = new List<(string, string, ExamResult)>();
+
+        var users = await firebase
+            .Child("users")
+            .OnceAsync<Dictionary<string, object>>();
+
+        foreach (var user in users)
+        {
+            string userId = user.Key;
+            var userData = user.Object;
+
+            string username = userData.ContainsKey("Username") ? userData["Username"].ToString() : userId;
+
+            var grades = await firebase
+                .Child("users")
+                .Child(userId)
+                .Child("grades")
+                .OnceAsync<ExamResult>();
+            if (grades != null && grades.Count > 0)
+            {
+
+                foreach (var grade in grades)
+                {
+
+                    var exam = await GetExamByIdAsync(grade.Object.ExamId);
+
+
+                    grade.Object.Subject = exam?.Topics?.FirstOrDefault() ?? "-";
+                    grade.Object.Level = exam?.Difficulty ?? "-";
+                    grade.Object.Score = (int)grade.Object.Grade;
+
+
+
+                    gradesList.Add((username, userId, grade.Object));
+                }
+            }
+        }
+
+        return gradesList;
+    }
     public async Task<List<Question>> GetQuestionsByTopicAsync(string topic)
     {
         var allQuestions = await GetAllQuestionsAsync();
@@ -237,9 +287,30 @@ public class FirebaseHelper
 
         return questions.Select(q => q.Object).ToList();
     }
+    public async Task<User> GetUserByIdAsync(string userId)
+    {
+        var firebaseUser = await firebase
+            .Child("users")
+            .Child(userId)
+            .OnceSingleAsync<User>();
+
+        return firebaseUser;
+    }
+    public async Task CreateUserInFirebaseAsync(User user)
+    {
+        await firebase
+            .Child("users")
+            .Child(user.UserId)
+            .PutAsync(new
+            {
+                Username = user.Username,
+                UserId = user.UserId,
+                Email = user.Email,
+                Role = user.Role
+            });
 
 
 
 
-
+    }
 }
