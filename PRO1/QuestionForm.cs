@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,13 +21,69 @@ namespace PRO1
             
             label1.Font = new Font("Arial", 12, FontStyle.Bold);
             label2.Font = new Font("Arial", 12, FontStyle.Bold);
+            panelMain.Paint += panelMain_Paint;
+            panelMain.BackColor = Color.Transparent;
+            StyleWarmButton(button2);
+            StyleLabel(label2, true);  
+            StyleLabel(label1);
 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.BackColor = Color.White;
+            comboBox1.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            comboBox1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+
+            StyleDataGridView(dataGridView1);
 
         }
 
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+            Color semiTransparentWhite = Color.FromArgb(160, Color.White);
+            using (SolidBrush brush = new SolidBrush(semiTransparentWhite))
+            {
+                e.Graphics.FillRectangle(brush, panelMain.ClientRectangle);
+            }
+        }
+        private void StyleLabel(Label label, bool isTitle = false)
+        {
+            label.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            label.BackColor = Color.Transparent;
+            label.Font = isTitle
+                ? new Font("Segoe UI", 16, FontStyle.Bold)
+                : new Font("Segoe UI", 11, FontStyle.Regular);
+            label.TextAlign = ContentAlignment.MiddleLeft;
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "deleteButton")
+            {
+                DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                cell.Style.BackColor = Color.FromArgb(220, 80, 80); // אדום בהיר
+                cell.Style.ForeColor = Color.White;
+                cell.Style.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            }
 
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "editButton")
+            {
+                DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                cell.Style.BackColor = Color.FromArgb(230, 230, 230); // אפור בהיר
+                cell.Style.ForeColor = Color.Black;
+                cell.Style.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            }
+        }
         private async void QuestionForm_Load(object sender, EventArgs e)
         {
+            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
             FirebaseHelper firebaseHelper = new FirebaseHelper();
             this.currentTeacherId = SessionManager.TeacherId;
 
@@ -43,8 +98,8 @@ namespace PRO1
                 {
                     DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
                     editButtonColumn.Name = "editButton";
-                    editButtonColumn.HeaderText = "ערוך";
-                    editButtonColumn.Text = "ערוך";
+                    editButtonColumn.HeaderText = "Edit";
+                    editButtonColumn.Text = "Edit";
                     editButtonColumn.UseColumnTextForButtonValue = true;
                     dataGridView1.Columns.Add(editButtonColumn);
                 }
@@ -53,8 +108,8 @@ namespace PRO1
                 {
                     DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
                     deleteButtonColumn.Name = "deleteButton";
-                    deleteButtonColumn.HeaderText = "מחק";
-                    deleteButtonColumn.Text = "מחק";
+                    deleteButtonColumn.HeaderText = "Delete";
+                    deleteButtonColumn.Text = "Delete";
                     deleteButtonColumn.UseColumnTextForButtonValue = true;
                     dataGridView1.Columns.Add(deleteButtonColumn);
                 }
@@ -97,7 +152,32 @@ namespace PRO1
                 fillInTheBlanksForm.ShowDialog();
             }
         }
+        private void StyleDataGridView(DataGridView dgv)
+        {
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = Color.White;
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.GridColor = Color.LightGray;
 
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 160, 102); // חום בהיר
+            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            dgv.DefaultCellStyle.BackColor = Color.White;
+            dgv.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(230, 215, 200);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgv.ColumnHeadersHeight = 35;
+
+            dgv.RowTemplate.Height = 30;
+            dgv.AllowUserToAddRows = false;
+            dgv.RowHeadersVisible = false;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 

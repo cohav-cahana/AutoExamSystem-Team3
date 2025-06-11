@@ -31,10 +31,7 @@ namespace PRO1
         {
 
             this.Hide();
-
             QuestionForm questionForm = new QuestionForm();
-
-            
             questionForm.ShowDialog();  
             
         }

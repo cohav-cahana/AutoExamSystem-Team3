@@ -38,7 +38,7 @@ namespace PRO1
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.Cursor = Cursors.Hand;
             btnExit.BackgroundImageLayout = ImageLayout.Stretch;
-      //      btnExit.BackgroundImage = Image.FromFile("Resources/SYSTEM_OUT.png"); 
+         //   btnExit.BackgroundImage = Image.FromFile("Resources/SYSTEM_OUT.png"); 
 
 
             btnExit.Click += btnExit_Click;
@@ -48,6 +48,7 @@ namespace PRO1
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
+          //  btnExit.Image = Properties.Resources;
             Application.Exit();
         }
 
@@ -115,6 +116,6 @@ namespace PRO1
             path.AddEllipse(0, 0, btn.Width, btn.Height);
             btn.Region = new Region(path);
         }
-     
+
     }
 }
