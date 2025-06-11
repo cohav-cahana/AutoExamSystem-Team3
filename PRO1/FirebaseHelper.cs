@@ -23,6 +23,7 @@ public class FirebaseHelper
     }
 
 
+
     public async Task UpdateQuestionAsync(string key, Dictionary<string, object> data)
     {
         //var firebase = new FirebaseClient("https://questions-sce-default-rtdb.firebaseio.com/");
@@ -34,6 +35,18 @@ public class FirebaseHelper
             .Child("exams")
             .Child(exam.Id)
             .PutAsync(exam);
+    }
+    public async Task DeleteQuestionAsync(string questionId)
+    {
+        await firebase.Child("questions").Child(questionId).DeleteAsync();
+    }
+
+    public async Task SaveAdaptiveExamAsync(AdaptiveExam adaptiveExam)
+    {
+        await firebase
+            .Child("adaptiveExams")
+            .Child(adaptiveExam.Id)
+            .PutAsync(adaptiveExam);
     }
     public async Task<List<Exam>> GetAllExamsAsync()
     {
@@ -76,39 +89,35 @@ public class FirebaseHelper
     }
 
 
-    public async Task AddQuestionAsync(string type, string correctAnswer, string topic, string level, string questionText, string answer1, string answer2, string answer3, string answer4)
+    public async Task AddQuestionAsync(string type, string correctAnswer, string topic, string level, string questionText, string answer1, string answer2, string answer3, string answer4, string teacherId)
     {
 
-        //var question = new
-        //{
-        //    CorrectAnswer = correctAnswer,
-        //    Topic = topic,
-        //    Level=level,
-        //    QuestionText = questionText,
-        //    Answer1 = answer1,
-        //    Answer2 = answer2,
-        //    Answer3 = answer3,
-        //    Answer4 = answer4
-
-        //};
+        
         object question;
+        Random rnd = new Random();
+        int newId = rnd.Next(10000, 99999);  
+        string newIdString = newId.ToString();
+
 
         switch (type)
         {
             case "TrueFalse":
                 question = new
                 {
+                    Id = newId,
                     QuestionText = questionText,
                     CorrectAnswer = correctAnswer,
                     Topic = topic,
                     Level = level,
-                    Type = type
+                    Type = type,
+                    TeacherId = teacherId
                 };
                 break;
 
             case "MultipleChoice":
                 question = new
                 {
+                    Id = newId,
                     QuestionText = questionText,
                     CorrectAnswer = correctAnswer,
                     Topic = topic,
@@ -117,29 +126,35 @@ public class FirebaseHelper
                     Answer2 = answer2,
                     Answer3 = answer3,
                     Answer4 = answer4,
-                    Type = type
+                    Type = type,
+                    TeacherId = teacherId
                 };
                 break;
 
             case "FillInTheBlanks": 
                 question = new
                 {
+                    Id = newId,
+                    QuestionText = questionText,
                     CorrectAnswer = correctAnswer,
                     Topic = topic,
                     Level = level,
-                    QuestionText = questionText,
-                    Type = type
+
+                    Type = type,
+                    TeacherId = teacherId
 
                 };
                 break;
             case "OpenQuestion":
                 question = new
                 {
+                    Id = newId,
                     QuestionText = questionText,
                     CorrectAnswer = correctAnswer,
                     Topic = topic,
                     Level = level,
-                    Type = "OpenQuestion"
+                    Type = "OpenQuestion",
+                    TeacherId = teacherId
                 };
                 break;
 
@@ -148,7 +163,10 @@ public class FirebaseHelper
         }
 
 
-        await firebase.Child("questions").PostAsync(question);
+        await firebase
+                .Child("questions")
+                .Child(newId.ToString())
+                .PutAsync(question);
     }
     public async Task<List<Question>> GetAllQuestionsAsync()
     {
@@ -157,6 +175,36 @@ public class FirebaseHelper
             .OnceAsync<Question>();
 
         return questions.Select(q => q.Object).ToList();
+    }
+    public async Task<List<Question>> GetQuestionsByTopicAsync(string topic)
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        return allQuestions.Where(q => q.Topic.Equals(topic, StringComparison.OrdinalIgnoreCase)).ToList();
+    }
+    public async Task<List<Question>> GetQuestionsByTopicAndLevelAsync(string topic, string level)
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        return allQuestions
+            .Where(q => q.Topic.Equals(topic, StringComparison.OrdinalIgnoreCase) && q.Level.Equals(level, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+    }
+    public async Task<List<Question>> easyQuestionsAsync()
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        var easyQuestions = allQuestions.Where(q => q.Level.Equals("קל", StringComparison.OrdinalIgnoreCase)).ToList();
+        return easyQuestions;
+    }
+    public async Task<List<Question>> mediumQuestionsAsync()
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        var mediumQuestions = allQuestions.Where(q => q.Level.Equals("בינוני", StringComparison.OrdinalIgnoreCase)).ToList();
+        return mediumQuestions;
+    }
+    public async Task<List<Question>> hardQuestionsAsync()
+    {
+        var allQuestions = await GetAllQuestionsAsync();
+        var hardQuestions = allQuestions.Where(q => q.Level.Equals("קשה", StringComparison.OrdinalIgnoreCase)).ToList();
+        return hardQuestions;
     }
     public async Task<List<ExamResult>> GetAllExamsAsync(string userId)
     {
@@ -168,6 +216,17 @@ public class FirebaseHelper
 
         return results.Select(r => r.Object).ToList();
     }
+    public async Task<List<Question>> GetQuestionsByTeacherIdAsync(string teacherId)
+    {
+        var questions = await firebase
+         .Child("questions")
+         .OrderBy("TeacherId")
+         .EqualTo(teacherId)
+         .OnceAsync<Question>();
+
+        return questions.Select(q => q.Object).ToList();
+    }
+
 
 
 

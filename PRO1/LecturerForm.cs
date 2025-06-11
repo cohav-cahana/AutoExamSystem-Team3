@@ -32,6 +32,9 @@ namespace PRO1
             StyleComboBox(cmb_topic);
             StyleComboBox(cmbDifficulty);
 
+            panel1.BackColor = Color.FromArgb(150, Color.White);
+            panel1.BorderStyle = BorderStyle.None;
+
         }
 
         private List<Question> allQuestions = new List<Question>();

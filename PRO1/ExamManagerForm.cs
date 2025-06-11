@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,8 +18,10 @@ namespace PRO1
         public ExamManagerForm()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackColor = Color.White;
+            label1.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+
+
         }
         private List<Exam> exams = new List<Exam>();
 
@@ -78,6 +81,19 @@ namespace PRO1
             {
                 lstExamQuestions.Items.Add("למבחן זה אין שאלות שמורות");
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+
+            form1.Show();
+            this.Close();
         }
     }
 }

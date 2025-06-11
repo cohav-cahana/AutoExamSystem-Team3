@@ -21,8 +21,20 @@ namespace PRO1
         public RegisterForm()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
+            this.BackgroundImage = Properties.Resources._33;
             this.BackgroundImageLayout = ImageLayout.Stretch;
+            BACKpanel.BackColor = Color.FromArgb(150, Color.White);
+            BACKpanel.BorderStyle = BorderStyle.None;
+
+            this.BACKpanel.SendToBack();
+            txtUsername.BringToFront();
+            txtPassword.BringToFront();
+            txtID.BringToFront();
+            txtEmail.BringToFront();
+            cmbRole.BringToFront();
+            RegisterB.BringToFront();
+            btnUsernameTip.BringToFront();
+            btnPasswordTip.BringToFront();
 
         }
         public static List<string> ReadAllIDs(string filePath)

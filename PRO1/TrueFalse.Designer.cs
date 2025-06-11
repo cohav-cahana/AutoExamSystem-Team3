@@ -38,21 +38,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(352, 173);
+            this.textBox1.Location = new System.Drawing.Point(254, 283);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 68);
+            this.textBox1.Size = new System.Drawing.Size(475, 68);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(609, 154);
+            this.label1.Location = new System.Drawing.Point(686, 246);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 16);
             this.label1.TabIndex = 1;
@@ -63,7 +65,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.radioButton1.Location = new System.Drawing.Point(602, 266);
+            this.radioButton1.Location = new System.Drawing.Point(656, 387);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(50, 20);
             this.radioButton1.TabIndex = 2;
@@ -76,7 +78,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.CheckAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.radioButton2.Location = new System.Drawing.Point(583, 307);
+            this.radioButton2.Location = new System.Drawing.Point(637, 446);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(69, 20);
             this.radioButton2.TabIndex = 3;
@@ -87,7 +89,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(51, 364);
+            this.button1.Location = new System.Drawing.Point(576, 515);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 55);
             this.button1.TabIndex = 13;
@@ -98,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(592, 112);
+            this.label3.Location = new System.Drawing.Point(676, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 20;
@@ -112,7 +114,7 @@
             "קל",
             "בינוני",
             "קשה"});
-            this.comboBox2.Location = new System.Drawing.Point(465, 109);
+            this.comboBox2.Location = new System.Drawing.Point(511, 178);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 19;
@@ -121,7 +123,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(592, 71);
+            this.label2.Location = new System.Drawing.Point(658, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 18;
@@ -135,7 +137,7 @@
             "בדיקות תוכנה",
             "סטטיסטיקה",
             "מבנה נתונים"});
-            this.comboBox1.Location = new System.Drawing.Point(465, 71);
+            this.comboBox1.Location = new System.Drawing.Point(498, 104);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 17;
@@ -143,13 +145,23 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(678, 388);
+            this.button2.Location = new System.Drawing.Point(38, 608);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 31);
             this.button2.TabIndex = 21;
             this.button2.Text = "חזור";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PRO1.Properties.Resources._3310;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1169, 679);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // TrueFalse
             // 
@@ -166,9 +178,11 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "TrueFalse";
             this.Text = "TrueFalse";
             this.Load += new System.EventHandler(this.TrueFalse_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +200,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

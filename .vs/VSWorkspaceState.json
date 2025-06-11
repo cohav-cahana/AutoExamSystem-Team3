@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\PRO1",
-    "\\PRO1\\Properties"
+    "\\PRO1"
   ],
-  "SelectedNode": "\\PRO1\\Properties\\Resources.resx",
+  "SelectedNode": "\\PRO1\\AdaptiveSelectionForm.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -35,7 +35,9 @@
             this.colScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDifficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -44,7 +46,7 @@
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Freestyle Script", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(362, 9);
+            this.linkLabel1.Location = new System.Drawing.Point(382, 31);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(327, 190);
             this.linkLabel1.TabIndex = 0;
@@ -110,18 +112,30 @@
             this.colDifficulty.Name = "colDifficulty";
             this.colDifficulty.ReadOnly = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PRO1.Properties.Resources._339;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1164, 677);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // GradeFormTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1151, 641);
+            this.ClientSize = new System.Drawing.Size(1161, 676);
             this.Controls.Add(this.dgvScores);
             this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "GradeFormTeacher";
             this.Text = "GradeFormTeacher";
             this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +150,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colScore;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubject;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDifficulty;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

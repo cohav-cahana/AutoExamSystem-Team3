@@ -8,6 +8,7 @@ namespace PRO1
 {
     public class Question
     {
+        public string Id { get; set; }
         public string QuestionText { get; set; }
         public string CorrectAnswer { get; set; }
         public string Topic { get; set; }

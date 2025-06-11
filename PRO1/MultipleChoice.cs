@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SixLabors.Fonts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,43 @@ namespace PRO1
 {
     public partial class MultipleChoice : Form
     {
-        public MultipleChoice()
+        private string questionKey;
+        private string teacherId;
+        private Question editedQuestion = null;
+
+
+        public MultipleChoice(string teacherId)
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.back2;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-        }
+            this.teacherId = teacherId;
+            
 
+
+        }
+        public MultipleChoice(string teacherId, Question question) : this(teacherId)
+        {
+            InitializeComponent();
+
+            this.editedQuestion = question;
+            this.editedQuestion = question;
+            questionKey = question.Id;
+            textBox1.Text = question.QuestionText;
+            textBox2.Text = question.Answer1;
+            textBox3.Text = question.Answer2;
+            textBox4.Text = question.Answer3;
+            textBox5.Text = question.Answer4;
+            comboBox1.SelectedItem = question.Topic;
+            comboBox2.SelectedItem = question.Level;
+
+            
+            if (question.CorrectAnswer == question.Answer1) radioButton1.Checked = true;
+            else if (question.CorrectAnswer == question.Answer2) radioButton2.Checked = true;
+            else if (question.CorrectAnswer == question.Answer3) radioButton3.Checked = true;
+            else if (question.CorrectAnswer == question.Answer4) radioButton4.Checked = true;
+        }
         private void MultipleChoice_Load(object sender, EventArgs e)
         {
+
 
         }
 
@@ -74,7 +103,7 @@ namespace PRO1
         {
             FirebaseHelper firebaseHelper = new FirebaseHelper();
 
-            // קבלת המידע מהטופס
+            
             string questionText = textBox1.Text;
             string answer1 = textBox2.Text;
             string answer2 = textBox3.Text;
@@ -84,15 +113,52 @@ namespace PRO1
             string level = comboBox2.SelectedItem?.ToString();
             string correctAnswer = GetCorrectAnswer();
 
+            if (string.IsNullOrWhiteSpace(questionText) || string.IsNullOrWhiteSpace(correctAnswer))
+            {
+                MessageBox.Show("אנא מלא את כל השדות ובחר תשובה נכונה.");
+                return;
+            }
 
-            // שליחה ל-Firebase
-            await firebaseHelper.AddQuestionAsync("MultipleChoice",correctAnswer, topic,level, questionText,  answer1,  answer2, answer3, answer4);
+            if (editedQuestion != null)
+            {
+                
+                editedQuestion.QuestionText = questionText;
+                editedQuestion.Answer1 = answer1;
+                editedQuestion.Answer2 = answer2;
+                editedQuestion.Answer3 = answer3;
+                editedQuestion.Answer4 = answer4;
+                editedQuestion.Topic = topic;
+                editedQuestion.Level = level;
+                editedQuestion.CorrectAnswer = correctAnswer;
 
-            // הודעה שהשאלה נשמרה בהצלחה
-            MessageBox.Show("השאלה נשמרה בהצלחה!");
+                //await firebaseHelper.UpdateQuestionAsync(editedQuestion);
+                var data = new Dictionary<string, object>
+    {
+                     { "Id", questionKey },
+        { "QuestionText", editedQuestion.QuestionText },
+        { "Answer1", editedQuestion.Answer1 },
+        { "Answer2", editedQuestion.Answer2 },
+        { "Answer3", editedQuestion.Answer3 },
+        { "Answer4", editedQuestion.Answer4 },
+        { "Topic", editedQuestion.Topic },
+        { "Level", editedQuestion.Level },
+        { "CorrectAnswer", editedQuestion.CorrectAnswer },
+        { "Type", "MultipleChoice" },
+        { "TeacherId", teacherId }
+    };
+                await firebaseHelper.UpdateQuestionAsync(editedQuestion.Id.ToString(), data);
+
+                MessageBox.Show("השאלה עודכנה בהצלחה!");
+            }
+            else
+            {
+                
+                await firebaseHelper.AddQuestionAsync("MultipleChoice", correctAnswer, topic, level, questionText, answer1, answer2, answer3, answer4, SessionManager.TeacherId);
+                MessageBox.Show("השאלה נשמרה בהצלחה!");
+            }
         }
 
-        // פונקציה לקביעת התשובה הנכונה
+       
         private string GetCorrectAnswer()
         {
             if (radioButton1.Checked) return textBox2.Text;

@@ -414,7 +414,9 @@
     <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd.jpg" />
     <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd1.jpg" />
     <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd2.jpg" />
-    <None Include="Resources\33.jpg" />
+    <None Include="Resources\33.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\44.jpg" />
     <None Include="Resources\9b2356b940865023738a860c0b22b5bb1.jpg" />
     <None Include="Resources\9b2356b940865023738a860c0b22b5bb2.jpg" />
@@ -430,6 +432,16 @@
     <None Include="Resources\334.jpg" />
     <None Include="Resources\335.jpg" />
     <None Include="Resources\336.jpg" />
+    <None Include="Resources\337.jpg" />
+    <None Include="Resources\338.jpg" />
+    <None Include="Resources\339.jpg" />
+    <None Include="Resources\3310.jpg" />
+    <None Include="Resources\3311.jpg" />
+    <None Include="Resources\3312.jpg" />
+    <None Include="Resources\3313.jpg" />
+    <None Include="Resources\3314.jpg" />
+    <None Include="Resources\3315.jpg" />
+    <None Include="Resources\3316.jpg" />
     <Content Include="Resources\front11.png" />
     <Content Include="Resources\Graguation.png" />
     <None Include="Resources\students_banner_cropped.png" />

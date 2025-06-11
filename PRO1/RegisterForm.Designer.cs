@@ -51,24 +51,19 @@ namespace PRO1
             this.cmbRole = new System.Windows.Forms.ComboBox();
             this.btnPasswordTip = new System.Windows.Forms.Button();
             this.btnUsernameTip = new System.Windows.Forms.Button();
-            this.picSmileySad = new System.Windows.Forms.PictureBox();
-            this.picSmiley = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblRegister = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picSmileySad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSmiley)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BACKpanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtUsername.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(197, 97);
+            this.txtUsername.Location = new System.Drawing.Point(493, 182);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(143, 38);
+            this.txtUsername.Size = new System.Drawing.Size(240, 38);
             this.txtUsername.TabIndex = 4;
             this.txtUsername.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtUsername.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
@@ -77,10 +72,10 @@ namespace PRO1
             // 
             this.txtPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtPassword.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(197, 165);
+            this.txtPassword.Location = new System.Drawing.Point(493, 244);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(143, 38);
+            this.txtPassword.Size = new System.Drawing.Size(240, 38);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtPassword.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
@@ -89,10 +84,10 @@ namespace PRO1
             // 
             this.txtID.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtID.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(197, 236);
+            this.txtID.Location = new System.Drawing.Point(493, 304);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(143, 38);
+            this.txtID.Size = new System.Drawing.Size(240, 38);
             this.txtID.TabIndex = 6;
             this.txtID.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtID.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
@@ -101,10 +96,10 @@ namespace PRO1
             // 
             this.txtEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtEmail.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(197, 295);
+            this.txtEmail.Location = new System.Drawing.Point(493, 370);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(143, 38);
+            this.txtEmail.Size = new System.Drawing.Size(240, 38);
             this.txtEmail.TabIndex = 7;
             this.txtEmail.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.txtEmail.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
@@ -116,10 +111,10 @@ namespace PRO1
             this.RegisterB.FlatAppearance.BorderSize = 0;
             this.RegisterB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterB.ForeColor = System.Drawing.Color.White;
-            this.RegisterB.Location = new System.Drawing.Point(346, 454);
+            this.RegisterB.Location = new System.Drawing.Point(493, 482);
             this.RegisterB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RegisterB.Name = "RegisterB";
-            this.RegisterB.Size = new System.Drawing.Size(127, 40);
+            this.RegisterB.Size = new System.Drawing.Size(240, 40);
             this.RegisterB.TabIndex = 8;
             this.RegisterB.Text = "sign up";
             this.RegisterB.UseVisualStyleBackColor = false;
@@ -137,17 +132,17 @@ namespace PRO1
             this.cmbRole.Items.AddRange(new object[] {
             "Student",
             "Lecture"});
-            this.cmbRole.Location = new System.Drawing.Point(197, 370);
+            this.cmbRole.Location = new System.Drawing.Point(493, 431);
             this.cmbRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(143, 31);
+            this.cmbRole.Size = new System.Drawing.Size(240, 31);
             this.cmbRole.TabIndex = 10;
             this.cmbRole.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.cmbRole.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
             // btnPasswordTip
             // 
-            this.btnPasswordTip.Location = new System.Drawing.Point(356, 165);
+            this.btnPasswordTip.Location = new System.Drawing.Point(765, 244);
             this.btnPasswordTip.Name = "btnPasswordTip";
             this.btnPasswordTip.Size = new System.Drawing.Size(42, 27);
             this.btnPasswordTip.TabIndex = 12;
@@ -156,55 +151,27 @@ namespace PRO1
             // 
             // btnUsernameTip
             // 
-            this.btnUsernameTip.Location = new System.Drawing.Point(356, 102);
+            this.btnUsernameTip.Location = new System.Drawing.Point(765, 187);
             this.btnUsernameTip.Name = "btnUsernameTip";
             this.btnUsernameTip.Size = new System.Drawing.Size(42, 27);
             this.btnUsernameTip.TabIndex = 13;
             this.btnUsernameTip.Text = "?";
             this.btnUsernameTip.UseVisualStyleBackColor = true;
             // 
-            // picSmileySad
-            // 
-            this.picSmileySad.BackColor = System.Drawing.Color.Transparent;
-            this.picSmileySad.Location = new System.Drawing.Point(287, 454);
-            this.picSmileySad.Name = "picSmileySad";
-            this.picSmileySad.Size = new System.Drawing.Size(53, 61);
-            this.picSmileySad.TabIndex = 15;
-            this.picSmileySad.TabStop = false;
-            this.picSmileySad.Visible = false;
-            // 
-            // picSmiley
-            // 
-            this.picSmiley.Location = new System.Drawing.Point(479, 444);
-            this.picSmiley.Name = "picSmiley";
-            this.picSmiley.Size = new System.Drawing.Size(100, 50);
-            this.picSmiley.TabIndex = 14;
-            this.picSmiley.TabStop = false;
-            this.picSmiley.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(543, -5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(356, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblRegister
             // 
             this.lblRegister.AutoSize = true;
             this.lblRegister.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblRegister.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblRegister.Location = new System.Drawing.Point(157, 23);
+            this.lblRegister.Location = new System.Drawing.Point(492, 114);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(241, 45);
+            this.lblRegister.Size = new System.Drawing.Size(230, 45);
             this.lblRegister.TabIndex = 16;
-            this.lblRegister.Text = "Register Here!";
+            this.lblRegister.Text = "Register Here";
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(733, 567);
+            this.btn_back.Location = new System.Drawing.Point(15, 550);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(124, 52);
             this.btn_back.TabIndex = 17;
@@ -212,35 +179,40 @@ namespace PRO1
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.button1_Click);
             // 
+            // BACKpanel
+            // 
+            this.BACKpanel.BackColor = System.Drawing.Color.White;
+            this.BACKpanel.Location = new System.Drawing.Point(340, 91);
+            this.BACKpanel.Name = "BACKpanel";
+            this.BACKpanel.Size = new System.Drawing.Size(536, 483);
+            this.BACKpanel.TabIndex = 18;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::PRO1.Properties.Resources._33;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1151, 641);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.lblRegister);
-            this.Controls.Add(this.picSmileySad);
-            this.Controls.Add(this.picSmiley);
             this.Controls.Add(this.btnUsernameTip);
             this.Controls.Add(this.btnPasswordTip);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmbRole);
             this.Controls.Add(this.RegisterB);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.BACKpanel);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RegisterForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "RegisterForm";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picSmileySad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSmiley)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,12 +225,10 @@ namespace PRO1
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button RegisterB;
         private System.Windows.Forms.ComboBox cmbRole;
-        private PictureBox pictureBox1;
         private Button btnPasswordTip;
         private Button btnUsernameTip;
-        private PictureBox picSmiley;
-        private PictureBox picSmileySad;
         private Label lblRegister;
         private Button btn_back;
+        private Panel BACKpanel;
     }
 }

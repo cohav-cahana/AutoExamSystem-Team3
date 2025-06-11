@@ -13,11 +13,44 @@ namespace PRO1
 {
     public partial class FillInTheBlanks : Form
     {
+        private string questionKey;
+        private string teacherId;
+        private Question question;
         public FillInTheBlanks()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackColor = Color.White;
+            label1.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+            label2.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+            label3.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+            label4.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+
+
+        }
+        public FillInTheBlanks(Question question) : this(SessionManager.TeacherId, question)
+        {
+            
+
+        }
+
+        public FillInTheBlanks(string teacherId) : this()
+        {
+
+            this.teacherId = teacherId;
+        }
+
+        public FillInTheBlanks(string teacherId, Question question) : this(teacherId)
+        {
+            
+
+            this.teacherId = teacherId;   // ודא שמקצה גם את teacherId
+            this.question = question;     // שומר את השאלה לעריכה
+            questionKey = question.Id;
+            textBox1.Text = question.QuestionText;
+            textBox2.Text = question.CorrectAnswer;
+            comboBox1.SelectedItem = question.Topic;
+            comboBox2.SelectedItem = question.Level;
+
         }
 
         private void FillInTheBlanks_Load(object sender, EventArgs e)
@@ -57,20 +90,46 @@ namespace PRO1
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            // יצירת אובייקט של FirebaseHelper
             FirebaseHelper firebaseHelper = new FirebaseHelper();
 
-            // קבלת המידע מהטופס
-            string questionText = textBox1.Text;  // שאלה
-            string correctAnswer = textBox2.Text; // תשובה נכונה
-            string topic = comboBox1.SelectedItem?.ToString(); // נושא
-            string level = comboBox2.SelectedItem?.ToString(); // רמת קושי
+            string questionText = textBox1.Text;
+            string correctAnswer = textBox2.Text;
+            string topic = comboBox1.SelectedItem?.ToString();
+            string level = comboBox2.SelectedItem?.ToString();
 
-            // שליחה ל-Firebase
-            await firebaseHelper.AddQuestionAsync("FillInTheBlanks", correctAnswer, topic, level, questionText, "", "", "", "");
+            if (string.IsNullOrWhiteSpace(questionText) || string.IsNullOrWhiteSpace(correctAnswer))
+            {
+                MessageBox.Show("אנא מלא את כל השדות הדרושים.");
+                return;
+            }
 
-            // הודעה שהשאלה נשמרה בהצלחה
-            MessageBox.Show("השאלה נשמרה בהצלחה!");
+            if (question != null)
+            {
+                question.QuestionText = questionText;
+                question.CorrectAnswer = correctAnswer;
+                question.Topic = topic;
+                question.Level = level;
+
+                var data = new Dictionary<string, object>
+        {
+                     { "Id", questionKey },
+            { "QuestionText", question.QuestionText },
+            { "CorrectAnswer", question.CorrectAnswer },
+            { "Topic", question.Topic },
+            { "Level", question.Level },
+            { "Type", "FillInTheBlanks" },
+            { "TeacherId", teacherId }
+        };
+
+                await firebaseHelper.UpdateQuestionAsync(question.Id.ToString(), data);
+                MessageBox.Show("השאלה עודכנה בהצלחה!");
+            }
+            else
+            {
+                // יצירת שאלה חדשה
+                await firebaseHelper.AddQuestionAsync("FillInTheBlanks", correctAnswer, topic, level, questionText, "", "", "", "", SessionManager.TeacherId);
+                MessageBox.Show("השאלה נשמרה בהצלחה!");
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -107,6 +166,22 @@ namespace PRO1
 
             
             questionForm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+
+            QuestionForm questionForm = new QuestionForm();
+
+
+            questionForm.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

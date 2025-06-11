@@ -76,6 +76,8 @@ namespace PRO1
                         Email = row.Cell(4).GetValue<string>(),
                         Role = excelRole
                     };
+                    SessionManager.Username = user.Username;
+                    SessionManager.TeacherId = user.UserId;
 
                     if (excelRole.ToLower() == "student")
                     {
