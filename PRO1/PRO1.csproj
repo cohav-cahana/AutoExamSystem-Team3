@@ -435,7 +435,9 @@
     <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd.jpg" />
     <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd1.jpg" />
     <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd2.jpg" />
-    <None Include="Resources\33.jpg" />
+    <None Include="Resources\33.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\44.jpg" />
     <None Include="Resources\9b2356b940865023738a860c0b22b5bb1.jpg" />
     <None Include="Resources\9b2356b940865023738a860c0b22b5bb2.jpg" />
