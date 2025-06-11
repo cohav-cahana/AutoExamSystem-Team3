@@ -1,5 +1,4 @@
 ﻿using DocumentFormat.OpenXml.Bibliography;
-using DocumentFormat.OpenXml.Spreadsheet;
 using PRO1.Properties;
 using System;
 using System.Collections.Generic;
@@ -63,9 +62,29 @@ namespace PRO1
 
             panelAverage.Region = new Region(path);
 
+            StyleLabel(label1,true);
+            StyleLabel(label2);
+            StyleLabel(label3, true); 
+            StyleLabel(label4);
 
-
+            chartGrades.BackColor = Color.Transparent;
+            chartGrades.ChartAreas[0].BackColor = Color.FromArgb(160, Color.White);
+            StyleLinenButton(button1);
+            StyleDataGridView(dataGridView1);
         }
+
+        private void StyleLinenButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = Color.Linen;
+            button.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0; // <--- בלי מסגרת
+            button.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 239, 213); // Peach-like hover
+            button.Cursor = Cursors.Hand;
+            button.TextAlign = ContentAlignment.MiddleCenter;
+        }
+
 
         private async void GradesForm_Load(object sender, EventArgs e)
         {
@@ -81,17 +100,15 @@ namespace PRO1
 
                 
                 DataTable table = new DataTable();
-                table.Columns.Add("מזהה מבחן");
-                table.Columns.Add("כמות שאלות");
-                table.Columns.Add("ציון");
-                table.Columns.Add("תאריך");
+                table.Columns.Add("Exam ID");
+                table.Columns.Add("Number of Questions");
+                table.Columns.Add("Grade");
+                table.Columns.Add("Date");
 
                 foreach (var result in examResults)
                 { 
                     var exam = allExams.FirstOrDefault(ex => ex.Id == result.ExamId);
-
                     int questionCount = exam != null ? exam.QuestionCount : 0;
-
                     table.Rows.Add(result.ExamId, questionCount, result.Grade, result.TakenAt.ToString("dd/MM/yyyy HH:mm"));
                 }
 
@@ -194,7 +211,32 @@ namespace PRO1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+        private void StyleDataGridView(DataGridView dgv)
+        {
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = Color.White;
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.GridColor = Color.LightGray;
 
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 160, 102); // חום בהיר
+            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            dgv.DefaultCellStyle.BackColor = Color.White;
+            dgv.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(230, 215, 200);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgv.ColumnHeadersHeight = 35;
+
+            dgv.RowTemplate.Height = 30;
+            dgv.AllowUserToAddRows = false;
+            dgv.RowHeadersVisible = false;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
         }
@@ -241,6 +283,15 @@ namespace PRO1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void StyleLabel(Label label, bool isTitle = false)
+        {
+            label.BackColor = Color.Transparent;
+            label.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            label.Font = isTitle
+                ? new Font("Segoe UI", 16, FontStyle.Bold)
+                : new Font("Segoe UI", 11, FontStyle.Regular);
+            label.TextAlign = ContentAlignment.MiddleRight;
         }
     }
 }
