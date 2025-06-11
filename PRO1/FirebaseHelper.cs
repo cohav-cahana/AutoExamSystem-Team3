@@ -174,8 +174,19 @@ public class FirebaseHelper
             .Child("questions")
             .OnceAsync<Question>();
 
-        return questions.Select(q => q.Object).ToList();
+        List<Question> result = new List<Question>();
+
+        foreach (var item in questions)
+        {
+            Question q = item.Object;
+            q.Id = item.Key; 
+
+            result.Add(q);
+        }
+
+        return result;
     }
+
     public async Task<List<Question>> GetQuestionsByTopicAsync(string topic)
     {
         var allQuestions = await GetAllQuestionsAsync();

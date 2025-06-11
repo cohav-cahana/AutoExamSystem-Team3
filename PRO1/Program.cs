@@ -16,7 +16,7 @@ namespace PRO1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FillInTheBlanks());
+            Application.Run(new MainPage());
         }
     }
 }

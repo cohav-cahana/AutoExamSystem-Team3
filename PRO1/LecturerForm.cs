@@ -46,94 +46,94 @@ namespace PRO1
 
         private async void btnCreatExam_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(txtQuestionCount.Text, out int questionCount))
             {
-                if (!int.TryParse(txtQuestionCount.Text, out int questionCount))
-                {
-                    MessageBox.Show("אנא הזיני מספר שאלות תקין");
-                    return;
-                }
-
-                string difficulty = cmbDifficulty.SelectedItem?.ToString();
-                if (string.IsNullOrEmpty(difficulty))
-                {
-                    MessageBox.Show("אנא בחרי רמת קושי");
-                    return;
-                }
-
-                string selectedTopic;
-
-                if (checkBoxRandomTopics.Checked)
-                {
-                    List<string> allTopics = cmb_topic.Items.Cast<string>().ToList();
-                    if (allTopics.Count == 0)
-                    {
-                        MessageBox.Show("אין נושאים זמינים במסד הנתונים");
-                        return;
-                    }
-
-                    Random rand = new Random();
-                    selectedTopic = allTopics[rand.Next(allTopics.Count)];
-                    MessageBox.Show("נבחר נושא אקראי:\n" + selectedTopic);
-                    cmb_topic.SelectedItem = selectedTopic; // תצוגה ויזואלית
-                }
-                else
-                {
-                    selectedTopic = cmb_topic.SelectedItem?.ToString();
-                    if (string.IsNullOrEmpty(selectedTopic))
-                    {
-                        MessageBox.Show("אנא בחרי נושא");
-                        return;
-                    }
-                }
-
-                List<string> selectedTypes = checkedListBoxType.CheckedItems.Cast<string>().ToList();
-                if (selectedTypes.Count == 0)
-                {
-                    MessageBox.Show("אנא בחרי לפחות סוג שאלה אחד");
-                    return;
-                }
-
-                if (!int.TryParse(txt_Timer.Text, out int examDuration))
-                {
-                    MessageBox.Show("אנא הזיני זמן בשניות (מספר בלבד)");
-                    return;
-                }
-
-                List<Question> selectedQuestions = allQuestions
-                    .Where(q =>
-                        q.Topic?.Trim() == selectedTopic.Trim() &&
-                        selectedTypes.Any(t => t.Trim() == q.Type?.Trim()) &&
-                        string.Equals(q.Level?.Trim(), difficulty.Trim(), StringComparison.OrdinalIgnoreCase)
-                    )
-                    .OrderBy(q => Guid.NewGuid())
-                    .Take(questionCount)
-                    .ToList();
-
-                if (selectedQuestions.Count < questionCount)
-                {
-                    MessageBox.Show("אין מספיק שאלות מתאימות במסד הנתונים");
-                    return;
-                }
-
-                Exam newExam = new Exam
-                {
-                    Id = Guid.NewGuid().ToString().Substring(0, 6),
-                    QuestionCount = questionCount,
-                    Topics = new List<string> { selectedTopic },
-                    Difficulty = difficulty,
-                    DurationInSeconds = examDuration,
-                    Questions = selectedQuestions
-                };
-
-                exams.Add(newExam);
-                listBoxExams.Items.Add(newExam);
-                MessageBox.Show("המבחן נוצר בהצלחה!");
-                await firebaseHelper.SaveExamAsync(newExam);
+                MessageBox.Show("Please enter a valid number of questions.");
+                return;
             }
+
+            string difficulty = cmbDifficulty.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(difficulty))
+            {
+                MessageBox.Show("Please select a difficulty level.");
+                return;
+            }
+
+            string selectedTopic;
+
+            if (checkBoxRandomTopics.Checked)
+            {
+                List<string> allTopics = cmb_topic.Items.Cast<string>().ToList();
+                if (allTopics.Count == 0)
+                {
+                    MessageBox.Show("No available topics in the database.");
+                    return;
+                }
+
+                Random rand = new Random();
+                selectedTopic = allTopics[rand.Next(allTopics.Count)];
+                MessageBox.Show("Random topic selected:\n" + selectedTopic);
+                cmb_topic.SelectedItem = selectedTopic; // visual display
+            }
+            else
+            {
+                selectedTopic = cmb_topic.SelectedItem?.ToString();
+                if (string.IsNullOrEmpty(selectedTopic))
+                {
+                    MessageBox.Show("Please select a topic.");
+                    return;
+                }
+            }
+
+            List<string> selectedTypes = checkedListBoxType.CheckedItems.Cast<string>().ToList();
+            if (selectedTypes.Count == 0)
+            {
+                MessageBox.Show("Please select at least one question type.");
+                return;
+            }
+
+            if (!int.TryParse(txt_Timer.Text, out int examDuration))
+            {
+                MessageBox.Show("Please enter exam duration in seconds (numbers only).");
+                return;
+            }
+
+            List<Question> selectedQuestions = allQuestions
+                .Where(q =>
+                    q.Topic?.Trim() == selectedTopic.Trim() &&
+                    selectedTypes.Any(t => t.Trim() == q.Type?.Trim()) &&
+                    string.Equals(q.Level?.Trim(), difficulty.Trim(), StringComparison.OrdinalIgnoreCase)
+                )
+                .OrderBy(q => Guid.NewGuid())
+                .Take(questionCount)
+                .ToList();
+
+            if (selectedQuestions.Count < questionCount)
+            {
+                MessageBox.Show("Not enough suitable questions in the database.");
+                return;
+            }
+
+            Exam newExam = new Exam
+            {
+                Id = Guid.NewGuid().ToString().Substring(0, 6),
+                QuestionCount = questionCount,
+                Topics = new List<string> { selectedTopic },
+                Difficulty = difficulty,
+                DurationInSeconds = examDuration,
+                Questions = selectedQuestions
+            };
+
+            exams.Add(newExam);
+            listBoxExams.Items.Add(newExam);
+            MessageBox.Show("Exam created successfully!");
+            await firebaseHelper.SaveExamAsync(newExam);
         }
+
 
         private async void LecturerForm_Load(object sender, EventArgs e)
         {
+
             FirebaseHelper firebaseHelper = new FirebaseHelper();
             allQuestions = await firebaseHelper.GetAllQuestionsAsync();
 
@@ -244,6 +244,9 @@ namespace PRO1
                 }
             };
         }
+   
+
+
     }
 
 }
