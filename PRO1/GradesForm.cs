@@ -28,8 +28,7 @@ namespace PRO1
             this.currentUser = user;
             this.login = login;
             firebaseHelper = new FirebaseHelper();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            
             label1.BackColor = System.Drawing.Color.FromArgb(100, 173, 216, 230);
             label2.BackColor = System.Drawing.Color.FromArgb(100, 173, 216, 230);
             label1.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
@@ -251,7 +250,11 @@ namespace PRO1
             label.TextAlign = ContentAlignment.MiddleRight;
         }
 
-        private void button1_Click_1(object sender, EventArgs e) { }
+        private void button1_Click_1(object sender, EventArgs e) {
+            StudentForm gradesform = new StudentForm(currentUser, login);
+            gradesform.Show();
+            this.Hide();
+        }
 
         private void panelAverage_Paint(object sender, PaintEventArgs e)
         {

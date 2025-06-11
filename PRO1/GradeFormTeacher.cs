@@ -16,8 +16,6 @@ namespace PRO1
         public GradeFormTeacher()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
             this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
 
        

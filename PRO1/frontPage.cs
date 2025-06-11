@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using PRO1;
 using PRO1.Properties;
 
+
 namespace PRO1
 {
     public partial class frontPage : Form
@@ -19,10 +20,17 @@ namespace PRO1
         public frontPage()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.BackColor = Color.FromArgb(120, Color.White);
-            panel1.BorderStyle = BorderStyle.None;
+            this.BackColor = Color.White;
+
+            //panel1.BackColor = Color.FromArgb(120, Color.White);  
+            //panel1.BorderStyle = BorderStyle.None;
+
+
+
+
+
+
+
         }
 
         private void signup_Click(object sender, EventArgs e)
@@ -31,15 +39,18 @@ namespace PRO1
             registerForm.Show();
         }
 
-        private async void login_Click(object sender, EventArgs e) {
+        private void login_Click(object sender, EventArgs e)
+        {
             string username = txtusername_log.Text.Trim();
             string password = txtpassword_log.Text.Trim();
 
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Users.xlsx");
 
+
+
             if (!File.Exists(filePath))
             {
-                MessageBox.Show("Users file not found.");
+                MessageBox.Show("קובץ המשתמשים לא נמצא.");
                 return;
             }
 
@@ -48,7 +59,7 @@ namespace PRO1
 
             bool found = false;
 
-            foreach (var row in worksheet.RowsUsed().Skip(1)) // Skip header row
+            foreach (var row in worksheet.RowsUsed().Skip(1)) // לדלג על שורת כותרות
             {
                 string excelUser = row.Cell(1).GetValue<string>();
                 string excelPass = row.Cell(2).GetValue<string>();
@@ -65,31 +76,20 @@ namespace PRO1
                         Email = row.Cell(4).GetValue<string>(),
                         Role = excelRole
                     };
-                  
-
                     SessionManager.Username = user.Username;
                     SessionManager.TeacherId = user.UserId;
-                    FirebaseHelper firebaseHelper = new FirebaseHelper();
-
-                    var firebaseUser = await firebaseHelper.GetUserByIdAsync(user.UserId);
-
-                    if (firebaseUser == null)
-                    {
-                        // Create user node in Firebase if not exists
-                        await firebaseHelper.CreateUserInFirebaseAsync(user);
-                    }
 
                     if (excelRole.ToLower() == "student")
                     {
-                        MessageBox.Show("Welcome student!");
+                        MessageBox.Show("ברוך הבא סטודנט!");
                         StudentForm studentForm = new StudentForm(user, this);
                         studentForm.Show();
                         this.Hide();
                     }
                     else if (excelRole.ToLower() == "lecture")
                     {
-                        MessageBox.Show("Welcome lecturer!");
-                        Form1 lecturerForm = new Form1(user, this); 
+                        MessageBox.Show("שלום מרצה!");
+                        Form1 lecturerForm = new Form1();
                         lecturerForm.Show();
                         this.Hide();
                     }
@@ -100,10 +100,9 @@ namespace PRO1
 
             if (!found)
             {
-                MessageBox.Show("Incorrect username or password.");
+                MessageBox.Show("שם המשתמש או הסיסמה שגויים.");
             }
         }
-
         private void SetPlaceholder(TextBox textBox, string placeholder)
         {
             textBox.Text = placeholder;
@@ -111,6 +110,7 @@ namespace PRO1
 
             if (textBox == txtpassword_log)
                 textBox.UseSystemPasswordChar = false;
+
 
             textBox.Enter += (s, e) =>
             {
@@ -133,24 +133,31 @@ namespace PRO1
             };
         }
 
+
         private void frontPage_Load(object sender, EventArgs e)
         {
             SetPlaceholder(txtusername_log, "Username");
             SetPlaceholder(txtpassword_log, "Password");
             txtpassword_log.UseSystemPasswordChar = true;
             btnShowPassword.Image = Image.FromFile("Resources/icons8-closed-eye-32x32.png");
+
+            //panelRight.BackgroundImageLayout = ImageLayout.Stretch;
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please contact your instructor to reset your password.", "Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         bool passwordVisible = false;
-
         private void btnShowPassword_Click(object sender, EventArgs e)
         {
+
             passwordVisible = !passwordVisible;
+
             txtpassword_log.UseSystemPasswordChar = !passwordVisible;
 
             if (passwordVisible)
@@ -162,7 +169,6 @@ namespace PRO1
                 btnShowPassword.Image = Image.FromFile("Resources/icons8-closed-eye-32x32.png");
             }
         }
-
         private void panelRight_Paint(object sender, PaintEventArgs e)
         {
 
@@ -181,11 +187,31 @@ namespace PRO1
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void txtusername_log_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
+
+        }
     }
+
 }

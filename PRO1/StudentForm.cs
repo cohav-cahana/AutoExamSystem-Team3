@@ -24,8 +24,7 @@ namespace PRO1
             InitializeComponent();
             this.currentUser = user;
             this.login = login;
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            
             welcomeLbl.Text = "Welcome " + user.Username;
 
 
