@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnLearn = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.btnSignup = new System.Windows.Forms.Button();
@@ -37,7 +36,7 @@
             this.btnContact = new System.Windows.Forms.Button();
             this.lblContactInfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,27 +52,13 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "COLLEGE SYSTEM";
             // 
-            // btnLearn
-            // 
-            this.btnLearn.BackColor = System.Drawing.Color.White;
-            this.btnLearn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLearn.FlatAppearance.BorderSize = 0;
-            this.btnLearn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLearn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnLearn.ForeColor = System.Drawing.Color.Black;
-            this.btnLearn.Location = new System.Drawing.Point(654, 31);
-            this.btnLearn.Name = "btnLearn";
-            this.btnLearn.Size = new System.Drawing.Size(146, 34);
-            this.btnLearn.TabIndex = 3;
-            this.btnLearn.Text = "Learn More";
-            this.btnLearn.UseVisualStyleBackColor = false;
-            // 
             // btnLogin
             // 
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnLogin.Location = new System.Drawing.Point(962, 31);
+            this.btnLogin.Location = new System.Drawing.Point(825, 31);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(85, 34);
             this.btnLogin.TabIndex = 4;
@@ -83,18 +68,16 @@
             // 
             // sidePanel
             // 
+            this.sidePanel.Controls.Add(this.btnExit);
             this.sidePanel.Controls.Add(this.btnSignup);
             this.sidePanel.Controls.Add(this.btnLogin);
             this.sidePanel.Controls.Add(this.lblTitle);
-            this.sidePanel.Controls.Add(this.btnLearn);
-            this.sidePanel.Controls.Add(this.panel1);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.sidePanel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(1161, 100);
             this.sidePanel.TabIndex = 5;
-            this.sidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidePanel_Paint);
             // 
             // btnSignup
             // 
@@ -102,13 +85,13 @@
             this.btnSignup.FlatAppearance.BorderSize = 0;
             this.btnSignup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignup.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnSignup.Location = new System.Drawing.Point(822, 31);
+            this.btnSignup.Location = new System.Drawing.Point(936, 31);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(118, 34);
             this.btnSignup.TabIndex = 5;
             this.btnSignup.Text = "Sign up";
             this.btnSignup.UseVisualStyleBackColor = true;
-            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click_1);
             // 
             // label1
             // 
@@ -160,17 +143,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel1
+            // btnExit
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1161, 100);
-            this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            this.btnExit.Location = new System.Drawing.Point(1077, 31);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(51, 41);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // MainPage
             // 
@@ -187,7 +167,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "MainPage";
             this.Text = "MainPage";
-            this.Load += new System.EventHandler(this.MainPage_Load_1);
             this.sidePanel.ResumeLayout(false);
             this.sidePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -199,7 +178,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnLearn;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Button btnSignup;
@@ -207,6 +185,6 @@
         private System.Windows.Forms.Button btnContact;
         private System.Windows.Forms.Label lblContactInfo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnExit;
     }
 }

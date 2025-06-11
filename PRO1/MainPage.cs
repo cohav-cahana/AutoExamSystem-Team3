@@ -31,9 +31,25 @@ namespace PRO1
                     btn.Click += Btn_Click;
                 }
             }
-        }
-         
 
+            MakeButtonRound(btnExit);
+            btnExit.BackColor = Color.FromArgb(217, 160, 102); 
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.Cursor = Cursors.Hand;
+            btnExit.BackgroundImageLayout = ImageLayout.Stretch;
+      //      btnExit.BackgroundImage = Image.FromFile("Resources/SYSTEM_OUT.png"); 
+
+
+            btnExit.Click += btnExit_Click;
+            btnExit.MouseEnter += (s, e2) => btnExit.BackColor = Color.FromArgb(184, 111, 80);
+            btnExit.MouseLeave += (s, e2) => btnExit.BackColor = Color.FromArgb(217, 160, 102);
+
+        }
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void Btn_Click(object sender, EventArgs e)
         {
@@ -70,52 +86,35 @@ namespace PRO1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frontPage login = new frontPage();
-            login.Show();   // פותח טופס חדש – לא מה שאת רוצה
-            this.Hide();    // מסתיר את הטופס הנוכחי – גם לא רצוי
 
+             frontPage login = new frontPage();
+            login.Show();
+             this.Hide();
         }
 
-        private void btnApply_Click(object sender, EventArgs e)
-        {
-        }
 
-        private void btnSignup_Click(object sender, EventArgs e)
-        {
-            RegisterForm registerForm = new RegisterForm();
-            registerForm.Show();
-            this.Hide();
-        }
+
+
 
         private void btnContact_Click(object sender, EventArgs e)
         {
-            lblContactInfo.Visible = !lblContactInfo.Visible;
+            lblContactInfo.Visible = true;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btnSignup_Click_1(object sender, EventArgs e)
         {
 
-        }
+                RegisterForm registerForm = new RegisterForm();
+             registerForm.Show();
+            this.Hide();
 
-        private void sidePanel_Paint(object sender, PaintEventArgs e)
+        }
+        private void MakeButtonRound(Button btn)
         {
-
+            GraphicsPath path = new GraphicsPath();
+            path.AddEllipse(0, 0, btn.Width, btn.Height);
+            btn.Region = new Region(path);
         }
-
-        private void MainPage_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
+     
     }
 }

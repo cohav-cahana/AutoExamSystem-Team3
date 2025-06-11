@@ -19,18 +19,26 @@ namespace PRO1
         {
             InitializeComponent();
             this.BackColor = Color.White;
-            label4.Font = new Font("Arial", 12, FontStyle.Bold);
-            label1.Font = new Font("Arial", 12, FontStyle.Bold);
-            label2.Font = new Font("Arial", 12, FontStyle.Bold);
-            label3.Font = new Font("Arial", 12, FontStyle.Bold);
-            label5.Font = new Font("Arial", 12, FontStyle.Bold);
+            StyleWarmButton(btnCreatExam);
+            StyleWarmButton(go_back);
 
+            StyleLabel(label4);
+            StyleLabel(label2);
+            StyleLabel(label3);
+
+            StyleTextBox(txtQuestionCount);
+            StyleTextBox(txt_Timer);
+            StyleComboBox(cmb_topic);
+            StyleComboBox(cmbDifficulty);
+
+            panel1.BackColor = Color.FromArgb(150, Color.White);
+            panel1.BorderStyle = BorderStyle.None;
 
         }
 
         private List<Question> allQuestions = new List<Question>();
 
-      
+
 
         private List<Exam> exams = new List<Exam>();
 
@@ -160,13 +168,16 @@ namespace PRO1
             cmbDifficulty.Items.Clear();
             foreach (var level in levels)
                 cmbDifficulty.Items.Add(level);
+
+            SetPlaceholder(txtQuestionCount, "Number of questions");
+            SetPlaceholder(txt_Timer, "Exam duration");
         }
 
 
         private void listBoxExams_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-         }
+        }
         private void go_back_Click(object sender, EventArgs e)
         {
             Form1 go_back1 = new Form1();
@@ -174,14 +185,63 @@ namespace PRO1
             this.Hide();
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void StyleWarmButton(Button button)
         {
-            Form1 form1 = new Form1();
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066"); // חום בהיר
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50"); // חום כהה יותר בהובר
+            button.Cursor = Cursors.Hand;
+        }
+        private void StyleLabel(Label label, bool isTitle = false)
+        {
+            label.ForeColor = ColorTranslator.FromHtml(isTitle ? "#5C3A21" : "#3E2C23");
+            label.BackColor = Color.Transparent;
+            label.Font = isTitle
+                ? new Font("Segoe UI", 16, FontStyle.Bold)
+                : new Font("Segoe UI", 11, FontStyle.Regular);
+            label.TextAlign = ContentAlignment.MiddleRight;
+            label.RightToLeft = RightToLeft.Yes;
+        }
 
-            form1.Show();
-            this.Close();
+        private void StyleTextBox(TextBox textBox)
+        {
+            textBox.BorderStyle = BorderStyle.FixedSingle;
+            textBox.BackColor = Color.White;
+            textBox.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            textBox.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+        }
+        private void StyleComboBox(ComboBox comboBox)
+        {
+            comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox.BackColor = Color.White;
+            comboBox.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            comboBox.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+        }
+        private void SetPlaceholder(TextBox textBox, string placeholder)
+        {
+            textBox.Text = placeholder;
+            textBox.ForeColor = Color.Gray;
 
+            textBox.GotFocus += (s, e) =>
+            {
+                if (textBox.Text == placeholder)
+                {
+                    textBox.Text = "";
+                    textBox.ForeColor = Color.Black;
+                }
+            };
+
+            textBox.LostFocus += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = Color.Gray;
+                }
+            };
         }
     }
 

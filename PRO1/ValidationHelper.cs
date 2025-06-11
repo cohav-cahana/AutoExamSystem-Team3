@@ -26,6 +26,11 @@ namespace PRO1
         {
             return System.Text.RegularExpressions.Regex.IsMatch(id, @"^\d{9}$");
         }
+        public static bool IsUniqueID(string id, List<string> existingIDs)
+        {
+            return !existingIDs.Contains(id);
+        }
+
 
         public static bool IsValidEmail(string email)
         {

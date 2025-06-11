@@ -11,6 +11,7 @@ using DocumentFormat.OpenXml.Drawing.Charts;
 
 namespace PRO1
 {
+    //ניסיון
     public partial class AdaptiveSelectionForm : Form
     {
 

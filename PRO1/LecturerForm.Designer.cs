@@ -30,7 +30,6 @@ namespace PRO1
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.txtQuestionCount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkedListBoxType = new System.Windows.Forms.CheckedListBox();
@@ -41,34 +40,24 @@ namespace PRO1
             this.checkBoxRandomTopics = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmb_topic = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txt_Timer = new System.Windows.Forms.TextBox();
             this.go_back = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(203, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Choose a number of questions:  ";
             // 
             // txtQuestionCount
             // 
-            this.txtQuestionCount.Location = new System.Drawing.Point(684, 112);
+            this.txtQuestionCount.Location = new System.Drawing.Point(235, 80);
             this.txtQuestionCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQuestionCount.Name = "txtQuestionCount";
-            this.txtQuestionCount.Size = new System.Drawing.Size(100, 22);
+            this.txtQuestionCount.Size = new System.Drawing.Size(224, 22);
             this.txtQuestionCount.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 193);
+            this.label2.Location = new System.Drawing.Point(46, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 2;
@@ -76,9 +65,8 @@ namespace PRO1
             // 
             // checkedListBoxType
             // 
-            this.checkedListBoxType.BackColor = System.Drawing.Color.SeaShell;
             this.checkedListBoxType.FormattingEnabled = true;
-            this.checkedListBoxType.Location = new System.Drawing.Point(560, 172);
+            this.checkedListBoxType.Location = new System.Drawing.Point(235, 131);
             this.checkedListBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBoxType.Name = "checkedListBoxType";
             this.checkedListBoxType.Size = new System.Drawing.Size(224, 89);
@@ -87,49 +75,49 @@ namespace PRO1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(282, 322);
+            this.label3.Location = new System.Drawing.Point(46, 252);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 16);
+            this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 4;
-            this.label3.Text = "difficulty level:";
+            this.label3.Text = "difficulty level";
             // 
             // cmbDifficulty
             // 
             this.cmbDifficulty.FormattingEnabled = true;
-            this.cmbDifficulty.Location = new System.Drawing.Point(583, 324);
+            this.cmbDifficulty.Location = new System.Drawing.Point(235, 244);
             this.cmbDifficulty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbDifficulty.Name = "cmbDifficulty";
-            this.cmbDifficulty.Size = new System.Drawing.Size(121, 24);
+            this.cmbDifficulty.Size = new System.Drawing.Size(219, 24);
             this.cmbDifficulty.TabIndex = 5;
             // 
             // btnCreatExam
             // 
-            this.btnCreatExam.BackColor = System.Drawing.Color.Linen;
-            this.btnCreatExam.Location = new System.Drawing.Point(954, 596);
+            this.btnCreatExam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreatExam.ForeColor = System.Drawing.Color.White;
+            this.btnCreatExam.Location = new System.Drawing.Point(507, 490);
             this.btnCreatExam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreatExam.Name = "btnCreatExam";
-            this.btnCreatExam.Size = new System.Drawing.Size(115, 39);
+            this.btnCreatExam.Size = new System.Drawing.Size(127, 52);
             this.btnCreatExam.TabIndex = 6;
             this.btnCreatExam.Text = "Create Exam";
-            this.btnCreatExam.UseVisualStyleBackColor = false;
+            this.btnCreatExam.UseVisualStyleBackColor = true;
             this.btnCreatExam.Click += new System.EventHandler(this.btnCreatExam_Click);
             // 
             // listBoxExams
             // 
-            this.listBoxExams.BackColor = System.Drawing.Color.Linen;
             this.listBoxExams.FormattingEnabled = true;
             this.listBoxExams.ItemHeight = 16;
-            this.listBoxExams.Location = new System.Drawing.Point(282, 476);
+            this.listBoxExams.Location = new System.Drawing.Point(682, 21);
             this.listBoxExams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxExams.Name = "listBoxExams";
-            this.listBoxExams.Size = new System.Drawing.Size(563, 132);
+            this.listBoxExams.Size = new System.Drawing.Size(458, 452);
             this.listBoxExams.TabIndex = 7;
             this.listBoxExams.SelectedIndexChanged += new System.EventHandler(this.listBoxExams_SelectedIndexChanged);
             // 
             // checkBoxRandomTopics
             // 
             this.checkBoxRandomTopics.AutoSize = true;
-            this.checkBoxRandomTopics.Location = new System.Drawing.Point(566, 267);
+            this.checkBoxRandomTopics.Location = new System.Drawing.Point(235, 340);
             this.checkBoxRandomTopics.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxRandomTopics.Name = "checkBoxRandomTopics";
             this.checkBoxRandomTopics.Size = new System.Drawing.Size(117, 20);
@@ -140,7 +128,7 @@ namespace PRO1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(364, 56);
+            this.label4.Location = new System.Drawing.Point(46, 31);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 16);
             this.label4.TabIndex = 9;
@@ -149,82 +137,66 @@ namespace PRO1
             // cmb_topic
             // 
             this.cmb_topic.FormattingEnabled = true;
-            this.cmb_topic.Location = new System.Drawing.Point(548, 56);
+            this.cmb_topic.Location = new System.Drawing.Point(235, 28);
             this.cmb_topic.Name = "cmb_topic";
-            this.cmb_topic.Size = new System.Drawing.Size(121, 24);
+            this.cmb_topic.Size = new System.Drawing.Size(224, 24);
             this.cmb_topic.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(243, 400);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 16);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Exam duration (in seconds) : ";
             // 
             // txt_Timer
             // 
-            this.txt_Timer.Location = new System.Drawing.Point(621, 394);
+            this.txt_Timer.Location = new System.Drawing.Point(235, 297);
             this.txt_Timer.Name = "txt_Timer";
-            this.txt_Timer.Size = new System.Drawing.Size(100, 22);
+            this.txt_Timer.Size = new System.Drawing.Size(219, 22);
             this.txt_Timer.TabIndex = 12;
             // 
             // go_back
             // 
-            this.go_back.BackColor = System.Drawing.Color.Linen;
-            this.go_back.Location = new System.Drawing.Point(60, 596);
+            this.go_back.Location = new System.Drawing.Point(28, 602);
             this.go_back.Name = "go_back";
-            this.go_back.Size = new System.Drawing.Size(98, 51);
+            this.go_back.Size = new System.Drawing.Size(122, 52);
             this.go_back.TabIndex = 13;
             this.go_back.Text = "back";
-            this.go_back.UseVisualStyleBackColor = false;
+            this.go_back.UseVisualStyleBackColor = true;
             this.go_back.Click += new System.EventHandler(this.go_back_Click);
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.Image = global::PRO1.Properties.Resources._3310;
-            this.pictureBox1.Location = new System.Drawing.Point(3, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1157, 675);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.panel1.Controls.Add(this.checkBoxRandomTopics);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txt_Timer);
+            this.panel1.Controls.Add(this.cmbDifficulty);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.cmb_topic);
+            this.panel1.Controls.Add(this.txtQuestionCount);
+            this.panel1.Controls.Add(this.checkedListBoxType);
+            this.panel1.Location = new System.Drawing.Point(105, 17);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(529, 456);
+            this.panel1.TabIndex = 14;
             // 
             // LecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PRO1.Properties.Resources._33;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1161, 676);
             this.Controls.Add(this.go_back);
-            this.Controls.Add(this.txt_Timer);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cmb_topic);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkBoxRandomTopics);
             this.Controls.Add(this.listBoxExams);
             this.Controls.Add(this.btnCreatExam);
-            this.Controls.Add(this.cmbDifficulty);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.checkedListBoxType);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtQuestionCount);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LecturerForm";
             this.Text = "LecturerForm";
             this.Load += new System.EventHandler(this.LecturerForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtQuestionCount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox checkedListBoxType;
@@ -235,9 +207,8 @@ namespace PRO1
         private System.Windows.Forms.CheckBox checkBoxRandomTopics;
         private Label label4;
         private ComboBox cmb_topic;
-        private Label label5;
         private TextBox txt_Timer;
         private Button go_back;
-        private PictureBox pictureBox1;
+        private Panel panel1;
     }
 }

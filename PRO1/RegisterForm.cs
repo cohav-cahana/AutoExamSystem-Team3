@@ -9,19 +9,54 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using DocumentFormat.OpenXml.Drawing.Charts;
 
 
 namespace PRO1
 {
     public partial class RegisterForm : Form
     {
-        private MainPage mainPage;
+        ToolTip tip = new ToolTip();
+
         public RegisterForm()
         {
             InitializeComponent();
-            this.BackColor = Color.White;
+            this.BackgroundImage = Properties.Resources._33;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+            BACKpanel.BackColor = Color.FromArgb(150, Color.White);
+            BACKpanel.BorderStyle = BorderStyle.None;
 
+            this.BACKpanel.SendToBack();
+            txtUsername.BringToFront();
+            txtPassword.BringToFront();
+            txtID.BringToFront();
+            txtEmail.BringToFront();
+            cmbRole.BringToFront();
+            RegisterB.BringToFront();
+            btnUsernameTip.BringToFront();
+            btnPasswordTip.BringToFront();
 
+        }
+        public static List<string> ReadAllIDs(string filePath)
+        {
+            List<string> ids = new List<string>();
+
+            using (var workbook = new XLWorkbook(filePath))
+            {
+                var worksheet = workbook.Worksheet(1); 
+                var rows = worksheet.RangeUsed().RowsUsed();
+
+                foreach (var row in rows.Skip(1))
+                {
+                    string id = row.Cell(3).GetValue<string>().Trim();
+                    if (!string.IsNullOrEmpty(id))
+                    {
+                        ids.Add(id);
+                    }
+                }
+            }
+
+            return ids;
         }
 
         private async void RegisterB_Click(object sender, EventArgs e)
@@ -32,38 +67,7 @@ namespace PRO1
             string id = txtID.Text.Trim();
             string email = txtEmail.Text.Trim();
             string role = cmbRole.SelectedItem?.ToString();
-
-            if (!ValidationHelper.IsValidUsername(username))
-            { 
-                MessageBox.Show("שם המשתמש חייב להכיל 6–8 תווים, עד שתי ספרות וכל השאר אותיות באנגלית.");
-                return;
-            }
-
-            if (!ValidationHelper.IsValidPassword(password))
-            {
-                MessageBox.Show("הסיסמה חייבת להכיל 8–10 תווים, לפחות אות אחת, ספרה אחת ותו מיוחד.");
-                return;
-            }
-
-            if (!ValidationHelper.IsValidID(id))
-            {
-                MessageBox.Show("מספר ת\"ז לא תקין. חייב להיות 9 ספרות.");
-                return;
-            }
-
-            if (!ValidationHelper.IsValidEmail(email))
-            {
-                MessageBox.Show("כתובת מייל לא תקינה.");
-                return;
-            }
-
-            MessageBox.Show("הרשמה הושלמה בהצלחה!");
-
-
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Users.xlsx");
-
-
-
 
             if (!File.Exists(filePath))
             {
@@ -76,6 +80,39 @@ namespace PRO1
                 ws.Cell(1, 5).Value = "Role";
                 wb.SaveAs(filePath);
             }
+            List<string> existingIDs = ReadAllIDs(filePath);
+
+
+            if (!ValidationHelper.IsValidUsername(username))
+            {
+                MessageBox.Show("Username must be 6–8 characters long, contain up to two digits, and the rest letters.");
+                return;
+            }
+
+            if (!ValidationHelper.IsValidPassword(password))
+            {
+                MessageBox.Show("Password must be 8–10 characters long, with at least one letter, one digit, and one special character.");
+                return;
+            }
+
+            if (!ValidationHelper.IsValidID(id))
+            {
+                MessageBox.Show("Invalid ID. It must be exactly 9 digits.");
+                return;
+            }
+            else if (!ValidationHelper.IsUniqueID(id, existingIDs))
+            {
+                MessageBox.Show("This ID already exists in the system. Please enter a unique ID.");
+                return;
+            }
+
+            if (!ValidationHelper.IsValidEmail(email))
+            {
+                MessageBox.Show("Invalid email address.");
+                return;
+            }
+        
+
 
 
             var workbook = new XLWorkbook(filePath);
@@ -93,78 +130,125 @@ namespace PRO1
             await firebaseHelper.AddUserAsync(username, password, id, email, role);
 
 
-            MessageBox.Show("המשתמש נשמר בהצלחה!");
-            MainPage mainPage = new MainPage();
-            mainPage.Show();
+            MessageBox.Show("User saved successfully!");
+            MainPage mainpage = new MainPage();
+            mainpage.Show();
+
             this.Close();
 
 
-
-
         }
+        private void AddPlaceholders()
+        {
+            txtUsername.Text = "Enter username";
+            txtUsername.ForeColor = Color.Gray;
+            txtUsername.GotFocus += RemovePlaceholderUsername;
+            txtUsername.LostFocus += SetPlaceholderUsername;
+
+            txtPassword.Text = "Enter password";
+            txtPassword.ForeColor = Color.Gray;
+            txtPassword.GotFocus += RemovePlaceholderPassword;
+            txtPassword.LostFocus += SetPlaceholderPassword;
+
+            txtID.Text = "Enter ID";
+            txtID.ForeColor = Color.Gray;
+            txtID.GotFocus += RemovePlaceholderID;
+            txtID.LostFocus += SetPlaceholderID;
+
+            txtEmail.Text = "Enter email";
+            txtEmail.ForeColor = Color.Gray;
+            txtEmail.GotFocus += RemovePlaceholderEmail;
+            txtEmail.LostFocus += SetPlaceholderEmail;
+        }
+        // Username
+        private void RemovePlaceholderUsername(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "Enter username")
+            {
+                txtUsername.Text = "";
+                txtUsername.ForeColor = Color.Black;
+            }
+        }
+
+        private void SetPlaceholderUsername(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                txtUsername.Text = "Enter username";
+                txtUsername.ForeColor = Color.Gray;
+            }
+        }
+
+        // Password
+        private void RemovePlaceholderPassword(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Enter password")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.Black;
+                txtPassword.PasswordChar = '●';
+            }
+        }
+
+        private void SetPlaceholderPassword(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                txtPassword.PasswordChar = '\0';
+                txtPassword.UseSystemPasswordChar = false;
+                txtPassword.Text = "Enter password";
+                txtPassword.ForeColor = Color.Gray;
+            }
+        }
+
+        // ID
+        private void RemovePlaceholderID(object sender, EventArgs e)
+        {
+            if (txtID.Text == "Enter ID")
+            {
+                txtID.Text = "";
+                txtID.ForeColor = Color.Black;
+            }
+        }
+
+        private void SetPlaceholderID(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtID.Text))
+            {
+                txtID.Text = "Enter ID";
+                txtID.ForeColor = Color.Gray;
+            }
+        }
+
+        // Email
+        private void RemovePlaceholderEmail(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "Enter email")
+            {
+                txtEmail.Text = "";
+                txtEmail.ForeColor = Color.Black;
+            }
+        }
+
+        private void SetPlaceholderEmail(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                txtEmail.Text = "Enter email";
+                txtEmail.ForeColor = Color.Gray;
+            }
+        }
+
+
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
+            AddPlaceholders();
+            tip.SetToolTip(btnUsernameTip, "Username must be 6–8 characters long, contain up to two digits, and the rest letters (English).");
+            tip.SetToolTip(btnPasswordTip, "Password must be 8–10 characters long, with at least one letter, one digit, and one special character.");
 
-        }
 
-        private void btnUsernameTip_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void picSmiley_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPasswordTip_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -173,12 +257,6 @@ namespace PRO1
             MainPage mainPage = new MainPage();
             mainPage.Show();
             this.Close();
-
-    }
-
-        private void txtID_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

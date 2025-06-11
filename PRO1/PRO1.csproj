@@ -414,6 +414,7 @@
     <Content Include="Images\AutoExamP_.jpg" />
     <Content Include="Images\back2.jpg" />
     <Content Include="Resources\10313778.jpg" />
+    <Content Include="Resources\SYSTEM_OUT.png" />
     <None Include="Resources\הורדה %281%29.png" />
     <None Include="Resources\הורדה.png" />
     <None Include="Resources\חדש.jpg" />
@@ -436,7 +437,9 @@
     <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd.jpg" />
     <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd1.jpg" />
     <None Include="Resources\3cad2673ba7d30f0877f2944ca94aefd2.jpg" />
-    <None Include="Resources\33.jpg" />
+    <None Include="Resources\33.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\44.jpg" />
     <None Include="Resources\9b2356b940865023738a860c0b22b5bb1.jpg" />
     <None Include="Resources\9b2356b940865023738a860c0b22b5bb2.jpg" />
@@ -474,6 +477,7 @@
     <None Include="Resources\icons8-test-501.png" />
     <Content Include="Resources\icons8-user-50.png" />
     <None Include="Resources\icons8-user-501.png" />
+    <Content Include="Resources\OIP.jfif" />
     <Content Include="Resources\student.png" />
     <Content Include="Resources\student1.png" />
     <Content Include="Resources\students1.png" />
