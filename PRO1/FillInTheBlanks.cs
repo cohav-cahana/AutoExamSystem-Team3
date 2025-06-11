@@ -20,10 +20,21 @@ namespace PRO1
         {
             InitializeComponent();
             this.BackColor = Color.White;
-            label1.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            label2.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            label3.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            label4.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+            label1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            label2.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            label3.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            label4.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            button1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            button3.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            comboBox1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            comboBox2.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            textBox1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            textBox2.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            mainPanel.BackColor = Color.FromArgb(120, Color.White);
+
+
+
+
 
 
         }

@@ -157,5 +157,16 @@ namespace PRO1
         {
 
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+
+            QuestionForm questionForm = new QuestionForm();
+
+
+            questionForm.Show();
+        }
     }
 }

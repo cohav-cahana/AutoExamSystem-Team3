@@ -40,6 +40,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();
+            this.btn_back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,10 +135,10 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "אלגוריתמים",
-            "בדיקות תוכנה",
-            "סטטיסטיקה",
-            "מבנה נתונים"});
+            "Algorithms",
+            "Software Testing",
+            "Statistics",
+            "Data Structures"});
             this.comboBox1.Location = new System.Drawing.Point(498, 104);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
@@ -172,11 +173,22 @@
             this.panel.Size = new System.Drawing.Size(589, 453);
             this.panel.TabIndex = 23;
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(38, 523);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(116, 55);
+            this.btn_back.TabIndex = 24;
+            this.btn_back.Text = "BACK";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // TrueFalse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 611);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox2);
@@ -212,5 +224,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button btn_back;
     }
 }
