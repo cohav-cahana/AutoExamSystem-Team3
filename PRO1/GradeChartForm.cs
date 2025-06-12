@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -10,6 +11,7 @@ namespace PRO1
         {
             InitializeComponent();
             InitializeChart(high, mid, low);
+            StyleWarmButton(button1);
         }
 
         private void InitializeChart(int high, int mid, int low)
@@ -44,6 +46,23 @@ namespace PRO1
         private void chart1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GradeFormTeacher g1 = new GradeFormTeacher();
+            g1.Show();
+            this.Hide();
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
         }
     }
 

@@ -42,7 +42,9 @@ namespace PRO1
             StyleLabel(durationPlaceholder);
             StyleWarmButton(backBtn);
             StyleWarmButton(startExamBtn);
-            
+            StyleWarmButton(btn_A);
+
+
 
 
 

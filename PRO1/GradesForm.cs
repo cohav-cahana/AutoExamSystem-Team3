@@ -46,6 +46,8 @@ namespace PRO1
             chartGrades.ChartAreas[0].BackColor = Color.FromArgb(160, Color.White);
             StyleLinenButton(button1);
             StyleDataGridView(dataGridView1);
+
+            StyleWarmButton(button1);
         }
 
         private void StyleLinenButton(Button button)
@@ -259,6 +261,16 @@ namespace PRO1
         private void panelAverage_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
         }
     }
 }

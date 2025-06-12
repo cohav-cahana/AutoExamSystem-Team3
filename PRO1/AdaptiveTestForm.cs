@@ -37,7 +37,7 @@ namespace PRO1
             // 
             // AdaptiveTestForm
             // 
-            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.ClientSize = new System.Drawing.Size(1171, 522);
             this.Name = "AdaptiveTestForm";
             this.Load += new System.EventHandler(this.AdaptiveTestForm_Load);
             this.ResumeLayout(false);

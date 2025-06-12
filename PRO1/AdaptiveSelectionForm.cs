@@ -27,10 +27,47 @@ namespace PRO1
         {
             InitializeComponent();
             InitializeCustomComponents();
+            int centerX = this.ClientSize.Width / 2;
+
+            numberQuestion.Size = new Size(250, 35);
+            numberQuestion.Location = new Point(centerX - numberQuestion.Width / 2, 100);
+            this.Resize += (s, e) => InitializeCustomComponents();
+
+            typeofQ.Size = new Size(250, 35);
+            typeofQ.Location = new Point(centerX - typeofQ.Width / 2, 150);
+
+            SetPlaceholder(numberQuestion, "Number of Questions");
+            SetPlaceholder(typeofQ, "Select Topic");
 
             this.user = user;
             this.examSelection = examSelection;
             this.BackColor = Color.White;
+            StyleWarmButton(button2);
+            StyleWarmButton(startAdaptiveExamButton);
+
+        }
+        private void SetPlaceholder(Control ctrl, string placeholder)
+        {
+            ctrl.ForeColor = Color.Gray;
+            ctrl.Text = placeholder;
+
+            ctrl.GotFocus += (s, e) =>
+            {
+                if (ctrl.Text == placeholder)
+                {
+                    ctrl.Text = "";
+                    ctrl.ForeColor = Color.Black;
+                }
+            };
+
+            ctrl.LostFocus += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(ctrl.Text))
+                {
+                    ctrl.Text = placeholder;
+                    ctrl.ForeColor = Color.Gray;
+                }
+            };
         }
 
         private async void Clickstart(object sender, EventArgs e)
@@ -97,6 +134,16 @@ namespace PRO1
                 this.Hide();
             }
         }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -107,13 +154,6 @@ namespace PRO1
         {
             this.BackColor = Color.Bisque;
 
-            // label1
-            label1 = new Label();
-            label1.Text = "Number of Questions:";
-            label1.Location = new Point(100, 80);
-            label1.Size = new Size(200, 30);
-            label1.Font = new Font("Arial", 12, FontStyle.Bold);
-            this.Controls.Add(label1);
 
             // numberQuestion (TextBox)
             numberQuestion = new TextBox();
@@ -121,13 +161,6 @@ namespace PRO1
             numberQuestion.Size = new Size(200, 30);
             this.Controls.Add(numberQuestion);
 
-            // label2
-            label2 = new Label();
-            label2.Text = "Select Topic:";
-            label2.Location = new Point(100, 130);
-            label2.Size = new Size(200, 30);
-            label2.Font = new Font("Arial", 12, FontStyle.Bold);
-            this.Controls.Add(label2);
 
             // typeofQ (ComboBox)
             typeofQ = new ComboBox();
@@ -155,18 +188,12 @@ namespace PRO1
             startAdaptiveExamButton.Size = new Size(180, 40);
             startAdaptiveExamButton.Click += startAdaptiveExamButton_Click;
             this.Controls.Add(startAdaptiveExamButton);
-
-            pictureBox1 = new PictureBox();
-            pictureBox1.Location = new Point(550, 80);
-            pictureBox1.Size = new Size(150, 150);
-            pictureBox1.BackColor = Color.Gray;
-            pictureBox1.Click += pictureBox1_Click;
-            this.Controls.Add(pictureBox1);
         }
 
         private void AdaptiveSelectionForm_Load(object sender, EventArgs e)
         {
-
+            this.BackgroundImage = Properties.Resources._33;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PRO1
 {
@@ -31,6 +30,9 @@ namespace PRO1
             textBox1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
             textBox2.Font = new Font("Segoe UI", 10, FontStyle.Regular);
             mainPanel.BackColor = Color.FromArgb(120, Color.White);
+
+            StyleWarmButton(button1);
+            StyleWarmButton(button3);
 
 
 
@@ -178,7 +180,16 @@ namespace PRO1
             
             questionForm.Show();
         }
-
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();

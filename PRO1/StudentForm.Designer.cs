@@ -71,12 +71,13 @@ namespace PRO1
             // 
             this.backBtn.AutoSize = true;
             this.backBtn.BackColor = System.Drawing.Color.Linen;
+            this.backBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.backBtn.Location = new System.Drawing.Point(12, 575);
+            this.backBtn.Location = new System.Drawing.Point(12, 562);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(189, 34);
+            this.backBtn.Size = new System.Drawing.Size(173, 47);
             this.backBtn.TabIndex = 4;
-            this.backBtn.Text = "חזרה לדף הכניסה";
+            this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 

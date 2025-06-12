@@ -14,6 +14,7 @@ namespace PRO1
     {
         private string questionKey;
         private bool isEditMode = false;
+ 
 
         public TrueFalse()
         {
@@ -30,6 +31,9 @@ namespace PRO1
             radioButton2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
             panel.BackColor = Color.White;
             panel.BackColor = Color.FromArgb(150, Color.White);
+            StyleWarmButton(btn_back);
+            StyleWarmButton(button1);
+
 
         }
 
@@ -119,7 +123,16 @@ namespace PRO1
 
             return string.Empty;
         }
-
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 

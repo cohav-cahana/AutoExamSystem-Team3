@@ -39,6 +39,7 @@
             this.colDifficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnShowChart = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_back2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -146,12 +147,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btn_back2
+            // 
+            this.btn_back2.Location = new System.Drawing.Point(23, 584);
+            this.btn_back2.Name = "btn_back2";
+            this.btn_back2.Size = new System.Drawing.Size(106, 45);
+            this.btn_back2.TabIndex = 5;
+            this.btn_back2.Text = "Back";
+            this.btn_back2.UseVisualStyleBackColor = true;
+            this.btn_back2.Click += new System.EventHandler(this.btn_back2_Click_1);
+            // 
             // GradeFormTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1151, 641);
+            this.Controls.Add(this.btn_back2);
             this.Controls.Add(this.btnShowChart);
             this.Controls.Add(this.dgvScores);
             this.Controls.Add(this.linkLabel1);
@@ -176,6 +188,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colScore;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubject;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDifficulty;
-
+        private System.Windows.Forms.Button btn_back2;
     }
 }

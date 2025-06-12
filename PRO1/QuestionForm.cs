@@ -14,6 +14,9 @@ namespace PRO1
     {
         string currentTeacherId;
         private BindingList<Question> questionsList;
+        private Question editingQuestion = null;
+        private string teacherId;
+        private FirebaseHelper firebaseHelper = new FirebaseHelper();
 
         public QuestionForm()
         {
@@ -222,7 +225,6 @@ namespace PRO1
             }
             else if (dataGridView1.Columns[e.ColumnIndex].Name == "editButton")
             {
-                // פתח טופס עריכה בהתאם לסוג השאלה
                 switch (selectedQuestion.Type)
                 {
                     case "MultipleChoice":
@@ -250,7 +252,6 @@ namespace PRO1
                         break;
                 }
 
-                // טען מחדש את הטבלה לאחר עריכה
                 QuestionForm_Load(sender, e);
             }
         }

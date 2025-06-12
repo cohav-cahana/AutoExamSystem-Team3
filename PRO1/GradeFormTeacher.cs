@@ -17,8 +17,11 @@ namespace PRO1
         {
             InitializeComponent();
             this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
+            StyleWarmButton(btnShowChart);
+            StyleWarmButton(btn_back2);
 
-       
+
+
         }
 
         private void dgvScores_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -70,7 +73,16 @@ namespace PRO1
                 MessageBox.Show(" Error loading grades: " + ex.Message);
             }
         }
-
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
         private void btnShowChart_Click(object sender, EventArgs e)
         {
             GradeChartForm chartForm = new GradeChartForm(high, mid, low);
@@ -80,6 +92,14 @@ namespace PRO1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void btn_back2_Click_1(object sender, EventArgs e)
+        {
+            Form1 lecture1 = new Form1();
+            lecture1.Show();
+            this.Hide();
         }
     }
 }

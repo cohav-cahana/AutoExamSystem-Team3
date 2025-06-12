@@ -84,9 +84,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(849, 540);
+            this.button1.Location = new System.Drawing.Point(738, 506);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 58);
+            this.button1.Size = new System.Drawing.Size(147, 67);
             this.button1.TabIndex = 25;
             this.button1.Text = "Create Question\n";
             this.button1.UseVisualStyleBackColor = true;
