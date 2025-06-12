@@ -12,26 +12,48 @@ namespace PRO1
 {
     public partial class TrueFalse : Form
     {
-        private string questionKey; 
+        private string questionKey;
         private bool isEditMode = false;
+ 
+
         public TrueFalse()
         {
             InitializeComponent();
-            label2.Font = new Font("Arial", 18, FontStyle.Bold);
-            label1.Font = new Font("Arial", 18, FontStyle.Bold);
-            label3.Font = new Font("Arial", 18, FontStyle.Bold);
+
+            label1.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            label2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            label3.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+            button1.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            button2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+            radioButton1.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            radioButton2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            panel.BackColor = Color.White;
+            panel.BackColor = Color.FromArgb(150, Color.White);
+            StyleWarmButton(btn_back);
+            StyleWarmButton(button1);
 
 
         }
+
         public TrueFalse(Question selectedQuestion)
         {
             InitializeComponent();
-            
+
+            label1.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            label2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            label3.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+            button1.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            button2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+            radioButton1.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            radioButton2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
             isEditMode = true;
             questionKey = selectedQuestion.Id;
 
-            // מילוי נתוני השאלה בטופס
             textBox1.Text = selectedQuestion.QuestionText;
 
             if (selectedQuestion.CorrectAnswer == "True")
@@ -42,8 +64,6 @@ namespace PRO1
             comboBox1.SelectedItem = selectedQuestion.Topic;
             comboBox2.SelectedItem = selectedQuestion.Level;
         }
-
-
 
         private void TrueFalse_Load(object sender, EventArgs e)
         {
@@ -64,9 +84,12 @@ namespace PRO1
             string topic = comboBox1.SelectedItem?.ToString();
             string level = comboBox2.SelectedItem?.ToString();
 
-            if (string.IsNullOrWhiteSpace(questionText) || string.IsNullOrWhiteSpace(correctAnswer))
+            if (string.IsNullOrWhiteSpace(questionText) ||
+        string.IsNullOrWhiteSpace(correctAnswer) ||
+        string.IsNullOrWhiteSpace(topic) ||
+        string.IsNullOrWhiteSpace(level))
             {
-                MessageBox.Show("אנא מלא את כל השדות הדרושים.");
+                MessageBox.Show("Please fill in all required fields.");
                 return;
             }
 
@@ -74,36 +97,45 @@ namespace PRO1
             {
                 // עדכון שאלה קיימת
                 var data = new Dictionary<string, object>
-        {
+                {
                     { "Id", questionKey },
-            { "QuestionText", questionText },
-            { "CorrectAnswer", correctAnswer },
-            { "Topic", topic },
-            { "Level", level },
-            { "Type", "TrueFalse" },
-            { "TeacherId", SessionManager.TeacherId }
-        };
+                    { "QuestionText", questionText },
+                    { "CorrectAnswer", correctAnswer },
+                    { "Topic", topic },
+                    { "Level", level },
+                    { "Type", "TrueFalse" },
+                    { "TeacherId", SessionManager.TeacherId }
+                };
 
                 await firebaseHelper.UpdateQuestionAsync(questionKey, data);
-                MessageBox.Show("השאלה עודכנה בהצלחה!");
+                MessageBox.Show("Question updated successfully!");
             }
             else
             {
                 // הוספת שאלה חדשה
                 await firebaseHelper.AddQuestionAsync("TrueFalse", correctAnswer, topic, level, questionText, "", "", "", "", SessionManager.TeacherId);
-                MessageBox.Show("השאלה נשמרה בהצלחה!");
+                MessageBox.Show("Question saved successfully!");
             }
         }
 
         // פונקציה לקביעת התשובה הנכונה
         private string GetCorrectAnswer()
         {
-            if (radioButton1.Checked) return "True";  // אם נבחר True
-            if (radioButton2.Checked) return "False";  // אם נבחר False
+            if (radioButton1.Checked) return "True";
+            if (radioButton2.Checked) return "False";
 
             return string.Empty;
         }
-
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -130,6 +162,19 @@ namespace PRO1
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            QuestionForm questionForm = new QuestionForm();
+            questionForm.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
 

@@ -20,43 +20,39 @@ namespace PRO1
             InitializeComponent();
             this.BackColor = Color.White;
             label1.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-
-
         }
-        private List<Exam> exams = new List<Exam>();
 
+        private List<Exam> exams = new List<Exam>();
 
         private async void btnDeleteExam_Click(object sender, EventArgs e)
         {
             if (lstExams.SelectedIndex == -1)
             {
-                MessageBox.Show("בחר מבחן למחיקה");
+                MessageBox.Show("Please select an exam to delete.");
                 return;
             }
 
             string selectedId = exams[lstExams.SelectedIndex].Id;
             await firebaseHelper.DeleteExamAsync(selectedId);
-            MessageBox.Show("המבחן נמחק");
+            MessageBox.Show("Exam deleted.");
 
             ExamManagerForm_Load(sender, e);
         }
-   
-        
 
         private async void ExamManagerForm_Load(object sender, EventArgs e)
         {
+
             var data = await firebaseHelper.GetAllExamsAsync();
             exams = data;
             if (exams.Count == 0)
             {
-                MessageBox.Show("לא נמצאו מבחנים במאגר");
+                MessageBox.Show("No exams found in the database.");
                 return;
             }
-            
+
             lstExams.Items.Clear();
             foreach (var exam in exams)
-                lstExams.Items.Add($"{exam.Id} - {exam.QuestionCount} שאלות ({exam.Difficulty})");
-
+                lstExams.Items.Add($"{exam.Id} - {exam.QuestionCount} questions ({exam.Difficulty})");
         }
 
         private void lstExams_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,28 +68,29 @@ namespace PRO1
                 foreach (var q in selectedExam.Questions)
                 {
                     lstExamQuestions.Items.Add(
-                        $"• {q.QuestionText} | תשובה: {q.CorrectAnswer} ({q.Type}, {q.Level})"
-                     );
-
+                        $"• {q.QuestionText} | Answer: {q.CorrectAnswer} ({q.Type}, {q.Level})"
+                    );
                 }
             }
             else
             {
-                lstExamQuestions.Items.Add("למבחן זה אין שאלות שמורות");
+                lstExamQuestions.Items.Add("This exam has no saved questions.");
             }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
-
             form1.Show();
             this.Close();
         }
+ 
+
+
     }
+
 }

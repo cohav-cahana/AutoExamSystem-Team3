@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PRO1
 {
@@ -25,6 +24,67 @@ namespace PRO1
             label3.Font = new Font("Arial", 18, FontStyle.Bold);
             label2.Font = new Font("Arial", 18, FontStyle.Bold);
 
+            StyleLabel(label1); 
+            StyleLabel(label2); 
+            StyleLabel(label3); 
+            StyleLabel(label4);
+
+            StyleWarmButton(button1); 
+            StyleWarmButton(button2);
+
+            panelmain.Paint += panel1_Paint;
+            panelmain.BackColor = Color.Transparent;
+
+            button1.MouseEnter += (s, e) => button1.BackColor = ColorTranslator.FromHtml("#B86F50");
+            button1.MouseLeave += (s, e) => button1.BackColor = ColorTranslator.FromHtml("#D9A066");
+
+            button2.MouseEnter += (s, e) => button2.BackColor = ColorTranslator.FromHtml("#B86F50");
+            button2.MouseLeave += (s, e) => button2.BackColor = ColorTranslator.FromHtml("#D9A066");
+  
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.BackColor = Color.White;
+            comboBox1.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            comboBox1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.BackColor = Color.White;
+            comboBox2.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            comboBox2.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+        }
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+            Color semiTransparentWhite = Color.FromArgb(160, Color.White);
+            using (SolidBrush brush = new SolidBrush(semiTransparentWhite))
+            {
+                e.Graphics.FillRectangle(brush, panelmain.ClientRectangle);
+            }
+        }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Color semiTransparentWhite = Color.FromArgb(160, Color.White); 
+            using (SolidBrush brush = new SolidBrush(semiTransparentWhite))
+            {
+                e.Graphics.FillRectangle(brush, panelmain.ClientRectangle);
+            }
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
+        private void StyleLabel(Label label, bool isTitle = false)
+        {
+            label.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            label.BackColor = Color.Transparent;
+            label.Font = isTitle
+                ? new Font("Segoe UI", 16, FontStyle.Bold)
+                : new Font("Segoe UI", 11, FontStyle.Regular);
+            label.TextAlign = ContentAlignment.MiddleLeft;
         }
         public OpenQuestion(Question selectedQuestion)
         {
@@ -102,6 +162,13 @@ namespace PRO1
             string topic = comboBox1.SelectedItem?.ToString();
             string level = comboBox2.SelectedItem?.ToString();
 
+            if (string.IsNullOrWhiteSpace(questionText) || string.IsNullOrWhiteSpace(correctAnswer) ||
+        string.IsNullOrWhiteSpace(topic) || string.IsNullOrWhiteSpace(level))
+            {
+                MessageBox.Show("Please fill in all fields before saving the question", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (isEditMode)
             {
                 Dictionary<string, object> updatedData = new Dictionary<string, object>()
@@ -119,15 +186,29 @@ namespace PRO1
         };
 
                 await firebaseHelper.UpdateQuestionAsync(questionKey, updatedData);
-                MessageBox.Show("השאלה הפתוחה עודכנה בהצלחה!");
+                MessageBox.Show("The question was updated successfully!");
             }
             else
             {
-                await firebaseHelper.AddQuestionAsync("OpenQuestion", correctAnswer, topic, level, questionText, "", "", "", "","");
-                MessageBox.Show("השאלה הפתוחה נשמרה בהצלחה!");
+                await firebaseHelper.AddQuestionAsync("OpenQuestion", correctAnswer, topic, level, questionText, "", "", "", "", SessionManager.TeacherId);
+                MessageBox.Show("The question was saved successfully!");
             }
+
+            
+            textBox1.Clear();
+            textBox2.Clear();
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

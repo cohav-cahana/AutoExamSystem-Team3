@@ -3,90 +3,103 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Net.Http;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace PRO1
 {
     public partial class GradeFormTeacher : Form
     {
+
+        private int high = 0;
+        private int mid = 0;
+        private int low = 0;
+
         public GradeFormTeacher()
         {
-
             InitializeComponent();
+            this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
+            StyleWarmButton(btnShowChart);
+            StyleWarmButton(btn_back2);
 
-            this.BackColor = Color.White;
 
-
-
-
-            //this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
 
         }
 
         private void dgvScores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
         }
 
         private async void GradeFormTeacher_Load(object sender, EventArgs e)
         {
             dgvScores.Rows.Clear();
 
+            FirebaseHelper firebaseHelper = new FirebaseHelper();
 
-
-            string firebaseUrl = "https://questions-sce-default-rtdb.firebaseio.com/users.json";
-
-
-            using (HttpClient client = new HttpClient())
+            try
             {
-                HttpResponseMessage response = await client.GetAsync(firebaseUrl);
+                var allGrades = await firebaseHelper.GetAllGradesAsync();
 
-                if (response.IsSuccessStatusCode)
+
+                high = 0;
+                mid = 0;
+                low = 0;
+
+                foreach (var (username, userId, examResult) in allGrades)
                 {
-                    string json = await response.Content.ReadAsStringAsync();
+                    dgvScores.Rows.Add(
+                        username,
+                        userId,
+                        examResult.Score,
+                        examResult.Subject,
+                        examResult.Level
+                    );
 
-                    var allUsers = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(json);
 
-                    foreach (var user in allUsers)
-                    {
-                        string userId = user.Key;
-                        var userData = user.Value;
-
-                        if (userData.ContainsKey("grades"))
-                        {
-                            string username = userData.ContainsKey("Username") ? userData["Username"].ToString() : userId;
-
-                            var gradesJson = JsonConvert.SerializeObject(userData["grades"]);
-                            var grades = JsonConvert.DeserializeObject<Dictionary<string, Grade>>(gradesJson);
-
-                            foreach (var grade in grades.Values)
-                            {
-                                dgvScores.Rows.Add(
-                                    username,         // שם
-                                    userId,           // ת"ז
-                                    grade.score,      // ציון
-                                    grade.subject,    // מקצוע
-                                    grade.level       // רמת קושי
-                                );
-                            }
-                        }
-                    }
+                    if (examResult.Score >= 85)
+                        high++;
+                    else if (examResult.Score >= 56)
+                        mid++;
+                    else
+                        low++;
                 }
-                else
-                {
-                    MessageBox.Show("שגיאה בשליפת נתונים מה־Firebase.");
-                }
+                dgvScores.ClearSelection();
+                dgvScores.Refresh();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(" Error loading grades: " + ex.Message);
+            }
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
+        private void btnShowChart_Click(object sender, EventArgs e)
+        {
+            GradeChartForm chartForm = new GradeChartForm(high, mid, low);
+            chartForm.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void btn_back2_Click_1(object sender, EventArgs e)
+        {
+            Form1 lecture1 = new Form1();
+            lecture1.Show();
+            this.Hide();
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using DocumentFormat.OpenXml.Bibliography;
-using DocumentFormat.OpenXml.Spreadsheet;
 using PRO1.Properties;
 using System;
 using System.Collections.Generic;
@@ -23,49 +22,59 @@ namespace PRO1
 
 
 
-        public GradesForm(User user)
+
+        public GradesForm(User user, frontPage login)
         {
             InitializeComponent();
-            currentUser = user;
+            this.currentUser = user;
+            this.login = login;
             firebaseHelper = new FirebaseHelper();
             
-            label1.BackColor = System.Drawing.Color.FromArgb(180, 150, 100, 50);
-            label2.BackColor = System.Drawing.Color.FromArgb(180, 150, 100, 50);
-            label1.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            label2.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            label3.Font = new System.Drawing.Font("Arial", 16, FontStyle.Bold);
-            label3.BackColor = System.Drawing.Color.FromArgb(180, 150, 100, 50);
-            label4.Font = new System.Drawing.Font("Arial", 15, FontStyle.Bold);
-            int size = 80;
-            int cornerRadius = 20;
+           
+            
+            
+            label4.Font = new System.Drawing.Font("Arial", 20, FontStyle.Bold);
 
-            panelAverage.Size = new Size(size, size);
-            panelAverage.BackColor = System.Drawing.Color.White;
+            StyleLabel(label1);
+            StyleLabel(label2);
+            StyleLabel(label3); 
+           
 
-            GraphicsPath path = new GraphicsPath();
+            chartGrades.BackColor = Color.Transparent;
+            chartGrades.ChartAreas[0].BackColor = Color.FromArgb(160, Color.White);
+            StyleLinenButton(button1);
+            StyleDataGridView(dataGridView1);
 
-            // פינה שמאל עליונה
-            path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
-            // קו למעלה
-            path.AddLine(cornerRadius, 0, size - cornerRadius, 0);
-            // פינה ימין עליונה
-            path.AddArc(size - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
-            // קו ימני
-            path.AddLine(size, cornerRadius, size, size - cornerRadius);
-            // פינה ימין תחתונה
-            path.AddArc(size - cornerRadius, size - cornerRadius, cornerRadius, cornerRadius, 0, 90);
-            // קו תחתון
-            path.AddLine(size - cornerRadius, size, cornerRadius, size);
-            // פינה שמאל תחתונה
-            path.AddArc(0, size - cornerRadius, cornerRadius, cornerRadius, 90, 90);
-            // קו שמאלי
-            path.AddLine(0, size - cornerRadius, 0, cornerRadius);
-
-            panelAverage.Region = new Region(path);
-
-
-
+            StyleWarmButton(button1);
+            SetRoundedRegion(panelAverage,20);
         }
+        private void SetRoundedRegion(Control control, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            Rectangle rect = control.ClientRectangle;
+
+            path.AddArc(rect.X, rect.Y, radius, radius, 180, 90);
+            path.AddArc(rect.Right - radius, rect.Y, radius, radius, 270, 90);
+            path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90);
+            path.AddArc(rect.X, rect.Bottom - radius, radius, radius, 90, 90);
+            path.CloseFigure();
+
+            control.Region = new Region(path);
+        }
+
+
+        private void StyleLinenButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = Color.Linen;
+            button.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0; // <--- בלי מסגרת
+            button.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 239, 213); // Peach-like hover
+            button.Cursor = Cursors.Hand;
+            button.TextAlign = ContentAlignment.MiddleCenter;
+        }
+
 
         private async void GradesForm_Load(object sender, EventArgs e)
         {
@@ -73,64 +82,43 @@ namespace PRO1
 
             try
             {
-                
+                // שליפת תוצאות המבחנים של המשתמש הנוכחי
                 examResults = await firebaseHelper.GetAllExamsAsync(currentUser.UserId);
 
-                
+                // שליפת כל המבחנים כדי שנוכל לראות כמות שאלות לפי ID
                 List<Exam> allExams = await firebaseHelper.GetAllExamsAsync();
 
-                
+                // יצירת טבלה
                 DataTable table = new DataTable();
-                table.Columns.Add("מזהה מבחן");
-                table.Columns.Add("כמות שאלות");
-                table.Columns.Add("ציון");
-                table.Columns.Add("תאריך");
+                table.Columns.Add("Exam ID");
+                table.Columns.Add("Number of Questions");
+                table.Columns.Add("Grade");
+                table.Columns.Add("Date");
 
                 foreach (var result in examResults)
                 { 
                     var exam = allExams.FirstOrDefault(ex => ex.Id == result.ExamId);
-
                     int questionCount = exam != null ? exam.QuestionCount : 0;
-
                     table.Rows.Add(result.ExamId, questionCount, result.Grade, result.TakenAt.ToString("dd/MM/yyyy HH:mm"));
                 }
 
                 dataGridView1.DataSource = table;
-                
-                dataGridView1.EnableHeadersVisualStyles = false;
-                dataGridView1.BackgroundColor = System.Drawing.Color.White;
-                dataGridView1.GridColor = System.Drawing.Color.LightGray;
-                dataGridView1.BorderStyle = BorderStyle.None;
-                dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
 
-                
-                dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(240, 240, 240); 
-                dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-                dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridView1.ColumnHeadersDefaultCellStyle.Padding = new Padding(0, 5, 0, 5);
-                dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
-                
-                dataGridView1.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-                dataGridView1.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-                dataGridView1.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(220, 220, 250); 
-                dataGridView1.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-                dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dataGridView1.DefaultCellStyle.Padding = new Padding(0, 5, 0, 5);
-
-               
+                // עיצוב הטבלה (רשות)
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dataGridView1.RowTemplate.Height = 35;
+                dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10, FontStyle.Bold);
+                dataGridView1.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10);
 
-
-               
+                dataGridView1.BorderStyle = BorderStyle.None;
+                dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
+                dataGridView1.GridColor = dataGridView1.BackgroundColor;
 
                 double total = 0;
                 int count = 0;
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    if (row.Cells["ציון"].Value != null && double.TryParse(row.Cells["ציון"].Value.ToString(), out double grade))
+                    if (row.Cells["Grade"].Value != null && double.TryParse(row.Cells["Grade"].Value.ToString(), out double grade))
                     {
                         total += grade;
                         count++;
@@ -138,9 +126,9 @@ namespace PRO1
                 }
 
                 double average = count > 0 ? total / count : 0;
-                label4.Text = average.ToString("0.##"); 
+                label4.Text = average.ToString("0.##"); // רק המספר
 
-                
+                // ציור תרשים ציונים
                 DrawGradesChart();
 
 
@@ -159,29 +147,28 @@ namespace PRO1
             chartGrades.Series.Clear();
             chartGrades.ChartAreas.Clear();
 
-            
             ChartArea chartArea = new ChartArea();
             chartArea.BackColor = System.Drawing.Color.White;
             chartArea.AxisX.MajorGrid.Enabled = false;
             chartArea.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea.AxisX.Title = "תאריך";
-            chartArea.AxisY.Title = "ציון";
+            chartArea.AxisX.Title = "Date";
+            chartArea.AxisY.Title = "Grade";
             chartGrades.ChartAreas.Add(chartArea);
 
             
             Series series = new Series
             {
-                ChartType = SeriesChartType.SplineArea, 
-                Color = System.Drawing.Color.FromArgb(180, 150, 100, 50), 
-
+                ChartType = SeriesChartType.SplineArea,
+                Color = System.Drawing.Color.FromArgb(180, 255, 245, 238),  
                 BorderWidth = 2,
-                BorderColor = System.Drawing.Color.SaddleBrown, 
+                BorderColor = Color.FromArgb(255, 245, 230, 220)
+,
                 MarkerStyle = MarkerStyle.Circle,
                 MarkerSize = 6,
-                MarkerColor = System.Drawing.Color.SaddleBrown,
+                MarkerColor = Color.FromArgb(255, 245, 230, 220),
             };
 
-           
+          
             var sortedResults = examResults.OrderBy(r => r.TakenAt);
             foreach (var result in sortedResults)
             {
@@ -194,7 +181,32 @@ namespace PRO1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+        private void StyleDataGridView(DataGridView dgv)
+        {
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = Color.White;
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.GridColor = Color.LightGray;
 
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 160, 102); // חום בהיר
+            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            dgv.DefaultCellStyle.BackColor = Color.White;
+            dgv.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(230, 215, 200);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgv.ColumnHeadersHeight = 35;
+
+            dgv.RowTemplate.Height = 30;
+            dgv.AllowUserToAddRows = false;
+            dgv.RowHeadersVisible = false;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
         }
@@ -226,12 +238,13 @@ namespace PRO1
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
 
             if (studentForm == null)
             {
-                studentForm = new StudentForm(currentUser,  login); // בהנחה שזו החתימה
+                studentForm = new StudentForm(currentUser, login);
             }
             this.Close();
             studentForm.Show();
@@ -242,8 +255,38 @@ namespace PRO1
         {
 
         }
+        private void StyleLabel(Label label, bool isTitle = false)
+        {
+            label.BackColor = Color.Transparent;
+            label.ForeColor = ColorTranslator.FromHtml("#3E2C23");
+            label.Font = isTitle
+                ? new Font("Segoe UI", 16, FontStyle.Bold)
+                : new Font("Segoe UI", 11, FontStyle.Regular);
+            label.TextAlign = ContentAlignment.MiddleRight;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e) {
+            StudentForm gradesform = new StudentForm(currentUser, login);
+            gradesform.Show();
+            this.Hide();
+        }
 
         private void panelAverage_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }

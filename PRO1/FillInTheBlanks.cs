@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PRO1
 {
@@ -20,10 +19,24 @@ namespace PRO1
         {
             InitializeComponent();
             this.BackColor = Color.White;
-            label1.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            label2.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            label3.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
-            label4.Font = new System.Drawing.Font("Arial", 12, FontStyle.Bold);
+            label1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            label2.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            label3.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            label4.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            button1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            button3.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            comboBox1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            comboBox2.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            textBox1.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            textBox2.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            mainPanel.BackColor = Color.FromArgb(120, Color.White);
+
+            StyleWarmButton(button1);
+            StyleWarmButton(button3);
+
+
+
+
 
 
         }
@@ -43,8 +56,8 @@ namespace PRO1
         {
             
 
-            this.teacherId = teacherId;   // ודא שמקצה גם את teacherId
-            this.question = question;     // שומר את השאלה לעריכה
+            this.teacherId = teacherId;  
+            this.question = question;     
             questionKey = question.Id;
             textBox1.Text = question.QuestionText;
             textBox2.Text = question.CorrectAnswer;
@@ -97,9 +110,12 @@ namespace PRO1
             string topic = comboBox1.SelectedItem?.ToString();
             string level = comboBox2.SelectedItem?.ToString();
 
-            if (string.IsNullOrWhiteSpace(questionText) || string.IsNullOrWhiteSpace(correctAnswer))
+            if (string.IsNullOrWhiteSpace(questionText) ||
+        string.IsNullOrWhiteSpace(correctAnswer) ||
+        string.IsNullOrWhiteSpace(topic) ||
+        string.IsNullOrWhiteSpace(level))
             {
-                MessageBox.Show("אנא מלא את כל השדות הדרושים.");
+                MessageBox.Show("Please fill in all fields before saving the question", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -122,14 +138,18 @@ namespace PRO1
         };
 
                 await firebaseHelper.UpdateQuestionAsync(question.Id.ToString(), data);
-                MessageBox.Show("השאלה עודכנה בהצלחה!");
+                MessageBox.Show("The question was updated successfully!");
             }
             else
             {
-                // יצירת שאלה חדשה
+                
                 await firebaseHelper.AddQuestionAsync("FillInTheBlanks", correctAnswer, topic, level, questionText, "", "", "", "", SessionManager.TeacherId);
-                MessageBox.Show("השאלה נשמרה בהצלחה!");
+                MessageBox.Show("The question was saved successfully!");
             }
+            textBox1.Clear();
+            textBox2.Clear();
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -167,7 +187,16 @@ namespace PRO1
             
             questionForm.Show();
         }
-
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -180,6 +209,11 @@ namespace PRO1
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

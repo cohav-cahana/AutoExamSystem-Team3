@@ -1,5 +1,4 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,21 +23,28 @@ namespace PRO1
             InitializeComponent();
             this.currentUser = user;
             this.login = login;
+            
             welcomeLbl.Text = "Welcome " + user.Username;
+
 
             panel1.Paint += panel1_Paint;
 
             this.BackColor = System.Drawing.Color.White;
-            
+            StyleWarmButton(backBtn);
+            StyleWarmButton(examBtn);
+            StyleWarmButton(gradeBtn);
+
+
 
 
         }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Panel panel = sender as Panel;
             if (panel == null) return;
 
-            int radius = 20; // כמה עגולים יהיו הקצוות
+            int radius = 20;
 
             GraphicsPath path = new GraphicsPath();
             Rectangle rect = panel.ClientRectangle;
@@ -58,20 +64,32 @@ namespace PRO1
         {
             ExamSelection examSelection = new ExamSelection(currentUser, this);
             examSelection.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
             login.Show();
-            this.Hide();
+            this.Close();
+
+            
         }
 
         private void gradeBtn_Click(object sender, EventArgs e)
         {
-            GradesForm gradesForm = new GradesForm(currentUser);
+            GradesForm gradesForm = new GradesForm(currentUser, login);
             gradesForm.Show();
             this.Hide();
+        }
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
         }
 
         private void welcomeLbl_Click(object sender, EventArgs e)
@@ -83,6 +101,7 @@ namespace PRO1
         {
 
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -105,6 +124,9 @@ namespace PRO1
 
         }
 
-       
+        
+         
+
     }
 }
+

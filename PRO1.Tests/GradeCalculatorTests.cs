@@ -9,7 +9,6 @@ using PRO1;
 
 namespace PRO1.Tests
 {
-    [TestClass]
     public class GradeCalculatorTests
     {
         [TestMethod]

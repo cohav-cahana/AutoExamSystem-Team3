@@ -30,30 +30,29 @@ namespace PRO1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button examBtn;
+            this.examBtn = new System.Windows.Forms.Button();
             this.welcomeLbl = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Button();
             this.gradeBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            examBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // examBtn
             // 
-            examBtn.BackColor = System.Drawing.Color.Linen;
-            examBtn.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            examBtn.Image = global::PRO1.Properties.Resources.icons8_user_50;
-            examBtn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            examBtn.Location = new System.Drawing.Point(581, 245);
-            examBtn.Name = "examBtn";
-            examBtn.Size = new System.Drawing.Size(338, 114);
-            examBtn.TabIndex = 1;
-            examBtn.Text = "Start Test";
-            examBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            examBtn.UseVisualStyleBackColor = false;
-            examBtn.Click += new System.EventHandler(this.examBtn_Click);
+            this.examBtn.BackColor = System.Drawing.Color.Linen;
+            this.examBtn.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
+            this.examBtn.Image = global::PRO1.Properties.Resources.icons8_user_50;
+            this.examBtn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.examBtn.Location = new System.Drawing.Point(581, 245);
+            this.examBtn.Name = "examBtn";
+            this.examBtn.Size = new System.Drawing.Size(338, 114);
+            this.examBtn.TabIndex = 1;
+            this.examBtn.Text = "Start Test";
+            this.examBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.examBtn.UseVisualStyleBackColor = false;
+            this.examBtn.Click += new System.EventHandler(this.examBtn_Click);
             // 
             // welcomeLbl
             // 
@@ -72,12 +71,13 @@ namespace PRO1
             // 
             this.backBtn.AutoSize = true;
             this.backBtn.BackColor = System.Drawing.Color.Linen;
+            this.backBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.backBtn.Location = new System.Drawing.Point(12, 575);
+            this.backBtn.Location = new System.Drawing.Point(12, 562);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(189, 34);
+            this.backBtn.Size = new System.Drawing.Size(173, 47);
             this.backBtn.TabIndex = 4;
-            this.backBtn.Text = "חזרה לדף הכניסה";
+            this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
@@ -126,7 +126,7 @@ namespace PRO1
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.gradeBtn);
             this.Controls.Add(this.welcomeLbl);
-            this.Controls.Add(examBtn);
+            this.Controls.Add(this.examBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "StudentForm";
@@ -144,5 +144,6 @@ namespace PRO1
         private Label welcomeLbl;
         private PictureBox pictureBox2;
         private Panel panel1;
+        private Button examBtn;
     }
 }

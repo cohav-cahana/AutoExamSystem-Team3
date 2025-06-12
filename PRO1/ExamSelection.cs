@@ -42,7 +42,9 @@ namespace PRO1
             StyleLabel(durationPlaceholder);
             StyleWarmButton(backBtn);
             StyleWarmButton(startExamBtn);
-            
+            StyleWarmButton(btn_A);
+
+
 
 
 
@@ -156,6 +158,13 @@ namespace PRO1
         private void difficultyPlaceholder_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_A_Click(object sender, EventArgs e)
+        {
+            AdaptiveSelectionForm adaptiveSelectionForm = new AdaptiveSelectionForm(currentUser, this);
+            adaptiveSelectionForm.Show();
+            this.Hide();
         }
     }
 }

@@ -85,7 +85,7 @@
             this.Controls.Add(this.questionLbl);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FillinTheBlanksPanel";
-            this.Size = new System.Drawing.Size(1179, 723);
+            this.Size = new System.Drawing.Size(1169, 688);
             this.Load += new System.EventHandler(this.FillinTheBlanksPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

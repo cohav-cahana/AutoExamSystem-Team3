@@ -46,11 +46,11 @@
             this.label1.Font = new System.Drawing.Font("Freestyle Script", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(262, 17);
+            this.label1.Location = new System.Drawing.Point(328, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(550, 142);
+            this.label1.Size = new System.Drawing.Size(399, 142);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome to Your Adaptive Test\n\n";
+            this.label1.Text = "Welcome to Your Test\r\n\r\n";
             // 
             // examTimer
             // 
@@ -90,9 +90,9 @@
             // examStartBtn
             // 
             this.examStartBtn.BackColor = System.Drawing.Color.Transparent;
-            this.examStartBtn.Location = new System.Drawing.Point(457, 574);
+            this.examStartBtn.Location = new System.Drawing.Point(913, 576);
             this.examStartBtn.Name = "examStartBtn";
-            this.examStartBtn.Size = new System.Drawing.Size(226, 46);
+            this.examStartBtn.Size = new System.Drawing.Size(144, 46);
             this.examStartBtn.TabIndex = 7;
             this.examStartBtn.Text = "Click To Start";
             this.examStartBtn.UseVisualStyleBackColor = false;
@@ -101,7 +101,7 @@
             // nextBtn
             // 
             this.nextBtn.BackColor = System.Drawing.Color.Transparent;
-            this.nextBtn.Location = new System.Drawing.Point(15, 574);
+            this.nextBtn.Location = new System.Drawing.Point(19, 576);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(144, 46);
             this.nextBtn.TabIndex = 8;
@@ -118,9 +118,9 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = global::PRO1.Properties.Resources._3310;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1161, 676);
-            this.Controls.Add(this.nextBtn);
+            this.ClientSize = new System.Drawing.Size(1099, 637);
             this.Controls.Add(this.examStartBtn);
+            this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.label1);

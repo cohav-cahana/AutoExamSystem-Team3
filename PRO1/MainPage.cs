@@ -32,13 +32,14 @@ namespace PRO1
                 }
             }
 
+
             MakeButtonRound(btnExit);
             btnExit.BackColor = Color.FromArgb(217, 160, 102); 
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.Cursor = Cursors.Hand;
             btnExit.BackgroundImageLayout = ImageLayout.Stretch;
-      //      btnExit.BackgroundImage = Image.FromFile("Resources/SYSTEM_OUT.png"); 
+         //   btnExit.BackgroundImage = Image.FromFile("Resources/SYSTEM_OUT.png"); 
 
 
             btnExit.Click += btnExit_Click;
@@ -48,6 +49,7 @@ namespace PRO1
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
+          //  btnExit.Image = Properties.Resources;
             Application.Exit();
         }
 
@@ -86,14 +88,12 @@ namespace PRO1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-             frontPage login = new frontPage();
+ 
+            frontPage login = new frontPage();
             login.Show();
-             this.Hide();
+            this.Hide();
+
         }
-
-
-
 
 
         private void btnContact_Click(object sender, EventArgs e)
@@ -109,12 +109,13 @@ namespace PRO1
             this.Hide();
 
         }
+
         private void MakeButtonRound(Button btn)
         {
             GraphicsPath path = new GraphicsPath();
             path.AddEllipse(0, 0, btn.Width, btn.Height);
             btn.Region = new Region(path);
         }
-     
+
     }
 }

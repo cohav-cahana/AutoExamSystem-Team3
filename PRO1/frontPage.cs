@@ -24,7 +24,8 @@ namespace PRO1
 
             //panel1.BackColor = Color.FromArgb(120, Color.White);  
             //panel1.BorderStyle = BorderStyle.None;
-
+            StyleWarmButton(button1);
+            StyleWarmButton(login);
 
 
 
@@ -145,7 +146,16 @@ namespace PRO1
 
 
         }
-
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066");
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50");
+            button.Cursor = Cursors.Hand;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please contact your instructor to reset your password.", "Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -186,8 +196,8 @@ namespace PRO1
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
-               
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)

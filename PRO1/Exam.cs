@@ -18,7 +18,7 @@ namespace PRO1
 
         public override string ToString()
         {
-            return $"מבחן {Id} - {QuestionCount} שאלות, נושא: {string.Join(",", Topics)}, רמה: {Difficulty}";
+            return $"ID FOR THE TEST: {Id}, Questions: {QuestionCount}, Topic: {Topics[0]}, Level: {Difficulty}";
         }
     }
 }

@@ -14,13 +14,13 @@ namespace PRO1
         public string Topic { get; set; }
         public string Level { get; set; }
         public string Type { get; set; }
+        public string TeacherId { get; set; }
+
 
         public string Answer1 { get; set; }
         public string Answer2 { get; set; }
         public string Answer3 { get; set; }
         public string Answer4 { get; set; }
-        public string TeacherId { get; set; }
-
     }
 
 }

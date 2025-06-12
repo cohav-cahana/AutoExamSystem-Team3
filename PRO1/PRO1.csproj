@@ -173,9 +173,6 @@
     <Compile Include="AdaptiveTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdaptiveTestForm.Designer.cs">
-      <DependentUpon>AdaptiveTestForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="ExamResult.cs" />
     <Compile Include="ExamSelection.cs">
       <SubType>Form</SubType>
@@ -209,8 +206,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grade.cs" />
     <Compile Include="GradeCalculator.cs" />
+    <Compile Include="GradeChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradeChartForm.Designer.cs">
+      <DependentUpon>GradeChartForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GradeFormTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,12 +236,6 @@
     </Compile>
     <Compile Include="LecturerForm.Designer.cs">
       <DependentUpon>LecturerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LoginControl.Designer.cs">
-      <DependentUpon>LoginControl.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginManager.cs" />
     <Compile Include="MainPage.cs">
@@ -265,6 +261,11 @@
     </Compile>
     <Compile Include="Open.Designer.cs">
       <DependentUpon>Open.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Open1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Open.resx</DependentUpon>
     </Compile>
     <Compile Include="OpenQuestionUserControl.cs">
       <SubType>UserControl</SubType>
@@ -341,6 +342,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GradeChartForm.resx">
+      <DependentUpon>GradeChartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GradeFormTeacher.resx">
       <DependentUpon>GradeFormTeacher.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,9 +357,6 @@
     <EmbeddedResource Include="LecturerForm.resx">
       <DependentUpon>LecturerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginControl.resx">
-      <DependentUpon>LoginControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -367,6 +368,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Open.resx">
       <DependentUpon>Open.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Open1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OpenQuestionUserControl.resx">
       <DependentUpon>OpenQuestionUserControl.cs</DependentUpon>
@@ -410,7 +413,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitignore" />
     <Content Include="Images\AutoExamP_.jpg" />
     <Content Include="Images\back2.jpg" />
     <Content Include="Resources\10313778.jpg" />
