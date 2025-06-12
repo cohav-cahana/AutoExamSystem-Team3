@@ -144,9 +144,9 @@ namespace PRO1
                 .Distinct()
                 .ToList();
 
-            cmb_topic.Items.Clear();
-            foreach (var topic in topics)
-                cmb_topic.Items.Add(topic);
+            //cmb_topic.Items.Clear();
+            //foreach (var topic in topics)
+            //    cmb_topic.Items.Add(topic);
 
 
             var types = allQuestions
@@ -190,11 +190,11 @@ namespace PRO1
         private void StyleWarmButton(Button button)
         {
             button.FlatStyle = FlatStyle.Flat;
-            button.BackColor = ColorTranslator.FromHtml("#D9A066"); // חום בהיר
+            button.BackColor = ColorTranslator.FromHtml("#D9A066"); 
             button.ForeColor = Color.White;
             button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             button.FlatAppearance.BorderSize = 0;
-            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50"); // חום כהה יותר בהובר
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50"); 
             button.Cursor = Cursors.Hand;
         }
         private void StyleLabel(Label label, bool isTitle = false)
@@ -271,6 +271,16 @@ namespace PRO1
                 e.Bounds, textColor, TextFormatFlags.Left | TextFormatFlags.VerticalCenter);
 
             e.DrawFocusRectangle();
+        }
+
+        private void cmb_topic_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

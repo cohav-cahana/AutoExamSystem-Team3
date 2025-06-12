@@ -49,8 +49,6 @@ namespace PRO1
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.RegisterB = new System.Windows.Forms.Button();
             this.cmbRole = new System.Windows.Forms.ComboBox();
-            this.btnPasswordTip = new System.Windows.Forms.Button();
-            this.btnUsernameTip = new System.Windows.Forms.Button();
             this.lblRegister = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.BACKpanel = new System.Windows.Forms.Panel();
@@ -60,7 +58,7 @@ namespace PRO1
             // 
             this.txtUsername.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtUsername.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(493, 182);
+            this.txtUsername.Location = new System.Drawing.Point(389, 182);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(240, 38);
@@ -72,7 +70,7 @@ namespace PRO1
             // 
             this.txtPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtPassword.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(493, 244);
+            this.txtPassword.Location = new System.Drawing.Point(389, 244);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(240, 38);
@@ -84,7 +82,7 @@ namespace PRO1
             // 
             this.txtID.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtID.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(493, 304);
+            this.txtID.Location = new System.Drawing.Point(389, 304);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(240, 38);
@@ -96,7 +94,7 @@ namespace PRO1
             // 
             this.txtEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtEmail.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(493, 370);
+            this.txtEmail.Location = new System.Drawing.Point(389, 370);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(240, 38);
@@ -111,7 +109,7 @@ namespace PRO1
             this.RegisterB.FlatAppearance.BorderSize = 0;
             this.RegisterB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterB.ForeColor = System.Drawing.Color.White;
-            this.RegisterB.Location = new System.Drawing.Point(493, 482);
+            this.RegisterB.Location = new System.Drawing.Point(389, 482);
             this.RegisterB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RegisterB.Name = "RegisterB";
             this.RegisterB.Size = new System.Drawing.Size(240, 40);
@@ -132,7 +130,7 @@ namespace PRO1
             this.cmbRole.Items.AddRange(new object[] {
             "Student",
             "Lecture"});
-            this.cmbRole.Location = new System.Drawing.Point(493, 431);
+            this.cmbRole.Location = new System.Drawing.Point(389, 431);
             this.cmbRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(240, 31);
@@ -140,30 +138,12 @@ namespace PRO1
             this.cmbRole.MouseEnter += new System.EventHandler(this.cmbRole_MouseEnter);
             this.cmbRole.MouseLeave += new System.EventHandler(this.cmbRole_MouseLeave);
             // 
-            // btnPasswordTip
-            // 
-            this.btnPasswordTip.Location = new System.Drawing.Point(765, 244);
-            this.btnPasswordTip.Name = "btnPasswordTip";
-            this.btnPasswordTip.Size = new System.Drawing.Size(42, 27);
-            this.btnPasswordTip.TabIndex = 12;
-            this.btnPasswordTip.Text = "?";
-            this.btnPasswordTip.UseVisualStyleBackColor = true;
-            // 
-            // btnUsernameTip
-            // 
-            this.btnUsernameTip.Location = new System.Drawing.Point(765, 187);
-            this.btnUsernameTip.Name = "btnUsernameTip";
-            this.btnUsernameTip.Size = new System.Drawing.Size(42, 27);
-            this.btnUsernameTip.TabIndex = 13;
-            this.btnUsernameTip.Text = "?";
-            this.btnUsernameTip.UseVisualStyleBackColor = true;
-            // 
             // lblRegister
             // 
             this.lblRegister.AutoSize = true;
             this.lblRegister.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblRegister.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblRegister.Location = new System.Drawing.Point(492, 114);
+            this.lblRegister.Location = new System.Drawing.Point(388, 114);
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(230, 45);
             this.lblRegister.TabIndex = 16;
@@ -171,7 +151,7 @@ namespace PRO1
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(15, 550);
+            this.btn_back.Location = new System.Drawing.Point(26, 555);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(124, 52);
             this.btn_back.TabIndex = 17;
@@ -182,7 +162,7 @@ namespace PRO1
             // BACKpanel
             // 
             this.BACKpanel.BackColor = System.Drawing.Color.White;
-            this.BACKpanel.Location = new System.Drawing.Point(340, 91);
+            this.BACKpanel.Location = new System.Drawing.Point(240, 84);
             this.BACKpanel.Name = "BACKpanel";
             this.BACKpanel.Size = new System.Drawing.Size(536, 483);
             this.BACKpanel.TabIndex = 18;
@@ -191,14 +171,14 @@ namespace PRO1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = global::PRO1.Properties.Resources._33;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1151, 641);
+            this.ClientSize = new System.Drawing.Size(982, 628);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.lblRegister);
-            this.Controls.Add(this.btnUsernameTip);
-            this.Controls.Add(this.btnPasswordTip);
             this.Controls.Add(this.cmbRole);
             this.Controls.Add(this.RegisterB);
             this.Controls.Add(this.txtEmail);
@@ -207,10 +187,8 @@ namespace PRO1
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.BACKpanel);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RegisterForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "RegisterForm";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.ResumeLayout(false);
@@ -225,8 +203,6 @@ namespace PRO1
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button RegisterB;
         private System.Windows.Forms.ComboBox cmbRole;
-        private Button btnPasswordTip;
-        private Button btnUsernameTip;
         private Label lblRegister;
         private Button btn_back;
         private Panel BACKpanel;

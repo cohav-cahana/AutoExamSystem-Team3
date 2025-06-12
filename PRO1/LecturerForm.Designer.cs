@@ -94,7 +94,6 @@ namespace PRO1
             // 
             this.btnCreatExam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreatExam.ForeColor = System.Drawing.Color.White;
-
             this.btnCreatExam.Location = new System.Drawing.Point(473, 524);
             this.btnCreatExam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreatExam.Name = "btnCreatExam";
@@ -108,7 +107,6 @@ namespace PRO1
             // 
             this.listBoxExams.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.listBoxExams.FormattingEnabled = true;
-
             this.listBoxExams.ItemHeight = 35;
             this.listBoxExams.Location = new System.Drawing.Point(618, 63);
             this.listBoxExams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -124,7 +122,7 @@ namespace PRO1
             this.checkBoxRandomTopics.Location = new System.Drawing.Point(235, 340);
             this.checkBoxRandomTopics.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxRandomTopics.Name = "checkBoxRandomTopics";
-            this.checkBoxRandomTopics.Size = new System.Drawing.Size(117, 20);
+            this.checkBoxRandomTopics.Size = new System.Drawing.Size(113, 20);
             this.checkBoxRandomTopics.TabIndex = 8;
             this.checkBoxRandomTopics.Text = "Random topic";
             this.checkBoxRandomTopics.UseVisualStyleBackColor = true;
@@ -141,10 +139,16 @@ namespace PRO1
             // cmb_topic
             // 
             this.cmb_topic.FormattingEnabled = true;
+            this.cmb_topic.Items.AddRange(new object[] {
+            "Algorithms",
+            "Software Testing",
+            "Statistics",
+            "Data Structures"});
             this.cmb_topic.Location = new System.Drawing.Point(235, 28);
             this.cmb_topic.Name = "cmb_topic";
             this.cmb_topic.Size = new System.Drawing.Size(224, 24);
             this.cmb_topic.TabIndex = 10;
+            this.cmb_topic.SelectedIndexChanged += new System.EventHandler(this.cmb_topic_SelectedIndexChanged);
             // 
             // txt_Timer
             // 
@@ -174,11 +178,11 @@ namespace PRO1
             this.panel1.Controls.Add(this.cmb_topic);
             this.panel1.Controls.Add(this.txtQuestionCount);
             this.panel1.Controls.Add(this.checkedListBoxType);
-
             this.panel1.Location = new System.Drawing.Point(71, 63);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(513, 456);
             this.panel1.TabIndex = 14;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // LecturerForm
             // 

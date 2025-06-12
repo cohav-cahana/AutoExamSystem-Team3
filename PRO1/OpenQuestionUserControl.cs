@@ -24,13 +24,13 @@ namespace PRO1
             lblQuestionCounter.Text = $"Question {numQuestion + 1} of {totalQuestions}";
             panel1.BackColor = Color.FromArgb(120, Color.White);
             panel1.BorderStyle = BorderStyle.None;
-
-
+            lblQuestionCounter.BackColor = Color.FromArgb(120, Color.White);
+            questionLbl.BackColor = Color.FromArgb(120, Color.White);
         }
 
         private void FitTextToLabel(Label label)
         {
-            int minFontSize = 6;
+            int minFontSize = 12;
             int maxFontSize = label.Font.Size > 20 ? (int)label.Font.Size : 20;
             Size proposedSize = label.Size;
 
@@ -65,6 +65,16 @@ namespace PRO1
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void OpenQuestionUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void questionLbl_Click(object sender, EventArgs e)
         {
 
         }

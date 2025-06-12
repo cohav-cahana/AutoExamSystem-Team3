@@ -64,7 +64,7 @@ namespace PRO1
         {
             ExamSelection examSelection = new ExamSelection(currentUser, this);
             examSelection.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void backBtn_Click(object sender, EventArgs e)

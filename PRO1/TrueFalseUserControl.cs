@@ -22,14 +22,15 @@ namespace PRO1
             questionLbl.Text = question.QuestionText;
             FitTextToLabel(questionLbl);
             lblQuestionCounter.Text = $"Question {numQuestion + 1} of {totalQuestions}";
-            questionPanel.BackColor = Color.FromArgb(120, Color.White); // שקיפות עדינה
+            questionPanel.BackColor = Color.FromArgb(120, Color.White);
             questionPanel.BorderStyle = BorderStyle.None;
-
+            //lblQuestionCounter.BackColor = Color.Transparent;
+            lblQuestionCounter.BackColor = Color.FromArgb(120, Color.White);
         }
 
         private void FitTextToLabel(Label label)
         {
-            int minFontSize = 6;
+            int minFontSize = 12;
             int maxFontSize = label.Font.Size > 20 ? (int)label.Font.Size : 20;
             Size proposedSize = label.Size;
 
@@ -54,7 +55,7 @@ namespace PRO1
             {
                 if (control is RadioButton radioButton)
                 {
-                    radioButton.BackColor = Color.Turquoise;
+                    radioButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
                 }
             }
         }
@@ -62,13 +63,13 @@ namespace PRO1
         private void TrueButton_CheckedChanged(object sender, EventArgs e)
         {
             uncheckRadioButtons();
-            TrueButton.BackColor = Color.Teal;
+            TrueButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(29)))));
         }
 
         private void FalseButton_CheckedChanged(object sender, EventArgs e)
         {
             uncheckRadioButtons();
-            FalseButton.BackColor = Color.Teal;
+            FalseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(29)))));
         }
 
         public string GetSelectedAnswer()
@@ -107,6 +108,11 @@ namespace PRO1
         }
 
         private void questionLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblQuestionCounter_Click(object sender, EventArgs e)
         {
 
         }

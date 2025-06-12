@@ -19,7 +19,7 @@
             }
             base.Dispose(disposing);
         }
-        
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -57,10 +57,10 @@
             // 
             // lblTimer
             // 
-            this.lblTimer.BackColor = System.Drawing.Color.Linen;
+            this.lblTimer.BackColor = System.Drawing.Color.ForestGreen;
             this.lblTimer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTimer.Font = new System.Drawing.Font("Engravers MT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.ForeColor = System.Drawing.Color.PeachPuff;
+            this.lblTimer.ForeColor = System.Drawing.Color.LightGreen;
             this.lblTimer.Location = new System.Drawing.Point(884, 44);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(143, 31);
@@ -78,24 +78,22 @@
             // 
             // examStartBtn
             // 
-            this.examStartBtn.BackColor = System.Drawing.Color.Linen;
-            this.examStartBtn.Location = new System.Drawing.Point(530, 607);
+            this.examStartBtn.Location = new System.Drawing.Point(494, 586);
             this.examStartBtn.Name = "examStartBtn";
             this.examStartBtn.Size = new System.Drawing.Size(105, 34);
             this.examStartBtn.TabIndex = 7;
             this.examStartBtn.Text = "Click To Start";
-            this.examStartBtn.UseVisualStyleBackColor = false;
+            this.examStartBtn.UseVisualStyleBackColor = true;
             this.examStartBtn.Click += new System.EventHandler(this.examStartBtn_Click);
             // 
             // nextBtn
             // 
-            this.nextBtn.BackColor = System.Drawing.Color.Linen;
-            this.nextBtn.Location = new System.Drawing.Point(37, 607);
+            this.nextBtn.Location = new System.Drawing.Point(5, 586);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(128, 34);
             this.nextBtn.TabIndex = 8;
             this.nextBtn.Text = "Next Question";
-            this.nextBtn.UseVisualStyleBackColor = false;
+            this.nextBtn.UseVisualStyleBackColor = true;
             this.nextBtn.Visible = false;
             this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
@@ -105,9 +103,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.BackgroundImage = global::PRO1.Properties.Resources._334;
+            this.BackgroundImage = global::PRO1.Properties.Resources._3310;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1161, 676);
+            this.ClientSize = new System.Drawing.Size(1099, 637);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.examStartBtn);
             this.Controls.Add(this.panel1);
@@ -118,6 +116,7 @@
             this.Name = "AdaptiveTestForm";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Text = "Test";
+            this.Load += new System.EventHandler(this.AdaptiveTestForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

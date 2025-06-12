@@ -41,7 +41,7 @@ namespace PRO1
 
         private void FitTextToLabel(Label label)
         {
-            int minFontSize = 6;
+            int minFontSize = 12;
             int maxFontSize = label.Font.Size > 20 ? (int)label.Font.Size : 20;
             Size proposedSize = label.Size;
 
@@ -74,7 +74,7 @@ namespace PRO1
             {
                 if (control is RadioButton radioButton)
                 {
-                    radioButton.BackColor = Color.Turquoise;
+                    radioButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0))))); ;
                 }
             }
         }
@@ -82,25 +82,25 @@ namespace PRO1
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             this.uncheckRadioButtons();
-            radioButton3.BackColor = Color.Teal;
+            radioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(29)))));
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             this.uncheckRadioButtons();
-            radioButton2.BackColor = Color.Teal;
+            radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(29)))));
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             this.uncheckRadioButtons();
-            radioButton1.BackColor = Color.Teal;
+            radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(29)))));
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             this.uncheckRadioButtons();
-            radioButton4.BackColor = Color.Teal;
+            radioButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(29)))));
         }
 
         public string GetSelectedAnswer()

@@ -33,8 +33,7 @@ namespace PRO1
             txtEmail.BringToFront();
             cmbRole.BringToFront();
             RegisterB.BringToFront();
-            btnUsernameTip.BringToFront();
-            btnPasswordTip.BringToFront();
+            StyleWarmButton(btn_back);
 
         }
         public static List<string> ReadAllIDs(string filePath)
@@ -240,13 +239,20 @@ namespace PRO1
         }
 
 
-
+        private void StyleWarmButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.BackColor = ColorTranslator.FromHtml("#D9A066"); // חום בהיר
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#B86F50"); // חום כהה יותר בהובר
+            button.Cursor = Cursors.Hand;
+        }
         private void RegisterForm_Load(object sender, EventArgs e)
         {
             AddPlaceholders();
-            tip.SetToolTip(btnUsernameTip, "Username must be 6–8 characters long, contain up to two digits, and the rest letters (English).");
-            tip.SetToolTip(btnPasswordTip, "Password must be 8–10 characters long, with at least one letter, one digit, and one special character.");
-
+            
 
 
 

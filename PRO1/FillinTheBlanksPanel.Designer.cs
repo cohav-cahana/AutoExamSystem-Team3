@@ -31,8 +31,7 @@
             this.questionLbl = new System.Windows.Forms.Label();
             this.answerText = new System.Windows.Forms.TextBox();
             this.lblQuestionCounter = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // questionLbl
@@ -44,6 +43,7 @@
             this.questionLbl.TabIndex = 0;
             this.questionLbl.Text = "Question order \r\n";
             this.questionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.questionLbl.Click += new System.EventHandler(this.questionLbl_Click);
             // 
             // answerText
             // 
@@ -65,15 +65,12 @@
             this.lblQuestionCounter.TabIndex = 2;
             this.lblQuestionCounter.Text = "שאלה 1 מתוך 20";
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.Image = global::PRO1.Properties.Resources._338;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1173, 720);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.panel1.Location = new System.Drawing.Point(149, 105);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(766, 433);
+            this.panel1.TabIndex = 8;
             // 
             // FillinTheBlanksPanel
             // 
@@ -83,11 +80,10 @@
             this.Controls.Add(this.lblQuestionCounter);
             this.Controls.Add(this.answerText);
             this.Controls.Add(this.questionLbl);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Name = "FillinTheBlanksPanel";
-            this.Size = new System.Drawing.Size(1169, 688);
+            this.Size = new System.Drawing.Size(1064, 652);
             this.Load += new System.EventHandler(this.FillinTheBlanksPanel_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,6 +94,6 @@
         private System.Windows.Forms.Label questionLbl;
         private System.Windows.Forms.TextBox answerText;
         private System.Windows.Forms.Label lblQuestionCounter;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

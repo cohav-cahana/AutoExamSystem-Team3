@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,35 +71,7 @@ namespace PRO1
             };
         }
 
-        private async void Clickstart(object sender, EventArgs e)
-        {
-            String num = numberQuestion.Text;
-            String type = typeofQ.Text;
-            FirebaseHelper firebaseHelper = new FirebaseHelper();
-
-            if (!int.TryParse(num, out int number) || typeofQ.SelectedItem == null)
-            {
-                MessageBox.Show("Please enter the number of questions and the topic.");
-                return;
-            }
-
-            var easyQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "קל");
-            var mediumQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "בינוני");
-            var hardQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "קשה");
-
-            if (easyQuestions == null || easyQuestions.Count < number || mediumQuestions == null
-                || mediumQuestions.Count < number || hardQuestions == null || hardQuestions.Count < number)
-            {
-                MessageBox.Show("Not enough questions available for the selected topic.");
-                return;
-            }
-            else
-            {
-                AdaptiveTestForm adaptiveTestForm = new AdaptiveTestForm(user, this, number, easyQuestions, mediumQuestions, hardQuestions, type);
-                adaptiveTestForm.Show();
-                this.Hide();
-            }
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -117,9 +90,9 @@ namespace PRO1
                 return;
             }
 
-            var easyQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "קל");
-            var mediumQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "בינוני");
-            var hardQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "קשה");
+            var easyQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "Easy");
+            var mediumQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "Medium");
+            var hardQuestions = await firebaseHelper.GetQuestionsByTopicAndLevelAsync(type, "Hard");
 
             if (easyQuestions == null || easyQuestions.Count < number || mediumQuestions == null
                 || mediumQuestions.Count < number || hardQuestions == null || hardQuestions.Count < number)
@@ -166,7 +139,7 @@ namespace PRO1
             typeofQ = new ComboBox();
             typeofQ.Location = new Point(320, 130);
             typeofQ.Size = new Size(200, 30);
-            typeofQ.Items.AddRange(new string[] { "Algorithms", "Databases", "Software Testing" });
+            typeofQ.Items.AddRange(new string[] { "Algorithms","Software Testing","Statistics","Data Structures"});
             this.Controls.Add(typeofQ);
 
             // button2 - Back

@@ -550,7 +550,6 @@ C:\Users\maimo\source\repos\PRO1\PRO1\bin\Debug\zh-Hans\Microsoft.VisualStudio.T
 C:\Users\maimo\source\repos\PRO1\PRO1\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.csproj.AssemblyReference.cache
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.AdaptiveSelectionForm.resources
-C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.AdaptiveTestForm.resources
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.ExamSelection.resources
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.FillinTheBlanksPanel.resources
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.ExamManagerForm.resources
@@ -580,3 +579,4 @@ C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.csproj.CoreCompileInputs.ca
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.csproj.CopyComplete
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.exe
 C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.pdb
+C:\Users\maimo\source\repos\PRO1\PRO1\obj\Debug\PRO1.AdaptiveTestForm.resources

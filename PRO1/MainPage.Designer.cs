@@ -38,8 +38,7 @@
             this.lblContactInfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
 
-            this.btnExit = new System.Windows.Forms.Button();
-
+            
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();

@@ -38,7 +38,7 @@
             // 
             this.answerText.BackColor = System.Drawing.Color.White;
             this.answerText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.answerText.Location = new System.Drawing.Point(239, 165);
+            this.answerText.Location = new System.Drawing.Point(239, 183);
             this.answerText.Multiline = true;
             this.answerText.Name = "answerText";
             this.answerText.Size = new System.Drawing.Size(452, 128);
@@ -53,10 +53,11 @@
             this.questionLbl.ForeColor = System.Drawing.Color.Black;
             this.questionLbl.Location = new System.Drawing.Point(125, 38);
             this.questionLbl.Name = "questionLbl";
-            this.questionLbl.Size = new System.Drawing.Size(672, 84);
+            this.questionLbl.Size = new System.Drawing.Size(672, 128);
             this.questionLbl.TabIndex = 5;
             this.questionLbl.Text = "Question Number 1";
             this.questionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.questionLbl.Click += new System.EventHandler(this.questionLbl_Click);
             // 
             // lblQuestionCounter
             // 
@@ -88,6 +89,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "OpenQuestionUserControl";
             this.Size = new System.Drawing.Size(931, 447);
+            this.Load += new System.EventHandler(this.OpenQuestionUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

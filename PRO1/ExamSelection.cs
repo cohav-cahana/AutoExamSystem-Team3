@@ -97,6 +97,8 @@ namespace PRO1
 
         private void backBtn_Click(object sender, EventArgs e)
         {
+            
+
             studentForm.Show();
             this.Close();
         }

@@ -22,13 +22,15 @@ namespace PRO1
             questionLbl.Text = question.QuestionText;
             FitTextToLabel(questionLbl);
             lblQuestionCounter.Text = $"Question {numQuestion + 1} of {totalQuestions}";
-            this.BackgroundImage = Properties.Resources.jeffrey;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            lblQuestionCounter.BackColor = Color.FromArgb(120, Color.White);
+            questionLbl.BackColor = Color.FromArgb(120, Color.White);
+            lblQuestionCounter.ForeColor = Color.White;
+
         }
 
         private void FitTextToLabel(Label label)
         {
-            int minFontSize = 6;
+            int minFontSize = 12;
             int maxFontSize = label.Font.Size > 20 ? (int)label.Font.Size : 20;
             Size proposedSize = label.Size;
 
@@ -63,6 +65,11 @@ namespace PRO1
         }
 
         private void FillinTheBlanksPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void questionLbl_Click(object sender, EventArgs e)
         {
 
         }
