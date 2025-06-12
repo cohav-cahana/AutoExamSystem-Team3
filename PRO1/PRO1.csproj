@@ -176,6 +176,7 @@
     <Compile Include="AdaptiveTestForm.Designer.cs">
       <DependentUpon>AdaptiveTestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnswerSelector.cs" />
     <Compile Include="ExamResult.cs" />
     <Compile Include="ExamSelection.cs">
       <SubType>Form</SubType>

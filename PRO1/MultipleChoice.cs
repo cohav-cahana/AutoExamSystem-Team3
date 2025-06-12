@@ -22,9 +22,9 @@ namespace PRO1
             InitializeComponent();
             this.teacherId = teacherId;
 
-      
-            StyleLabel(label1);         
-            StyleLabel(label2);        
+
+            StyleLabel(label1);
+            StyleLabel(label2);
             StyleLabel(label3);
             StyleRadioButton(radioButton1);
             StyleRadioButton(radioButton2);
@@ -43,10 +43,10 @@ namespace PRO1
         }
         public MultipleChoice(string teacherId, Question question) : this(teacherId)
         {
-            
+
 
             this.editedQuestion = question;
-            
+
             questionKey = question.Id;
             textBox1.Text = question.QuestionText;
             textBox2.Text = question.Answer1;
@@ -56,7 +56,7 @@ namespace PRO1
             comboBox1.SelectedItem = question.Topic;
             comboBox2.SelectedItem = question.Level;
 
-            
+
             if (question.CorrectAnswer == question.Answer1) radioButton1.Checked = true;
             else if (question.CorrectAnswer == question.Answer2) radioButton2.Checked = true;
             else if (question.CorrectAnswer == question.Answer3) radioButton3.Checked = true;
@@ -128,11 +128,11 @@ namespace PRO1
                 ? new Font("Segoe UI", 16, FontStyle.Bold)
                 : new Font("Segoe UI", 11, FontStyle.Regular);
             label.TextAlign = ContentAlignment.MiddleRight;
-            label.RightToLeft = RightToLeft.No; 
+            label.RightToLeft = RightToLeft.No;
         }
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
-            Color semiTransparentWhite = Color.FromArgb(150, Color.White); 
+            Color semiTransparentWhite = Color.FromArgb(150, Color.White);
             using (SolidBrush brush = new SolidBrush(semiTransparentWhite))
             {
                 e.Graphics.FillRectangle(brush, panel4.ClientRectangle);
@@ -144,7 +144,7 @@ namespace PRO1
         {
             FirebaseHelper firebaseHelper = new FirebaseHelper();
 
-            
+
             string questionText = textBox1.Text;
             string answer1 = textBox2.Text;
             string answer2 = textBox3.Text;
@@ -168,7 +168,7 @@ namespace PRO1
             }
             if (editedQuestion != null)
             {
-                
+
                 editedQuestion.QuestionText = questionText;
                 editedQuestion.Answer1 = answer1;
                 editedQuestion.Answer2 = answer2;
@@ -199,7 +199,7 @@ namespace PRO1
             }
             else
             {
-                
+
                 await firebaseHelper.AddQuestionAsync("MultipleChoice", correctAnswer, topic, level, questionText, answer1, answer2, answer3, answer4, SessionManager.TeacherId);
                 MessageBox.Show("The question was saved successfully!");
             }
@@ -214,14 +214,32 @@ namespace PRO1
         }
 
 
+        //private string GetCorrectAnswer()
+        //{
+        //    if (radioButton1.Checked) return textBox2.Text;
+        //    if (radioButton2.Checked) return textBox3.Text;
+        //    if (radioButton3.Checked) return textBox4.Text;
+        //    if (radioButton4.Checked) return textBox5.Text;
+
+        //    return string.Empty; // אם לא נבחרה תשובה נכונה
+        //}
+
         private string GetCorrectAnswer()
         {
-            if (radioButton1.Checked) return textBox2.Text;
-            if (radioButton2.Checked) return textBox3.Text;
-            if (radioButton3.Checked) return textBox4.Text;
-            if (radioButton4.Checked) return textBox5.Text;
+            bool[] checks = {
+        radioButton1.Checked,
+        radioButton2.Checked,
+        radioButton3.Checked,
+        radioButton4.Checked
+    };
+            string[] answers = {
+        textBox2.Text,
+        textBox3.Text,
+        textBox4.Text,
+        textBox5.Text
+    };
 
-            return string.Empty; // אם לא נבחרה תשובה נכונה
+            return AnswerSelector.GetCorrectAnswer(checks, answers);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -256,5 +274,5 @@ namespace PRO1
 
         }
     }
- }
+}
 

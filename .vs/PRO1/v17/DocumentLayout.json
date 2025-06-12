@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\pro1\\adaptivetestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{EAEF1582-DB6D-47A3-ACE0-3AEF8B34EAA2}|PRO1.Tests\\PRO1.Tests.csproj|c:\\users\\amirs\\source\\repos\\cohav-cahana\\autoexamsystem-team3\\pro1.tests\\answerselectortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAEF1582-DB6D-47A3-ACE0-3AEF8B34EAA2}|PRO1.Tests\\PRO1.Tests.csproj|solutionrelative:pro1.tests\\answerselectortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\amirs\\source\\repos\\cohav-cahana\\autoexamsystem-team3\\pro1\\multiplechoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\multiplechoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\amirs\\source\\repos\\cohav-cahana\\autoexamsystem-team3\\pro1\\adaptivetestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\adaptivetestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -43,7 +51,7 @@
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\gradesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\amirs\\source\\repos\\cohav-cahana\\autoexamsystem-team3\\pro1\\lecturerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\pro1\\lecturerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\lecturerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -59,7 +67,7 @@
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\truefalse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|c:\\users\\amirs\\source\\repos\\cohav-cahana\\autoexamsystem-team3\\pro1\\open.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\pro1\\open.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{679C06D5-CA4F-4565-ADA4-8DD4EE180447}|PRO1\\PRO1.csproj|solutionrelative:pro1\\open.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -214,7 +222,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 327,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -222,55 +230,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "MultipleChoice.cs",
+              "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\MultipleChoice.cs",
+              "RelativeDocumentMoniker": "PRO1\\MultipleChoice.cs",
+              "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\MultipleChoice.cs",
+              "RelativeToolTip": "PRO1\\MultipleChoice.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAmwIoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T18:43:51.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AnswerSelectorTests.cs",
+              "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1.Tests\\AnswerSelectorTests.cs",
+              "RelativeDocumentMoniker": "PRO1.Tests\\AnswerSelectorTests.cs",
+              "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1.Tests\\AnswerSelectorTests.cs",
+              "RelativeToolTip": "PRO1.Tests\\AnswerSelectorTests.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T18:43:18.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\Form1.cs",
               "RelativeDocumentMoniker": "PRO1\\Form1.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\Form1.cs [Design]",
               "RelativeToolTip": "PRO1\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:27:00.541Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T07:27:00.541Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "FillInTheBlanks.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\FillInTheBlanks.cs",
               "RelativeDocumentMoniker": "PRO1\\FillInTheBlanks.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\FillInTheBlanks.cs [Design]",
               "RelativeToolTip": "PRO1\\FillInTheBlanks.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:57:38.623Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T06:57:38.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ExamSelection.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\ExamSelection.cs",
               "RelativeDocumentMoniker": "PRO1\\ExamSelection.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\ExamSelection.cs [Design]",
               "RelativeToolTip": "PRO1\\ExamSelection.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T23:35:01.528Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T23:35:01.528Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ExamManagerForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\ExamManagerForm.cs",
               "RelativeDocumentMoniker": "PRO1\\ExamManagerForm.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\ExamManagerForm.cs [Design]",
               "RelativeToolTip": "PRO1\\ExamManagerForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:57:36.846Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T06:57:36.846Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AdaptiveTestForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\AdaptiveTestForm.cs",
               "RelativeDocumentMoniker": "PRO1\\AdaptiveTestForm.cs",
@@ -282,91 +312,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AdaptiveSelectionForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\AdaptiveSelectionForm.cs",
               "RelativeDocumentMoniker": "PRO1\\AdaptiveSelectionForm.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\AdaptiveSelectionForm.cs [Design]",
               "RelativeToolTip": "PRO1\\AdaptiveSelectionForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T23:14:00.276Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T23:14:00.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "frontPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\frontPage.cs",
               "RelativeDocumentMoniker": "PRO1\\frontPage.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\frontPage.cs [Design]",
               "RelativeToolTip": "PRO1\\frontPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:45:07.076Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T07:45:07.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "GradeChartForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradeChartForm.cs",
               "RelativeDocumentMoniker": "PRO1\\GradeChartForm.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradeChartForm.cs [Design]",
               "RelativeToolTip": "PRO1\\GradeChartForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:02:03.949Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T07:02:03.949Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "GradeFormTeacher.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradeFormTeacher.cs",
               "RelativeDocumentMoniker": "PRO1\\GradeFormTeacher.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradeFormTeacher.cs [Design]",
               "RelativeToolTip": "PRO1\\GradeFormTeacher.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:52:32.823Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T06:52:32.823Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "GradesForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradesForm.cs",
               "RelativeDocumentMoniker": "PRO1\\GradesForm.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradesForm.cs [Design]",
               "RelativeToolTip": "PRO1\\GradesForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:57:44.705Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T06:57:44.705Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "LecturerForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\LecturerForm.cs",
               "RelativeDocumentMoniker": "PRO1\\LecturerForm.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\LecturerForm.cs [Design]",
               "RelativeToolTip": "PRO1\\LecturerForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T16:34:32.675Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T16:34:32.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "MainPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\MainPage.cs",
               "RelativeDocumentMoniker": "PRO1\\MainPage.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\MainPage.cs [Design]",
               "RelativeToolTip": "PRO1\\MainPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:57:48.76Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T06:57:48.76Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "MultipleChoice.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\MultipleChoice.cs",
               "RelativeDocumentMoniker": "PRO1\\MultipleChoice.cs",
@@ -378,79 +401,73 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "TrueFalse.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\TrueFalse.cs",
               "RelativeDocumentMoniker": "PRO1\\TrueFalse.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\TrueFalse.cs [Design]",
               "RelativeToolTip": "PRO1\\TrueFalse.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:12:31.787Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T07:12:31.787Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Open.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\Open.cs",
               "RelativeDocumentMoniker": "PRO1\\Open.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\Open.cs [Design]",
               "RelativeToolTip": "PRO1\\Open.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T16:37:17.573Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T16:37:17.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "RegisterForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\RegisterForm.cs",
               "RelativeDocumentMoniker": "PRO1\\RegisterForm.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\RegisterForm.cs [Design]",
               "RelativeToolTip": "PRO1\\RegisterForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T15:45:49.517Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T15:45:49.517Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "TestForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\TestForm.cs",
               "RelativeDocumentMoniker": "PRO1\\TestForm.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\TestForm.cs [Design]",
               "RelativeToolTip": "PRO1\\TestForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T22:55:15.912Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T22:55:15.912Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "StudentForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\StudentForm.cs",
               "RelativeDocumentMoniker": "PRO1\\StudentForm.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\StudentForm.cs [Design]",
               "RelativeToolTip": "PRO1\\StudentForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T22:57:05.887Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T22:57:05.887Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "QuestionForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\QuestionForm.cs",
               "RelativeDocumentMoniker": "PRO1\\QuestionForm.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\QuestionForm.cs [Design]",
               "RelativeToolTip": "PRO1\\QuestionForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:52:51.52Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T06:52:51.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "MultipleChoiceUserControl.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\MultipleChoiceUserControl.cs",
               "RelativeDocumentMoniker": "PRO1\\MultipleChoiceUserControl.cs",
@@ -458,12 +475,11 @@
               "RelativeToolTip": "PRO1\\MultipleChoiceUserControl.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAkwEwAAACPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T14:44:31.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T14:44:31.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "GradeFormTeacher.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradeFormTeacher.cs",
               "RelativeDocumentMoniker": "PRO1\\GradeFormTeacher.cs",
@@ -471,49 +487,44 @@
               "RelativeToolTip": "PRO1\\GradeFormTeacher.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAYwDsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:53:16.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T06:53:16.163Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "ExamTests.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1.Tests\\ExamTests.cs",
               "RelativeDocumentMoniker": "PRO1.Tests\\ExamTests.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1.Tests\\ExamTests.cs",
               "RelativeToolTip": "PRO1.Tests\\ExamTests.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAYwIgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T15:11:17.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T15:11:17.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "GradeCalculatorTests.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1.Tests\\GradeCalculatorTests.cs",
               "RelativeDocumentMoniker": "PRO1.Tests\\GradeCalculatorTests.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1.Tests\\GradeCalculatorTests.cs",
               "RelativeToolTip": "PRO1.Tests\\GradeCalculatorTests.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T15:10:49.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "FirebaseHelperTests.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1.Tests\\FirebaseHelperTests.cs",
               "RelativeDocumentMoniker": "PRO1.Tests\\FirebaseHelperTests.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1.Tests\\FirebaseHelperTests.cs",
               "RelativeToolTip": "PRO1.Tests\\FirebaseHelperTests.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T15:56:03.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "GradeChartForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradeChartForm.Designer.cs",
               "RelativeDocumentMoniker": "PRO1\\GradeChartForm.Designer.cs",
@@ -521,12 +532,11 @@
               "RelativeToolTip": "PRO1\\GradeChartForm.Designer.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T15:40:31.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T15:40:31.493Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "frontPage.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\frontPage.cs",
               "RelativeDocumentMoniker": "PRO1\\frontPage.cs",
@@ -534,12 +544,11 @@
               "RelativeToolTip": "PRO1\\frontPage.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAxwBYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:45:15.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T07:45:15.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "GradeChartForm.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradeChartForm.cs",
               "RelativeDocumentMoniker": "PRO1\\GradeChartForm.cs",
@@ -547,12 +556,11 @@
               "RelativeToolTip": "PRO1\\GradeChartForm.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAIwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:02:31.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T07:02:31.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "OpenQuestionUserControl.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\OpenQuestionUserControl.cs",
               "RelativeDocumentMoniker": "PRO1\\OpenQuestionUserControl.cs",
@@ -564,7 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "TestForm.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\TestForm.cs",
               "RelativeDocumentMoniker": "PRO1\\TestForm.cs",
@@ -572,12 +580,11 @@
               "RelativeToolTip": "PRO1\\TestForm.cs",
               "ViewState": "AgIAAM4AAAAAAAAAAAAjwNgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T22:55:25.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T22:55:25.88Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "GradeFormTeacher.Designer.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradeFormTeacher.Designer.cs",
               "RelativeDocumentMoniker": "PRO1\\GradeFormTeacher.Designer.cs",
@@ -585,12 +592,11 @@
               "RelativeToolTip": "PRO1\\GradeFormTeacher.Designer.cs",
               "ViewState": "AgIAAKQAAAAAAAAAAAAAwLMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:00:16.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T07:00:16.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "ExamResult.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\ExamResult.cs",
               "RelativeDocumentMoniker": "PRO1\\ExamResult.cs",
@@ -602,7 +608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "FirebaseHelper.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\FirebaseHelper.cs",
               "RelativeDocumentMoniker": "PRO1\\FirebaseHelper.cs",
@@ -614,7 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "OpenQuestionUserControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\OpenQuestionUserControl.cs",
               "RelativeDocumentMoniker": "PRO1\\OpenQuestionUserControl.cs",
@@ -625,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "AdaptiveTestForm.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\AdaptiveTestForm.cs",
               "RelativeDocumentMoniker": "PRO1\\AdaptiveTestForm.cs",
@@ -633,12 +639,11 @@
               "RelativeToolTip": "PRO1\\AdaptiveTestForm.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAqwFAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T23:30:58.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T23:30:58.757Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "OpenQuestionUserControl.Designer.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\OpenQuestionUserControl.Designer.cs",
               "RelativeDocumentMoniker": "PRO1\\OpenQuestionUserControl.Designer.cs",
@@ -650,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "FillinTheBlanksPanel.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\FillinTheBlanksPanel.cs",
               "RelativeDocumentMoniker": "PRO1\\FillinTheBlanksPanel.cs",
@@ -661,19 +666,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "MultipleChoiceUserControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\MultipleChoiceUserControl.cs",
               "RelativeDocumentMoniker": "PRO1\\MultipleChoiceUserControl.cs",
               "ToolTip": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\MultipleChoiceUserControl.cs [Design]",
               "RelativeToolTip": "PRO1\\MultipleChoiceUserControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T14:49:48.356Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T14:49:48.356Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "TrueFalseUserControl.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\TrueFalseUserControl.cs",
               "RelativeDocumentMoniker": "PRO1\\TrueFalseUserControl.cs",
@@ -685,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "TrueFalseUserControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\TrueFalseUserControl.cs",
               "RelativeDocumentMoniker": "PRO1\\TrueFalseUserControl.cs",
@@ -696,7 +700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "AdaptiveSelectionForm.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\AdaptiveSelectionForm.cs",
               "RelativeDocumentMoniker": "PRO1\\AdaptiveSelectionForm.cs",
@@ -704,12 +708,11 @@
               "RelativeToolTip": "PRO1\\AdaptiveSelectionForm.cs",
               "ViewState": "AgIAAIkAAAAAAAAAAAAYwJwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T23:14:41.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T23:14:41.986Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "ExamSelection.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\ExamSelection.cs",
               "RelativeDocumentMoniker": "PRO1\\ExamSelection.cs",
@@ -717,12 +720,11 @@
               "RelativeToolTip": "PRO1\\ExamSelection.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAvwCwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T23:34:37.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T23:34:37.093Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "GradesForm.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\GradesForm.cs",
               "RelativeDocumentMoniker": "PRO1\\GradesForm.cs",
@@ -730,12 +732,11 @@
               "RelativeToolTip": "PRO1\\GradesForm.cs",
               "ViewState": "AgIAAPQAAAAAAAAAAAAAAAcBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:28:13.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T07:28:13.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "StudentForm.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\StudentForm.cs",
               "RelativeDocumentMoniker": "PRO1\\StudentForm.cs",
@@ -743,12 +744,11 @@
               "RelativeToolTip": "PRO1\\StudentForm.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAkwFMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T22:58:14.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T22:58:14.233Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "TrueFalse.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\TrueFalse.cs",
               "RelativeDocumentMoniker": "PRO1\\TrueFalse.cs",
@@ -756,12 +756,11 @@
               "RelativeToolTip": "PRO1\\TrueFalse.cs",
               "ViewState": "AgIAAHQAAAAAAAAAAADgv4MAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:12:33.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T07:12:33.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "FillInTheBlanks.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\FillInTheBlanks.cs",
               "RelativeDocumentMoniker": "PRO1\\FillInTheBlanks.cs",
@@ -769,12 +768,11 @@
               "RelativeToolTip": "PRO1\\FillInTheBlanks.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T07:25:38.022Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T07:25:38.022Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "QuestionForm.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\QuestionForm.cs",
               "RelativeDocumentMoniker": "PRO1\\QuestionForm.cs",
@@ -782,12 +780,11 @@
               "RelativeToolTip": "PRO1\\QuestionForm.cs",
               "ViewState": "AgIAAN0AAAAAAAAAAAAkwOgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T06:52:57.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T06:52:57.846Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "SessionManager.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\SessionManager.cs",
               "RelativeDocumentMoniker": "PRO1\\SessionManager.cs",
@@ -799,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "LoginManager.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\LoginManager.cs",
               "RelativeDocumentMoniker": "PRO1\\LoginManager.cs",
@@ -811,7 +808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "AdaptiveExam.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\AdaptiveExam.cs",
               "RelativeDocumentMoniker": "PRO1\\AdaptiveExam.cs",
@@ -823,7 +820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "AdaptiveTestForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\AdaptiveTestForm.Designer.cs",
               "RelativeDocumentMoniker": "PRO1\\AdaptiveTestForm.Designer.cs",
@@ -831,12 +828,11 @@
               "RelativeToolTip": "PRO1\\AdaptiveTestForm.Designer.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAcwBUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T23:00:27.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T23:00:27.95Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\amirs\\source\\repos\\cohav-cahana\\AutoExamSystem-Team3\\PRO1\\Program.cs",
               "RelativeDocumentMoniker": "PRO1\\Program.cs",
