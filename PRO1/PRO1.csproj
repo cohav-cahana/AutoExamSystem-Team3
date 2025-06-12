@@ -420,8 +420,8 @@
     <Content Include="Images\AutoExamP_.jpg" />
     <Content Include="Images\back2.jpg" />
     <Content Include="Resources\10313778.jpg" />
-    <None Include="Resources\3317.jpg" />
     <Content Include="Resources\SYSTEM_OUT.png" />
+    <None Include="Resources\3317.jpg" />
     <None Include="Resources\הורדה %281%29.png" />
     <None Include="Resources\הורדה.png" />
     <None Include="Resources\חדש.jpg" />

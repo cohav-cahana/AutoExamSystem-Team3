@@ -34,6 +34,7 @@ namespace PRO1
             cmbRole.BringToFront();
             RegisterB.BringToFront();
             StyleWarmButton(btn_back);
+            StyleWarmButton(RegisterB);
 
         }
         public static List<string> ReadAllIDs(string filePath)
@@ -185,7 +186,6 @@ namespace PRO1
             {
                 txtPassword.Text = "";
                 txtPassword.ForeColor = Color.Black;
-                txtPassword.PasswordChar = '●';
             }
         }
 
