@@ -130,7 +130,7 @@ namespace PRO1
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "StudentForm";
-            this.Text = "StudentForm";
+            this.Text = "Student Main Page";
             this.Load += new System.EventHandler(this.StudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

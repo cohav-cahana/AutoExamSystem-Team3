@@ -16,7 +16,7 @@ namespace PRO1
         public GradeFormTeacher()
         {
             InitializeComponent();
-            this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
+            //this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
             StyleWarmButton(btnShowChart);
             StyleWarmButton(btn_back2);
 
@@ -40,7 +40,9 @@ namespace PRO1
 
             try
             {
+                dgvScores.Hide();
                 var allGrades = await firebaseHelper.GetAllGradesAsync();
+                dgvScores.Show();
 
 
                 high = 0;
@@ -49,18 +51,34 @@ namespace PRO1
 
                 foreach (var (username, userId, examResult) in allGrades)
                 {
-                    dgvScores.Rows.Add(
+                    int rowIndex = dgvScores.Rows.Add(
                         username,
                         userId,
-                        examResult.Score,
+                        examResult.Grade,
                         examResult.Subject,
                         examResult.Level
                     );
 
+                    var gradeCell = dgvScores.Rows[rowIndex].Cells[2];
 
-                    if (examResult.Score >= 85)
+                    if (examResult.Grade >= 85)
+                    {
+                        gradeCell.Style.BackColor = Color.FromArgb(240, 220, 200);
+                    }
+                    else if (examResult.Grade >= 56)
+                    {
+                        gradeCell.Style.BackColor = Color.FromArgb(128, 64, 0);
+                    }
+                    else
+                    {
+                        gradeCell.Style.BackColor = Color.Black;
+                        gradeCell.Style.ForeColor = Color.White;
+                    }
+
+
+                    if (examResult.Grade >= 85)
                         high++;
-                    else if (examResult.Score >= 56)
+                    else if (examResult.Grade >= 56)
                         mid++;
                     else
                         low++;

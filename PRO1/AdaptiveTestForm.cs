@@ -242,6 +242,7 @@ namespace PRO1
             }
             else
             {
+                examTimer.Stop();
                 float score = (correctAnswers * 100) / totalQuestions;
                 AdaptiveExam exam = new AdaptiveExam
                 {

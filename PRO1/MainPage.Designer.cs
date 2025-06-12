@@ -37,8 +37,6 @@
             this.btnContact = new System.Windows.Forms.Button();
             this.lblContactInfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-
-            
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -153,7 +151,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
-
             // 
             // MainPage
             // 
@@ -169,7 +166,7 @@
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MainPage";
-            this.Text = "MainPage";
+            this.Text = "Welcome To The System";
             this.sidePanel.ResumeLayout(false);
             this.sidePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

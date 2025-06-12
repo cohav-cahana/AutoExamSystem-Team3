@@ -108,7 +108,7 @@
             this.btn_createQ.Name = "btn_createQ";
             this.btn_createQ.Size = new System.Drawing.Size(160, 123);
             this.btn_createQ.TabIndex = 12;
-            this.btn_createQ.Text = "Create Qutestion";
+            this.btn_createQ.Text = "Create Question";
             this.btn_createQ.UseVisualStyleBackColor = false;
             this.btn_createQ.Click += new System.EventHandler(this.btn_createQ_Click);
             // 
@@ -171,7 +171,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Lecturer Main Page";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

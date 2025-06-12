@@ -206,12 +206,15 @@ namespace PRO1
             }
             else
             {
+                examTimer.Stop();
                 float score = (correctAnswers * 100) / totalQuestions;
                 ExamResult result = new ExamResult
                 {
                     UserId = currentUser.UserId,
                     ExamId = currentExam.Id,
                     Grade = score,
+                    Subject = currentExam.Topics.First(),
+                    Level = currentExam.Difficulty,
                     TakenAt = DateTime.Now
                 };
                 FirebaseHelper firebaseHelper = new FirebaseHelper();

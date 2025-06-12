@@ -19,7 +19,7 @@ namespace PRO1
             chart1.Series.Clear();
             chart1.Titles.Clear();
 
-            chart1.Titles.Add("התפלגות ציונים לפי טווחים");
+            chart1.Titles.Add("Student Grade Distribution By Ranges");
 
             Series series = new Series("מספר תלמידים");
             series.ChartType = SeriesChartType.Column;
@@ -30,8 +30,8 @@ namespace PRO1
 
             chart1.Series.Add(series);
 
-            chart1.ChartAreas[0].AxisX.Title = "טווח ציונים";
-            chart1.ChartAreas[0].AxisY.Title = "כמות תלמידים";
+            chart1.ChartAreas[0].AxisX.Title = "Grade Range";
+            chart1.ChartAreas[0].AxisY.Title = "Amount Of Students";
         }
         private void GradeChartForm_Load(object sender, EventArgs e)
         {

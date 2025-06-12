@@ -180,7 +180,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "GradesForm";
-            this.Text = "GradesForm";
+            this.Text = "Student Grades Page";
             this.Load += new System.EventHandler(this.GradesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGrades)).EndInit();

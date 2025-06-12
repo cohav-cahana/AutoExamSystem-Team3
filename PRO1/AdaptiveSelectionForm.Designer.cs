@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 450);
             this.Name = "AdaptiveSelectionForm";
-            this.Text = "AdaptiveSelectionForm";
+            this.Text = "Adaptive Exam Selection Page";
             this.Load += new System.EventHandler(this.AdaptiveSelectionForm_Load);
             this.ResumeLayout(false);
 

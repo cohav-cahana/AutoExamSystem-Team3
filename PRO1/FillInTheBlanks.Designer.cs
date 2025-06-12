@@ -197,7 +197,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FillInTheBlanks";
-            this.Text = "FillInTheBlanks";
+            this.Text = "Fill In The Blanks Question Creation";
             this.Load += new System.EventHandler(this.FillInTheBlanks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainPanel.ResumeLayout(false);

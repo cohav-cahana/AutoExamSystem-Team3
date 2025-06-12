@@ -202,7 +202,7 @@
             this.Controls.Add(this.panel);
             this.Controls.Add(this.pictureBox1);
             this.Name = "TrueFalse";
-            this.Text = "TrueFalse";
+            this.Text = "True Or False Question Creation";
             this.Load += new System.EventHandler(this.TrueFalse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

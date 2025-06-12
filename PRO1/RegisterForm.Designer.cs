@@ -189,7 +189,7 @@ namespace PRO1
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RegisterForm";
-            this.Text = "RegisterForm";
+            this.Text = "Register";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

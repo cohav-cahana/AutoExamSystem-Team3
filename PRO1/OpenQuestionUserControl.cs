@@ -21,11 +21,12 @@ namespace PRO1
             this.numQuestion = numQuestion;
             questionLbl.Text = question.QuestionText;
             FitTextToLabel(questionLbl);
+            lblQuestionCounter.ForeColor = Color.Black;
             lblQuestionCounter.Text = $"Question {numQuestion + 1} of {totalQuestions}";
             panel1.BackColor = Color.FromArgb(120, Color.White);
             panel1.BorderStyle = BorderStyle.None;
-            lblQuestionCounter.BackColor = Color.FromArgb(120, Color.White);
-            questionLbl.BackColor = Color.FromArgb(120, Color.White);
+            questionLbl.BackColor = Color.Transparent;
+            lblQuestionCounter.BackColor = Color.Transparent;
         }
 
         private void FitTextToLabel(Label label)

@@ -128,7 +128,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TestForm";
             this.Padding = new System.Windows.Forms.Padding(2);
-            this.Text = "Test";
+            this.Text = "Test Page";
             this.Load += new System.EventHandler(this.TestForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

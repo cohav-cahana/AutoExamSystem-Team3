@@ -120,8 +120,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::PRO1.Properties.Resources.students_banner_cropped;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 205);
@@ -147,7 +147,7 @@
             this.Controls.Add(this.txtusername_log);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frontPage";
-            this.Text = "frontPage";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.frontPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

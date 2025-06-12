@@ -70,11 +70,11 @@ namespace PRO1
 
         private void uncheckRadioButtons()
         {
-            foreach (Control control in this.Controls)
+            foreach (Control control in panel1.Controls)
             {
                 if (control is RadioButton radioButton)
                 {
-                    radioButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0))))); ;
+                    radioButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
                 }
             }
         }

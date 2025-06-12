@@ -265,7 +265,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MultipleChoice";
-            this.Text = "MultipleChoice";
+            this.Text = "Multiple Choice Question Creation";
             this.Load += new System.EventHandler(this.MultipleChoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);

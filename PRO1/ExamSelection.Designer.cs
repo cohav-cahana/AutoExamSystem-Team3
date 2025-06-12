@@ -41,8 +41,8 @@
             this.startExamBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_A = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -189,6 +189,16 @@
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btn_A
+            // 
+            this.btn_A.Location = new System.Drawing.Point(623, 406);
+            this.btn_A.Name = "btn_A";
+            this.btn_A.Size = new System.Drawing.Size(225, 52);
+            this.btn_A.TabIndex = 11;
+            this.btn_A.Text = "Start Adaptive Exam";
+            this.btn_A.UseVisualStyleBackColor = true;
+            this.btn_A.Click += new System.EventHandler(this.btn_A_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PRO1.Properties.Resources._332;
@@ -199,16 +209,6 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btn_A
-            // 
-            this.btn_A.Location = new System.Drawing.Point(623, 406);
-            this.btn_A.Name = "btn_A";
-            this.btn_A.Size = new System.Drawing.Size(225, 52);
-            this.btn_A.TabIndex = 11;
-            this.btn_A.Text = "Start Adaptive Exam";
-            this.btn_A.UseVisualStyleBackColor = true;
-            this.btn_A.Click += new System.EventHandler(this.btn_A_Click);
             // 
             // ExamSelection
             // 
@@ -229,7 +229,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "ExamSelection";
-            this.Text = "ExamSelection";
+            this.Text = "Exam Selection Page";
             this.Load += new System.EventHandler(this.ExamSelection_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

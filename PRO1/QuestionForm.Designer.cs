@@ -126,7 +126,7 @@
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.pictureBox1);
             this.Name = "QuestionForm";
-            this.Text = " ";
+            this.Text = " Question Creation";
             this.Load += new System.EventHandler(this.QuestionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

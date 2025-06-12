@@ -169,7 +169,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "GradeFormTeacher";
-            this.Text = "GradeFormTeacher";
+            this.Text = "Students Grades List";
             this.Load += new System.EventHandler(this.GradeFormTeacher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

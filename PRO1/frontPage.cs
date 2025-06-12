@@ -21,7 +21,6 @@ namespace PRO1
         {
             InitializeComponent();
             this.BackColor = Color.White;
-
             //panel1.BackColor = Color.FromArgb(120, Color.White);  
             //panel1.BorderStyle = BorderStyle.None;
             StyleWarmButton(button1);
@@ -51,7 +50,7 @@ namespace PRO1
 
             if (!File.Exists(filePath))
             {
-                MessageBox.Show("קובץ המשתמשים לא נמצא.");
+                MessageBox.Show("Student File Not Found");
                 return;
             }
 
@@ -82,14 +81,14 @@ namespace PRO1
 
                     if (excelRole.ToLower() == "student")
                     {
-                        MessageBox.Show("ברוך הבא סטודנט!");
+                        MessageBox.Show("Welcome Student!");
                         StudentForm studentForm = new StudentForm(user, this);
                         studentForm.Show();
                         this.Hide();
                     }
                     else if (excelRole.ToLower() == "lecture")
                     {
-                        MessageBox.Show("שלום מרצה!");
+                        MessageBox.Show("Welcome Lecturer!");
                         Form1 lecturerForm = new Form1();
                         lecturerForm.Show();
                         this.Hide();
@@ -101,7 +100,7 @@ namespace PRO1
 
             if (!found)
             {
-                MessageBox.Show("שם המשתמש או הסיסמה שגויים.");
+                MessageBox.Show("Name Or Password Entered Incorrectly.");
             }
         }
         private void SetPlaceholder(TextBox textBox, string placeholder)

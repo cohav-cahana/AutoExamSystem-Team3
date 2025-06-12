@@ -83,9 +83,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.lblQuestionCounter);
-            this.Controls.Add(this.questionLbl);
-            this.Controls.Add(this.answerText);
+            this.panel1.Controls.Add(this.lblQuestionCounter);
+            this.panel1.Controls.Add(this.questionLbl);
+            this.panel1.Controls.Add(this.answerText);
             this.Controls.Add(this.panel1);
             this.Name = "OpenQuestionUserControl";
             this.Size = new System.Drawing.Size(931, 447);

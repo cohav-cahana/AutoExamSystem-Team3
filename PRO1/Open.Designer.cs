@@ -181,7 +181,7 @@
             this.Controls.Add(this.panelmain);
             this.Controls.Add(this.pictureBox1);
             this.Name = "OpenQuestion";
-            this.Text = "OpenQuestion";
+            this.Text = "Open Question Creation";
             this.Load += new System.EventHandler(this.OpenQuestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelmain.ResumeLayout(false);
