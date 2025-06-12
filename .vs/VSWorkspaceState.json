@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\PRO1"
+    "\\PRO1",
+    "\\PRO1.Tests"
   ],
-  "SelectedNode": "\\PRO1\\AdaptiveSelectionForm.cs",
+  "SelectedNode": "\\PRO1.Tests\\AnswerSelectorTests.cs",
   "PreviewInSolutionExplorer": false
 }

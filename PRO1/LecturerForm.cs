@@ -162,9 +162,9 @@ namespace PRO1
 
 
             var levels = allQuestions
-                           .Select(q => q.Level)
+                           .Select(q => q.Level?.Trim())
                            .Where(level => !string.IsNullOrWhiteSpace(level))
-                           .Distinct()
+                           .Distinct(StringComparer.OrdinalIgnoreCase)
                            .ToList();
 
             cmbDifficulty.Items.Clear();
@@ -279,6 +279,11 @@ namespace PRO1
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmbDifficulty_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

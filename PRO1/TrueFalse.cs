@@ -25,7 +25,6 @@ namespace PRO1
             label3.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
             button1.Font = new Font("Segoe UI", 12, FontStyle.Regular);
-            button2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
             radioButton1.Font = new Font("Segoe UI", 12, FontStyle.Regular);
             radioButton2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
@@ -46,7 +45,6 @@ namespace PRO1
             label3.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
             button1.Font = new Font("Segoe UI", 12, FontStyle.Regular);
-            button2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
             radioButton1.Font = new Font("Segoe UI", 12, FontStyle.Regular);
             radioButton2.Font = new Font("Segoe UI", 12, FontStyle.Regular);
@@ -161,13 +159,7 @@ namespace PRO1
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-            QuestionForm questionForm = new QuestionForm();
-            questionForm.Show();
-        }
+    
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

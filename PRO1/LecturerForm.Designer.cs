@@ -89,6 +89,7 @@ namespace PRO1
             this.cmbDifficulty.Name = "cmbDifficulty";
             this.cmbDifficulty.Size = new System.Drawing.Size(219, 24);
             this.cmbDifficulty.TabIndex = 5;
+            this.cmbDifficulty.SelectedIndexChanged += new System.EventHandler(this.cmbDifficulty_SelectedIndexChanged);
             // 
             // btnCreatExam
             // 
