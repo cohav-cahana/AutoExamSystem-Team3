@@ -105,7 +105,8 @@
             // chartGrades
             // 
             this.chartGrades.BackColor = System.Drawing.Color.Transparent;
-            this.chartGrades.BackImage = "C:\\Users\\maimo\\Pictures\\Screenshots\\צילום מסך 2025-06-12 133841.png";
+            this.chartGrades.BackImage = "";
+            this.chartGrades.BackgroundImage = Properties.Resources.הורדה;
             this.chartGrades.BorderlineColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
             this.chartGrades.ChartAreas.Add(chartArea1);
@@ -114,7 +115,7 @@
             this.chartGrades.Location = new System.Drawing.Point(230, 54);
             this.chartGrades.Name = "chartGrades";
             this.chartGrades.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series1.BackImage = "C:\\Users\\maimo\\Desktop\\הורדה.png";
+            //series1.BackImage = "C:\\Users\\maimo\\Desktop\\הורדה.png";
             series1.BackImageTransparentColor = System.Drawing.Color.Transparent;
             series1.BackSecondaryColor = System.Drawing.Color.Transparent;
             series1.BorderColor = System.Drawing.Color.Transparent;
