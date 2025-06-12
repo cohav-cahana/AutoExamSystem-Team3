@@ -213,6 +213,7 @@ namespace PRO1
                     UserId = currentUser.UserId,
                     ExamId = currentExam.Id,
                     Grade = score,
+                    IsAdaptive = false,
                     Subject = currentExam.Topics.First(),
                     Level = currentExam.Difficulty,
                     TakenAt = DateTime.Now

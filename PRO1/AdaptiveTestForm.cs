@@ -79,8 +79,9 @@ namespace PRO1
                     UserId = currentUser.UserId,
                     ExamId = exam.Id,
                     Grade = score,
-                    TakenAt = DateTime.Now,
-                    IsAdaptive = true
+                    Subject = exam.Topics.First(),
+                    IsAdaptive = true,
+                    TakenAt = DateTime.Now
                 };
                 FirebaseHelper firebaseHelper = new FirebaseHelper();
                 await firebaseHelper.SaveAdaptiveExamAsync(exam);

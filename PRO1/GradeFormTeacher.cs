@@ -56,7 +56,7 @@ namespace PRO1
                         userId,
                         examResult.Grade,
                         examResult.Subject,
-                        examResult.Level
+                        examResult.IsAdaptive ? "Adaptive" : examResult.Level
                     );
 
                     var gradeCell = dgvScores.Rows[rowIndex].Cells[2];
