@@ -322,6 +322,24 @@ public class FirebaseHelper
 
         return questions.Select(q => q.Object).ToList();
     }
+    public async Task<List<User>> GetAllUsersAsync()
+    {
+        var firebaseUsers = await firebase
+            .Child("users")
+            .OnceAsync<User>();
+
+        List<User> users = new List<User>();
+
+        foreach (var user in firebaseUsers)
+        {
+            User u = user.Object;
+            u.UserId = user.Key; 
+            users.Add(u);
+        }
+
+        return users;
+    }
+
     public async Task<User> GetUserByIdAsync(string userId)
     {
         var firebaseUser = await firebase

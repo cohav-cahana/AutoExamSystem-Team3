@@ -52,6 +52,9 @@ namespace PRO1
             this.lblRegister = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.BACKpanel = new System.Windows.Forms.Panel();
+            this.lblHelpPassword = new System.Windows.Forms.Label();
+            this.lblHelpUsername = new System.Windows.Forms.Label();
+            this.BACKpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -82,7 +85,7 @@ namespace PRO1
             // 
             this.txtID.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtID.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(389, 304);
+            this.txtID.Location = new System.Drawing.Point(149, 214);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(240, 38);
@@ -162,10 +165,39 @@ namespace PRO1
             // BACKpanel
             // 
             this.BACKpanel.BackColor = System.Drawing.Color.White;
+            this.BACKpanel.Controls.Add(this.lblHelpPassword);
+            this.BACKpanel.Controls.Add(this.lblHelpUsername);
+            this.BACKpanel.Controls.Add(this.txtID);
             this.BACKpanel.Location = new System.Drawing.Point(240, 84);
             this.BACKpanel.Name = "BACKpanel";
             this.BACKpanel.Size = new System.Drawing.Size(536, 483);
             this.BACKpanel.TabIndex = 18;
+            // 
+            // lblHelpPassword
+            // 
+            this.lblHelpPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblHelpPassword.AutoSize = true;
+            this.lblHelpPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblHelpPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHelpPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblHelpPassword.Location = new System.Drawing.Point(395, 162);
+            this.lblHelpPassword.Name = "lblHelpPassword";
+            this.lblHelpPassword.Size = new System.Drawing.Size(21, 28);
+            this.lblHelpPassword.TabIndex = 8;
+            this.lblHelpPassword.Text = "?";
+            // 
+            // lblHelpUsername
+            // 
+            this.lblHelpUsername.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblHelpUsername.AutoSize = true;
+            this.lblHelpUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblHelpUsername.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHelpUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblHelpUsername.Location = new System.Drawing.Point(395, 100);
+            this.lblHelpUsername.Name = "lblHelpUsername";
+            this.lblHelpUsername.Size = new System.Drawing.Size(21, 28);
+            this.lblHelpUsername.TabIndex = 7;
+            this.lblHelpUsername.Text = "?";
             // 
             // RegisterForm
             // 
@@ -182,7 +214,6 @@ namespace PRO1
             this.Controls.Add(this.cmbRole);
             this.Controls.Add(this.RegisterB);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.BACKpanel);
@@ -191,6 +222,8 @@ namespace PRO1
             this.Name = "RegisterForm";
             this.Text = "Register";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
+            this.BACKpanel.ResumeLayout(false);
+            this.BACKpanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +239,7 @@ namespace PRO1
         private Label lblRegister;
         private Button btn_back;
         private Panel BACKpanel;
+        private Label lblHelpUsername;
+        private Label lblHelpPassword;
     }
 }

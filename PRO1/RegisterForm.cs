@@ -81,11 +81,17 @@ namespace PRO1
                 wb.SaveAs(filePath);
             }
             List<string> existingIDs = ReadAllIDs(filePath);
+            bool isUnique = await ValidationHelper.IsUniqueUsernameAsync(username, filePath, firebaseHelper);
 
 
             if (!ValidationHelper.IsValidUsername(username))
             {
                 MessageBox.Show("Username must be 6–8 characters long, contain up to two digits, and the rest letters.");
+                return;
+            }
+            if (!isUnique)
+            {
+                MessageBox.Show("This username already exists in the system. Please choose a different one.");
                 return;
             }
 
@@ -252,11 +258,15 @@ namespace PRO1
         private void RegisterForm_Load(object sender, EventArgs e)
         {
             AddPlaceholders();
-            
-
-
-
+            AddTooltips();
         }
+        private void AddTooltips()
+        {
+
+            tip.SetToolTip(lblHelpUsername, "Username must be 6–8 characters long, contain up to two digits(in English).");
+            tip.SetToolTip(lblHelpPassword, "Password must be 8–10 characters long, with at least one letter, one digit, and one special character.");
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

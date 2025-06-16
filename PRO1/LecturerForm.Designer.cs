@@ -108,10 +108,14 @@ namespace PRO1
             // 
             this.listBoxExams.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.listBoxExams.FormattingEnabled = true;
+            this.listBoxExams.HorizontalExtent = 1000;
+            this.listBoxExams.HorizontalScrollbar = true;
+            this.listBoxExams.IntegralHeight = false;
             this.listBoxExams.ItemHeight = 35;
             this.listBoxExams.Location = new System.Drawing.Point(618, 63);
             this.listBoxExams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxExams.Name = "listBoxExams";
+            this.listBoxExams.ScrollAlwaysVisible = true;
             this.listBoxExams.Size = new System.Drawing.Size(531, 459);
             this.listBoxExams.TabIndex = 7;
             this.listBoxExams.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBoxExams_DrawItem);

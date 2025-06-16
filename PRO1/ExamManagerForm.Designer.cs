@@ -74,9 +74,11 @@
             this.lstExamQuestions.BackColor = System.Drawing.Color.Linen;
             this.lstExamQuestions.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lstExamQuestions.FormattingEnabled = true;
+            this.lstExamQuestions.HorizontalScrollbar = true;
             this.lstExamQuestions.ItemHeight = 19;
             this.lstExamQuestions.Location = new System.Drawing.Point(655, 157);
             this.lstExamQuestions.Name = "lstExamQuestions";
+            this.lstExamQuestions.ScrollAlwaysVisible = true;
             this.lstExamQuestions.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.lstExamQuestions.Size = new System.Drawing.Size(355, 251);
             this.lstExamQuestions.TabIndex = 3;
