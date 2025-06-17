@@ -128,7 +128,7 @@
             // 
             // btnShowChart
             // 
-            this.btnShowChart.Location = new System.Drawing.Point(922, 584);
+            this.btnShowChart.Location = new System.Drawing.Point(943, 584);
             this.btnShowChart.Name = "btnShowChart";
             this.btnShowChart.Size = new System.Drawing.Size(177, 45);
             this.btnShowChart.TabIndex = 4;

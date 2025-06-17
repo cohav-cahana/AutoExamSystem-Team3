@@ -16,5 +16,7 @@ namespace PRO1
 
         public string Subject { get; set; }
         public string Level { get; set; }
+        public int Score { get; set; }
+
     }
 }

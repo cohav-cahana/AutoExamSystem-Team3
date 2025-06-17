@@ -50,10 +50,9 @@ namespace PRO1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GradeFormTeacher g1 = new GradeFormTeacher();
-            g1.Show();
-            this.Hide();
+            this.Close();
         }
+
         private void StyleWarmButton(Button button)
         {
             button.FlatStyle = FlatStyle.Flat;
